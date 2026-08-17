@@ -8,11 +8,15 @@ import ParallaxElement from '../components/ParallaxElement';
 import SEO from '../components/SEO';
 
 import CinematicSection from '../components/CinematicSection';
+import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const project = PROJECTS.find(p => p.id === id);
   if (!project) return <div>Project not found</div>;
+  const visibleDetails = demoItems(project.details, project.details.slice(0, 2));
+  const visibleSpecs = demoItems(project.technicalSpecs ?? [], (project.technicalSpecs ?? []).slice(0, 2));
+  const visibleGallery = demoItems(project.gallery, project.gallery.slice(0, 2));
 
   return (
     <div className="bg-ink">
@@ -110,7 +114,7 @@ export default function ProjectDetail() {
                       </div>
                     </Reveal>
                   )}
-                  {project.solution && (
+                  {project.solution && !MANAGER_DEMO_MODE && (
                     <Reveal direction="up" delay={0.6}>
                       <div className="space-y-8">
                         <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">The Solution</h3>
@@ -127,7 +131,7 @@ export default function ProjectDetail() {
                 <div className="bg-stone/5 p-12 border border-stone/10 space-y-12">
                   <h3 className="text-[10px] uppercase tracking-[0.4em] text-stone font-bold border-b border-stone/10 pb-6">Technical Data</h3>
                   <div className="space-y-8">
-                    {project.details.map((detail, i) => (
+                    {visibleDetails.map((detail, i) => (
                       <Reveal key={detail.label} direction="up" delay={i * 0.1}>
                         <div className="flex justify-between items-end gap-4">
                           <span className="text-[10px] uppercase tracking-[0.2em] text-stone/60 font-bold">{detail.label}</span>
@@ -142,7 +146,7 @@ export default function ProjectDetail() {
                     <div className="pt-12 border-t border-stone/10 space-y-8">
                       <h4 className="text-[10px] uppercase tracking-[0.3em] text-gold font-bold">Specifications</h4>
                       <div className="space-y-6">
-                        {project.technicalSpecs.map((spec, i) => (
+                        {visibleSpecs.map((spec, i) => (
                           <Reveal key={spec.label} direction="up" delay={i * 0.1}>
                             <div className="flex justify-between items-end gap-4">
                               <span className="text-[10px] uppercase tracking-[0.2em] text-stone/60 font-bold">{spec.label}</span>
@@ -201,7 +205,7 @@ export default function ProjectDetail() {
             <h2 className="text-xs uppercase tracking-[0.6em] text-ivory/60 font-bold">VISUAL ANTHOLOGY</h2>
           </Reveal>
           <div className="grid grid-cols-12 gap-8 md:gap-16">
-            {project.gallery.map((img, i) => {
+            {visibleGallery.map((img, i) => {
               const isFull = i % 3 === 0;
               const colSpan = isFull ? 'col-span-12' : 'col-span-12 md:col-span-6';
               const aspect = isFull ? 'aspect-[21/9]' : 'aspect-[4/5]';

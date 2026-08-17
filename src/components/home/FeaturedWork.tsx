@@ -7,6 +7,7 @@ import Reveal from '../Reveal';
 import ParallaxImage from '../ParallaxImage';
 import StaggerText from '../StaggerText';
 import ParallaxElement from '../ParallaxElement';
+import { demoItems } from '../../config/siteMode';
 
 function ProjectCard({ project, index }: { project: any, index: number }) {
   const x = useMotionValue(0);
@@ -96,6 +97,8 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
 }
 
 export default function FeaturedWork() {
+  // The full project set remains available when manager demo mode is disabled.
+  const visibleProjects = demoItems(PROJECTS.slice(0, 4), [PROJECTS[5]]);
   return (
     <section id="work" className="py-24 md:py-48 px-8 relative overflow-hidden">
       {/* Background Parallax */}
@@ -128,8 +131,8 @@ export default function FeaturedWork() {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 lg:gap-32">
-          {PROJECTS.slice(0, 4).map((project, i) => (
+        <div className={`grid grid-cols-1 gap-16 ${visibleProjects.length > 1 ? 'md:grid-cols-2 md:gap-24 lg:gap-32' : 'max-w-xl'}`}>
+          {visibleProjects.map((project, i) => (
             <div key={project.id}>
               <ProjectCard project={project} index={i} />
             </div>

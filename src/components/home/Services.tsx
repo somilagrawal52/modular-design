@@ -6,8 +6,10 @@ import Reveal from '../Reveal';
 import StaggerText from '../StaggerText';
 import ParallaxElement from '../ParallaxElement';
 import Magnetic from '../Magnetic';
+import { demoItems } from '../../config/siteMode';
 
 export default function Services() {
+  const visibleServices = demoItems(SERVICES, SERVICES.slice(0, 2));
   const [activeId, setActiveId] = useState<string | null>(SERVICES[0].id);
 
   return (
@@ -45,7 +47,7 @@ export default function Services() {
           </div>
 
           <div className="lg:col-span-8 flex flex-col">
-            {SERVICES.map((service, i) => (
+            {visibleServices.map((service, i) => (
               <Reveal key={service.id} direction="up" delay={i * 0.1} fullWidth>
                 <div
                   className="border-b border-stone/10 py-16 cursor-pointer group"

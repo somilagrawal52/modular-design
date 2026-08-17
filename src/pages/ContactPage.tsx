@@ -8,6 +8,7 @@ import Reveal from '../components/Reveal';
 import CinematicSection from '../components/CinematicSection';
 import SEO from '../components/SEO';
 import Magnetic from '../components/Magnetic';
+import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
 const LOCATIONS = [
   {
@@ -133,7 +134,7 @@ export default function ContactPage() {
                   <div className="space-y-4">
                     <label className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">Inquiry Type</label>
                     <div className="flex flex-wrap gap-4">
-                      {['Residential', 'Commercial', 'Hospitality', 'Urban', 'Press'].map((type) => (
+                      {['Residential', 'Commercial', 'Hospitality', 'Urban', 'Press'].slice(0, MANAGER_DEMO_MODE ? 3 : undefined).map((type) => (
                         <button
                           key={type}
                           type="button"
@@ -226,7 +227,7 @@ export default function ContactPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {LOCATIONS.map((loc, i) => (
+            {demoItems(LOCATIONS, LOCATIONS.slice(0, 2)).map((loc, i) => (
               <div key={loc.city} className="h-full">
                 <Magnetic strength={0.1} className="h-full">
                   <motion.div
@@ -285,7 +286,7 @@ export default function ContactPage() {
                   { label: 'Press Inquiries', email: 'press@aurelian.com' },
                   { label: 'Career Opportunities', email: 'careers@aurelian.com' },
                   { label: 'General Info', email: 'studio@aurelian.com' }
-                ].map((item) => (
+                ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((item) => (
                   <div key={item.label} className="group">
                     <h4 className="text-[10px] uppercase tracking-widest text-ivory/40 mb-2">{item.label}</h4>
                     <a href={`mailto:${item.email}`} className="text-lg font-light hover:text-gold transition-colors">{item.email}</a>

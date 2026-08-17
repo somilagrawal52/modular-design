@@ -3,6 +3,7 @@ import Reveal from '../Reveal';
 import ParallaxImage from '../ParallaxImage';
 import StaggerText from '../StaggerText';
 import ParallaxElement from '../ParallaxElement';
+import { MANAGER_DEMO_MODE } from '../../config/siteMode';
 
 export default function Philosophy() {
   return (
@@ -39,12 +40,12 @@ export default function Philosophy() {
                   delay={0.6}
                   stagger={0.02}
                 />
-                <StaggerText
+                {!MANAGER_DEMO_MODE && <StaggerText
                   text="Every project is a unique exploration of geometry and materiality, crafted with an uncompromising attention to detail and a deep respect for the human experience."
                   className="text-sm text-stone/60 font-light leading-relaxed pt-2"
                   delay={1.2}
                   stagger={0.01}
-                />
+                />}
               </div>
 
               <div className="flex gap-24 mt-24 pt-12 border-t border-stone/10">

@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import { Instagram, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
 import Reveal from './Reveal';
 import StaggerText from './StaggerText';
+import { MANAGER_DEMO_MODE } from '../config/siteMode';
 export default function Footer() {
   return (
     <footer className="bg-ink border-t border-stone/10 pt-16 md:pt-32 pb-12 px-8 relative overflow-hidden">
@@ -51,7 +52,7 @@ export default function Footer() {
                   { name: 'Instagram', icon: <Instagram size={14} /> },
                   { name: 'Twitter', icon: <Twitter size={14} /> },
                   { name: 'LinkedIn', icon: <Linkedin size={14} /> }
-                ].map((social) => (
+                ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((social) => (
                   <a key={social.name} href="#" className="group flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory/60 hover:text-gold transition-all duration-500">
                     <span className="opacity-40 group-hover:opacity-100 transition-opacity">{social.icon}</span>
                     {social.name}

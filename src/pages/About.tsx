@@ -6,6 +6,7 @@ import ParallaxElement from '../components/ParallaxElement';
 import CinematicSection from '../components/CinematicSection';
 import { TEAM } from '../constants';
 import SEO from '../components/SEO';
+import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
 export default function About() {
   return (
@@ -66,12 +67,12 @@ export default function About() {
                   delay={0.2}
                   stagger={0.02}
                 />
-                <StaggerText
+                {!MANAGER_DEMO_MODE && <StaggerText
                   text="Today, we are a global practice, yet our core philosophy remains unchanged. We believe that architecture is not merely about building; it is about the careful orchestration of light, shadow, and material to create environments that resonate with the human spirit."
                   className="text-ivory/70 text-lg leading-relaxed font-light"
                   delay={0.8}
                   stagger={0.01}
-                />
+                />}
                 
                 <div className="pt-12 border-t border-stone/10 grid grid-cols-2 gap-12">
                   <div>
@@ -114,7 +115,7 @@ export default function About() {
               { title: 'Vision', text: 'To redefine the boundaries of luxury through architectural innovation and material honesty.' },
               { title: 'Mission', text: 'To create spaces that inspire, endure, and harmonize with the natural and urban landscape.' },
               { title: 'Values', text: 'Precision, Integrity, Craftsmanship, and a deep respect for the environment.' }
-            ].map((item, i) => (
+            ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((item, i) => (
               <ParallaxElement key={item.title} speed={0.02 * (i + 1)}>
                 <Reveal direction="up" delay={i * 0.1}>
                   <div className="space-y-8">
@@ -159,7 +160,7 @@ export default function About() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {TEAM.map((member, i) => (
+            {demoItems(TEAM, TEAM.slice(0, 2)).map((member, i) => (
               <ParallaxElement key={member.name} speed={i % 2 === 0 ? 0.02 : -0.02}>
                 <Reveal direction="up" delay={i * 0.1} className="group">
                   <div className="relative aspect-[4/5] overflow-hidden mb-8 border border-stone/10 p-2 bg-stone/5">
@@ -218,7 +219,7 @@ export default function About() {
                 { year: '2005', title: 'International Breakthrough', text: 'The completion of the Obsidian Villa in the Swiss Alps garners global acclaim.' },
                 { year: '2012', title: 'Global Expansion', text: 'Opening of the London and Tokyo offices to serve a growing international clientele.' },
                 { year: '2023', title: 'Sustainability Milestone', text: 'AURELIAN commits to carbon-neutral operations across all global projects.' }
-              ].map((milestone, i) => (
+              ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((milestone, i) => (
                 <Reveal key={milestone.year} direction="up" delay={i * 0.1}>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-8 group">
                     <div className="md:col-span-1">

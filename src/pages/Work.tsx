@@ -9,15 +9,16 @@ import StaggerText from '../components/StaggerText';
 import ParallaxElement from '../components/ParallaxElement';
 import CinematicSection from '../components/CinematicSection';
 import SEO from '../components/SEO';
+import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
-const RESIDENTIAL_PROJECTS = PROJECTS.filter((project) => project.category === 'Residential');
 const CATEGORIES = ['All', 'Residential', 'Commercial', 'Hospitality'];
 
 export default function Work() {
-  const [filter, setFilter] = useState('Residential');
+  const [filter, setFilter] = useState(MANAGER_DEMO_MODE ? 'Residential' : 'All');
   const filteredProjects = filter === 'All'
     ? PROJECTS
     : PROJECTS.filter((project) => project.category === filter);
+  const visibleProjects = demoItems(filteredProjects, [PROJECTS[5]]);
 
   return (
     <div className="bg-ink min-h-screen pt-40 pb-32 relative overflow-hidden">
@@ -57,8 +58,7 @@ export default function Work() {
           
         </div>
 
-          {/* Only All and Residential are currently available. */}
-          {true && (
+          <div className="self-start md:self-end">
             <ParallaxElement speed={-0.02}>
               <Reveal direction="left" delay={0.4}>
                 <div className="flex flex-col items-start md:items-end gap-6">
@@ -69,14 +69,11 @@ export default function Work() {
                     {CATEGORIES.map((category) => (
                       <button
                         key={category}
-                        onClick={() => (category === 'All' || category === 'Residential') && setFilter(category)}
-                        disabled={category !== 'All' && category !== 'Residential'}
+                        onClick={() => setFilter(category)}
                         className={`text-[10px] uppercase tracking-[0.3em] pb-1 border-b-2 transition-all duration-500 relative group ${
                           filter === category
                             ? 'border-gold text-gold'
-                            : category === 'All' || category === 'Residential'
-                              ? 'border-transparent text-ivory/60 hover:text-ivory'
-                              : 'border-transparent text-ivory/25 cursor-not-allowed'
+                            : 'border-transparent text-ivory/60 hover:text-ivory'
                         }`}
                       >
                         {category}
@@ -89,11 +86,11 @@ export default function Work() {
                 </div>
               </Reveal>
             </ParallaxElement>
-          )}
+          </div>
 
         {/* Editorial Grid */}
         <div className="grid grid-cols-12 gap-y-32 md:gap-y-80 gap-x-8">
-            {filteredProjects.map((project, i) => {
+            {visibleProjects.map((project, i) => {
               // Create a highly dynamic editorial layout
               const isHero = i % 4 === 0;
               const isVertical = i % 4 === 1;

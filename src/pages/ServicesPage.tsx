@@ -8,8 +8,17 @@ import CinematicSection from '../components/CinematicSection';
 import { ArrowDown } from 'lucide-react';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import { demoItems } from '../config/siteMode';
 
 export default function ServicesPage() {
+  const visibleServices = demoItems(SERVICES, SERVICES.slice(0, 2));
+  const processSteps = [
+    { step: '01', title: 'Discovery', text: 'We begin by understanding the site, the context, and the unique aspirations of the client.' },
+    { step: '02', title: 'Ideation', text: 'A rigorous conceptual phase where we explore geometry, light, and material possibilities.' },
+    { step: '03', title: 'Refinement', text: 'Translating concepts into precise technical drawings and material specifications.' },
+    { step: '04', title: 'Execution', text: 'Overseeing the realization of the vision with uncompromising attention to detail.' }
+  ];
+  const visibleProcessSteps = demoItems(processSteps, processSteps.slice(0, 2));
   return (
     <div className="bg-ink min-h-screen">
       <SEO
@@ -51,7 +60,7 @@ export default function ServicesPage() {
 
       {/* Services Showcase */}
       <div className="relative">
-        {SERVICES.map((service, i) => (
+        {visibleServices.map((service, i) => (
           <CinematicSection key={service.id} className="py-16 md:py-32 px-8 md:px-24 border-b border-stone/10">
             {/* Background Number */}
             <ParallaxElement speed={-0.1} className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
@@ -82,7 +91,7 @@ export default function ServicesPage() {
                   />
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {service.features.map((feature, j) => (
+                    {demoItems(service.features, service.features.slice(0, 2)).map((feature, j) => (
                       <Reveal key={feature} direction="up" delay={j * 0.1 + 0.6}>
                         <div className="group flex items-start gap-4 p-6 border border-stone/10 bg-stone/5 hover:border-gold/30 transition-colors duration-500">
                           <div className="w-1.5 h-1.5 bg-gold rounded-full mt-1.5 group-hover:scale-150 transition-transform" />
@@ -153,12 +162,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: '01', title: 'Discovery', text: 'We begin by understanding the site, the context, and the unique aspirations of the client.' },
-              { step: '02', title: 'Ideation', text: 'A rigorous conceptual phase where we explore geometry, light, and material possibilities.' },
-              { step: '03', title: 'Refinement', text: 'Translating concepts into precise technical drawings and material specifications.' },
-              { step: '04', title: 'Execution', text: 'Overseeing the realization of the vision with uncompromising attention to detail.' }
-            ].map((item, i) => (
+            {visibleProcessSteps.map((item, i) => (
               <ParallaxElement key={item.step} speed={0.02 * (i + 1)}>
                 <Reveal direction="up" delay={i * 0.1}>
                   <div className="space-y-8 p-12 border border-stone/10 bg-ink/40 backdrop-blur-sm relative group hover:border-gold/30 transition-all duration-500 h-full">

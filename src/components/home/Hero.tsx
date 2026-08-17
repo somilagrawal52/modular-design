@@ -2,6 +2,7 @@ import { motion, useTransform, useSpring, useMotionValue, useMotionTemplate } fr
 import { useEffect } from 'react';
 import Reveal from '../Reveal';
 import StaggerText from '../StaggerText';
+import { MANAGER_DEMO_MODE } from '../../config/siteMode';
 
 export default function Hero() {
   const mouseX = useMotionValue(0);
@@ -42,7 +43,7 @@ export default function Hero() {
       <div className="relative z-20 text-center px-8">
         <motion.div style={{ transform }}>
           <Reveal delay={0.2}>
-            <div className="hidden">
+            <div className={MANAGER_DEMO_MODE ? 'hidden' : 'flex items-center justify-center gap-6 mb-12'}>
               <div className="h-[1px] w-12 bg-gold/40" />
               <span className="text-[10px] uppercase tracking-[0.6em] text-gold font-bold">
                 Est. 1998 — Geneva
@@ -74,7 +75,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className="hidden"
+        className={MANAGER_DEMO_MODE ? 'hidden' : 'absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4'}
       >
         <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60">Explore below</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-gold to-transparent" />
