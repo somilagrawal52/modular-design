@@ -2,7 +2,7 @@ import { motion, useTransform, useSpring, useMotionValue, useMotionTemplate } fr
 import { useEffect } from 'react';
 import Reveal from '../Reveal';
 import StaggerText from '../StaggerText';
-import { MANAGER_DEMO_MODE } from '../../config/siteMode';
+import { MANAGER_DEMO_MODE, SITE_NAME } from '../../config/siteMode';
 
 export default function Hero() {
   const mouseX = useMotionValue(0);
@@ -62,7 +62,7 @@ export default function Hero() {
 
           <div className="max-w-2xl mx-auto">
             <StaggerText
-              text="AURELIAN is a global practice dedicated to the orchestration of light, shadow, and material. We create structures that resonate with the human spirit."
+              text={`${SITE_NAME} is a global practice dedicated to the orchestration of light, shadow, and material. We create structures that resonate with the human spirit.`}
               className="text-lg md:text-xl text-ivory/70 font-light tracking-wide leading-relaxed italic font-serif"
               delay={1.2}
               stagger={0.02}

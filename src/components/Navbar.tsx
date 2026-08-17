@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Magnetic from './Magnetic';
+import { SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ export default function Navbar() {
             <div className="w-6 h-6 md:w-8 md:h-8 border border-gold/40 flex items-center justify-center">
               <div className="w-1 h-1 bg-gold" />
             </div>
-            AURELIAN
+            {SITE_NAME}
           </motion.div>
         </Magnetic>
       </Link>
@@ -148,7 +149,7 @@ export default function Navbar() {
               <div className="flex flex-col items-center gap-2">
                 <div className="w-8 h-[1px] bg-gold/30" />
                 <span className="text-[8px] uppercase tracking-[0.4em] text-ivory/20 font-bold">
-                  Aurelian Studios © 2026
+                  {SITE_STUDIO_NAME} © 2026
                 </span>
               </div>
             </motion.div>

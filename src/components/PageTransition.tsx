@@ -1,5 +1,6 @@
 import { motion, HTMLMotionProps } from 'motion/react';
 import { ReactNode, forwardRef } from 'react';
+import { SITE_NAME } from '../config/siteMode';
 
 interface PageTransitionProps extends HTMLMotionProps<"div"> {
   children: ReactNode;
@@ -121,7 +122,7 @@ const PageTransition = forwardRef<HTMLDivElement, PageTransitionProps>(
               variants={logoVariants}
               className="text-ink font-display font-bold tracking-[0.8em] text-3xl md:text-5xl z-10"
             >
-              AURELIAN
+              {SITE_NAME}
             </motion.div>
           </div>
         </div>

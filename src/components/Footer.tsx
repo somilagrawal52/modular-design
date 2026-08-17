@@ -2,13 +2,13 @@ import { motion } from 'motion/react';
 import { Instagram, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
 import Reveal from './Reveal';
 import StaggerText from './StaggerText';
-import { MANAGER_DEMO_MODE } from '../config/siteMode';
+import { companyEmail, MANAGER_DEMO_MODE, SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
 export default function Footer() {
   return (
     <footer className="bg-ink border-t border-stone/10 pt-16 md:pt-32 pb-12 px-8 relative overflow-hidden">
       {/* Subtle Background Text */}
       <div className="absolute bottom-0 left-0 w-full text-[20vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none translate-y-1/2">
-        AURELIAN
+        {SITE_NAME}
       </div>
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 relative z-10">
@@ -21,10 +21,10 @@ export default function Footer() {
           </Reveal>
           <Reveal direction="up" delay={0.4}>
             <a
-              href="mailto:studio@aurelian.com"
+              href={`mailto:${companyEmail('studio')}`}
               className="group inline-flex items-center gap-6 text-2xl md:text-4xl font-light tracking-tight hover:text-gold transition-all duration-500"
             >
-              studio@aurelian.com
+              {companyEmail('studio')}
               <div className="w-12 h-12 rounded-full border border-stone/20 flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all duration-500">
                 <ArrowUpRight className="group-hover:text-ink transition-colors" size={24} />
               </div>
@@ -66,7 +66,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto mt-16 md:mt-32 pt-12 border-t border-stone/10 flex flex-col md:flex-row justify-between items-center gap-8 text-[8px] uppercase tracking-[0.5em] text-ivory/60 font-bold relative z-10">
         <Reveal direction="up" delay={0.5}>
-          <p>© 2026 AURELIAN STUDIOS. ALL RIGHTS RESERVED.</p>
+          <p>© 2026 {SITE_STUDIO_NAME}. ALL RIGHTS RESERVED.</p>
         </Reveal>
         <div className="flex gap-12">
           <Reveal direction="up" delay={0.6}>

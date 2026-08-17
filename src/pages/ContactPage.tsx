@@ -8,14 +8,14 @@ import Reveal from '../components/Reveal';
 import CinematicSection from '../components/CinematicSection';
 import SEO from '../components/SEO';
 import Magnetic from '../components/Magnetic';
-import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
+import { companyEmail, MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
 const LOCATIONS = [
   {
     city: 'Geneva',
     address: 'Rue du Rhône 14, 1204 Geneva',
     phone: '+41 22 310 00 00',
-    email: 'geneva@aurelian.com',
+    email: companyEmail('geneva'),
     timezone: 'Europe/Zurich',
     image: 'https://images.unsplash.com/photo-1581262177000-8139a463e531?auto=format&fit=crop&q=80&w=1000'
   },
@@ -23,7 +23,7 @@ const LOCATIONS = [
     city: 'London',
     address: '24 Savile Row, London W1S 3PR',
     phone: '+44 20 7946 0000',
-    email: 'london@aurelian.com',
+    email: companyEmail('london'),
     timezone: 'Europe/London',
     image: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&q=80&w=1000'
   },
@@ -31,7 +31,7 @@ const LOCATIONS = [
     city: 'New York',
     address: '150 Wooster St, New York, NY 10012',
     phone: '+1 212 555 0123',
-    email: 'ny@aurelian.com',
+    email: companyEmail('ny'),
     timezone: 'America/New_York',
     image: 'https://images.unsplash.com/photo-1496871455396-14e56815f1f4?auto=format&fit=crop&q=80&w=1000'
   }
@@ -125,7 +125,7 @@ export default function ContactPage() {
                       <label className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">Email Address</label>
                       <input 
                         type="email" 
-                        placeholder="studio@aurelian.com"
+                        placeholder={companyEmail('studio')}
                         className="w-full bg-transparent border-b border-stone/20 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/10 text-ivory text-xl font-light"
                       />
                     </div>
@@ -282,10 +282,10 @@ export default function ContactPage() {
               <h3 className="text-xs uppercase tracking-[0.5em] text-gold font-bold">Direct Access</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 {[
-                  { label: 'New Projects', email: 'projects@aurelian.com' },
-                  { label: 'Press Inquiries', email: 'press@aurelian.com' },
-                  { label: 'Career Opportunities', email: 'careers@aurelian.com' },
-                  { label: 'General Info', email: 'studio@aurelian.com' }
+                  { label: 'New Projects', email: companyEmail('projects') },
+                  { label: 'Press Inquiries', email: companyEmail('press') },
+                  { label: 'Career Opportunities', email: companyEmail('careers') },
+                  { label: 'General Info', email: companyEmail('studio') }
                 ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((item) => (
                   <div key={item.label} className="group">
                     <h4 className="text-[10px] uppercase tracking-widest text-ivory/40 mb-2">{item.label}</h4>

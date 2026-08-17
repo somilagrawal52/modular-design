@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { SITE_STUDIO_NAME } from '../config/siteMode';
 
 interface SEOProps {
   title: string;
@@ -12,7 +13,7 @@ interface SEOProps {
 export default function SEO({
   title,
   description,
-  name = 'AURELIAN Studios',
+  name = SITE_STUDIO_NAME,
   type = 'website',
   image = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
   url = 'https://aurelian.cursorbits.works'
