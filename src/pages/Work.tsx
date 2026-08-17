@@ -14,8 +14,7 @@ const RESIDENTIAL_PROJECTS = PROJECTS.filter((project) => project.category === '
 const CATEGORIES = ['All', 'Residential', 'Commercial', 'Hospitality'];
 
 export default function Work() {
-  // Kept for future use; the work page currently displays residential projects only.
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState('Residential');
   const filteredProjects = filter === 'All'
     ? PROJECTS
     : PROJECTS.filter((project) => project.category === filter);
@@ -58,8 +57,8 @@ export default function Work() {
           
         </div>
 
-          {/* Sector filters are temporarily disabled. Set the condition to true to restore them. */}
-          {false && (
+          {/* Only All and Residential are currently available. */}
+          {true && (
             <ParallaxElement speed={-0.02}>
               <Reveal direction="left" delay={0.4}>
                 <div className="flex flex-col items-start md:items-end gap-6">
@@ -70,9 +69,14 @@ export default function Work() {
                     {CATEGORIES.map((category) => (
                       <button
                         key={category}
-                        onClick={() => setFilter(category)}
+                        onClick={() => (category === 'All' || category === 'Residential') && setFilter(category)}
+                        disabled={category !== 'All' && category !== 'Residential'}
                         className={`text-[10px] uppercase tracking-[0.3em] pb-1 border-b-2 transition-all duration-500 relative group ${
-                          filter === category ? 'border-gold text-gold' : 'border-transparent text-ivory/60 hover:text-ivory'
+                          filter === category
+                            ? 'border-gold text-gold'
+                            : category === 'All' || category === 'Residential'
+                              ? 'border-transparent text-ivory/60 hover:text-ivory'
+                              : 'border-transparent text-ivory/25 cursor-not-allowed'
                         }`}
                       >
                         {category}
@@ -89,7 +93,7 @@ export default function Work() {
 
         {/* Editorial Grid */}
         <div className="grid grid-cols-12 gap-y-32 md:gap-y-80 gap-x-8">
-            {RESIDENTIAL_PROJECTS.map((project, i) => {
+            {filteredProjects.map((project, i) => {
               // Create a highly dynamic editorial layout
               const isHero = i % 4 === 0;
               const isVertical = i % 4 === 1;
