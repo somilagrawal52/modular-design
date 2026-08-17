@@ -1,0 +1,40 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import Work from './pages/Work';
+import ProjectDetail from './pages/ProjectDetail';
+import About from './pages/About';
+import ServicesPage from './pages/ServicesPage';
+import ContactPage from './pages/ContactPage';
+import { useEffect } from 'react';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
+export default function App() {
+  const location = useLocation();
+
+  return (
+    <Layout>
+      <ScrollToTop />
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/work/:id" element={<ProjectDetail />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Layout>
+  );
+}
