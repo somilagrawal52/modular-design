@@ -19,8 +19,8 @@ export default function About() {
       <CinematicSection parallax={false} className="h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
-            alt="Studio Atmosphere"
+            src="/images/modular-campus-aerial.jpeg"
+            alt="Aerial view of a modular living campus"
             speed={0.2}
             className="w-full h-full"
           />
@@ -96,8 +96,8 @@ export default function About() {
                 </div>
                 <Reveal direction="left" delay={0.4} className="aspect-[3/4] overflow-hidden rounded-sm border border-stone/10 p-2 bg-stone/5">
                   <ParallaxImage
-                    src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&q=80&w=2000"
-                    alt="Studio Interior"
+                    src="/images/modular-residence-pool.jpeg"
+                    alt="Modern modular residence with pool"
                     className="w-full h-full"
                   />
                 </Reveal>
