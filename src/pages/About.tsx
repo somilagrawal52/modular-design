@@ -13,7 +13,7 @@ export default function About() {
     <div className="bg-ink min-h-screen">
       <SEO 
         title="About Us" 
-        description="Founded in 1998, AURELIAN is a global architectural practice driven by a singular vision: to strip away the superfluous and reveal the essential beauty of space." 
+        description="Founded in 1998, COMPANY is a global architectural practice driven by a singular vision: to strip away the superfluous and reveal the essential beauty of space." 
       />
       {/* Hero Section */}
       <CinematicSection parallax={false} className="h-[90vh] flex items-center justify-center">
@@ -62,7 +62,7 @@ export default function About() {
                   <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold block">Our Genesis</span>
                 </Reveal>
                 <StaggerText
-                  text="Founded in 1998, AURELIAN began as a small collective of architects in Geneva, driven by a singular vision: to strip away the superfluous and reveal the essential beauty of space."
+                  text="Founded in 1998, COMPANY began as a small collective of architects in Geneva, driven by a singular vision: to strip away the superfluous and reveal the essential beauty of space."
                   className="text-3xl md:text-4xl font-light leading-tight text-ivory/90"
                   delay={0.2}
                   stagger={0.02}
@@ -215,10 +215,10 @@ export default function About() {
             
             <div className="lg:col-span-8 space-y-24">
               {[
-                { year: '1998', title: 'The Foundation', text: 'Julian Aurelian establishes the studio in a small attic in Geneva.' },
+                { year: '1998', title: 'The Foundation', text: 'Julian Company establishes the studio in a small attic in Geneva.' },
                 { year: '2005', title: 'International Breakthrough', text: 'The completion of the Obsidian Villa in the Swiss Alps garners global acclaim.' },
                 { year: '2012', title: 'Global Expansion', text: 'Opening of the London and Tokyo offices to serve a growing international clientele.' },
-                { year: '2023', title: 'Sustainability Milestone', text: 'AURELIAN commits to carbon-neutral operations across all global projects.' }
+                { year: '2023', title: 'Sustainability Milestone', text: 'COMPANY commits to carbon-neutral operations across all global projects.' }
               ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((milestone, i) => (
                 <Reveal key={milestone.year} direction="up" delay={i * 0.1}>
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-8 group">

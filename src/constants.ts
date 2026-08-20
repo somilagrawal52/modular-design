@@ -98,6 +98,6 @@ export const TEAM = [
     name: 'Sophia Chen',
     role: 'Sustainability Lead',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=800',
-    bio: 'Sophia ensures that every AURELIAN project meets the highest standards of environmental responsibility and longevity.'
+    bio: 'Sophia ensures that every COMPANY project meets the highest standards of environmental responsibility and longevity.'
   }
 ];

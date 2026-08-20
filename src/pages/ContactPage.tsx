@@ -65,7 +65,7 @@ export default function ContactPage() {
     <div className="bg-ink min-h-screen pt-40 relative overflow-hidden">
       <SEO 
         title="Contact Us" 
-        description="Get in touch with AURELIAN Studios. Whether you have a specific project in mind or simply wish to learn more about our practice, we invite you to reach out." 
+        description="Get in touch with COMPANY Studios. Whether you have a specific project in mind or simply wish to learn more about our practice, we invite you to reach out." 
       />
 
       {/* Background Atmosphere */}
@@ -301,7 +301,7 @@ export default function ContactPage() {
               <Globe className="text-gold mb-8" size={32} />
               <h3 className="text-2xl font-display font-bold mb-6 tracking-tight">GLOBAL OPERATIONS</h3>
               <p className="text-ivory/60 font-light leading-relaxed mb-8">
-                AURELIAN operates as a unified global practice. Our studios in Geneva, London, and New York work in seamless orchestration, ensuring that every project benefits from our collective intelligence and diverse cultural perspectives.
+                COMPANY operates as a unified global practice. Our studios in Geneva, London, and New York work in seamless orchestration, ensuring that every project benefits from our collective intelligence and diverse cultural perspectives.
               </p>
               <div className="flex gap-8">
                 {['Instagram', 'LinkedIn', 'Behance'].map((social) => (
