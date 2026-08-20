@@ -33,8 +33,8 @@ export default function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/40 to-ink z-10" />
         <img
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=2000"
-          alt="Architectural Detail"
+          src="/images/modular-home-garden.jpeg"
+          alt="Contemporary modular home in a garden"
           className="w-full h-full object-cover"
           referrerPolicy="no-referrer"
         />

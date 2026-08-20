@@ -7,7 +7,7 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     location: 'Swiss Alps',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000',
+    image: '/images/modular-home-garden.jpeg',
     description: 'A brutalist masterpiece carved into the granite slopes of the Swiss Alps. The Monolith House redefines the relationship between raw concrete and the pristine mountain landscape.',
     challenge: 'The primary challenge was the extreme topography and the harsh alpine climate. We needed to create a structure that felt like a natural extension of the mountain while providing a warm, protected sanctuary for its inhabitants.',
     solution: 'We utilized a "carved" architectural language, using high-performance thermal concrete that mimics the surrounding granite. The interior is lined with reclaimed oak to provide a tactile contrast to the raw exterior.',
@@ -23,9 +23,9 @@ export const PROJECTS: Project[] = [
       { label: 'Status', value: 'Completed' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=2000',
-      'https://images.unsplash.com/photo-1600607687960-ce8746a747a5?auto=format&fit=crop&q=80&w=2000',
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000'
+      '/images/modular-residence-pool.jpeg',
+      '/images/modular-campus-aerial.jpeg',
+      '/images/container-pool.jpeg'
     ]
   },
   {
@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     category: 'Commercial',
     location: 'Dubai, UAE',
     year: '2023',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000',
+    image: '/images/container-cafe-rooftop.jpeg',
     description: 'A sanctuary of light and water. The Azure Pavilion serves as a private members club, featuring a floating glass structure that seems to defy gravity over the Persian Gulf.',
     challenge: 'Designing a structure that could withstand the intense heat and humidity of Dubai while maintaining a sense of ethereal lightness and transparency.',
     solution: 'We developed a custom double-skin facade with integrated solar shading and a passive cooling system that utilizes the surrounding seawater.',
@@ -50,8 +50,8 @@ export const PROJECTS: Project[] = [
       { label: 'Status', value: 'Completed' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000',
-      'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=2000'
+      '/images/container-cafe-rooftop.jpeg',
+      '/images/modular-campus-aerial.jpeg'
     ]
   },
   {
@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     category: 'Hospitality',
     location: 'Tokyo, Japan',
     year: '2025',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000',
+    image: '/images/modular-campus-aerial.jpeg',
     description: 'A vertical retreat in the heart of Shinjuku. The Obsidian Tower uses dark basalt and intelligent lighting to create a silent oasis amidst the neon chaos of Tokyo.',
     challenge: 'How to create a sense of profound silence and isolation in one of the densest urban environments on Earth.',
     solution: 'The tower is wrapped in a "sound-absorbing" basalt skin. The interior layout is based on traditional Japanese "Ma" (negative space), focusing on the voids between functional areas.',
@@ -76,8 +76,8 @@ export const PROJECTS: Project[] = [
       { label: 'Status', value: 'In Progress' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000',
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000'
+      '/images/modular-home-garden.jpeg',
+      '/images/modular-residence-pool.jpeg'
     ]
   },
   {
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     category: 'Hospitality',
     location: 'Iceland',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1631941150945-837cb81fc7e2?auto=format&fit=crop&q=80&w=2000',
+    image: '/images/modular-campus-aerial.jpeg',
     description: 'A series of glass cabins designed to offer an unobstructed view of the Aurora Borealis, blending seamlessly into the volcanic landscape.',
     challenge: 'Minimizing the ecological footprint in a fragile volcanic ecosystem while providing luxury amenities.',
     solution: 'The cabins are prefabricated off-site and "floated" onto the landscape using minimal foundation points. They are entirely powered by geothermal energy.',
@@ -102,8 +102,8 @@ export const PROJECTS: Project[] = [
       { label: 'Status', value: 'Completed' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2000',
-      'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000'
+      '/images/modular-home-garden.jpeg',
+      '/images/container-pool.jpeg'
     ]
   },
   {
@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
     category: 'Commercial',
     location: 'Paris, France',
     year: '2023',
-    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&q=80&w=2000',
+    image: '/images/container-cafe-rooftop.jpeg',
     description: 'A renovation of a historic Parisian courtyard into a modern office atrium, featuring a suspended garden and acoustic velvet panels.',
     challenge: 'Integrating modern office requirements into a protected 18th-century structure without damaging the original fabric.',
     solution: 'We created a "reversible" steel and glass insertion that touches the original walls at only a few points. The acoustic panels are made from recycled velvet.',
@@ -128,8 +128,8 @@ export const PROJECTS: Project[] = [
       { label: 'Status', value: 'Completed' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2000',
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000'
+      '/images/container-cafe-rooftop.jpeg',
+      '/images/container-pool.jpeg'
     ]
   },
   {
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     location: 'Santorini, Greece',
     year: '2025',
-    image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=2000',
+    image: '/images/modular-residence-pool.jpeg',
     description: 'A contemporary take on Cycladic architecture, utilizing white sculptural forms and infinity pools that merge with the Aegean Sea.',
     challenge: 'Reinterpreting traditional forms in a way that feels contemporary and functional for modern living.',
     solution: 'We used robotic stone-cutting technology to create complex, fluid forms that would be impossible with traditional methods, while maintaining the iconic white aesthetic.',
@@ -154,8 +154,8 @@ export const PROJECTS: Project[] = [
       { label: 'Status', value: 'In Progress' }
     ],
     gallery: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=2000',
-      'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000'
+      '/images/container-pool.jpeg',
+      '/images/modular-home-garden.jpeg'
     ]
   }
 ];

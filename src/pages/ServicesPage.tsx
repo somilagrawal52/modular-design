@@ -29,8 +29,8 @@ export default function ServicesPage() {
       <CinematicSection parallax={false} className="h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
-            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=2000"
-            alt="Architecture Blueprint"
+            src="/images/modular-residence-pool.jpeg"
+            alt="Contemporary modular residence"
             speed={0.2}
             className="w-full h-full"
           />
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                     className="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl"
                   >
                     <ParallaxImage
-                      src={`https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000&sig=${i}`}
+                      src={['/images/container-cafe-rooftop.jpeg', '/images/container-pool.jpeg', '/images/modular-home-garden.jpeg'][i]}
                       alt={service.title}
                       className="w-full h-full transition-all duration-1000"
                     />

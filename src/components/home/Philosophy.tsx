@@ -81,8 +81,8 @@ export default function Philosophy() {
                 
                 <Reveal direction="left" delay={0.3} className="relative aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
                   <ParallaxImage
-                    src="https://images.unsplash.com/photo-1721222201286-cd139caa1dfe?auto=format&fit=crop&q=80&w=2000"
-                    alt="Minimalist Staircase"
+                    src="/images/modular-campus-aerial.jpeg"
+                    alt="Aerial view of a modular living campus"
                     className="w-full h-full transition-all duration-1000"
                   />
                   <div className="absolute inset-0 bg-gold/5 mix-blend-overlay z-10" />
