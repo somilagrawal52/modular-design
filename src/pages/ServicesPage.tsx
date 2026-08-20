@@ -29,7 +29,7 @@ export default function ServicesPage() {
       <CinematicSection parallax={false} className="h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
-            src="/images/modular-residence-pool.jpeg"
+            src="/images/modular-residence-pool-hero.png"
             alt="Contemporary modular residence"
             speed={0.2}
             className="w-full h-full"

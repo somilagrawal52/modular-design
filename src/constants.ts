@@ -23,8 +23,8 @@ export const PROJECTS: Project[] = [
       { label: 'Status', value: 'Completed' }
     ],
     gallery: [
-      '/images/modular-residence-pool.jpeg',
-      '/images/modular-campus-aerial.jpeg',
+      '/images/modular-residence-pool-hero.png',
+      '/images/modular-campus-aerial-hero.png',
       '/images/container-pool.jpeg'
     ]
   },
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     ],
     gallery: [
       '/images/container-cafe-rooftop.jpeg',
-      '/images/modular-campus-aerial.jpeg'
+      '/images/modular-campus-aerial-hero.png'
     ]
   },
   {
@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     category: 'Hospitality',
     location: 'Tokyo, Japan',
     year: '2025',
-    image: '/images/modular-campus-aerial.jpeg',
+    image: '/images/modular-campus-aerial-hero.png',
     description: 'A vertical retreat in the heart of Shinjuku. The Obsidian Tower uses dark basalt and intelligent lighting to create a silent oasis amidst the neon chaos of Tokyo.',
     challenge: 'How to create a sense of profound silence and isolation in one of the densest urban environments on Earth.',
     solution: 'The tower is wrapped in a "sound-absorbing" basalt skin. The interior layout is based on traditional Japanese "Ma" (negative space), focusing on the voids between functional areas.',
@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
     ],
     gallery: [
       '/images/modular-home-garden.jpeg',
-      '/images/modular-residence-pool.jpeg'
+      '/images/modular-residence-pool-hero.png'
     ]
   },
   {
@@ -86,7 +86,7 @@ export const PROJECTS: Project[] = [
     category: 'Hospitality',
     location: 'Iceland',
     year: '2024',
-    image: '/images/modular-campus-aerial.jpeg',
+    image: '/images/modular-campus-aerial-hero.png',
     description: 'A series of glass cabins designed to offer an unobstructed view of the Aurora Borealis, blending seamlessly into the volcanic landscape.',
     challenge: 'Minimizing the ecological footprint in a fragile volcanic ecosystem while providing luxury amenities.',
     solution: 'The cabins are prefabricated off-site and "floated" onto the landscape using minimal foundation points. They are entirely powered by geothermal energy.',
@@ -138,7 +138,7 @@ export const PROJECTS: Project[] = [
     category: 'Residential',
     location: 'Santorini, Greece',
     year: '2025',
-    image: '/images/modular-residence-pool.jpeg',
+    image: '/images/modular-residence-pool-hero.png',
     description: 'A contemporary take on Cycladic architecture, utilizing white sculptural forms and infinity pools that merge with the Aegean Sea.',
     challenge: 'Reinterpreting traditional forms in a way that feels contemporary and functional for modern living.',
     solution: 'We used robotic stone-cutting technology to create complex, fluid forms that would be impossible with traditional methods, while maintaining the iconic white aesthetic.',
