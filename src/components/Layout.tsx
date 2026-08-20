@@ -14,7 +14,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className={`relative min-h-screen bg-ink overflow-x-hidden ${MANAGER_DEMO_MODE ? '' : 'custom-cursor-enabled'}`}>
       <div className={MANAGER_DEMO_MODE ? 'hidden' : 'fixed bottom-12 right-12 z-[998] hidden xl:block'}>
         <div className="vertical-text text-[10px] uppercase tracking-[0.8em] text-ivory/40 font-bold select-none pointer-events-none">
-          AURELIAN — ARCHITECTURAL EXCELLENCE
+          MODULAR SPACES — DESIGNED TO ADAPT
         </div>
       </div>
 

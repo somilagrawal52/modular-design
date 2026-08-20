@@ -27,7 +27,7 @@ export default function Philosophy() {
               
               <StaggerText
                 el="h2"
-                text="Architecture is the poetry of space, written in light and stone."
+                text="Better spaces, built with less waste and more possibility."
                 className="text-6xl md:text-8xl font-serif italic font-light tracking-tighter leading-[0.85] mb-16 text-stone"
                 delay={0.2}
                 stagger={0.05}
@@ -35,7 +35,7 @@ export default function Philosophy() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                 <StaggerText
-                  text="We believe that luxury is not about excess, but about the perfect alignment of light, shadow, and material. Our work is a dialogue between the site's history and its future potential."
+                  text="We believe thoughtful modular design makes great spaces more accessible. Every project balances efficient construction, everyday comfort, and a strong connection to its setting."
                   className="text-xl text-stone/80 font-light leading-relaxed"
                   delay={0.6}
                   stagger={0.02}
@@ -90,7 +90,7 @@ export default function Philosophy() {
                 
                 <div className="absolute -bottom-12 -left-12 z-30 hidden xl:block">
                   <div className="vertical-text text-[10px] uppercase tracking-[0.5em] text-gold font-bold bg-ivory/80 backdrop-blur-md p-6 border border-gold/20 shadow-xl">
-                    VILLA OBSIDIAN — 2024
+                    MODULAR LIVING CAMPUS
                   </div>
                 </div>
               </div>

@@ -2,182 +2,76 @@ import { Project, Service } from './types';
 
 export const PROJECTS: Project[] = [
   {
-    id: 'monolith-house',
-    title: 'The Monolith House',
-    category: 'Residential',
-    location: 'Swiss Alps',
-    year: '2024',
-    image: '/images/modular-home-garden.jpeg',
-    description: 'A brutalist masterpiece carved into the granite slopes of the Swiss Alps. The Monolith House redefines the relationship between raw concrete and the pristine mountain landscape.',
-    challenge: 'The primary challenge was the extreme topography and the harsh alpine climate. We needed to create a structure that felt like a natural extension of the mountain while providing a warm, protected sanctuary for its inhabitants.',
-    solution: 'We utilized a "carved" architectural language, using high-performance thermal concrete that mimics the surrounding granite. The interior is lined with reclaimed oak to provide a tactile contrast to the raw exterior.',
-    materiality: 'The palette is strictly limited to four elements: raw concrete, reclaimed oak, slate, and low-iron glass. This restraint allows the textures of the materials to speak, responding to the changing light of the mountains.',
-    technicalSpecs: [
-      { label: 'Structural System', value: 'Reinforced Thermal Concrete' },
-      { label: 'Energy Class', value: 'Minergie-P-Eco' },
-      { label: 'Glazing', value: 'Triple-pane Argon Filled' }
-    ],
-    details: [
-      { label: 'Area', value: '850 sqm' },
-      { label: 'Materials', value: 'Exposed Concrete, Oak, Slate' },
-      { label: 'Status', value: 'Completed' }
-    ],
-    gallery: [
-      '/images/modular-residence-pool-hero.png',
-      '/images/modular-campus-aerial-hero.png',
-      '/images/container-pool.jpeg'
-    ]
+    id: 'garden-pavilion', title: 'Garden Pavilion', category: 'Residential', location: 'Site-specific', year: '2026', image: '/images/modular-home-garden-hero.png',
+    description: 'A compact prefabricated residence designed to settle lightly into a landscaped garden, pairing panoramic glazing with a calm, efficient living plan.',
+    challenge: 'Create a fully finished home with minimal on-site disruption and a strong connection to the landscape.', solution: 'The residence is assembled from precision-built modules, then placed on a light-touch foundation with services integrated before arrival.',
+    materiality: 'A crisp white modular shell, low-iron glazing, and warm planting textures give the home a quiet, contemporary character.',
+    technicalSpecs: [{ label: 'Construction', value: 'Off-site Modular' }, { label: 'Foundation', value: 'Light-touch Supports' }, { label: 'Glazing', value: 'Panoramic Insulated Glass' }],
+    details: [{ label: 'Type', value: 'Modular Residence' }, { label: 'Delivery', value: 'Turnkey Module' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/modular-residence-pool-hero.png', '/images/modular-campus-aerial-hero.png', '/images/container-pool.jpeg']
   },
   {
-    id: 'azure-pavilion',
-    title: 'Azure Pavilion',
-    category: 'Commercial',
-    location: 'Dubai, UAE',
-    year: '2023',
-    image: '/images/container-cafe-rooftop.jpeg',
-    description: 'A sanctuary of light and water. The Azure Pavilion serves as a private members club, featuring a floating glass structure that seems to defy gravity over the Persian Gulf.',
-    challenge: 'Designing a structure that could withstand the intense heat and humidity of Dubai while maintaining a sense of ethereal lightness and transparency.',
-    solution: 'We developed a custom double-skin facade with integrated solar shading and a passive cooling system that utilizes the surrounding seawater.',
-    materiality: 'White Thassos marble provides a cool, reflective base, while ultra-clear low-iron glass creates an invisible boundary between the interior and the sea. Polished chrome accents capture the shimmering desert light.',
-    technicalSpecs: [
-      { label: 'Facade', value: 'Double-skin Low-E Glass' },
-      { label: 'Cooling', value: 'Seawater Heat Exchange' },
-      { label: 'Lighting', value: 'Dynamic LED Integration' }
-    ],
-    details: [
-      { label: 'Area', value: '1,200 sqm' },
-      { label: 'Materials', value: 'Low-iron Glass, White Marble' },
-      { label: 'Status', value: 'Completed' }
-    ],
-    gallery: [
-      '/images/container-cafe-rooftop.jpeg',
-      '/images/modular-campus-aerial-hero.png'
-    ]
+    id: 'rooftop-coffee-bar', title: 'Rooftop Coffee Bar', category: 'Commercial', location: 'Site-specific', year: '2026', image: '/images/container-cafe-rooftop.jpeg',
+    description: 'A hospitality concept that turns a shipping container into a polished coffee bar, with a rooftop terrace that extends the guest experience outdoors.',
+    challenge: 'Create a compact food-and-beverage destination that can be transported, installed, and opened quickly.', solution: 'The service counter, back-of-house equipment, doors, and rooftop access are integrated into a single modular build.',
+    materiality: 'A clean container shell, black metal details, timber counter surfaces, and planted edges bring warmth to the compact footprint.',
+    technicalSpecs: [{ label: 'Format', value: 'Container Conversion' }, { label: 'Terrace', value: 'Rooftop Seating' }, { label: 'Setup', value: 'Rapid Installation' }],
+    details: [{ label: 'Type', value: 'Hospitality Module' }, { label: 'Service', value: 'Food & Beverage' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/container-cafe-rooftop.jpeg', '/images/modular-campus-aerial-hero.png']
   },
   {
-    id: 'obsidian-tower',
-    title: 'Obsidian Tower',
-    category: 'Hospitality',
-    location: 'Tokyo, Japan',
-    year: '2025',
-    image: '/images/modular-campus-aerial-hero.png',
-    description: 'A vertical retreat in the heart of Shinjuku. The Obsidian Tower uses dark basalt and intelligent lighting to create a silent oasis amidst the neon chaos of Tokyo.',
-    challenge: 'How to create a sense of profound silence and isolation in one of the densest urban environments on Earth.',
-    solution: 'The tower is wrapped in a "sound-absorbing" basalt skin. The interior layout is based on traditional Japanese "Ma" (negative space), focusing on the voids between functional areas.',
-    materiality: 'Honed basalt, blackened steel, and dark cedar create a monochromatic environment that absorbs light and sound. Translucent washi-glass partitions provide soft, diffused illumination.',
-    technicalSpecs: [
-      { label: 'Acoustics', value: 'Active Noise Cancellation Skin' },
-      { label: 'Seismic', value: 'Tuned Mass Damper' },
-      { label: 'Automation', value: 'AI-driven Guest Experience' }
-    ],
-    details: [
-      { label: 'Floors', value: '42' },
-      { label: 'Materials', value: 'Basalt, Blackened Steel' },
-      { label: 'Status', value: 'In Progress' }
-    ],
-    gallery: [
-      '/images/modular-home-garden.jpeg',
-      '/images/modular-residence-pool-hero.png'
-    ]
+    id: 'modular-living-campus', title: 'Modular Living Campus', category: 'Hospitality', location: 'Site-specific', year: '2026', image: '/images/modular-campus-aerial-hero.png',
+    description: 'A collection of independent modular suites arranged around shared landscape, giving each guest privacy while creating a connected destination.',
+    challenge: 'Balance repeatable construction with a setting that feels personal, grounded, and close to nature.', solution: 'Standardised modules are positioned around a central path network, allowing the site to grow in phases as demand changes.',
+    materiality: 'Light modular volumes sit above the terrain, with timber decks and planted paths softening the edges between architecture and landscape.',
+    technicalSpecs: [{ label: 'System', value: 'Repeatable Modules' }, { label: 'Growth', value: 'Phased Deployment' }, { label: 'Site Impact', value: 'Reduced Ground Works' }],
+    details: [{ label: 'Type', value: 'Hospitality Campus' }, { label: 'Configuration', value: 'Multi-unit' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/modular-home-garden.jpeg', '/images/modular-residence-pool-hero.png']
   },
   {
-    id: 'lunar-retreat',
-    title: 'Lunar Retreat',
-    category: 'Hospitality',
-    location: 'Iceland',
-    year: '2024',
-    image: '/images/modular-campus-aerial-hero.png',
-    description: 'A series of glass cabins designed to offer an unobstructed view of the Aurora Borealis, blending seamlessly into the volcanic landscape.',
-    challenge: 'Minimizing the ecological footprint in a fragile volcanic ecosystem while providing luxury amenities.',
-    solution: 'The cabins are prefabricated off-site and "floated" onto the landscape using minimal foundation points. They are entirely powered by geothermal energy.',
-    materiality: 'The cabins use structural glass with a specialized coating to prevent bird collisions. The interior features local wool textiles and charred wood, echoing the volcanic surroundings.',
-    technicalSpecs: [
-      { label: 'Power', value: '100% Geothermal' },
-      { label: 'Foundation', value: 'Micro-pile System' },
-      { label: 'Waste', value: 'Closed-loop Water System' }
-    ],
-    details: [
-      { label: 'Units', value: '12 Cabins' },
-      { label: 'Materials', value: 'Smart Glass, Local Stone' },
-      { label: 'Status', value: 'Completed' }
-    ],
-    gallery: [
-      '/images/modular-home-garden.jpeg',
-      '/images/container-pool.jpeg'
-    ]
+    id: 'forest-retreat-pods', title: 'Forest Retreat Pods', category: 'Hospitality', location: 'Site-specific', year: '2026', image: '/images/modular-campus-aerial-hero.png',
+    description: 'A flexible retreat model that brings high-comfort, low-impact accommodation to landscape-led destinations.',
+    challenge: 'Deliver comfortable guest suites without prolonged construction activity in sensitive natural settings.', solution: 'Prefabricated pods arrive largely complete, reducing build time and allowing the landscape to remain the focal point.',
+    materiality: 'Durable modular panels, insulated glazing, and restrained exterior finishes create a robust all-season envelope.',
+    technicalSpecs: [{ label: 'Build Method', value: 'Factory Finished' }, { label: 'Deployment', value: 'Low-disruption' }, { label: 'Envelope', value: 'High-performance Insulation' }],
+    details: [{ label: 'Type', value: 'Retreat Pod' }, { label: 'Use', value: 'Short Stay' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/modular-home-garden.jpeg', '/images/container-pool.jpeg']
   },
   {
-    id: 'velvet-atrium',
-    title: 'Velvet Atrium',
-    category: 'Commercial',
-    location: 'Paris, France',
-    year: '2023',
-    image: '/images/container-cafe-rooftop.jpeg',
-    description: 'A renovation of a historic Parisian courtyard into a modern office atrium, featuring a suspended garden and acoustic velvet panels.',
-    challenge: 'Integrating modern office requirements into a protected 18th-century structure without damaging the original fabric.',
-    solution: 'We created a "reversible" steel and glass insertion that touches the original walls at only a few points. The acoustic panels are made from recycled velvet.',
-    materiality: 'The contrast between the historic limestone walls and the precision-engineered steel and glass insertion is the core of the project. Recycled velvet in deep emerald provides acoustic warmth.',
-    technicalSpecs: [
-      { label: 'Preservation', value: 'Non-invasive Installation' },
-      { label: 'Acoustics', value: 'Recycled Velvet Panels' },
-      { label: 'Vegetation', value: 'Hydroponic Vertical Garden' }
-    ],
-    details: [
-      { label: 'Area', value: '2,400 sqm' },
-      { label: 'Materials', value: 'Steel, Velvet, Glass' },
-      { label: 'Status', value: 'Completed' }
-    ],
-    gallery: [
-      '/images/container-cafe-rooftop.jpeg',
-      '/images/container-pool.jpeg'
-    ]
+    id: 'container-courtyard-cafe', title: 'Container Courtyard Café', category: 'Commercial', location: 'Site-specific', year: '2026', image: '/images/container-cafe-rooftop.jpeg',
+    description: 'A compact café designed as a movable social hub, combining counter service below with a casual rooftop gathering space.',
+    challenge: 'Fit front-of-house, storage, equipment, and accessible circulation into a small, transportable footprint.', solution: 'The layout uses the container structure as an organised shell, with opening façades that connect service directly to the courtyard.',
+    materiality: 'Powder-coated metal, timber, planting, and simple industrial lighting give the module a welcoming public-facing finish.',
+    technicalSpecs: [{ label: 'Base Unit', value: '40 ft Container' }, { label: 'Facade', value: 'Opening Service Hatch' }, { label: 'Mobility', value: 'Transport-ready' }],
+    details: [{ label: 'Type', value: 'Commercial Module' }, { label: 'Use', value: 'Café & Events' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/container-cafe-rooftop.jpeg', '/images/container-pool.jpeg']
   },
   {
-    id: 'ivory-villa',
-    title: 'Ivory Villa',
-    category: 'Residential',
-    location: 'Santorini, Greece',
-    year: '2025',
-    image: '/images/modular-residence-pool-hero.png',
-    description: 'A contemporary take on Cycladic architecture, utilizing white sculptural forms and infinity pools that merge with the Aegean Sea.',
-    challenge: 'Reinterpreting traditional forms in a way that feels contemporary and functional for modern living.',
-    solution: 'We used robotic stone-cutting technology to create complex, fluid forms that would be impossible with traditional methods, while maintaining the iconic white aesthetic.',
-    materiality: 'Traditional white stucco is reimagined as a seamless, sculptural skin. Local Naxian limestone is used for the flooring, extending from the interior to the pool deck to create a unified plane.',
-    technicalSpecs: [
-      { label: 'Fabrication', value: 'Robotic Stone Cutting' },
-      { label: 'Water', value: 'Desalination Integration' },
-      { label: 'Climate', value: 'Passive Wind Cooling' }
-    ],
-    details: [
-      { label: 'Area', value: '600 sqm' },
-      { label: 'Materials', value: 'White Stucco, Limestone' },
-      { label: 'Status', value: 'In Progress' }
-    ],
-    gallery: [
-      '/images/container-pool.jpeg',
-      '/images/modular-home-garden.jpeg'
-    ]
+    id: 'courtyard-residence', title: 'Courtyard Residence', category: 'Residential', location: 'Site-specific', year: '2026', image: '/images/modular-residence-pool-hero.png',
+    description: 'A two-level modular residence that brings living spaces, terrace, and pool together in a bright indoor-outdoor composition.',
+    challenge: 'Achieve the amenity and presence of a custom home while retaining the speed and precision of modular construction.', solution: 'Stacked modules create distinct private and social levels, while generous glazing frames the garden and pool terrace.',
+    materiality: 'Soft white cladding, dark window frames, glass balustrades, and water create a crisp contemporary palette.',
+    technicalSpecs: [{ label: 'Configuration', value: 'Stacked Modules' }, { label: 'Outdoor Space', value: 'Terrace & Pool' }, { label: 'Delivery', value: 'Prefabricated Build' }],
+    details: [{ label: 'Type', value: 'Family Residence' }, { label: 'Levels', value: 'Two Storeys' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/container-pool.jpeg', '/images/modular-home-garden.jpeg']
   }
 ];
 
 export const SERVICES: Service[] = [
   {
-    id: 'architectural-design',
-    title: 'Architectural Design',
-    description: 'We create timeless structures that harmonize with their environment while pushing the boundaries of modern engineering.',
-    features: ['Conceptual Design', 'Structural Engineering', 'Sustainable Solutions', '3D Visualization']
+    id: 'modular-home-design', title: 'Modular Home Design',
+    description: 'We design modern prefabricated homes that bring thoughtful planning, flexible layouts, and refined architecture into a faster build process.',
+    features: ['Concept Planning', 'Module Configuration', 'Structural Coordination', '3D Visualization']
   },
   {
-    id: 'interior-architecture',
-    title: 'Interior Architecture',
-    description: 'Crafting intimate spaces that reflect the soul of the inhabitant. Every detail is considered, from material tactile quality to light behavior.',
-    features: ['Custom Furniture', 'Material Sourcing', 'Lighting Design', 'Art Curation']
+    id: 'commercial-container-spaces', title: 'Commercial Container Spaces',
+    description: 'We turn container structures into memorable cafés, retail spaces, pop-ups, and hospitality venues designed for real operation.',
+    features: ['Space Planning', 'Service Counter Design', 'Rooftop Terraces', 'Brand-ready Interiors']
   },
   {
-    id: 'urban-planning',
-    title: 'Urban Planning',
-    description: 'Designing the future of cities. We develop master plans that prioritize human experience and ecological balance.',
-    features: ['Master Planning', 'Landscape Design', 'Infrastructure Strategy', 'Public Space Design']
+    id: 'modular-amenities', title: 'Modular Amenities & Pools',
+    description: 'We add flexible outdoor amenities—from modular pools to landscape-ready leisure spaces—that complete a site with minimal disruption.',
+    features: ['Pool Integration', 'Landscape Coordination', 'Deck & Access Design', 'Site Installation']
   }
 ];
 

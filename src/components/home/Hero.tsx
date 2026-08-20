@@ -1,8 +1,14 @@
-import { motion, useTransform, useSpring, useMotionValue, useMotionTemplate } from 'motion/react';
-import { useEffect } from 'react';
-import Reveal from '../Reveal';
-import StaggerText from '../StaggerText';
-import { MANAGER_DEMO_MODE, SITE_NAME } from '../../config/siteMode';
+import {
+  motion,
+  useTransform,
+  useSpring,
+  useMotionValue,
+  useMotionTemplate,
+} from "motion/react";
+import { useEffect } from "react";
+import Reveal from "../Reveal";
+import StaggerText from "../StaggerText";
+import { MANAGER_DEMO_MODE, SITE_NAME } from "../../config/siteMode";
 
 export default function Hero() {
   const mouseX = useMotionValue(0);
@@ -19,18 +25,15 @@ export default function Hero() {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
     };
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
   const transform = useMotionTemplate`translate3d(${moveX}px, ${moveY}px, 0)`;
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <motion.div 
-        
-        className="absolute inset-0 z-0"
-      >
+      <motion.div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/40 to-ink z-10" />
         <img
           src="/images/modular-home-garden-hero.png"
@@ -43,7 +46,13 @@ export default function Hero() {
       <div className="relative z-20 text-center px-8">
         <motion.div style={{ transform }}>
           <Reveal delay={0.2}>
-            <div className={MANAGER_DEMO_MODE ? 'hidden' : 'flex items-center justify-center gap-6 mb-12'}>
+            <div
+              className={
+                MANAGER_DEMO_MODE
+                  ? "hidden"
+                  : "flex items-center justify-center gap-6 mb-12"
+              }
+            >
               <div className="h-[1px] w-12 bg-gold/40" />
               <span className="text-[10px] uppercase tracking-[0.6em] text-gold font-bold">
                 Est. 1998 — Geneva
@@ -51,7 +60,7 @@ export default function Hero() {
               <div className="h-[1px] w-12 bg-gold/40" />
             </div>
           </Reveal>
-          
+
           <StaggerText
             el="h1"
             text="THE POETRY OF SPACE."
@@ -62,7 +71,7 @@ export default function Hero() {
 
           <div className="max-w-2xl mx-auto">
             <StaggerText
-              text={`${SITE_NAME} is a global practice dedicated to the orchestration of light, shadow, and material. We create structures that resonate with the human spirit.`}
+              text={`${SITE_NAME} creates modular spaces for living, gathering, and growing—designed with clarity, built with precision, and made for real life.`}
               className="text-lg md:text-xl text-ivory/70 font-light tracking-wide leading-relaxed italic font-serif"
               delay={1.2}
               stagger={0.02}
@@ -71,13 +80,19 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
-        className={MANAGER_DEMO_MODE ? 'hidden' : 'absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4'}
+        className={
+          MANAGER_DEMO_MODE
+            ? "hidden"
+            : "absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
+        }
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60">Explore below</span>
+        <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60">
+          Explore below
+        </span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-gold to-transparent" />
       </motion.div>
     </section>

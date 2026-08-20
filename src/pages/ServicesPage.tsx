@@ -13,17 +13,17 @@ import { demoItems } from '../config/siteMode';
 export default function ServicesPage() {
   const visibleServices = demoItems(SERVICES, SERVICES.slice(0, 2));
   const processSteps = [
-    { step: '01', title: 'Discovery', text: 'We begin by understanding the site, the context, and the unique aspirations of the client.' },
-    { step: '02', title: 'Ideation', text: 'A rigorous conceptual phase where we explore geometry, light, and material possibilities.' },
-    { step: '03', title: 'Refinement', text: 'Translating concepts into precise technical drawings and material specifications.' },
-    { step: '04', title: 'Execution', text: 'Overseeing the realization of the vision with uncompromising attention to detail.' }
+    { step: '01', title: 'Discovery', text: 'We begin with the site, programme, access, and the way people will use the space.' },
+    { step: '02', title: 'Configuration', text: 'We shape the module layout, circulation, and indoor-outdoor experience around the brief.' },
+    { step: '03', title: 'Coordination', text: 'We refine the build, services, finishes, and transport-ready details before fabrication.' },
+    { step: '04', title: 'Installation', text: 'We bring the completed modules together on site for an efficient, considered handover.' }
   ];
   const visibleProcessSteps = demoItems(processSteps, processSteps.slice(0, 2));
   return (
     <div className="bg-ink min-h-screen">
       <SEO
         title="Our Services"
-        description="AURELIAN Studios offers specialized expertise in architectural design, interior architecture, and urban planning."
+        description="Explore modular home design, commercial container spaces, and modular amenities built for flexible modern use."
       />
       {/* Hero Section */}
       <CinematicSection parallax={false} className="h-screen flex items-center justify-center">
@@ -44,7 +44,7 @@ export default function ServicesPage() {
             </Reveal>
             <StaggerText
               el="h1"
-              text="THE ART OF PRECISION."
+              text="MODULAR BY DESIGN."
               className="text-[12vw] md:text-[10vw] font-display font-bold leading-[0.85] tracking-tighter mt-40"
               delay={0.4}
               stagger={0.08}

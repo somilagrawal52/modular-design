@@ -134,7 +134,7 @@ export default function ContactPage() {
                   <div className="space-y-4">
                     <label className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">Inquiry Type</label>
                     <div className="flex flex-wrap gap-4">
-                      {['Residential', 'Commercial', 'Hospitality', 'Urban', 'Press'].slice(0, MANAGER_DEMO_MODE ? 3 : undefined).map((type) => (
+                      {['Modular Home', 'Commercial Container', 'Hospitality', 'Pools & Amenities', 'Press'].slice(0, MANAGER_DEMO_MODE ? 3 : undefined).map((type) => (
                         <button
                           key={type}
                           type="button"

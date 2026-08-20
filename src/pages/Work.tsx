@@ -24,7 +24,7 @@ export default function Work() {
     <div className="bg-ink min-h-screen pt-40 pb-32 relative overflow-hidden">
       <SEO 
         title="Selected Works" 
-        description="Explore AURELIAN Studios' curated selection of residential projects." 
+        description="Explore a collection of modular residences, commercial container spaces, and hospitality concepts." 
       />
       <CinematicSection parallax={false} minHeight={false}>
         {/* Background Parallax */}
@@ -48,7 +48,7 @@ export default function Work() {
               </Reveal>
               <StaggerText
                 el="h1"
-                text="ARCHITECTURAL ANTHOLOGY."
+                text="MODULAR WORKS."
                 className="text-[10vw] md:text-[8vw] font-display font-bold leading-[0.85] tracking-tighter"
                 delay={0.2}
                 stagger={0.08}

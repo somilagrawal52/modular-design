@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <div className="relative">
       <SEO 
-        title="Architecture & Design" 
-        description="AURELIAN Studios is an award-winning architectural practice dedicated to creating timeless, sustainable, and visionary spaces." 
+        title="Modular Architecture & Design" 
+        description="Modular homes, commercial container spaces, and landscape-ready amenities designed for flexible modern living." 
       />
       <Hero />
       <CinematicSection>

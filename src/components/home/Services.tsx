@@ -32,13 +32,13 @@ export default function Services() {
               </Reveal>
               <StaggerText
                 el="h2"
-                text="THE ART OF SPATIAL STORYTELLING."
+                text="MODULAR SPACES, MADE TO MOVE."
                 className="text-6xl font-display font-bold tracking-tighter leading-[0.85] mb-12"
                 delay={0.2}
                 stagger={0.08}
               />
               <StaggerText
-                text="From private residences to urban landmarks, we provide a full spectrum of architectural services tailored for the most discerning clients."
+                text="From prefab homes to container cafés and outdoor amenities, we create flexible spaces built for the way people live and gather."
                 className="text-ivory/70 text-lg font-light leading-relaxed max-w-xs italic font-serif"
                 delay={0.6}
                 stagger={0.02}

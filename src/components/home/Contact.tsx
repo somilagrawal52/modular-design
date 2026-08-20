@@ -88,10 +88,10 @@ export default function Contact() {
                       <label className="text-[10px] uppercase tracking-[0.4em] text-ivory/60 font-bold mb-4 block">Project Type</label>
                       <select className="w-full bg-transparent border-b border-stone/20 py-4 outline-none focus:border-gold transition-all duration-500 text-ivory/40 text-xl font-light appearance-none">
                         <option>Select Sector</option>
-                        <option>Private Residential</option>
-                        <option>Commercial Development</option>
-                        <option>Hospitality & Leisure</option>
-                        <option>Urban Masterplan</option>
+                        <option>Modular Home</option>
+                        <option>Commercial Container Space</option>
+                        <option>Modular Hospitality</option>
+                        <option>Pool or Outdoor Amenity</option>
                       </select>
                     </div>
                     <div className="relative group">

@@ -118,7 +118,7 @@ export default function FeaturedWork() {
             </Reveal>
             <StaggerText
               el="h2"
-              text="ARCHITECTURAL NARRATIVES."
+              text="MODULAR POSSIBILITIES."
               className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.85]"
               delay={0.2}
               stagger={0.08}
