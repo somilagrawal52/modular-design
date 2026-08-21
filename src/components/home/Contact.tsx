@@ -89,8 +89,10 @@ export default function Contact() {
                       <select className="w-full bg-transparent border-b border-stone/20 py-4 outline-none focus:border-gold transition-all duration-500 text-ivory/40 text-xl font-light appearance-none">
                         <option>Select Sector</option>
                         <option>Modular Home</option>
-                        <option>Commercial Container Space</option>
-                        <option>Modular Hospitality</option>
+                        <option>Modular Hotel or Retreat</option>
+                        <option>Modular Office</option>
+                        <option>Café, Bar, or Restaurant</option>
+                        <option>Retail or Pop-Up</option>
                         <option>Pool or Outdoor Amenity</option>
                       </select>
                     </div>

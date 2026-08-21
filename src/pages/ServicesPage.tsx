@@ -122,7 +122,7 @@ export default function ServicesPage() {
                     className="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl"
                   >
                     <ParallaxImage
-                      src={['/images/container-cafe-rooftop.jpeg', '/images/container-pool.jpeg', '/images/modular-home-garden.jpeg'][i]}
+                      src={['/images/modular-home-garden-hero.png', '/images/modular-hotel-masterplan.png', '/images/modular-office-pavilion.png', '/images/modular-cafe.png', '/images/modular-rooftop-bar.png', '/images/container-pool.jpeg'][i]}
                       alt={service.title}
                       className="w-full h-full transition-all duration-1000"
                     />

@@ -19,7 +19,7 @@ export default function About() {
       <CinematicSection parallax={false} className="h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
-            src="/images/modular-campus-aerial-hero.png"
+            src="/images/modular-hotel-masterplan.png"
             alt="Aerial view of a modular living campus"
             speed={0.2}
             className="w-full h-full"

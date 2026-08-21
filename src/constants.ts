@@ -8,43 +8,43 @@ export const PROJECTS: Project[] = [
     materiality: 'A crisp white modular shell, low-iron glazing, and warm planting textures give the home a quiet, contemporary character.',
     technicalSpecs: [{ label: 'Construction', value: 'Off-site Modular' }, { label: 'Foundation', value: 'Light-touch Supports' }, { label: 'Glazing', value: 'Panoramic Insulated Glass' }],
     details: [{ label: 'Type', value: 'Modular Residence' }, { label: 'Delivery', value: 'Turnkey Module' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-residence-pool-hero.png', '/images/modular-campus-aerial-hero.png', '/images/container-pool.jpeg']
+    gallery: ['/images/modular-residence-pool-hero.png', '/images/modular-hotel-guest-room.png', '/images/modular-hotel-installation.png']
   },
   {
-    id: 'rooftop-coffee-bar', title: 'Rooftop Coffee Bar', category: 'Commercial', location: 'Site-specific', year: '2026', image: '/images/container-cafe-rooftop.jpeg',
-    description: 'A hospitality concept that turns a shipping container into a polished coffee bar, with a rooftop terrace that extends the guest experience outdoors.',
-    challenge: 'Create a compact food-and-beverage destination that can be transported, installed, and opened quickly.', solution: 'The service counter, back-of-house equipment, doors, and rooftop access are integrated into a single modular build.',
-    materiality: 'A clean container shell, black metal details, timber counter surfaces, and planted edges bring warmth to the compact footprint.',
-    technicalSpecs: [{ label: 'Format', value: 'Container Conversion' }, { label: 'Terrace', value: 'Rooftop Seating' }, { label: 'Setup', value: 'Rapid Installation' }],
-    details: [{ label: 'Type', value: 'Hospitality Module' }, { label: 'Service', value: 'Food & Beverage' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/container-cafe-rooftop.jpeg', '/images/modular-campus-aerial-hero.png']
+    id: 'modular-cafe', title: 'Modular Café', category: 'Café', location: 'Site-specific', year: '2026', image: '/images/modular-cafe.png',
+    description: 'A welcoming modular café and bakery that brings a warm, hospitality-led experience to a compact, transportable building.',
+    challenge: 'Create a full café operation with a memorable guest experience in a small, rapidly deployable footprint.', solution: 'The bar, kitchen, storage, opening façade, and planted terrace are organised as a complete modular hospitality system.',
+    materiality: 'Refined metal cladding, warm timber, glass, and abundant planting give the café a relaxed, premium character.',
+    technicalSpecs: [{ label: 'Format', value: 'Modular Hospitality' }, { label: 'Service', value: 'Café & Bakery' }, { label: 'Setup', value: 'Rapid Installation' }],
+    details: [{ label: 'Type', value: 'Café Module' }, { label: 'Experience', value: 'Indoor-Outdoor Dining' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/container-cafe-rooftop.jpeg', '/images/modular-hotel-masterplan.png']
   },
   {
-    id: 'modular-living-campus', title: 'Modular Living Campus', category: 'Hospitality', location: 'Site-specific', year: '2026', image: '/images/modular-campus-aerial-hero.png',
+    id: 'modular-living-campus', title: 'Modular Living Campus', category: 'Hospitality', location: 'Site-specific', year: '2026', image: '/images/modular-hotel-masterplan.png',
     description: 'A collection of independent modular suites arranged around shared landscape, giving each guest privacy while creating a connected destination.',
     challenge: 'Balance repeatable construction with a setting that feels personal, grounded, and close to nature.', solution: 'Standardised modules are positioned around a central path network, allowing the site to grow in phases as demand changes.',
     materiality: 'Light modular volumes sit above the terrain, with timber decks and planted paths softening the edges between architecture and landscape.',
     technicalSpecs: [{ label: 'System', value: 'Repeatable Modules' }, { label: 'Growth', value: 'Phased Deployment' }, { label: 'Site Impact', value: 'Reduced Ground Works' }],
     details: [{ label: 'Type', value: 'Hospitality Campus' }, { label: 'Configuration', value: 'Multi-unit' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-home-garden.jpeg', '/images/modular-residence-pool-hero.png']
+    gallery: ['/images/modular-hotel-guest-room.png', '/images/modular-hotel-installation.png']
   },
   {
-    id: 'forest-retreat-pods', title: 'Forest Retreat Pods', category: 'Hospitality', location: 'Site-specific', year: '2026', image: '/images/modular-campus-aerial-hero.png',
-    description: 'A flexible retreat model that brings high-comfort, low-impact accommodation to landscape-led destinations.',
-    challenge: 'Deliver comfortable guest suites without prolonged construction activity in sensitive natural settings.', solution: 'Prefabricated pods arrive largely complete, reducing build time and allowing the landscape to remain the focal point.',
-    materiality: 'Durable modular panels, insulated glazing, and restrained exterior finishes create a robust all-season envelope.',
-    technicalSpecs: [{ label: 'Build Method', value: 'Factory Finished' }, { label: 'Deployment', value: 'Low-disruption' }, { label: 'Envelope', value: 'High-performance Insulation' }],
-    details: [{ label: 'Type', value: 'Retreat Pod' }, { label: 'Use', value: 'Short Stay' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-home-garden.jpeg', '/images/container-pool.jpeg']
+    id: 'modular-office-pavilion', title: 'Modular Office Pavilion', category: 'Office', location: 'Site-specific', year: '2026', image: '/images/modular-office-pavilion.png',
+    description: 'A flexible office pavilion designed for focused work, informal meetings, and strong everyday connection to the landscape.',
+    challenge: 'Create a professional workplace that can arrive quickly, adapt as a team grows, and feel generous rather than temporary.', solution: 'A series of prefabricated volumes creates work zones, meeting space, shaded outdoor areas, and room for future expansion.',
+    materiality: 'White modular volumes, expansive glazing, planting, and shaded terraces create a calm campus-style environment.',
+    technicalSpecs: [{ label: 'Format', value: 'Expandable Modules' }, { label: 'Workplace', value: 'Office & Meeting Space' }, { label: 'Installation', value: 'Low-disruption' }],
+    details: [{ label: 'Type', value: 'Office Pavilion' }, { label: 'Use', value: 'Workplace' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/modular-hotel-installation.png', '/images/modular-hotel-guest-room.png']
   },
   {
-    id: 'container-courtyard-cafe', title: 'Container Courtyard Café', category: 'Commercial', location: 'Site-specific', year: '2026', image: '/images/container-cafe-rooftop.jpeg',
-    description: 'A compact café designed as a movable social hub, combining counter service below with a casual rooftop gathering space.',
-    challenge: 'Fit front-of-house, storage, equipment, and accessible circulation into a small, transportable footprint.', solution: 'The layout uses the container structure as an organised shell, with opening façades that connect service directly to the courtyard.',
-    materiality: 'Powder-coated metal, timber, planting, and simple industrial lighting give the module a welcoming public-facing finish.',
-    technicalSpecs: [{ label: 'Base Unit', value: '40 ft Container' }, { label: 'Facade', value: 'Opening Service Hatch' }, { label: 'Mobility', value: 'Transport-ready' }],
-    details: [{ label: 'Type', value: 'Commercial Module' }, { label: 'Use', value: 'Café & Events' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/container-cafe-rooftop.jpeg', '/images/container-pool.jpeg']
+    id: 'modular-rooftop-bar', title: 'Modular Rooftop Bar', category: 'Bar', location: 'Site-specific', year: '2026', image: '/images/modular-rooftop-bar.png',
+    description: 'An elevated bar concept that combines a modular hospitality shell with a dramatic rooftop setting for evening events and social gatherings.',
+    challenge: 'Deliver a high-impact bar experience that can be installed as a compact, self-contained hospitality destination.', solution: 'The modular build integrates the bar, back-of-house, lighting, and terrace edge into a single transport-ready configuration.',
+    materiality: 'Dark metal, warm timber, soft lighting, and planted borders create a refined atmosphere after sunset.',
+    technicalSpecs: [{ label: 'Format', value: 'Rooftop Module' }, { label: 'Service', value: 'Bar & Events' }, { label: 'Lighting', value: 'Integrated Ambient System' }],
+    details: [{ label: 'Type', value: 'Hospitality Module' }, { label: 'Use', value: 'Bar & Events' }, { label: 'Status', value: 'Concept Study' }],
+    gallery: ['/images/modular-cafe.png', '/images/container-pool.jpeg']
   },
   {
     id: 'courtyard-residence', title: 'Courtyard Residence', category: 'Residential', location: 'Site-specific', year: '2026', image: '/images/modular-residence-pool-hero.png',
@@ -53,7 +53,7 @@ export const PROJECTS: Project[] = [
     materiality: 'Soft white cladding, dark window frames, glass balustrades, and water create a crisp contemporary palette.',
     technicalSpecs: [{ label: 'Configuration', value: 'Stacked Modules' }, { label: 'Outdoor Space', value: 'Terrace & Pool' }, { label: 'Delivery', value: 'Prefabricated Build' }],
     details: [{ label: 'Type', value: 'Family Residence' }, { label: 'Levels', value: 'Two Storeys' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/container-pool.jpeg', '/images/modular-home-garden.jpeg']
+    gallery: ['/images/modular-hotel-guest-room.png', '/images/modular-hotel-installation.png']
   }
 ];
 
@@ -64,9 +64,24 @@ export const SERVICES: Service[] = [
     features: ['Concept Planning', 'Module Configuration', 'Structural Coordination', '3D Visualization']
   },
   {
-    id: 'commercial-container-spaces', title: 'Commercial Container Spaces',
-    description: 'We turn container structures into memorable cafés, retail spaces, pop-ups, and hospitality venues designed for real operation.',
-    features: ['Space Planning', 'Service Counter Design', 'Rooftop Terraces', 'Brand-ready Interiors']
+    id: 'modular-hotels-retreats', title: 'Modular Hotels & Retreats',
+    description: 'We create guest-room modules, resort masterplans, reception spaces, and amenities that open faster and grow in phases.',
+    features: ['Guest Room Modules', 'Resort Masterplanning', 'Reception & Shared Spaces', 'Phased Expansion']
+  },
+  {
+    id: 'modular-offices', title: 'Modular Offices & Workspaces',
+    description: 'We design flexible office pavilions and workplace campuses that adapt as teams, sites, and business needs change.',
+    features: ['Office Planning', 'Meeting Modules', 'Campus Layouts', 'Future Expansion']
+  },
+  {
+    id: 'cafes-bars-restaurants', title: 'Cafés, Bars & Restaurants',
+    description: 'We turn modular structures into polished food-and-beverage destinations built for service, social energy, and memorable customer experience.',
+    features: ['Café & Bar Planning', 'Kitchen Coordination', 'Rooftop Terraces', 'Guest Experience Design']
+  },
+  {
+    id: 'retail-popups', title: 'Retail & Pop-Ups',
+    description: 'We create transportable retail, showroom, and pop-up modules that can launch quickly and move as opportunities change.',
+    features: ['Retail Layouts', 'Display Systems', 'Brand-ready Interiors', 'Transport Planning']
   },
   {
     id: 'modular-amenities', title: 'Modular Amenities & Pools',

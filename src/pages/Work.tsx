@@ -11,7 +11,7 @@ import CinematicSection from '../components/CinematicSection';
 import SEO from '../components/SEO';
 import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
-const CATEGORIES = ['All', 'Residential', 'Commercial', 'Hospitality'];
+const CATEGORIES = ['All', 'Residential', 'Hospitality', 'Office', 'Café', 'Bar'];
 
 export default function Work() {
   const [filter, setFilter] = useState(MANAGER_DEMO_MODE ? 'Residential' : 'All');
