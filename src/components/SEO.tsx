@@ -15,8 +15,8 @@ export default function SEO({
   description,
   name = SITE_STUDIO_NAME,
   type = 'website',
-  image = 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
-  url = 'https://aurelian.cursorbits.works'
+  image = 'https://modular-design-flax.vercel.app/images/modular-hotel-realistic.jpg',
+  url = 'https://modular-design-flax.vercel.app/'
 }: SEOProps) {
   const fullTitle = `${title} | ${name}`;
   return (

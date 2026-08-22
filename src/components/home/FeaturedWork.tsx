@@ -98,7 +98,8 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
 
 export default function FeaturedWork() {
   // The full project set remains available when manager demo mode is disabled.
-  const visibleProjects = demoItems(PROJECTS.slice(0, 4), [PROJECTS[5]]);
+  const featuredProjects = [PROJECTS[0], PROJECTS[7], PROJECTS[6], PROJECTS[5]];
+  const visibleProjects = demoItems(featuredProjects, featuredProjects);
   return (
     <section id="work" className="py-24 md:py-48 px-8 relative overflow-hidden">
       {/* Background Parallax */}

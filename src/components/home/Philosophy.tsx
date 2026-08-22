@@ -81,7 +81,7 @@ export default function Philosophy() {
                 
                 <Reveal direction="left" delay={0.3} className="relative aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
                   <ParallaxImage
-                    src="/images/modular-campus-aerial-hero.png"
+                    src="/images/modular-campus-aerial-hero.jpg"
                     alt="Aerial view of a modular living campus"
                     className="w-full h-full transition-all duration-1000"
                   />

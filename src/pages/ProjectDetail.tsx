@@ -187,9 +187,11 @@ export default function ProjectDetail() {
               </ParallaxElement>
               <ParallaxElement speed={-0.02}>
                 <div className="aspect-square bg-stone/5 border border-stone/10 p-4">
-                  <div className="w-full h-full bg-stone/10 flex items-center justify-center">
-                    <span className="text-[10px] uppercase tracking-[1em] text-ivory/40 font-bold rotate-90">TEXTURE_STUDY</span>
-                  </div>
+                  <ParallaxImage
+                    src={project.gallery[0] ?? project.image}
+                    alt={`${project.title} material palette`}
+                    className="w-full h-full"
+                  />
                 </div>
               </ParallaxElement>
             </div>
