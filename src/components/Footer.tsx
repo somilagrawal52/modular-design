@@ -36,7 +36,7 @@ export default function Footer() {
           <div>
             <Reveal direction="up" delay={0.2}>
               <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-8">Global Studios</h4>
-              <address className="not-italic text-sm text-ivory/60 leading-relaxed space-y-4">
+              <address className="not-italic text-sm text-ivory/75 leading-relaxed space-y-4">
                 <p className="hover:text-ivory transition-colors cursor-default">Geneva — Rue du Rhône 14</p>
                 <p className="hover:text-ivory transition-colors cursor-default">London — Savile Row 24</p>
                 <p className="hover:text-ivory transition-colors cursor-default">New York — Wooster St 150</p>

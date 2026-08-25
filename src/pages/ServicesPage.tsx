@@ -101,7 +101,7 @@ export default function ServicesPage() {
                               className="text-[10px] uppercase tracking-widest text-ivory/60 font-bold mb-2"
                               delay={0.2}
                             />
-                            <p className="text-xs text-ivory/40 font-light">Specialized expertise in {feature.toLowerCase()} for complex projects.</p>
+                            <p className="text-xs text-ivory/70 font-light leading-relaxed">Specialized expertise in {feature.toLowerCase()} for complex projects.</p>
                           </div>
                         </div>
                       </Reveal>

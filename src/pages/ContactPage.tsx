@@ -249,15 +249,15 @@ export default function ContactPage() {
                   <div className="space-y-6">
                     <div className="flex items-start gap-4 group/item">
                       <MapPin size={14} className="text-gold/40 mt-1" />
-                      <p className="text-sm text-ivory/60 font-light leading-relaxed">{loc.address}</p>
+                      <p className="text-sm text-ivory/75 font-light leading-relaxed">{loc.address}</p>
                     </div>
                     <div className="flex items-center gap-4 group/item">
                       <Phone size={14} className="text-gold/40" />
-                      <p className="text-sm text-ivory/60 font-light">{loc.phone}</p>
+                      <p className="text-sm text-ivory/75 font-light">{loc.phone}</p>
                     </div>
                     <div className="flex items-center gap-4 group/item">
                       <Mail size={14} className="text-gold/40" />
-                      <p className="text-sm text-ivory/60 font-light">{loc.email}</p>
+                      <p className="text-sm text-ivory/75 font-light">{loc.email}</p>
                     </div>
                   </div>
 
@@ -300,7 +300,7 @@ export default function ContactPage() {
             <div className="bg-gold/5 p-12 border border-gold/10">
               <Globe className="text-gold mb-8" size={32} />
               <h3 className="text-2xl font-display font-bold mb-6 tracking-tight">GLOBAL OPERATIONS</h3>
-              <p className="text-ivory/60 font-light leading-relaxed mb-8">
+              <p className="text-ivory/75 font-light leading-relaxed mb-8">
                 COMPANY operates as a unified global practice. Our studios in Geneva, London, and New York work in seamless orchestration, ensuring that every project benefits from our collective intelligence and diverse cultural perspectives.
               </p>
               <div className="flex gap-8">

@@ -10,13 +10,44 @@ import SEO from '../components/SEO';
 import CinematicSection from '../components/CinematicSection';
 import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
+const EXTRA_GALLERY_IMAGES: Record<string, string[]> = {
+  'garden-pavilion': ['/images/garden-pavilion-extra.png'],
+  'modular-retail-showroom': ['/images/retail-showroom-extra.png'],
+  'modular-rooftop-bar': ['/images/rooftop-bar-extra.png'],
+  'modular-pool-leisure': ['/images/pool-leisure-extra.png'],
+  'modular-hotel': ['/images/modular-hotel-interior.png', '/images/modular-hotel-courtyard.png'],
+  'modular-clinic': ['/images/modular-clinic-interior.png', '/images/modular-clinic-exterior.png'],
+  'workforce-accommodation': ['/images/workforce-accommodation-lounge.png', '/images/workforce-accommodation-campus.png'],
+  'modular-classroom': ['/images/modular-classroom-interior.png', '/images/modular-classroom-exterior.png'],
+  'modular-site-office': ['/images/site-office-interior.png', '/images/site-office-exterior.png'],
+  'modular-gym': ['/images/modular-gym-interior.png', '/images/modular-gym-exterior.png'],
+  'modular-restroom': ['/images/modular-restroom-interior.png'],
+  'event-washroom-unit': ['/images/event-washroom-exterior.png', '/images/event-washroom-interior.png'],
+  'modular-canteen': ['/images/modular-canteen-interior.png', '/images/modular-canteen-exterior.png'],
+};
+
 export default function ProjectDetail() {
   const { id } = useParams();
   const project = PROJECTS.find(p => p.id === id);
   if (!project) return <div>Project not found</div>;
-  const visibleDetails = demoItems(project.details, project.details.slice(0, 2));
-  const visibleSpecs = demoItems(project.technicalSpecs ?? [], (project.technicalSpecs ?? []).slice(0, 2));
-  const visibleGallery = demoItems(project.gallery, project.gallery.slice(0, 2));
+  const defaultSpecs = project.category === 'Hospitality'
+    ? [{ label: 'System', value: 'Off-site Modular' }, { label: 'Delivery', value: 'Phased Installation' }, { label: 'Climate', value: 'Site-responsive Envelope' }]
+    : project.category === 'Commercial'
+      ? [{ label: 'Format', value: 'Modular Commercial' }, { label: 'Setup', value: 'Rapid Installation' }, { label: 'Service', value: 'Integrated Fit-out' }]
+      : [{ label: 'System', value: 'Off-site Modular' }, { label: 'Installation', value: 'Low-disruption Setup' }, { label: 'Finish', value: 'Durable External Envelope' }];
+  const technicalSpecs = project.technicalSpecs ?? defaultSpecs;
+  const standardizedDetails = project.details.map((detail) =>
+    detail.label === 'Status' && detail.value === 'Reference Proposal'
+      ? { ...detail, value: 'Concept Study' }
+      : detail
+  );
+  const visibleDetails = demoItems(standardizedDetails, standardizedDetails.slice(0, 2));
+  const visibleSpecs = demoItems(technicalSpecs, technicalSpecs.slice(0, 2));
+  const completeGallery = [...project.gallery, ...(EXTRA_GALLERY_IMAGES[project.id] ?? [])];
+  while (completeGallery.length < 3) {
+    completeGallery.push(project.image);
+  }
+  const visibleGallery = demoItems(completeGallery, completeGallery.slice(0, 2));
 
   return (
     <div className="bg-ink">
@@ -25,6 +56,14 @@ export default function ProjectDetail() {
         description={project.description} 
         image={project.image}
       />
+      <Link
+        to="/work"
+        aria-label="Back to archive"
+        className="fixed top-6 left-6 md:top-8 md:left-8 z-50 flex items-center gap-3 px-4 py-3 bg-ink/75 backdrop-blur-md border border-gold/25 text-[9px] uppercase tracking-[0.28em] text-gold font-bold transition-all duration-300 hover:bg-gold hover:text-ink hover:border-gold"
+      >
+        <ArrowLeft size={14} />
+        Back to Archive
+      </Link>
       {/* Hero */}
       <CinematicSection parallax={false} className="h-screen">
         <div className="absolute inset-0 overflow-hidden">
@@ -142,7 +181,7 @@ export default function ProjectDetail() {
                     ))}
                   </div>
                   
-                  {project.technicalSpecs && (
+                  {technicalSpecs.length > 0 && (
                     <div className="pt-12 border-t border-stone/10 space-y-8">
                       <h4 className="text-[10px] uppercase tracking-[0.3em] text-gold font-bold">Specifications</h4>
                       <div className="space-y-6">

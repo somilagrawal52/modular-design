@@ -29,6 +29,13 @@ export default function Work() {
     ?? limitedProjects[0];
   const gridProjects = limitedProjects.filter((project) => project.id !== featuredProject?.id);
   const hasMoreProjects = visibleCount < visibleProjects.length;
+  const projectSummary = (project: typeof PROJECTS[number]) => ({
+    type: project.details.find((detail) => detail.label === 'Type')?.value ?? project.category,
+    system: project.technicalSpecs?.[0]?.value ?? 'Off-site Modular',
+    status: project.details.find((detail) => detail.label === 'Status')?.value === 'Reference Proposal'
+      ? 'Concept Study'
+      : project.details.find((detail) => detail.label === 'Status')?.value ?? 'Concept Study',
+  });
 
   return (
     <div className="bg-ink min-h-screen pt-40 pb-32 relative overflow-hidden">
@@ -187,9 +194,19 @@ export default function Work() {
                     <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tighter leading-[0.95] group-hover/card:text-gold transition-colors duration-500">
                       {project.title}
                     </h3>
-                    <p className="mt-5 text-sm text-ivory/50 uppercase tracking-[0.18em]">
-                      {project.location}
-                    </p>
+                    <div className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-5 border-t border-stone/15 pt-5 text-[9px] uppercase tracking-[0.16em] text-ivory/45 font-bold">
+                      {[
+                        ['Location', project.location],
+                        ['Type', projectSummary(project).type],
+                        ['System', projectSummary(project).system],
+                        ['Status', projectSummary(project).status],
+                      ].map(([label, value]) => (
+                        <div key={label} className="min-w-0">
+                          <span className="block text-gold/70 mb-2">{label}</span>
+                          <span className="block text-ivory/70 normal-case tracking-normal text-[11px] font-medium truncate">{value}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   <ArrowUpRight size={28} className="mt-7 shrink-0 text-ivory/20 group-hover/card:text-gold group-hover/card:translate-x-1 group-hover/card:-translate-y-1 transition-all duration-500" />
                 </div>

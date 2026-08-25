@@ -97,8 +97,17 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
 }
 
 export default function FeaturedWork() {
-  // The full project set remains available when manager demo mode is disabled.
-  const featuredProjects = [PROJECTS[0], PROJECTS[7], PROJECTS[6], PROJECTS[5]];
+  const featuredDestinationIds = [
+    'jaisalmer-desert-camp',
+    'jaipur-boutique-stay',
+    'goa-coastal-retreat',
+    'rishikesh-wellness-retreat',
+    'kerala-backwater-retreat',
+  ];
+  const featuredProjects = featuredDestinationIds.flatMap((id) => {
+    const project = PROJECTS.find((item) => item.id === id);
+    return project ? [project] : [];
+  });
   const visibleProjects = demoItems(featuredProjects, featuredProjects);
   return (
     <section id="work" className="py-24 md:py-48 px-8 relative overflow-hidden">
@@ -114,12 +123,12 @@ export default function FeaturedWork() {
               <div className="flex items-center gap-4 mb-8">
                 <span className="text-gold font-mono text-xs">02</span>
                 <div className="h-[1px] w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Portfolio</span>
+                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Featured Destinations</span>
               </div>
             </Reveal>
             <StaggerText
               el="h2"
-              text="MODULAR POSSIBILITIES."
+              text="INDIA, MODULAR."
               className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.85]"
               delay={0.2}
               stagger={0.08}
