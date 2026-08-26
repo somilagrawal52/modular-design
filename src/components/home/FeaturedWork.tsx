@@ -97,14 +97,14 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
 }
 
 export default function FeaturedWork() {
-  const featuredDestinationIds = [
-    'jaisalmer-desert-camp',
-    'jaipur-boutique-stay',
-    'goa-coastal-retreat',
-    'rishikesh-wellness-retreat',
-    'kerala-backwater-retreat',
+  const featuredCapsuleIds = [
+    'modular-capsule-desert-retreat',
+    'modular-capsule-backwater-retreat',
+    'modular-capsule-tea-estate-retreat',
+    'modular-capsule-island-retreat',
+    'modular-capsule-lake-retreat',
   ];
-  const featuredProjects = featuredDestinationIds.flatMap((id) => {
+  const featuredProjects = featuredCapsuleIds.flatMap((id) => {
     const project = PROJECTS.find((item) => item.id === id);
     return project ? [project] : [];
   });
@@ -113,7 +113,7 @@ export default function FeaturedWork() {
     <section id="work" className="py-24 md:py-48 px-8 relative overflow-hidden">
       {/* Background Parallax */}
       <ParallaxElement speed={-0.05} className="absolute top-20 left-[-5%] text-[20vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
-        SELECTED
+        CAPSULE
       </ParallaxElement>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -123,12 +123,12 @@ export default function FeaturedWork() {
               <div className="flex items-center gap-4 mb-8">
                 <span className="text-gold font-mono text-xs">02</span>
                 <div className="h-[1px] w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Featured Destinations</span>
+                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Featured Capsule Systems</span>
               </div>
             </Reveal>
             <StaggerText
               el="h2"
-              text="INDIA, MODULAR."
+              text="CAPSULE SYSTEMS."
               className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.85]"
               delay={0.2}
               stagger={0.08}

@@ -13,6 +13,41 @@ import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
 const CATEGORIES = ['All', 'Residential', 'Hospitality', 'Commercial', 'Workplace', 'Community', 'Amenities'];
 const INITIAL_PROJECT_COUNT = 11;
+const CAPSULE_PROJECT_ORDER = [
+  'modular-capsule-micro-library-hub',
+  'modular-capsule-skills-learning-lab',
+  'modular-capsule-smart-washroom-pavilion',
+  'modular-capsule-care-clinic',
+  'modular-capsule-workforce-services-hub',
+  'modular-capsule-visitor-gateway',
+  'modular-capsule-drive-through-restaurant',
+  'modular-capsule-ev-charging-lounge',
+  'modular-capsule-learning-studio',
+  'modular-capsule-wellness-pavilion',
+  'modular-capsule-coworking-studio',
+  'modular-capsule-cafe',
+  'modular-capsule-courtyard-residence',
+  'modular-capsule-lake-retreat',
+  'modular-capsule-island-retreat',
+  'modular-capsule-tea-estate-retreat',
+  'modular-capsule-alpine-retreat',
+  'modular-capsule-desert-retreat',
+  'modular-capsule-forest-retreat',
+  'modular-capsule-backwater-retreat',
+];
+
+const orderProjectsForPortfolio = (projects: typeof PROJECTS) =>
+  [...projects].sort((first, second) => {
+    const firstOrder = CAPSULE_PROJECT_ORDER.indexOf(first.id);
+    const secondOrder = CAPSULE_PROJECT_ORDER.indexOf(second.id);
+    const firstIsCapsule = firstOrder !== -1;
+    const secondIsCapsule = secondOrder !== -1;
+
+    if (firstIsCapsule && secondIsCapsule) return firstOrder - secondOrder;
+    if (firstIsCapsule) return -1;
+    if (secondIsCapsule) return 1;
+    return Number(second.year) - Number(first.year);
+  });
 
 export default function Work() {
   const [filter, setFilter] = useState(MANAGER_DEMO_MODE ? 'Residential' : 'All');
@@ -20,13 +55,10 @@ export default function Work() {
   const filteredProjects = filter === 'All'
     ? PROJECTS
     : PROJECTS.filter((project) => project.category === filter);
-  const visibleProjects = demoItems(filteredProjects, [PROJECTS[5]]);
+  const orderedProjects = orderProjectsForPortfolio(filteredProjects);
+  const visibleProjects = demoItems(orderedProjects, [orderedProjects[0]]);
   const limitedProjects = visibleProjects.slice(0, visibleCount);
-  const preferredFeaturedId = filter === 'All' || filter === 'Residential'
-    ? 'monsoon-modular-home'
-    : undefined;
-  const featuredProject = limitedProjects.find((project) => project.id === preferredFeaturedId)
-    ?? limitedProjects[0];
+  const featuredProject = limitedProjects[0];
   const gridProjects = limitedProjects.filter((project) => project.id !== featuredProject?.id);
   const hasMoreProjects = visibleCount < visibleProjects.length;
   const projectSummary = (project: typeof PROJECTS[number]) => ({
@@ -61,11 +93,11 @@ export default function Work() {
           <div className="max-w-4xl">
             <ParallaxElement speed={0.02}>
               <Reveal direction="right">
-                <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Modular Applications</span>
+                <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Primary Portfolio — Capsule Systems</span>
               </Reveal>
               <StaggerText
                 el="h1"
-                text="MODULAR APPLICATIONS."
+                text="CAPSULE SYSTEMS."
                 className="text-[10vw] md:text-[8vw] font-display font-bold leading-[0.85] tracking-tighter"
                 delay={0.2}
                 stagger={0.08}
