@@ -15,7 +15,7 @@ export default function SEO({
   description,
   name = SITE_STUDIO_NAME,
   type = 'website',
-  image = 'https://modular-design-flax.vercel.app/images/modular-hotel-realistic.jpg',
+  image = 'https://modular-design-flax.vercel.app/images/modular-capsule-desert-retreat-hero.png',
   url = 'https://modular-design-flax.vercel.app/'
 }: SEOProps) {
   const fullTitle = `${title} | ${name}`;

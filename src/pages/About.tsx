@@ -19,8 +19,8 @@ export default function About() {
       <CinematicSection parallax={false} className="h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
-            src="/images/modular-hotel-realistic.jpg"
-            alt="Modular hotel with repeatable guest-room modules"
+            src="/images/modular-capsule-desert-retreat-hero.png"
+            alt="Modular capsule retreat in a desert landscape"
             speed={0.2}
             className="w-full h-full"
           />

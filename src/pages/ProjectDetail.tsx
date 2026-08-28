@@ -12,18 +12,10 @@ import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 
 const EXTRA_GALLERY_IMAGES: Record<string, string[]> = {
   'garden-pavilion': ['/images/garden-pavilion-extra.png'],
-  'modular-retail-showroom': ['/images/retail-showroom-extra.png'],
   'modular-rooftop-bar': ['/images/rooftop-bar-extra.png'],
   'modular-pool-leisure': ['/images/pool-leisure-extra.png'],
-  'modular-hotel': ['/images/modular-hotel-interior.png', '/images/modular-hotel-courtyard.png'],
-  'modular-clinic': ['/images/modular-clinic-interior.png', '/images/modular-clinic-exterior.png'],
-  'workforce-accommodation': ['/images/workforce-accommodation-lounge.png', '/images/workforce-accommodation-campus.png'],
-  'modular-classroom': ['/images/modular-classroom-interior.png', '/images/modular-classroom-exterior.png'],
-  'modular-site-office': ['/images/site-office-interior.png', '/images/site-office-exterior.png'],
   'modular-gym': ['/images/modular-gym-interior.png', '/images/modular-gym-exterior.png'],
-  'modular-restroom': ['/images/modular-restroom-interior.png'],
   'event-washroom-unit': ['/images/event-washroom-exterior.png', '/images/event-washroom-interior.png'],
-  'modular-canteen': ['/images/modular-canteen-interior.png', '/images/modular-canteen-exterior.png'],
 };
 
 export default function ProjectDetail() {

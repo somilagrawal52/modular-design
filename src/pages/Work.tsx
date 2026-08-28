@@ -14,6 +14,18 @@ import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 const CATEGORIES = ['All', 'Residential', 'Hospitality', 'Commercial', 'Workplace', 'Community', 'Amenities'];
 const INITIAL_PROJECT_COUNT = 11;
 const CAPSULE_PROJECT_ORDER = [
+  'modular-capsule-coliving-courtyard',
+  'modular-capsule-creative-studio-office',
+  'modular-capsule-orchard-farmhouse',
+  'modular-capsule-garden-family-residence',
+  'modular-capsule-lakeside-wellness-deck',
+  'modular-capsule-mountain-trail-basecamp',
+  'modular-capsule-desert-adventure-lodge',
+  'modular-capsule-coastal-leisure-pavilion',
+  'modular-capsule-exhibition-pavilion',
+  'modular-capsule-last-mile-logistics-hub',
+  'modular-capsule-retail-kiosk',
+  'modular-capsule-brand-experience-gallery',
   'modular-capsule-micro-library-hub',
   'modular-capsule-skills-learning-lab',
   'modular-capsule-smart-washroom-pavilion',
