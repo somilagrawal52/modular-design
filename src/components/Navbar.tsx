@@ -24,6 +24,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Work', href: '/work' },
+    { name: 'System', href: '/system' },
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -47,7 +48,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-12 items-center">
+      <div className="hidden lg:flex gap-8 xl:gap-12 items-center">
         {navLinks.map((link, i) => (
           <motion.div
             key={link.name}
@@ -70,7 +71,7 @@ export default function Navbar() {
 
       {/* Mobile Toggle */}
       <button
-        className="md:hidden text-ivory p-2 z-[1001] relative"
+        className="lg:hidden text-ivory p-2 z-[1001] relative"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Menu"
       >
@@ -107,7 +108,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 w-full h-[100dvh] bg-ink backdrop-blur-2xl z-[1000] flex flex-col items-center justify-center md:hidden overflow-y-auto py-20"
+            className="fixed inset-0 w-full h-[100dvh] bg-ink backdrop-blur-2xl z-[1000] flex flex-col items-center justify-center lg:hidden overflow-y-auto py-20"
           >
             <div className="flex flex-col items-center gap-6 sm:gap-8 w-full">
               {navLinks.map((link, i) => (

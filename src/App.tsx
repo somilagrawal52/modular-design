@@ -11,6 +11,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import About from './pages/About';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
+import SystemPage from './pages/SystemPage';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:id" element={<ProjectDetail />} />
+        <Route path="/system" element={<SystemPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactPage />} />
