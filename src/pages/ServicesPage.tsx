@@ -122,7 +122,7 @@ export default function ServicesPage() {
                     className="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl"
                   >
                     <ParallaxImage
-                      src={['/images/modular-home-garden-hero.jpg', '/images/modular-capsule-desert-retreat-hero.png', '/images/modular-office-india-exterior.jpg', '/images/container-cafe-rooftop.jpeg', '/images/modular-experience-showroom-hero.png', '/images/container-pool.jpeg'][i]}
+                      src={['/images/modular-home-garden-hero.jpg', '/images/modular-capsule-desert-retreat-hero.png', '/images/modular-office-india-exterior.jpg', '/images/container-cafe-rooftop.jpeg', '/images/modular-capsule-brand-experience-gallery-hero.png', '/images/container-pool.jpeg'][i]}
                       alt={service.title}
                       className="w-full h-full transition-all duration-1000"
                     />
