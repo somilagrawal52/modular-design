@@ -14,6 +14,11 @@ import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 const CATEGORIES = ['All', 'Residential', 'Hospitality', 'Commercial', 'Workplace', 'Community', 'Amenities'];
 const INITIAL_PROJECT_COUNT = 11;
 const CAPSULE_PROJECT_ORDER = [
+  'modular-capsule-riverbend-resort',
+  'modular-capsule-cloudline-observatory',
+  'modular-capsule-mangrove-retreat',
+  'modular-capsule-stone-spring-lodge',
+  'modular-capsule-canyon-skywalk-lodge',
   'modular-capsule-meadow-studio',
   'modular-capsule-rainforest-villa',
   'modular-capsule-stargazer-lodge',

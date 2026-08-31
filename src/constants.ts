@@ -2,6 +2,16 @@ import { Project, Service } from './types';
 
 export const PROJECTS: Project[] = [
   {
+    id: 'modular-capsule-riverbend-resort', title: 'Riverbend Capsule Resort', category: 'Hospitality', location: 'Rishikesh, Uttarakhand, India', year: '2026', image: '/images/capsule-riverbend-resort-hero.png',
+    description: 'A riverside hospitality pair of compact Volferda E3 capsules that brings panoramic guest rooms to the edge of the Ganges without the footprint of a conventional resort wing.',
+    challenge: 'Create an all-season destination beside a fast mountain river while keeping the built edge light, serviceable, and respectful of the natural terrain.',
+    solution: 'Two factory-finished E3 capsules are set on slim independent supports and linked by a raised service bridge, with the guest fit-out completed before installation.',
+    materiality: 'Smooth white shells, dark-framed curved glazing, pale oak interiors, stainless support frames, and river-stone thresholds balance a compact capsule language with the landscape.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Volferda E3' }, { label: 'Configuration', value: 'Twin River Suites + Bridge' }, { label: 'Foundation', value: 'Raised Independent Supports' }],
+    details: [{ label: 'Type', value: 'Riverside Capsule Hospitality' }, { label: 'Location', value: 'Rishikesh, Uttarakhand, India' }, { label: 'Status', value: 'Concept Ready' }],
+    gallery: ['/images/capsule-riverbend-resort-hero.png', '/images/capsule-riverbend-resort-evening.png', '/images/capsule-riverbend-resort-interior.png']
+  },
+  {
     id: 'modular-capsule-meadow-studio', title: 'Meadow Capsule Studio', category: 'Hospitality', location: 'Nainital, Uttarakhand, India', year: '2026', image: '/images/capsule-meadow-studio-hero.png',
     description: 'A compact panoramic capsule studio that creates a complete guest suite in a single factory-built volume, positioned lightly in a misty mountain meadow.',
     challenge: 'Deliver a premium one-key stay to a sloping landscape while protecting the open character of the meadow and keeping construction time short.',
@@ -10,36 +20,6 @@ export const PROJECTS: Project[] = [
     technicalSpecs: [{ label: 'System', value: 'Compact Capsule Studio' }, { label: 'Foundation', value: 'Independent Micro-piers' }, { label: 'Envelope', value: 'Insulated Composite Shell' }],
     details: [{ label: 'Type', value: 'Mountain Capsule Hospitality' }, { label: 'Location', value: 'Nainital, Uttarakhand, India' }, { label: 'Status', value: 'Concept Ready' }],
     gallery: ['/images/capsule-meadow-studio-hero.png', '/images/capsule-meadow-studio-evening.png', '/images/capsule-meadow-studio-interior.png']
-  },
-  {
-    id: 'modular-capsule-rainforest-villa', title: 'Rainforest Capsule Villa', category: 'Hospitality', location: 'Wayanad, Kerala, India', year: '2026', image: '/images/capsule-rainforest-villa-hero.png',
-    description: 'A two-bedroom capsule villa composed of twin panoramic guest wings, balancing generous family accommodation with a repeatable light-touch modular system.',
-    challenge: 'Create a larger all-weather stay for a rainforest site without turning to a conventional, high-footprint villa.',
-    solution: 'Two factory-complete capsule wings connect through a compact glazed link, arriving with services, bathrooms, interiors, and weather sealing completed before crane placement.',
-    materiality: 'Faceted white composite panels, full-height black glazing, warm oak interiors, raised dark-metal supports, and rain-ready paving give the villa a resilient tropical character.',
-    technicalSpecs: [{ label: 'System', value: 'Twin-bay Capsule Villa' }, { label: 'Configuration', value: 'Two Bedroom + Glazed Link' }, { label: 'Climate', value: 'Monsoon-ready Envelope' }],
-    details: [{ label: 'Type', value: 'Rainforest Capsule Hospitality' }, { label: 'Location', value: 'Wayanad, Kerala, India' }, { label: 'Status', value: 'Concept Ready' }],
-    gallery: ['/images/capsule-rainforest-villa-hero.png', '/images/capsule-rainforest-villa-evening.png', '/images/capsule-rainforest-villa-interior.png']
-  },
-  {
-    id: 'modular-capsule-stargazer-lodge', title: 'Stargazer Capsule Lodge', category: 'Hospitality', location: 'Hanle, Ladakh, India', year: '2026', image: '/images/capsule-stargazer-lodge-hero.png',
-    description: 'A wide, self-contained capsule lodge shaped around panoramic desert views and a rooflight that brings the night sky into the guest experience.',
-    challenge: 'Deliver a memorable high-altitude suite with reliable thermal performance and minimal site disruption across an exposed cold-desert setting.',
-    solution: 'A factory-finished lodge is crane-set onto a raised pier grid, with insulated services, a compact deck, and an integrated rooflight prepared before delivery.',
-    materiality: 'Graphite and white faceted panels, insulated dark glazing, a star-facing rooflight, warm timber joinery, and low amber lighting support a durable, cinematic guest experience.',
-    technicalSpecs: [{ label: 'System', value: 'Grand Panorama Capsule' }, { label: 'Foundation', value: 'Raised Pier Grid' }, { label: 'Feature', value: 'Integrated Stargazing Rooflight' }],
-    details: [{ label: 'Type', value: 'High-altitude Capsule Hospitality' }, { label: 'Location', value: 'Hanle, Ladakh, India' }, { label: 'Status', value: 'Concept Ready' }],
-    gallery: ['/images/capsule-stargazer-lodge-hero.png', '/images/capsule-stargazer-lodge-night.png', '/images/capsule-stargazer-lodge-interior.png']
-  },
-  {
-    id: 'modular-capsule-dune-courtyard', title: 'Dune Capsule Courtyard', category: 'Hospitality', location: 'Kutch, Gujarat, India', year: '2026', image: '/images/capsule-dune-courtyard-hero.png',
-    description: 'A protected desert courtyard formed by three faceted capsule suites, creating a shaded shared heart while preserving individual panoramic guest rooms.',
-    challenge: 'Make a comfortable desert compound that can manage heat, exposure, and privacy without heavy permanent construction.',
-    solution: 'Three weather-sealed capsule volumes are placed around a planted central court and connected by short paths, allowing the destination to be extended in matching clusters.',
-    materiality: 'Pale faceted composite shells, black framed glazing, shaded thresholds, stone paths, desert planting, and warm oak interiors create a precise response to the salt-desert palette.',
-    technicalSpecs: [{ label: 'System', value: 'Faceted Capsule Courtyard' }, { label: 'Configuration', value: 'Three Suite Cluster' }, { label: 'Climate', value: 'Heat + Dust-ready Envelope' }],
-    details: [{ label: 'Type', value: 'Desert Capsule Hospitality' }, { label: 'Location', value: 'Kutch, Gujarat, India' }, { label: 'Status', value: 'Concept Ready' }],
-    gallery: ['/images/capsule-dune-courtyard-hero.png', '/images/capsule-dune-courtyard-evening.png', '/images/capsule-dune-courtyard-interior.png']
   },
   {
     id: 'modular-apple-cabin-courtyard-village', title: 'Apple Cabin Courtyard Village', category: 'Hospitality', location: 'Bengaluru, Karnataka, India', year: '2026', image: '/images/apple-cabin-village-hero.png',
@@ -119,26 +99,6 @@ export const PROJECTS: Project[] = [
     technicalSpecs: [{ label: 'Construction', value: 'Off-site Modular' }, { label: 'Foundation', value: 'Light-touch Supports' }, { label: 'Glazing', value: 'Panoramic Insulated Glass' }],
     details: [{ label: 'Type', value: 'Modular Residence' }, { label: 'Delivery', value: 'Turnkey Module' }, { label: 'Status', value: 'Concept Study' }],
     gallery: ['/images/modular-home-garden-hero.jpg', '/images/garden-pavilion-interior.png']
-  },
-  {
-    id: 'courtyard-house', title: 'Courtyard House', category: 'Residential', location: 'Site-specific', year: '2026', image: '/images/modular-courtyard-home-exterior.jpg',
-    description: 'A calm two-module home organised around a planted courtyard, combining factory-built precision with warm, everyday living spaces.',
-    challenge: 'Create a spacious-feeling family home from transportable modules while keeping the garden at the centre of daily life.',
-    solution: 'Two prefabricated volumes are joined by a glazed connection and sheltered deck, creating a protected courtyard and a flexible open-plan living zone.',
-    materiality: 'Charcoal standing-seam cladding, cedar-lined reveals, black aluminium glazing, and low-maintenance native planting give the home a durable, grounded finish.',
-    technicalSpecs: [{ label: 'Configuration', value: 'Two Connected Modules' }, { label: 'Construction', value: 'Off-site Prefabrication' }, { label: 'Outdoor Space', value: 'Central Courtyard' }],
-    details: [{ label: 'Type', value: 'Modular Family Home' }, { label: 'Layout', value: 'Courtyard Plan' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-courtyard-home-exterior.jpg', '/images/modular-courtyard-home-interior.jpg', '/images/modular-courtyard-home-dusk.jpg']
-  },
-  {
-    id: 'monsoon-modular-home', title: 'Monsoon Modular Home', category: 'Residential', location: 'South India', year: '2026', image: '/images/india-modular-home-exterior.jpg',
-    description: 'A climate-responsive modular family home for South India, combining factory-built steel-frame volumes with deep shade, cross-ventilation, and a sheltered courtyard.',
-    challenge: 'Adapt a repeatable modular system to warm weather, intense monsoon rain, local construction practices, and the everyday needs of an Indian family.',
-    solution: 'Three prefabricated modules sit on a raised concrete plinth and connect through covered verandas, while brick jaali screens, generous overhangs, and operable openings control sun, rain, and airflow.',
-    materiality: 'Off-white insulated panels and charcoal steel frames are softened by local brick jaali, Kota stone, cane furniture, terracotta accents, and post-monsoon planting.',
-    technicalSpecs: [{ label: 'System', value: 'Steel-frame Modules' }, { label: 'Climate', value: 'Warm & Monsoon-ready' }, { label: 'Energy', value: 'Passive Shade + Solar' }],
-    details: [{ label: 'Type', value: 'Climate-responsive Home' }, { label: 'Region', value: 'South India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/india-modular-home-exterior.jpg', '/images/india-modular-home-courtyard.jpg', '/images/india-modular-home-interior.jpg']
   },
   {
     id: 'modular-restaurant', title: 'Modular Restaurant', category: 'Commercial', location: 'Site-specific', year: '2026', image: '/images/modular-restaurant-realistic.jpg',
@@ -279,16 +239,6 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/modular-capsule-learning-studio-hero.png', '/images/modular-capsule-learning-studio-interior.png', '/images/modular-capsule-learning-studio-installation.png']
   },
   {
-    id: 'modular-capsule-ev-charging-lounge', title: 'Modular Capsule EV Charging Lounge', category: 'Amenities', location: 'India', year: '2026', image: '/images/modular-capsule-ev-charging-lounge-hero.png',
-    description: 'A roadside charging and refreshment lounge that turns a short EV stop into a comfortable, high-quality pause through a pair of transport-ready capsule modules.',
-    challenge: 'Create a fast-to-deploy charging amenity that gives drivers shelter, refreshment, work space, and a clear premium identity without a conventional roadside build.',
-    solution: 'Two factory-finished capsule modules combine a bright guest lounge with integrated service space, then connect to charging bays and a shaded timber deck on a compact prepared plinth.',
-    materiality: 'Warm-grey insulated shells, low-iron panoramic glazing, oak-lined interiors, dark charging hardware, and restrained planting give the mobility hub a calm, durable character.',
-    technicalSpecs: [{ label: 'Configuration', value: '2 Capsule Lounge Modules' }, { label: 'Mobility', value: '4 EV Charging Bays' }, { label: 'Delivery', value: 'Rapid Plinth Installation' }],
-    details: [{ label: 'Type', value: 'EV Charging Amenity' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-ev-charging-lounge-hero.png', '/images/modular-capsule-ev-charging-lounge-interior.png', '/images/modular-capsule-ev-charging-lounge-installation.png']
-  },
-  {
     id: 'modular-capsule-visitor-gateway', title: 'Modular Capsule Visitor Gateway', category: 'Community', location: 'India', year: '2026', image: '/images/modular-capsule-visitor-gateway-hero.png',
     description: 'A low-impact arrival hub for natural destinations, bringing orientation, public amenities, and sheltered gathering space together in a repeatable capsule system.',
     challenge: 'Create an inviting visitor facility in a sensitive landscape while reducing permanent construction, protecting trees, and allowing the destination to grow in phases.',
@@ -329,46 +279,6 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/modular-capsule-micro-library-hub-hero.png', '/images/modular-capsule-micro-library-hub-interior.png', '/images/modular-capsule-micro-library-hub-installation.png']
   },
   {
-    id: 'modular-capsule-brand-experience-gallery', title: 'Modular Capsule Brand Experience Gallery', category: 'Commercial', location: 'India', year: '2026', image: '/images/modular-capsule-brand-experience-gallery-hero.png',
-    description: 'A high-impact, low-footprint commercial gallery that turns transportable capsule modules into a warm destination for display, consultation, and small events.',
-    challenge: 'Create a memorable premium customer environment that can move with a launch programme or evolve with a changing commercial site, without a permanent conventional fit-out.',
-    solution: 'Three factory-finished capsules form a composed gallery sequence with glazed display rooms, a dedicated consultation lounge, and a timber arrival deck that can be installed or relocated as one coordinated system.',
-    materiality: 'Warm-grey insulated shells, rounded low-iron glazing, light-oak joinery, acoustic linings, charcoal aluminium frames, and planted stone edges create a durable commercial setting.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Gallery Modules' }, { label: 'Programme', value: 'Display + Consultation' }, { label: 'Delivery', value: 'Rapid Commercial Installation' }],
-    details: [{ label: 'Type', value: 'Capsule Brand Experience Gallery' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-brand-experience-gallery-hero.png', '/images/modular-capsule-brand-experience-gallery-interior.png', '/images/modular-capsule-brand-experience-gallery-installation.png']
-  },
-  {
-    id: 'modular-capsule-retail-kiosk', title: 'Modular Capsule Retail Kiosk', category: 'Commercial', location: 'India', year: '2026', image: '/images/modular-capsule-retail-kiosk-hero.png',
-    description: 'A compact deployable retail and customer-service point that brings a polished capsule format to plazas, campuses, events, and high-footfall public settings.',
-    challenge: 'Deliver a premium small-footprint retail environment that can adapt to seasonal demand and change location without losing the quality of a permanent storefront.',
-    solution: 'One fully finished retail capsule combines a glazed display front, point-of-sale counter, concealed storage, and timber landing deck in a single crane-set commercial unit.',
-    materiality: 'A warm-grey insulated shell, rounded charcoal glazing frame, oak cabinetry, matte metal shelving, seamless flooring, and integrated lighting give the kiosk a precise and welcoming character.',
-    technicalSpecs: [{ label: 'Format', value: 'Single Capsule Kiosk' }, { label: 'Programme', value: 'Display + Point of Sale' }, { label: 'Setup', value: 'Plug-in Site Services' }],
-    details: [{ label: 'Type', value: 'Capsule Retail Kiosk' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-retail-kiosk-hero.png', '/images/modular-capsule-retail-kiosk-interior.png', '/images/modular-capsule-retail-kiosk-installation.png']
-  },
-  {
-    id: 'modular-capsule-exhibition-pavilion', title: 'Modular Capsule Exhibition Pavilion', category: 'Commercial', location: 'India', year: '2026', image: '/images/modular-capsule-exhibition-pavilion-hero.png',
-    description: 'A transportable exhibition destination for product, cultural, and public displays, composed as a refined cluster of glazed capsule rooms and a sheltered event terrace.',
-    challenge: 'Make a strong, reusable public presence for fairs and short-term programmes while preserving a high-quality visitor experience and minimising site disruption.',
-    solution: 'Three factory-finished capsules sit around a covered oak-lined terrace, pairing flexible exhibition rooms with a natural arrival and gathering space that can be crane-set, removed, and reused.',
-    materiality: 'Warm-grey weatherproof shells, panoramic curved glazing, oak flooring and soffits, acoustic ceilings, dark aluminium frames, stone paving, and landscape planting set an understated gallery tone.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Pavilion Modules' }, { label: 'Programme', value: 'Exhibition + Events' }, { label: 'Delivery', value: 'Crane-set + Reusable' }],
-    details: [{ label: 'Type', value: 'Capsule Exhibition Pavilion' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-exhibition-pavilion-hero.png', '/images/modular-capsule-exhibition-pavilion-interior.png', '/images/modular-capsule-exhibition-pavilion-installation.png']
-  },
-  {
-    id: 'modular-capsule-coastal-leisure-pavilion', title: 'Modular Capsule Coastal Leisure Pavilion', category: 'Amenities', location: 'Goa, India', year: '2026', image: '/images/modular-capsule-coastal-leisure-pavilion-hero.png',
-    description: 'A low-impact coastal leisure destination that groups glazed capsule rooms, a shaded deck, and a compact water lounge into a refined tropical amenity.',
-    challenge: 'Create a premium social and relaxation setting for a sensitive coastal site while limiting wet construction, protecting planting, and allowing the system to evolve with the destination.',
-    solution: 'Three factory-finished capsules sit lightly around a teak deck and small plunge-pool lounge, combining a flexible gathering room, refreshment point, and quiet retreat space in a reusable installation.',
-    materiality: 'Warm-grey weatherproof shells, deep charcoal glazing frames, curved low-iron glass, teak decking, oak linings, pale stone, and layered tropical planting balance durability with a calm coastal feel.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Leisure Modules' }, { label: 'Programme', value: 'Lounge + Water Deck' }, { label: 'Foundation', value: 'Low Adjustable Supports' }],
-    details: [{ label: 'Type', value: 'Capsule Coastal Leisure Pavilion' }, { label: 'Region', value: 'Goa, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-coastal-leisure-pavilion-hero.png', '/images/modular-capsule-coastal-leisure-pavilion-interior.png', '/images/modular-capsule-coastal-leisure-pavilion-installation.png']
-  },
-  {
     id: 'modular-capsule-desert-adventure-lodge', title: 'Modular Capsule Desert Adventure Lodge', category: 'Hospitality', location: 'Rajasthan, India', year: '2026', image: '/images/modular-capsule-desert-adventure-lodge-hero.png',
     description: 'A climate-ready adventure lodge that uses insulated capsule guest suites and a shared shaded courtyard to create a durable, low-impact desert stay.',
     challenge: 'Give guests a comfortable, memorable base in a hot and fragile landscape without relying on heavy construction, standard tents, or a fixed resort footprint.',
@@ -380,63 +290,13 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'modular-capsule-mountain-trail-basecamp', title: 'Modular Capsule Mountain Trail Basecamp', category: 'Hospitality', location: 'Himachal Pradesh, India', year: '2026', image: '/images/modular-capsule-mountain-trail-basecamp-hero.png',
-    description: 'A robust mountain basecamp that combines weather-ready capsule rooms, gear storage, warm gathering space, and a sheltered terrace at the start of a trail network.',
+    description: 'A robust mountain basecamp formed from stackable Luban A50 Ultra modules, combining gear storage, warm gathering space, and a sheltered terrace at the start of a trail network.',
     challenge: 'Provide a dependable visitor base in a remote mountain setting while reducing construction disruption and avoiding the temporary look of an ordinary trail cabin.',
-    solution: 'Three high-performance capsule modules form a clear arrival sequence of gear lounge, shared refreshment space, and flexible accommodation, set on a compact stone terrace with extendable plug-in capacity.',
-    materiality: 'High-performance insulated shells, rounded low-iron glazing, charcoal frames, oak storage and benches, durable rubber flooring, local stone, and weathered timber meet a demanding mountain climate.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Basecamp Modules' }, { label: 'Programme', value: 'Gear + Gathering + Stay' }, { label: 'Climate', value: 'Mountain-ready Envelope' }],
+    solution: 'Three A50 Ultra modules form a clear arrival sequence of gear lounge, shared refreshment space, and flexible accommodation, with elevated bridge components extending the compact stone-terrace basecamp.',
+    materiality: 'Pale grey and white insulated shells, dark rounded glazing, white external stairs, oak storage and benches, durable rubber flooring, local stone, and weathered timber meet a demanding mountain climate.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Luban A50 Ultra' }, { label: 'Configuration', value: '3 Stackable Basecamp Modules' }, { label: 'Programme', value: 'Gear + Gathering + Stay' }],
     details: [{ label: 'Type', value: 'Capsule Mountain Trail Basecamp' }, { label: 'Region', value: 'Himachal Pradesh, India' }, { label: 'Status', value: 'Concept Study' }],
     gallery: ['/images/modular-capsule-mountain-trail-basecamp-hero.png', '/images/modular-capsule-mountain-trail-basecamp-interior.png', '/images/modular-capsule-mountain-trail-basecamp-installation.png']
-  },
-  {
-    id: 'modular-capsule-lakeside-wellness-deck', title: 'Modular Capsule Lakeside Wellness Deck', category: 'Amenities', location: 'Kerala, India', year: '2026', image: '/images/modular-capsule-lakeside-wellness-deck-hero.png',
-    description: 'A waterside wellness setting that brings treatment, meditation, and relaxed gathering spaces together in a low-impact cluster of glazed capsule modules.',
-    challenge: 'Offer a calm, premium guest experience at the backwater edge without intensive shoreline works or a fixed building footprint that compromises the landscape.',
-    solution: 'Three factory-finished capsules align along a planted teak deck, creating adaptable wellness rooms and a covered meditation zone that can be carefully crane-set and serviced above the water edge.',
-    materiality: 'Warm-grey insulated shells, rounded glazing, pale oak interiors, charcoal frames, natural woven textures, teak decking, local stone, and dense tropical planting form a restrained wellness palette.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Wellness Modules' }, { label: 'Programme', value: 'Treatment + Meditation' }, { label: 'Foundation', value: 'Low-impact Adjustable Supports' }],
-    details: [{ label: 'Type', value: 'Capsule Lakeside Wellness Deck' }, { label: 'Region', value: 'Kerala, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-lakeside-wellness-deck-hero.png', '/images/modular-capsule-lakeside-wellness-deck-interior.png', '/images/modular-capsule-lakeside-wellness-deck-installation.png']
-  },
-  {
-    id: 'modular-capsule-garden-family-residence', title: 'Modular Capsule Garden Family Residence', category: 'Residential', location: 'Bengaluru, India', year: '2026', image: '/images/modular-capsule-garden-family-residence-hero.png',
-    description: 'A permanent-quality family home that arranges private and shared capsule rooms around a planted courtyard, pairing everyday comfort with a flexible off-site construction system.',
-    challenge: 'Create a warm, spacious home on a leafy urban site without sacrificing construction speed, future adaptability, or the garden space that makes the site special.',
-    solution: 'Four factory-finished capsules form a family living room, kitchen-dining room, private bedrooms, and an upper retreat around a shaded central garden that links the home together.',
-    materiality: 'Warm-grey insulated shells, curved low-iron glazing, oak joinery, charcoal aluminium frames, teak thresholds, pale stone paving, and dense garden planting make a calm and durable residential palette.',
-    technicalSpecs: [{ label: 'Configuration', value: '4 Capsule Family Modules' }, { label: 'Programme', value: 'Living + Bedrooms + Courtyard' }, { label: 'Foundation', value: 'Low Adjustable Supports' }],
-    details: [{ label: 'Type', value: 'Capsule Garden Family Residence' }, { label: 'Region', value: 'Bengaluru, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-garden-family-residence-hero.png', '/images/modular-capsule-garden-family-residence-interior.png', '/images/modular-capsule-garden-family-residence-installation.png']
-  },
-  {
-    id: 'modular-capsule-orchard-farmhouse', title: 'Modular Capsule Orchard Farmhouse', category: 'Residential', location: 'Nashik, India', year: '2026', image: '/images/modular-capsule-orchard-farmhouse-hero.png',
-    description: 'A low-impact farmhouse cluster that turns transportable capsule rooms into a comfortable orchard-facing home with a generous shaded verandah.',
-    challenge: 'Provide a high-quality rural retreat that can be built with minimal disruption to a working orchard and extend gradually as the property’s needs change.',
-    solution: 'Three factory-built capsules form living, sleeping, and kitchen zones around a covered timber verandah, sitting lightly above the ground with a repeatable system for future add-on rooms.',
-    materiality: 'Warm-grey weatherproof shells, oak cabinetry, panoramic low-iron glazing, charcoal frames, teak decking, local stone terraces, and orchard planting blend a precise modular system with its rural setting.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Farmhouse Modules' }, { label: 'Programme', value: 'Living + Stay + Verandah' }, { label: 'Growth', value: 'Add-on Guest Capsule' }],
-    details: [{ label: 'Type', value: 'Capsule Orchard Farmhouse' }, { label: 'Region', value: 'Nashik, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-orchard-farmhouse-hero.png', '/images/modular-capsule-orchard-farmhouse-interior.png', '/images/modular-capsule-orchard-farmhouse-installation.png']
-  },
-  {
-    id: 'modular-capsule-creative-studio-office', title: 'Modular Capsule Creative Studio Office', category: 'Workplace', location: 'Pune, India', year: '2026', image: '/images/modular-capsule-creative-studio-office-hero.png',
-    description: 'A refined workplace cluster for focused making, client sessions, and collaborative work, designed as a reusable capsule system around a landscaped social courtyard.',
-    challenge: 'Give a growing creative team a distinctive, professional home that feels permanent and client-ready without committing to a fixed conventional office build.',
-    solution: 'Four factory-finished capsules create open studio space, focus rooms, client meeting areas, and a shared outdoor work court, with clear connections and an extendable modular framework.',
-    materiality: 'Warm-grey insulated shells, broad curved glazing, oak worktops, acoustic linings, charcoal aluminium frames, timber deck surfaces, and garden planting support calm, productive daily use.',
-    technicalSpecs: [{ label: 'Configuration', value: '4 Capsule Studio Modules' }, { label: 'Programme', value: 'Work + Clients + Collaboration' }, { label: 'Growth', value: 'Plug-in Meeting Expansion' }],
-    details: [{ label: 'Type', value: 'Capsule Creative Studio Office' }, { label: 'Region', value: 'Pune, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-creative-studio-office-hero.png', '/images/modular-capsule-creative-studio-office-interior.png', '/images/modular-capsule-creative-studio-office-installation.png']
-  },
-  {
-    id: 'modular-capsule-coliving-courtyard', title: 'Modular Capsule Co-living Courtyard', category: 'Residential', location: 'Bengaluru, India', year: '2026', image: '/images/modular-capsule-coliving-courtyard-hero.png',
-    description: 'A contemporary co-living community that balances private long-stay capsule rooms with a lush shared courtyard and generous outdoor table for everyday connection.',
-    challenge: 'Create compact, high-quality long-stay rooms without losing the social space, planting, privacy, and resident identity expected of a permanent home.',
-    solution: 'Five factory-built residential capsules form private studios around a shaded central courtyard, pairing individual decks and storage-rich rooms with one adaptable communal gathering space.',
-    materiality: 'Warm-grey weatherproof shells, curved glazing, oak storage, soft neutral interiors, charcoal frames, teak paths, textured paving, and dense urban planting create a welcoming shared setting.',
-    technicalSpecs: [{ label: 'Configuration', value: '5 Capsule Living Modules' }, { label: 'Programme', value: 'Private Rooms + Shared Court' }, { label: 'Delivery', value: 'Phased Residential Installation' }],
-    details: [{ label: 'Type', value: 'Capsule Co-living Courtyard' }, { label: 'Region', value: 'Bengaluru, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-coliving-courtyard-hero.png', '/images/modular-capsule-coliving-courtyard-interior.png', '/images/modular-capsule-coliving-courtyard-installation.png']
   },
   {
     id: 'modular-rooftop-bar', title: 'Modular Café & Bar', category: 'Commercial', location: 'Site-specific', year: '2026', image: '/images/container-cafe-rooftop.jpeg',
@@ -448,15 +308,6 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/container-cafe-rooftop.jpeg', '/images/modular-rooftop-bar-interior.png']
   },
   {
-    id: 'modular-pool-leisure', title: 'Modular Pool & Leisure', category: 'Amenities', location: 'Site-specific', year: '2026', image: '/images/modular-pool-realistic.jpg',
-    description: 'A practical container-pool and leisure concept designed to add outdoor recreation quickly to homes, hotels, and retreats.',
-    challenge: 'Add a usable pool facility with minimal on-site construction and a simple serviceable layout.', solution: 'A container-based pool is delivered as a finished unit, then paired with practical deck, access, and landscape works.',
-    materiality: 'Durable steel cladding, timber decking, standard pool fittings, and low-maintenance planting create a robust outdoor amenity.',
-    technicalSpecs: [{ label: 'Configuration', value: 'Container Pool' }, { label: 'Access', value: 'Integrated Steps' }, { label: 'Delivery', value: 'Prefabricated Unit' }],
-    details: [{ label: 'Type', value: 'Outdoor Amenity' }, { label: 'Use', value: 'Pool & Leisure' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-pool-realistic.jpg', '/images/modular-pool-leisure-pavilion.png']
-  },
-  {
     id: 'modular-office', title: 'Modular Office', category: 'Workplace', location: 'Bengaluru Region, India', year: '2026', image: '/images/modular-office-india-exterior.jpg',
     description: 'A permanent-quality two-storey workplace assembled from six prefabricated office modules, combining rapid installation with shaded, comfortable spaces for an Indian climate.',
     challenge: 'Create a professional office that can be delivered quickly, expand with the business, and avoid the temporary appearance associated with portable site cabins.',
@@ -466,8 +317,6 @@ export const PROJECTS: Project[] = [
     details: [{ label: 'Type', value: 'Modular Workplace' }, { label: 'Region', value: 'Bengaluru, India' }, { label: 'Status', value: 'Concept Study' }],
     gallery: ['/images/modular-office-india-exterior.jpg', '/images/modular-office-india-interior.jpg', '/images/modular-office-india-installation.jpg']
   },
-  { id: 'modular-workforce-village', title: 'Modular Workforce Village', category: 'Community', location: 'India', year: '2026', image: '/images/modular-workforce-village-hero.png', description: 'A well-planned modular accommodation village with private rooms, communal landscape, and durable shared amenities.', details: [{ label: 'Type', value: 'Workforce Accommodation' }, { label: 'Status', value: 'Concept Study' }], gallery: ['/images/modular-workforce-village-hero.png', '/images/modular-workforce-village-interior.png', '/images/modular-workforce-village-common.png'] },
-  { id: 'modular-pool-spa-club', title: 'Modular Pool & Spa Club', category: 'Amenities', location: 'India', year: '2026', image: '/images/modular-pool-spa-club-hero.png', description: 'A modular leisure club combining a pool deck, shaded spa pavilion, changing facilities, and landscape-ready social space.', details: [{ label: 'Type', value: 'Leisure Amenity' }, { label: 'Status', value: 'Concept Study' }], gallery: ['/images/modular-pool-spa-club-hero.png', '/images/modular-pool-spa-club-deck.png', '/images/modular-pool-spa-club-wellness.png'] },
   { id: 'modular-farmhouse-retreat', title: 'Modular Farmhouse Retreat', category: 'Residential', location: 'India', year: '2026', image: '/images/modular-farmhouse-hero.png', description: 'A modern modular farmhouse that connects a warm, practical interior to broad views of the surrounding landscape.', details: [{ label: 'Type', value: 'Farmhouse Residence' }, { label: 'Status', value: 'Concept Study' }], gallery: ['/images/modular-farmhouse-hero.png', '/images/modular-farmhouse-interior.png', '/images/modular-farmhouse-veranda.png'] },
   { id: 'modular-office-campus', title: 'Modular Office Campus', category: 'Workplace', location: 'India', year: '2026', image: '/images/modular-office-campus-hero.png', description: 'An expandable modular office campus with connected workspaces, meeting rooms, and shaded arrival courts.', details: [{ label: 'Type', value: 'Office Campus' }, { label: 'Status', value: 'Concept Study' }], gallery: ['/images/modular-office-campus-hero.png', '/images/modular-office-campus-workspace.png', '/images/modular-office-campus-entry.png'] },
   { id: 'modular-care-clinic', title: 'Modular Care Clinic', category: 'Community', location: 'India', year: '2026', image: '/images/modular-care-clinic-hero.png', description: 'A calm, rapidly deployable primary-care clinic with reception, treatment rooms, and a welcoming landscaped entry.', details: [{ label: 'Type', value: 'Healthcare Module' }, { label: 'Status', value: 'Concept Study' }], gallery: ['/images/modular-care-clinic-hero.png', '/images/modular-care-clinic-reception.png', '/images/modular-care-clinic-treatment.png'] },
@@ -480,13 +329,78 @@ export const PROJECTS: Project[] = [
   { id: 'manali-mountain-cafe', title: 'Manali Mountain Café', category: 'Commercial', location: 'Manali, Himachal Pradesh, India', year: '2026', image: '/images/manali-mountain-cafe.png', description: 'A compact modular café with warm interiors and panoramic mountain views.', details: [{ label: 'Type', value: 'Café Module' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/manali-mountain-cafe.png', '/images/manali-mountain-cafe-gallery.png', '/images/manali-mountain-cafe-detail.png'] },
   { id: 'coorg-forest-retreat', title: 'Coorg Forest Retreat', category: 'Hospitality', location: 'Coorg, Karnataka, India', year: '2026', image: '/images/coorg-forest-retreat-hero.png', description: 'A low-impact modular retreat of timber-and-glass suites set among coffee estate planting and misty hills.', details: [{ label: 'Type', value: 'Forest Hospitality' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/coorg-forest-retreat-hero.png', '/images/coorg-forest-retreat-terrace.png', '/images/coorg-forest-retreat-interior.png'] },
   { id: 'ladakh-highland-retreat', title: 'Ladakh Highland Retreat', category: 'Hospitality', location: 'Ladakh, India', year: '2026', image: '/images/ladakh-highland-retreat-hero.png', description: 'An insulated modular high-altitude retreat with warm guest suites and a sheltered shared lounge.', details: [{ label: 'Type', value: 'High-altitude Hospitality' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/ladakh-highland-retreat-hero.png', '/images/ladakh-highland-retreat-evening.png', '/images/ladakh-highland-retreat-aerial.png'] },
-  { id: 'kutch-salt-retreat', title: 'Kutch Salt Retreat', category: 'Hospitality', location: 'Kutch, Gujarat, India', year: '2026', image: '/images/kutch-salt-retreat-hero.png', description: 'A restrained modular retreat designed for the wide, bright landscape of Gujarat’s salt desert.', details: [{ label: 'Type', value: 'Desert Hospitality' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/kutch-salt-retreat-hero.png', '/images/kutch-salt-retreat-evening.png', '/images/kutch-salt-retreat-interior.png'] },
-  { id: 'jaisalmer-desert-camp', title: 'Jaisalmer Desert Camp', category: 'Hospitality', location: 'Jaisalmer, Rajasthan, India', year: '2026', image: '/images/jaisalmer-desert-camp-hero.png', description: 'A contemporary modular desert camp that combines private guest suites, a shaded central lounge, and low-impact site planning for the Thar landscape.', challenge: 'Create a premium hospitality experience that responds to heat, wind, and the fragility of a desert site.', solution: 'Prefabricated suites are placed on light-touch foundations around a shared pavilion, with deep overhangs, sheltered outdoor rooms, and efficient off-site fabrication.', materiality: 'Sand-toned mineral panels, bronzed frames, glazed openings, and local stone create a calm palette that sits naturally within the dunes.', technicalSpecs: [{ label: 'Accommodation', value: 'Modular Guest Suites' }, { label: 'Climate', value: 'Desert-ready Envelope' }, { label: 'Site Strategy', value: 'Low-impact Foundations' }], details: [{ label: 'Type', value: 'Desert Hospitality' }, { label: 'Region', value: 'Rajasthan, India' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/jaisalmer-desert-camp-hero.png', '/images/jaisalmer-desert-camp-evening.png', '/images/jaisalmer-desert-camp-aerial.png'] },
   { id: 'goa-coastal-retreat', title: 'Goa Coastal Retreat', category: 'Hospitality', location: 'Goa, India', year: '2026', image: '/images/goa-coastal-retreat-hero.png', description: 'A small modular coastal retreat of shaded guest suites, private decks, and landscaped water features designed for a tropical setting.', challenge: 'Deliver an elevated resort experience while managing strong sun, seasonal rain, and dense coastal planting.', solution: 'Independent factory-finished suites are connected by shaded paths and pool terraces, making phased construction possible with minimal site disruption.', materiality: 'White mineral walls, teak screens, dark aluminium, pale stone, and layered tropical planting keep the architecture cool and restrained.', technicalSpecs: [{ label: 'Format', value: 'Modular Resort Suites' }, { label: 'Climate', value: 'Tropical + Monsoon-ready' }, { label: 'Delivery', value: 'Phased Installation' }], details: [{ label: 'Type', value: 'Coastal Hospitality' }, { label: 'Region', value: 'Goa, India' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/goa-coastal-retreat-hero.png', '/images/goa-coastal-retreat-evening.png', '/images/goa-coastal-retreat-suite.png'] },
-  { id: 'rishikesh-wellness-retreat', title: 'Rishikesh Wellness Retreat', category: 'Hospitality', location: 'Rishikesh, Uttarakhand, India', year: '2026', image: '/images/rishikesh-wellness-retreat-hero.png', description: 'An elevated modular wellness retreat with private cabins, a riverside yoga pavilion, and low-impact paths through a Himalayan landscape.', challenge: 'Protect a sensitive river-edge setting while giving guests quiet, comfortable spaces that connect to the surrounding forest.', solution: 'Lightweight modular cabins sit on slender supports, while a shared glass pavilion provides a flexible centre for wellness and gathering.', materiality: 'Charred timber, cedar screens, dark steel, glass, and local stone bring warmth and durability to the forested riverbank.', technicalSpecs: [{ label: 'Foundation', value: 'Elevated Light-touch Piers' }, { label: 'Shared Space', value: 'Yoga Pavilion' }, { label: 'Site Impact', value: 'Reduced Ground Works' }], details: [{ label: 'Type', value: 'Wellness Hospitality' }, { label: 'Region', value: 'Uttarakhand, India' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/rishikesh-wellness-retreat-hero.png', '/images/rishikesh-wellness-retreat-pavilion.png', '/images/rishikesh-wellness-retreat-aerial.png'] },
-  { id: 'kerala-backwater-retreat', title: 'Kerala Backwater Retreat', category: 'Hospitality', location: 'Kerala, India', year: '2026', image: '/images/kerala-backwater-retreat-hero.png', description: 'A water-edge modular retreat of elevated villas and shaded verandas, designed to sit lightly within Kerala’s tropical backwater landscape.', challenge: 'Offer a high-quality waterside stay without heavy construction or disruption to the shoreline and surrounding vegetation.', solution: 'Prefabricated villas rest on slim supports above a carefully retained landscape, connecting to the water through small jetties and shared paths.', materiality: 'White composite panels, dark steel, weathered timber, local stone, and generous covered verandas provide a durable tropical palette.', technicalSpecs: [{ label: 'Configuration', value: 'Elevated Villa Modules' }, { label: 'Water Edge', value: 'Light-touch Jetty Access' }, { label: 'Climate', value: 'Tropical + Monsoon-ready' }], details: [{ label: 'Type', value: 'Backwater Hospitality' }, { label: 'Region', value: 'Kerala, India' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/kerala-backwater-retreat-hero.png', '/images/kerala-backwater-retreat-waterfront.png', '/images/kerala-backwater-retreat-interior.png'] },
   { id: 'modular-gym', title: 'Modular Gym', category: 'Amenities', location: 'Site-specific', year: '2026', image: '/images/modular-gym.jpg', description: 'A practical prefabricated fitness studio for communities, hotels, and workplaces.', details: [{ label: 'Type', value: 'Fitness' }, { label: 'Status', value: 'Concept Study' }], gallery: ['/images/modular-gym.jpg'] },
-  { id: 'event-washroom-unit', title: 'Event Washroom Unit', category: 'Amenities', location: 'Site-specific', year: '2026', image: '/images/modular-washroom-event-unit.jpeg', description: 'A multi-cubicle mobile washroom unit that brings clean, practical facilities to events, festivals, and temporary sites.', challenge: 'Provide high-capacity, easy-access washrooms that can be deployed quickly while keeping the visitor experience orderly and comfortable.', solution: 'A towable prefabricated unit consolidates individual cubicles, handwashing provision, durable access stairs, and service connections into one ready-to-use facility.', materiality: 'Smooth white composite panels, robust black steel access stairs, durable door hardware, and a compact towable chassis create a clean, hard-wearing event solution.', technicalSpecs: [{ label: 'Format', value: 'Towable Multi-cubicle Unit' }, { label: 'Access', value: 'External Stairs + Handrails' }, { label: 'Deployment', value: 'Rapid On-site Setup' }], details: [{ label: 'Type', value: 'Mobile Washroom Facility' }, { label: 'Use', value: 'Events & Temporary Sites' }, { label: 'Status', value: 'Reference Work' }], gallery: ['/images/modular-washroom-event-unit.jpeg'] },
+  {
+    id: 'capsule-forest-spa-suite', title: 'Capsule Forest Spa Suite', category: 'Hospitality', location: 'Coorg, Karnataka, India', year: '2026', image: '/images/capsule-showcase/capsule-forest-spa-retreat.png',
+    description: 'A secluded forest spa suite that pairs a panoramic capsule room with a sunken fire-circle lounge and a low-impact timber terrace.',
+    challenge: 'Create a calm, high-comfort guest suite that feels immersed in dense forest while keeping its installation light on the site.',
+    solution: 'The capsule is crane-set onto discrete supports before a dark timber deck, planted edges, and outdoor lounge are completed around it.',
+    materiality: 'White aluminium, dark glazing, pale oak joinery, teak decking, woven upholstery, and layered tropical planting create a warm, quiet retreat.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Panoramic E6-style Form' }, { label: 'Programme', value: 'Suite + Spa Lounge' }, { label: 'Foundation', value: 'Low-impact Supports' }],
+    details: [{ label: 'Type', value: 'Forest Capsule Suite' }, { label: 'Region', value: 'Coorg, India' }, { label: 'Status', value: 'Design Showcase' }],
+    gallery: ['/images/capsule-showcase/capsule-forest-spa-retreat.png', '/images/capsule-showcase/capsule-forest-spa-installation.png', '/images/capsule-showcase/capsule-forest-spa-interior.png']
+  },
+  {
+    id: 'capsule-alpine-lake-lodge', title: 'Capsule Alpine Lake Lodge', category: 'Hospitality', location: 'Himachal Pradesh, India', year: '2026', image: '/images/capsule-showcase/capsule-alpine-lake-lodge.png',
+    description: 'A long panoramic capsule lodge overlooking an alpine lake, with an outdoor conversation deck designed for slow evenings by the water.',
+    challenge: 'Give a prefabricated hospitality room a strong relationship to a dramatic lakeside setting without overwhelming the landscape.',
+    solution: 'The capsule is placed first on a compact lakeshore foundation, followed by a stepped timber deck and low lounge furniture that frame the view.',
+    materiality: 'Matte white aluminium, black-framed glazing, charcoal timber, warm wool upholstery, natural stone, and subtle lakeside lighting create a refined alpine atmosphere.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Long Panoramic K70-style Form' }, { label: 'Programme', value: 'Lodge + Lakeside Lounge' }, { label: 'Foundation', value: 'Compact Lakeshore Base' }],
+    details: [{ label: 'Type', value: 'Alpine Capsule Lodge' }, { label: 'Region', value: 'Himachal Pradesh, India' }, { label: 'Status', value: 'Design Showcase' }],
+    gallery: ['/images/capsule-showcase/capsule-alpine-lake-lodge.png', '/images/capsule-showcase/capsule-alpine-lake-installation.png', '/images/capsule-showcase/capsule-alpine-lake-interior.png']
+  },
+  {
+    id: 'capsule-desert-stargazing-suite', title: 'Capsule Desert Stargazing Suite', category: 'Hospitality', location: 'Jaisalmer, Rajasthan, India', year: '2026', image: '/images/capsule-showcase/capsule-desert-stargazing-suite.png',
+    description: 'A private desert suite centred on a dark panoramic capsule, with a sheltered lantern-lit lounge for evenings beneath open skies.',
+    challenge: 'Make a compact capsule feel generous and climate-aware in an exposed desert setting.',
+    solution: 'The suite is assembled in stages: the capsule is lifted into position first, then shaded decking, built-in seating, and a fire lounge establish a protected outdoor room.',
+    materiality: 'Charcoal metal cladding, reflective glazing, walnut interiors, sand-toned textiles, weathered timber, and low stone edging balance heat, shelter, and night-time comfort.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Panoramic S70-style Form' }, { label: 'Programme', value: 'Suite + Stargazing Lounge' }, { label: 'Foundation', value: 'Raised Desert Deck' }],
+    details: [{ label: 'Type', value: 'Desert Capsule Suite' }, { label: 'Region', value: 'Jaisalmer, India' }, { label: 'Status', value: 'Design Showcase' }],
+    gallery: ['/images/capsule-showcase/capsule-desert-stargazing-suite.png', '/images/capsule-showcase/capsule-desert-stargazing-installation.png', '/images/capsule-showcase/capsule-desert-stargazing-interior.png']
+  },
+  {
+    id: 'capsule-kerala-backwater-retreat', title: 'Capsule Kerala Backwater Retreat', category: 'Hospitality', location: 'Alappuzha, Kerala, India', year: '2026', image: '/images/capsule-showcase/capsule-kerala-backwater-exterior.png',
+    description: 'A tropical backwater stay that sets a panoramic capsule beside a quiet palm-lined canal, with a private waterside deck for slow mornings and sunset gatherings.',
+    challenge: 'Create a memorable guest suite that feels immersed in Kerala’s waterscape while responding to monsoon conditions and a delicate canal edge.',
+    solution: 'The existing capsule form is crane-set on a compact raised base, then a teak deck, laterite edge, rattan lounge, and planted water frontage are assembled around it.',
+    materiality: 'White capsule cladding, dark glazing, teak decking, laterite stone, cane furniture, pale linen, and tropical planting create a warm, low-impact retreat.',
+    technicalSpecs: [{ label: 'Capsule Form', value: 'Existing Panoramic White Capsule' }, { label: 'Programme', value: 'Suite + Waterside Lounge' }, { label: 'Setting', value: 'Tropical Backwater Edge' }],
+    details: [{ label: 'Type', value: 'Backwater Capsule Retreat' }, { label: 'Region', value: 'Kerala, India' }, { label: 'Status', value: 'Design Showcase' }],
+    gallery: ['/images/capsule-showcase/capsule-kerala-backwater-exterior.png', '/images/capsule-showcase/capsule-kerala-backwater-installation.png', '/images/capsule-showcase/capsule-kerala-backwater-interior.png']
+  },
+  {
+    id: 'capsule-jaisalmer-courtyard-suite', title: 'Capsule Jaisalmer Courtyard Suite', category: 'Hospitality', location: 'Jaisalmer, Rajasthan, India', year: '2026', image: '/images/capsule-showcase/capsule-jaisalmer-courtyard-exterior.png',
+    description: 'A desert guest suite that places a panoramic capsule within a sandstone courtyard, combining open dune views with a sheltered, lantern-lit outdoor room.',
+    challenge: 'Give a compact prefabricated suite the comfort and sense of place needed for an exposed desert climate.',
+    solution: 'The existing capsule is crane-installed on a raised timber base before sandstone walls, a shaded pergola, low seating, and dune-facing terraces complete the guest experience.',
+    materiality: 'Charcoal capsule cladding, dark glazing, hand-cut sandstone, weathered timber, woven rugs, linen upholstery, and bronze lanterns balance heat, shade, and evening comfort.',
+    technicalSpecs: [{ label: 'Capsule Form', value: 'Existing Panoramic Charcoal Capsule' }, { label: 'Programme', value: 'Suite + Desert Courtyard' }, { label: 'Setting', value: 'Sandstone + Dune Horizon' }],
+    details: [{ label: 'Type', value: 'Desert Courtyard Suite' }, { label: 'Region', value: 'Rajasthan, India' }, { label: 'Status', value: 'Design Showcase' }],
+    gallery: ['/images/capsule-showcase/capsule-jaisalmer-courtyard-exterior.png', '/images/capsule-showcase/capsule-jaisalmer-courtyard-installation.png', '/images/capsule-showcase/capsule-jaisalmer-courtyard-interior.png']
+  },
+  {
+    id: 'capsule-rishikesh-riverside-retreat', title: 'Capsule Rishikesh Riverside Retreat', category: 'Hospitality', location: 'Rishikesh, Uttarakhand, India', year: '2026', image: '/images/capsule-showcase/capsule-rishikesh-riverside-exterior.png',
+    description: 'A riverside mountain stay that reuses a long panoramic capsule form on a quiet timber platform above the turquoise Himalayan river.',
+    challenge: 'Create a restorative retreat that feels close to the river and foothills while staying light on a rocky, seasonal site.',
+    solution: 'The existing capsule is crane-set on discrete footings, followed by a compact deck, yoga platform, low stone fire lounge, and carefully placed path lighting.',
+    materiality: 'White capsule cladding, dark-framed glazing, charred timber, local river stone, pale oak, soft wool, and native planting give the retreat a calm mountain character.',
+    technicalSpecs: [{ label: 'Capsule Form', value: 'Existing Long Panoramic White Capsule' }, { label: 'Programme', value: 'Suite + Yoga Deck' }, { label: 'Setting', value: 'Himalayan Riverbank' }],
+    details: [{ label: 'Type', value: 'Riverside Capsule Retreat' }, { label: 'Region', value: 'Uttarakhand, India' }, { label: 'Status', value: 'Design Showcase' }],
+    gallery: ['/images/capsule-showcase/capsule-rishikesh-riverside-exterior.png', '/images/capsule-showcase/capsule-rishikesh-riverside-installation.png', '/images/capsule-showcase/capsule-rishikesh-riverside-interior.png']
+  },
+  {
+    id: 'capsule-munnar-tea-estate-lodge', title: 'Capsule Munnar Tea Estate Lodge', category: 'Hospitality', location: 'Munnar, Kerala, India', year: '2026', image: '/images/capsule-showcase/capsule-munnar-tea-estate-exterior.png',
+    description: 'A misty tea-estate lodge that places a long panoramic capsule above the terraces of Munnar, with a sheltered viewing deck for slow mornings and fireside evenings.',
+    challenge: 'Create a high-comfort stay that belongs to Munnar’s dramatic tea landscape while remaining light on a steep, rain-prone hillside.',
+    solution: 'The E8 capsule form is crane-set onto discrete footings, then a compact dark-timber deck, low stone lounge, planted edges, and view-oriented seating are assembled around it.',
+    materiality: 'White aluminium cladding, black-framed glazing, dark timber, local stone, woven outdoor furniture, pale oak joinery, and tea-estate planting balance crisp prefabrication with a warm hill-station atmosphere.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Volferda E8' }, { label: 'Capsule Size', value: '11.5 m × 3.2 m' }, { label: 'Programme', value: 'Panoramic Suite + View Deck' }],
+    details: [{ label: 'Type', value: 'Tea Estate Capsule Lodge' }, { label: 'Region', value: 'Munnar, Kerala, India' }, { label: 'Status', value: 'Design Showcase' }],
+    gallery: ['/images/capsule-showcase/capsule-munnar-tea-estate-exterior.png', '/images/capsule-showcase/capsule-munnar-tea-estate-installation.png', '/images/capsule-showcase/capsule-munnar-tea-estate-interior.png']
+  }
 ];
 
 export const SERVICES: Service[] = [

@@ -98,11 +98,11 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
 
 export default function FeaturedWork() {
   const featuredCapsuleIds = [
-    'modular-capsule-meadow-studio',
-    'modular-capsule-rainforest-villa',
-    'modular-capsule-stargazer-lodge',
-    'modular-capsule-dune-courtyard',
-    'modular-apple-cabin-courtyard-village',
+    'modular-capsule-riverbend-resort',
+    'modular-capsule-cloudline-observatory',
+    'modular-capsule-mangrove-retreat',
+    'modular-capsule-stone-spring-lodge',
+    'modular-capsule-canyon-skywalk-lodge',
   ];
   const featuredProjects = featuredCapsuleIds.flatMap((id) => {
     const project = PROJECTS.find((item) => item.id === id);

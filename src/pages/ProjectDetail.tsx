@@ -13,9 +13,7 @@ import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
 const EXTRA_GALLERY_IMAGES: Record<string, string[]> = {
   'garden-pavilion': ['/images/garden-pavilion-extra.png'],
   'modular-rooftop-bar': ['/images/rooftop-bar-extra.png'],
-  'modular-pool-leisure': ['/images/pool-leisure-extra.png'],
   'modular-gym': ['/images/modular-gym-interior.png', '/images/modular-gym-exterior.png'],
-  'event-washroom-unit': ['/images/event-washroom-exterior.png', '/images/event-washroom-interior.png'],
 };
 
 export default function ProjectDetail() {
