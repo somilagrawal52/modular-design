@@ -15,10 +15,17 @@ import SystemPage from './pages/SystemPage';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }, [pathname, hash]);
   return null;
 }
 

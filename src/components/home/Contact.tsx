@@ -20,7 +20,7 @@ export default function Contact() {
             <ParallaxElement speed={0.02}>
               <Reveal direction="right">
                 <div className="flex items-center gap-4 mb-12">
-                  <span className="text-gold font-mono text-xs">04</span>
+                  <span className="text-gold font-mono text-xs">05</span>
                   <div className="h-[1px] w-12 bg-gold" />
                   <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Inquiries</span>
                 </div>
