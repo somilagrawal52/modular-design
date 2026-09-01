@@ -52,16 +52,6 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/capsule-mountain-suite-hero.jpeg', '/images/capsule-mountain-suite-panorama.png', '/images/capsule-mountain-suite-interior.jpeg']
   },
   {
-    id: 'modular-capsule-snowline-resort', title: 'Snowline Capsule Resort', category: 'Hospitality', location: 'Himalayan Ski Belt, India', year: '2026', image: '/images/capsule-snowline-resort-hero.jpeg',
-    description: 'A compact alpine resort composed of insulated capsule suites arranged along a snow-ready path network, each with warm panoramic interiors.',
-    challenge: 'Create a low-impact winter destination that performs in snow and can expand suite by suite as demand grows.',
-    solution: 'Repeatable factory-complete capsules sit on raised supports above the snow line, while dark timber walks and preplanned service runs keep the terrain disturbance low.',
-    materiality: 'White weatherproof shells, dark chamfered glass frames, insulated floors, warm oak interiors, and subtly lit paths balance winter resilience with guest comfort.',
-    technicalSpecs: [{ label: 'System', value: 'Volumetric Capsule Suites' }, { label: 'Foundation', value: 'Raised Snow-ready Piers' }, { label: 'Envelope', value: 'All-season Thermal Shell' }],
-    details: [{ label: 'Type', value: 'Alpine Capsule Hospitality' }, { label: 'Location', value: 'Himalayan Ski Belt, India' }, { label: 'Status', value: 'Concept Ready' }],
-    gallery: ['/images/capsule-snowline-resort-hero.jpeg', '/images/capsule-snowline-resort-evening.png', '/images/capsule-snowline-resort-interior.png']
-  },
-  {
     id: 'modular-capsule-hillside-lodge', title: 'Hillside Capsule Lodge', category: 'Hospitality', location: 'Himalayan Foothills, India', year: '2026', image: '/images/capsule-hillside-lodge-hero.jpeg',
     description: 'An elevated hillside lodge made from sculpted capsule suites, lifting guests above meadow planting for wide valley views and minimal ground impact.',
     challenge: 'Place premium suites on a sloping, planted site while avoiding major excavation and retaining the character of the hillside.',
@@ -129,14 +119,14 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/modular-capsule-backwater-retreat-hero.png', '/images/modular-capsule-backwater-retreat-interior.png', '/images/modular-capsule-backwater-retreat-installation.png']
   },
   {
-    id: 'modular-capsule-forest-retreat', title: 'Modular Capsule Forest Retreat', category: 'Hospitality', location: 'Coorg, Karnataka, India', year: '2026', image: '/images/modular-capsule-forest-retreat-hero.png',
-    description: 'A low-impact forest stay made from elevated capsule suites, combining private canopy views with a repeatable modular hospitality system.',
+    id: 'modular-capsule-forest-retreat', title: 'Modular Capsule Forest Retreat', category: 'Hospitality', location: 'Coorg, Karnataka, India', year: '2026', image: '/images/modular-capsule-forest-retreat-hero-v2.png',
+    description: 'A low-impact forest stay made from elevated Volferda E3 suites, combining private canopy views with a repeatable modular hospitality system.',
     challenge: 'Place premium guest rooms across a planted hillside without extensive excavation or disturbance to the coffee-estate landscape.',
     solution: 'Factory-complete capsules are lifted onto independent pier supports and joined by light timber paths, allowing installation to move around mature planting and expand in measured phases.',
-    materiality: 'Warm-grey weatherproof capsule shells, rounded glazing, oak-lined interiors, dark metal connections, and rain-ready timber decks keep the experience refined and resilient.',
-    technicalSpecs: [{ label: 'Accommodation', value: '4 Capsule Guest Suites' }, { label: 'Foundation', value: 'Independent Pier Supports' }, { label: 'Climate', value: 'Monsoon-ready Envelope' }],
+    materiality: 'White Volferda E3 shells, dark-framed panoramic glazing, compact oak-lined interiors, dark metal connections, and rain-ready timber decks keep the experience refined and resilient.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Volferda E3' }, { label: 'Accommodation', value: '4 Capsule Guest Suites' }, { label: 'Foundation', value: 'Independent Pier Supports' }],
     details: [{ label: 'Type', value: 'Forest Capsule Hospitality' }, { label: 'Region', value: 'Coorg, Karnataka, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-forest-retreat-hero.png', '/images/modular-capsule-forest-retreat-interior.png', '/images/modular-capsule-forest-retreat-installation.png']
+    gallery: ['/images/modular-capsule-forest-retreat-hero-v2.png', '/images/modular-capsule-forest-retreat-interior-v2.png', '/images/modular-capsule-forest-retreat-installation-v2.png']
   },
   {
     id: 'modular-capsule-desert-retreat', title: 'Modular Capsule Desert Retreat', category: 'Hospitality', location: 'Jaisalmer, Rajasthan, India', year: '2026', image: '/images/modular-capsule-desert-retreat-hero.png',
@@ -159,24 +149,24 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/modular-capsule-alpine-retreat-hero.png', '/images/modular-capsule-alpine-retreat-interior.png', '/images/modular-capsule-alpine-retreat-installation.png']
   },
   {
-    id: 'modular-capsule-tea-estate-retreat', title: 'Modular Capsule Tea Estate Retreat', category: 'Hospitality', location: 'Munnar, Kerala, India', year: '2026', image: '/images/modular-capsule-tea-estate-retreat-hero.png',
-    description: 'A capsule hospitality retreat that steps gently through Munnar’s tea landscape, pairing misty hillside views with a repeatable, low-impact modular system.',
+    id: 'modular-capsule-tea-estate-retreat', title: 'Modular Capsule Tea Estate Retreat', category: 'Hospitality', location: 'Munnar, Kerala, India', year: '2026', image: '/images/modular-capsule-tea-estate-retreat-hero-v2.png',
+    description: 'A Volferda E8 hospitality retreat that steps gently through Munnar’s tea landscape, pairing misty hillside views with a repeatable, low-impact modular system.',
     challenge: 'Add premium guest accommodation to a planted tea-estate slope while preserving drainage, mature trees, and the layered views that define the setting.',
     solution: 'Factory-finished capsules are lifted onto independent supports and linked by narrow timber paths, allowing each suite to follow the contours of the hillside without heavy excavation.',
-    materiality: 'Warm-grey insulated shells, dark aluminium frames, timber-lined interiors, and rain-ready decks establish the same refined capsule language across a humid mountain climate.',
-    technicalSpecs: [{ label: 'Accommodation', value: '4 Capsule Guest Suites' }, { label: 'Foundation', value: 'Independent Pier Supports' }, { label: 'Climate', value: 'Monsoon-ready Envelope' }],
+    materiality: 'White Volferda E8 shells, black geometric frame details, timber-lined interiors, and rain-ready decks establish a crisp capsule language across a humid mountain climate.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Volferda E8' }, { label: 'Accommodation', value: '4 Capsule Guest Suites' }, { label: 'Foundation', value: 'Independent Pier Supports' }],
     details: [{ label: 'Type', value: 'Tea Estate Capsule Hospitality' }, { label: 'Region', value: 'Munnar, Kerala, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-tea-estate-retreat-hero.png', '/images/modular-capsule-tea-estate-retreat-interior.png', '/images/modular-capsule-tea-estate-retreat-installation.png']
+    gallery: ['/images/modular-capsule-tea-estate-retreat-hero-v2.png', '/images/modular-capsule-tea-estate-retreat-interior-v2.png', '/images/modular-capsule-tea-estate-retreat-installation-v2.png']
   },
   {
-    id: 'modular-capsule-island-retreat', title: 'Modular Capsule Island Retreat', category: 'Hospitality', location: 'Havelock Island, Andaman & Nicobar, India', year: '2026', image: '/images/modular-capsule-island-retreat-hero.png',
-    description: 'A small island retreat of raised capsule suites, placing panoramic coastal rooms within palms and native planting without overbuilding the shoreline.',
+    id: 'modular-capsule-island-retreat', title: 'Modular Capsule Island Retreat', category: 'Hospitality', location: 'Havelock Island, Andaman & Nicobar, India', year: '2026', image: '/images/modular-capsule-island-retreat-hero-v2.png',
+    description: 'A small island retreat of raised Luban floating-house suites, placing panoramic coastal rooms within palms and native planting without overbuilding the shoreline.',
     challenge: 'Deliver a premium beach stay that respects the sand, coastal planting, and tropical exposure of a sensitive island site.',
     solution: 'Compact off-site volumes arrive with interiors complete, then sit on short adjustable supports behind the beach and connect through a raised timber path that protects the ground below.',
-    materiality: 'Warm-grey corrosion-resistant shells, rounded glazing, teak interiors, dark metal trim, and shaded decks carry the core capsule system into a tropical coastal setting.',
-    technicalSpecs: [{ label: 'System', value: 'Volumetric Capsule Modules' }, { label: 'Foundation', value: 'Adjustable Raised Supports' }, { label: 'Climate', value: 'Tropical + Coastal-ready' }],
+    materiality: 'White arched Luban floating-house shells, curved blue-black glazing, teak interiors, dark marine-grade trim, and shaded decks carry the capsule system into a tropical coastal setting.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Luban Floating House' }, { label: 'Foundation', value: 'Adjustable Raised Supports' }, { label: 'Climate', value: 'Tropical + Coastal-ready' }],
     details: [{ label: 'Type', value: 'Island Capsule Hospitality' }, { label: 'Region', value: 'Havelock Island, Andaman & Nicobar, India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-island-retreat-hero.png', '/images/modular-capsule-island-retreat-interior.png', '/images/modular-capsule-island-retreat-installation.png']
+    gallery: ['/images/modular-capsule-island-retreat-hero-v2.png', '/images/modular-capsule-island-retreat-interior-v2.png', '/images/modular-capsule-island-retreat-installation-v2.png']
   },
   {
     id: 'modular-capsule-lake-retreat', title: 'Modular Capsule Lake Retreat', category: 'Hospitality', location: 'Nainital, Uttarakhand, India', year: '2026', image: '/images/modular-capsule-lake-retreat-hero.png',
@@ -189,54 +179,34 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/modular-capsule-lake-retreat-hero.png', '/images/modular-capsule-lake-retreat-interior.png', '/images/modular-capsule-lake-retreat-installation.png']
   },
   {
-    id: 'modular-capsule-courtyard-residence', title: 'Modular Capsule Courtyard Residence', category: 'Residential', location: 'India', year: '2026', image: '/images/modular-capsule-courtyard-residence-hero.png',
-    description: 'A family residence built around two capsule volumes and a sheltered communal pavilion, combining a planted courtyard with precise off-site delivery.',
+    id: 'modular-capsule-courtyard-residence', title: 'Modular Capsule Courtyard Residence', category: 'Residential', location: 'India', year: '2026', image: '/images/modular-capsule-courtyard-residence-hero-v2.png',
+    description: 'A family residence built around two compact capsule homes and a sheltered communal pavilion, combining a planted courtyard with straightforward off-site delivery.',
     challenge: 'Create a warm, permanent-feeling family home from transportable volumes while keeping garden space and outdoor living at the centre of daily life.',
-    solution: 'Factory-finished residential capsules are set around a light timber-and-steel pavilion, forming a protected courtyard that can grow with an additional room module when needed.',
-    materiality: 'Warm-grey insulated shells, low-iron glazing, oak interiors, dark structural frames, and planted edges establish the capsule language in a residential setting.',
-    technicalSpecs: [{ label: 'Configuration', value: '2 Capsule Volumes + Pavilion' }, { label: 'Foundation', value: 'Low Plinth + Adjustable Supports' }, { label: 'Growth', value: 'Add-on Room Module' }],
+    solution: 'Two factory-finished E3-based homes sit around a light timber-and-glass pavilion, forming a protected courtyard that can grow with an additional room module when needed.',
+    materiality: 'White E3-style insulated shells, curved black-framed glazing, oak interiors, simple dark supports, and planted edges establish a durable residential language.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Volferda E3' }, { label: 'Foundation', value: 'Low Plinth + Adjustable Supports' }, { label: 'Growth', value: 'Add-on Room Module' }],
     details: [{ label: 'Type', value: 'Capsule Family Residence' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-courtyard-residence-hero.png', '/images/modular-capsule-courtyard-residence-interior.png', '/images/modular-capsule-courtyard-residence-installation.png']
+    gallery: ['/images/modular-capsule-courtyard-residence-hero-v2.png', '/images/modular-capsule-courtyard-residence-interior-v2.png', '/images/modular-capsule-courtyard-residence-installation-v2.png']
   },
   {
-    id: 'modular-capsule-cafe', title: 'Modular Capsule Café', category: 'Commercial', location: 'India', year: '2026', image: '/images/modular-capsule-cafe-hero.png',
-    description: 'A compact two-capsule café that pairs an efficient service bar with a bright, relaxed guest lounge and shaded outdoor seating.',
-    challenge: 'Deliver a distinct, high-quality café experience on a compressed programme and short opening timeline without losing hospitality character.',
-    solution: 'Factory-finished service and lounge capsules arrive with bar equipment, seating, lighting, and façade glazing in place, then connect to a simple timber deck on site.',
-    materiality: 'Warm-grey insulated shells, rounded low-iron glazing, oak lining, charcoal aluminium details, and a timber terrace make the compact format feel generous.',
-    technicalSpecs: [{ label: 'Format', value: 'Two Capsule Café' }, { label: 'Service', value: 'Coffee + Light Dining' }, { label: 'Setup', value: 'Rapid Site Installation' }],
-    details: [{ label: 'Type', value: 'Capsule Café' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-cafe-hero.png', '/images/modular-capsule-cafe-interior.png', '/images/modular-capsule-cafe-installation.png']
-  },
-  {
-    id: 'modular-capsule-coworking-studio', title: 'Modular Capsule Co-working Studio', category: 'Workplace', location: 'India', year: '2026', image: '/images/modular-capsule-coworking-studio-hero.png',
-    description: 'An expandable work cluster made from connected capsule modules, with open desks, meeting rooms, and a shared outdoor work court.',
+    id: 'modular-capsule-coworking-studio', title: 'Modular Capsule Co-working Studio', category: 'Workplace', location: 'India', year: '2026', image: '/images/modular-capsule-coworking-studio-hero-v2.png',
+    description: 'An expandable work cluster of connected capsule modules, with open desks, meeting rooms, and a shared outdoor work court.',
     challenge: 'Create a premium, flexible workplace that can be installed quickly and expanded without interrupting the working day.',
-    solution: 'Four factory-built work capsules connect around a landscaped deck, separating focused spaces from social work zones while retaining a clear plug-in route for future modules.',
-    materiality: 'Warm-grey shells, panoramic glazing, oak work surfaces, acoustic lining, charcoal frames, and a timber courtyard deck create a refined, productive setting.',
-    technicalSpecs: [{ label: 'Configuration', value: '4 Capsule Work Modules' }, { label: 'Workplace', value: 'Desks + Meeting Rooms' }, { label: 'Growth', value: 'Plug-in Module Expansion' }],
+    solution: 'Four factory-built E8-based work modules connect around a simple landscaped deck, separating focused spaces from social work zones while retaining a clear plug-in route for future modules.',
+    materiality: 'White E8-style shells, panoramic black-framed glazing, oak work surfaces, acoustic lining, simple dark steel, and a timber courtyard deck create a durable, productive setting.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Volferda E8' }, { label: 'Workplace', value: 'Desks + Meeting Rooms' }, { label: 'Growth', value: 'Plug-in Module Expansion' }],
     details: [{ label: 'Type', value: 'Capsule Co-working Studio' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-coworking-studio-hero.png', '/images/modular-capsule-coworking-studio-interior.png', '/images/modular-capsule-coworking-studio-installation.png']
+    gallery: ['/images/modular-capsule-coworking-studio-hero-v2.png', '/images/modular-capsule-coworking-studio-interior-v2.png', '/images/modular-capsule-coworking-studio-installation-v2.png']
   },
   {
-    id: 'modular-capsule-wellness-pavilion', title: 'Modular Capsule Wellness Pavilion', category: 'Amenities', location: 'India', year: '2026', image: '/images/modular-capsule-wellness-pavilion-hero.png',
-    description: 'A tranquil wellness cluster for movement, recovery, and hydrotherapy, arranged as a series of capsule rooms around a planted water court.',
+    id: 'modular-capsule-wellness-pavilion', title: 'Modular Capsule Wellness Pavilion', category: 'Amenities', location: 'India', year: '2026', image: '/images/modular-capsule-wellness-pavilion-hero-v2.png',
+    description: 'A tranquil wellness cluster for movement, recovery, and hydrotherapy, arranged as three simple cabins around a planted water court.',
     challenge: 'Deliver a calm, amenity-rich destination with the smallest possible construction impact and a finish that feels considered rather than temporary.',
-    solution: 'Factory-finished movement and spa capsules gather around a sheltered deck, allowing a low-impact, phased installation with services integrated into each module.',
-    materiality: 'Warm-grey insulated shells, curved glazing, pale oak interiors, dark aluminium frames, stone-edged planting, and timber decks support a quiet wellness atmosphere.',
-    technicalSpecs: [{ label: 'Format', value: 'Three Capsule Wellness Modules' }, { label: 'Use', value: 'Yoga + Hydrotherapy' }, { label: 'Delivery', value: 'Low-impact Installation' }],
+    solution: 'Factory-finished arched movement and spa cabins gather around a sheltered deck, allowing low-impact phased installation with services integrated into each module.',
+    materiality: 'White arched floating-house-style shells, dark rounded glazing, pale oak interiors, simple steel supports, stone-edged planting, and timber decks support a quiet wellness atmosphere.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Luban Floating House' }, { label: 'Use', value: 'Yoga + Hydrotherapy' }, { label: 'Delivery', value: 'Low-impact Installation' }],
     details: [{ label: 'Type', value: 'Capsule Wellness Amenity' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-wellness-pavilion-hero.png', '/images/modular-capsule-wellness-pavilion-interior.png', '/images/modular-capsule-wellness-pavilion-installation.png']
-  },
-  {
-    id: 'modular-capsule-learning-studio', title: 'Modular Capsule Learning Studio', category: 'Community', location: 'India', year: '2026', image: '/images/modular-capsule-learning-studio-hero.png',
-    description: 'A compact, adaptable learning campus that combines a bright classroom, a project studio, and a shaded courtyard for informal teaching.',
-    challenge: 'Create a welcoming teaching environment that can open quickly, adapt to different learning formats, and grow as demand increases.',
-    solution: 'Factory-built learning capsules group beneath a light canopy around an outdoor teaching court, creating a simple campus pattern that can extend one module at a time.',
-    materiality: 'Warm-grey weatherproof shells, wide rounded glazing, oak classroom finishes, durable dark frames, and shaded timber decks give the campus a coherent identity.',
-    technicalSpecs: [{ label: 'Format', value: 'Two Capsule Learning Modules' }, { label: 'Learning', value: 'Flexible Classroom + Studio' }, { label: 'Delivery', value: 'Phased Campus Expansion' }],
-    details: [{ label: 'Type', value: 'Capsule Learning Studio' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-learning-studio-hero.png', '/images/modular-capsule-learning-studio-interior.png', '/images/modular-capsule-learning-studio-installation.png']
+    gallery: ['/images/modular-capsule-wellness-pavilion-hero-v2.png', '/images/modular-capsule-wellness-pavilion-interior-v2.png', '/images/modular-capsule-wellness-pavilion-installation-v2.png']
   },
   {
     id: 'modular-capsule-visitor-gateway', title: 'Modular Capsule Visitor Gateway', category: 'Community', location: 'India', year: '2026', image: '/images/modular-capsule-visitor-gateway-hero.png',
@@ -249,34 +219,14 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/modular-capsule-visitor-gateway-hero.png', '/images/modular-capsule-visitor-gateway-interior.png', '/images/modular-capsule-visitor-gateway-installation.png']
   },
   {
-    id: 'modular-capsule-care-clinic', title: 'Modular Capsule Care Clinic', category: 'Community', location: 'India', year: '2026', image: '/images/modular-capsule-care-clinic-hero.png',
-    description: 'A calm, primary-care clinic that brings consultation, treatment, and a welcoming waiting area together in a compact cluster of fully finished capsule modules.',
-    challenge: 'Provide a reassuring, professional health facility that can reach growing communities quickly while avoiding the temporary character of a portable cabin.',
-    solution: 'Three factory-finished care capsules connect around a sheltered entry court, separating reception, consultation, and treatment while allowing the clinic to grow through additional modules.',
-    materiality: 'Warm-grey insulated shells, rounded low-iron glazing, hygienic soft-touch surfaces, oak joinery, acoustic ceilings, and planted edges create a calm clinical setting.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Care Modules' }, { label: 'Programme', value: 'Consultation + Treatment' }, { label: 'Access', value: 'Step-free Entry + Ramp' }],
-    details: [{ label: 'Type', value: 'Capsule Primary-care Clinic' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-care-clinic-hero.png', '/images/modular-capsule-care-clinic-interior.png', '/images/modular-capsule-care-clinic-installation.png']
-  },
-  {
-    id: 'modular-capsule-skills-learning-lab', title: 'Modular Capsule Skills Learning Lab', category: 'Community', location: 'India', year: '2026', image: '/images/modular-capsule-skills-learning-lab-hero.png',
-    description: 'A flexible hands-on learning campus for skills training, digital work, and small-group teaching, arranged as a connected set of bright capsule studios.',
-    challenge: 'Create adaptable teaching space that can open quickly, support practical learning, and expand without disrupting the programme as student numbers change.',
-    solution: 'Three factory-built learning capsules group around a covered timber terrace, separating digital practice, collaborative workshop, and quiet teaching while sharing a repeatable service spine.',
-    materiality: 'Warm-grey shells, panoramic glazing, oak work surfaces, durable rubber flooring, acoustic linings, dark frames, and shaded outdoor learning space support intensive daily use.',
-    technicalSpecs: [{ label: 'Configuration', value: '3 Capsule Learning Modules' }, { label: 'Learning', value: 'Digital + Practical Skills' }, { label: 'Growth', value: 'Plug-in Classroom Expansion' }],
-    details: [{ label: 'Type', value: 'Skills & Digital Learning Lab' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-skills-learning-lab-hero.png', '/images/modular-capsule-skills-learning-lab-interior.png', '/images/modular-capsule-skills-learning-lab-installation.png']
-  },
-  {
-    id: 'modular-capsule-micro-library-hub', title: 'Modular Capsule Micro-library Hub', category: 'Community', location: 'India', year: '2026', image: '/images/modular-capsule-micro-library-hub-hero.png',
-    description: 'A compact civic reading and gathering place that pairs a glazed capsule library with a flexible community room and timber outdoor reading terrace.',
+    id: 'modular-capsule-micro-library-hub', title: 'Modular Capsule Micro-library Hub', category: 'Community', location: 'India', year: '2026', image: '/images/modular-capsule-micro-library-hub-hero-v2.png',
+    description: 'A compact civic reading and gathering place that pairs a glazed modular library with a flexible community room and timber outdoor reading terrace.',
     challenge: 'Give neighbourhoods a welcoming, high-quality learning space without the cost and construction impact of a conventional civic building.',
-    solution: 'Two factory-finished capsule modules link to a generous timber step and garden deck, providing a book-lined reading room alongside a flexible space for quiet events and small groups.',
-    materiality: 'Warm-grey weatherproof shells, rounded low-iron glazing, oak bookshelves, acoustic wall panels, soft seating, terrazzo flooring, and planted stone edges define a calm civic interior.',
-    technicalSpecs: [{ label: 'Configuration', value: '2 Capsule Community Modules' }, { label: 'Programme', value: 'Reading + Community Room' }, { label: 'Foundation', value: 'Low Adjustable Supports' }],
+    solution: 'Two factory-finished OT11-based modules link to a generous timber step and garden deck, providing a book-lined reading room alongside a flexible space for quiet events and small groups.',
+    materiality: 'White weatherproof shells, continuous dark glazing, oak bookshelves, simple acoustic lining, durable seating, timber flooring, and planted stone edges define a calm civic interior.',
+    technicalSpecs: [{ label: 'Capsule Reference', value: 'Luban OT11' }, { label: 'Programme', value: 'Reading + Community Room' }, { label: 'Foundation', value: 'Low Adjustable Supports' }],
     details: [{ label: 'Type', value: 'Micro-library & Community Hub' }, { label: 'Region', value: 'India' }, { label: 'Status', value: 'Concept Study' }],
-    gallery: ['/images/modular-capsule-micro-library-hub-hero.png', '/images/modular-capsule-micro-library-hub-interior.png', '/images/modular-capsule-micro-library-hub-installation.png']
+    gallery: ['/images/modular-capsule-micro-library-hub-hero-v2.png', '/images/modular-capsule-micro-library-hub-interior-v2.png', '/images/modular-capsule-micro-library-hub-installation-v2.png']
   },
   {
     id: 'modular-capsule-desert-adventure-lodge', title: 'Modular Capsule Desert Adventure Lodge', category: 'Hospitality', location: 'Rajasthan, India', year: '2026', image: '/images/modular-capsule-desert-adventure-lodge-hero.png',
@@ -325,7 +275,6 @@ export const PROJECTS: Project[] = [
   { id: 'darjeeling-tea-pavilion', title: 'Darjeeling Tea Pavilion', category: 'Hospitality', location: 'Darjeeling, India', year: '2026', image: '/images/darjeeling-tea-pavilion.png', description: 'A compact modular tea pavilion with one guest suite, framed by misty hillside views.', details: [{ label: 'Type', value: 'Tea Pavilion' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/darjeeling-tea-pavilion.png', '/images/darjeeling-tea-pavilion-gallery.png', '/images/darjeeling-tea-pavilion-detail.png'] },
   { id: 'manali-mountain-cafe', title: 'Manali Mountain Café', category: 'Commercial', location: 'Manali, Himachal Pradesh, India', year: '2026', image: '/images/manali-mountain-cafe.png', description: 'A compact modular café with warm interiors and panoramic mountain views.', details: [{ label: 'Type', value: 'Café Module' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/manali-mountain-cafe.png', '/images/manali-mountain-cafe-gallery.png', '/images/manali-mountain-cafe-detail.png'] },
   { id: 'coorg-forest-retreat', title: 'Coorg Forest Retreat', category: 'Hospitality', location: 'Coorg, Karnataka, India', year: '2026', image: '/images/coorg-forest-retreat-hero.png', description: 'A low-impact modular retreat of timber-and-glass suites set among coffee estate planting and misty hills.', details: [{ label: 'Type', value: 'Forest Hospitality' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/coorg-forest-retreat-hero.png', '/images/coorg-forest-retreat-terrace.png', '/images/coorg-forest-retreat-interior.png'] },
-  { id: 'ladakh-highland-retreat', title: 'Ladakh Highland Retreat', category: 'Hospitality', location: 'Ladakh, India', year: '2026', image: '/images/ladakh-highland-retreat-hero.png', description: 'An insulated modular high-altitude retreat with warm guest suites and a sheltered shared lounge.', details: [{ label: 'Type', value: 'High-altitude Hospitality' }, { label: 'Status', value: 'Reference Proposal' }], gallery: ['/images/ladakh-highland-retreat-hero.png', '/images/ladakh-highland-retreat-evening.png', '/images/ladakh-highland-retreat-aerial.png'] },
   { id: 'modular-gym', title: 'Modular Gym', category: 'Amenities', location: 'Site-specific', year: '2026', image: '/images/modular-gym.jpg', description: 'A practical prefabricated fitness studio for communities, hotels, and workplaces.', details: [{ label: 'Type', value: 'Fitness' }, { label: 'Status', value: 'Concept Study' }], gallery: ['/images/modular-gym.jpg'] },
   {
     id: 'capsule-forest-spa-suite', title: 'Capsule Forest Spa Suite', category: 'Hospitality', location: 'Coorg, Karnataka, India', year: '2026', image: '/images/capsule-showcase/capsule-forest-spa-retreat.png',
@@ -455,6 +404,6 @@ export const TEAM = [
     name: 'Sophia Chen',
     role: 'Sustainability Lead',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=800',
-    bio: 'Sophia ensures that every COMPANY project meets the highest standards of environmental responsibility and longevity.'
+    bio: 'Sophia ensures that every Dream Realty Ventures project meets the highest standards of environmental responsibility and longevity.'
   }
 ];

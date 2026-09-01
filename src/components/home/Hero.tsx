@@ -61,13 +61,10 @@ export default function Hero() {
             </div>
           </Reveal>
 
-          <StaggerText
-            el="h1"
-            text="THE POETRY OF SPACE."
-            className="text-[13vw] md:text-[11vw] font-display font-bold leading-[0.8] tracking-tighter mb-12"
-            delay={0.4}
-            stagger={0.08}
-          />
+          <h1 className="font-display font-bold leading-[0.82] tracking-tighter mb-12">
+            <span className="block whitespace-nowrap text-[6vw] sm:text-[6.2vw] md:text-[7vw] text-ivory">Turning Dreams into Reality</span>
+            <span className="block whitespace-nowrap text-[4vw] sm:text-[4.8vw] md:text-[5vw] text-gold font-serif italic font-light">- Breaking the Imagination Barriers</span>
+          </h1>
 
           <div className="max-w-2xl mx-auto">
             <StaggerText

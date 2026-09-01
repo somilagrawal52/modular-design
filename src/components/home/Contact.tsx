@@ -4,7 +4,7 @@ import Reveal from '../Reveal';
 import StaggerText from '../StaggerText';
 import ParallaxElement from '../ParallaxElement';
 import Magnetic from '../Magnetic';
-import { companyEmail } from '../../config/siteMode';
+import { dreamRealtyEmail } from '../../config/siteMode';
 
 export default function Contact() {
   return (
@@ -35,9 +35,9 @@ export default function Contact() {
               
               <div className="space-y-16">
                 {[
-                  { label: 'New Projects', value: companyEmail('projects') },
-                  { label: 'Press & Media', value: companyEmail('press') },
-                  { label: 'Careers', value: companyEmail('careers') }
+                  { label: 'New Projects', value: dreamRealtyEmail('projects') },
+                  { label: 'Press & Media', value: dreamRealtyEmail('press') },
+                  { label: 'Careers', value: dreamRealtyEmail('careers') }
                 ].map((item, i) => (
                   <Reveal key={item.label} direction="right" delay={i * 0.1 + 0.2}>
                     <div className="group cursor-pointer">

@@ -23,21 +23,21 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Work', href: '/work' },
-    { name: 'System', href: '/system' },
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Our Designs', href: '/work' },
+    { name: 'Technology Behind It', href: '/system' },
+    { name: 'Our Services', href: '/services' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[999] px-6 md:px-12 py-6 md:py-8 flex justify-between items-center bg-transparent backdrop-blur-sm border-b border-white/5">
+    <nav className="fixed top-0 left-0 w-full z-[999] px-4 md:px-6 xl:px-12 py-6 md:py-8 flex justify-between items-center bg-transparent backdrop-blur-sm border-b border-white/5">
       <Link to="/" onClick={() => setIsOpen(false)}>
         <Magnetic>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-xl md:text-2xl font-display font-bold tracking-[0.3em] text-ivory flex items-center gap-3 md:gap-4 p-2"
+            className="text-[11px] sm:text-sm md:text-base xl:text-lg font-display font-bold tracking-[0.12em] md:tracking-[0.15em] text-ivory flex items-center gap-2 md:gap-3 p-2 whitespace-nowrap"
           >
             <div className="w-6 h-6 md:w-8 md:h-8 border border-gold/40 flex items-center justify-center">
               <div className="w-1 h-1 bg-gold" />
@@ -48,7 +48,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden lg:flex gap-8 xl:gap-12 items-center">
+      <div className="hidden lg:flex gap-3 xl:gap-6 items-center">
         {navLinks.map((link, i) => (
           <motion.div
             key={link.name}
@@ -59,10 +59,10 @@ export default function Navbar() {
             <Magnetic>
               <Link
                 to={link.href}
-                className={`text-[10px] uppercase tracking-[0.4em] font-bold hover:text-gold transition-all duration-500 relative group p-4 ${location.pathname === link.href ? 'text-gold' : 'text-ivory/60'}`}
+                className={`text-[8px] xl:text-[9px] uppercase tracking-[0.18em] xl:tracking-[0.26em] font-bold hover:text-gold transition-all duration-500 relative group p-2 xl:p-3 whitespace-nowrap ${location.pathname === link.href ? 'text-gold' : 'text-ivory/60'}`}
               >
                 {link.name}
-                <span className={`absolute bottom-2 left-4 right-4 h-[1px] bg-gold transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100 ${location.pathname === link.href ? 'scale-x-100' : ''}`} />
+                <span className={`absolute bottom-1 left-2 right-2 xl:bottom-2 xl:left-3 xl:right-3 h-[1px] bg-gold transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100 ${location.pathname === link.href ? 'scale-x-100' : ''}`} />
               </Link>
             </Magnetic>
           </motion.div>
@@ -149,7 +149,7 @@ export default function Navbar() {
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="w-8 h-[1px] bg-gold/30" />
-                <span className="text-[8px] uppercase tracking-[0.4em] text-ivory/20 font-bold">
+                <span className="text-[8px] uppercase tracking-[0.22em] text-ivory/20 font-bold">
                   {SITE_STUDIO_NAME} © 2026
                 </span>
               </div>

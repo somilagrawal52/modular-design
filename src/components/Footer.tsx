@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Instagram, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
 import Reveal from './Reveal';
 import StaggerText from './StaggerText';
-import { companyEmail, MANAGER_DEMO_MODE, SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
+import { dreamRealtyEmail, MANAGER_DEMO_MODE, SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
 export default function Footer() {
   return (
     <footer className="bg-ink border-t border-stone/10 pt-16 md:pt-32 pb-12 px-8 relative overflow-hidden">
@@ -21,10 +21,10 @@ export default function Footer() {
           </Reveal>
           <Reveal direction="up" delay={0.4}>
             <a
-              href={`mailto:${companyEmail('studio')}`}
+              href={`mailto:${dreamRealtyEmail('studio')}`}
               className="group inline-flex items-center gap-6 text-2xl md:text-4xl font-light tracking-tight hover:text-gold transition-all duration-500"
             >
-              {companyEmail('studio')}
+              {dreamRealtyEmail('studio')}
               <div className="w-12 h-12 rounded-full border border-stone/20 flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all duration-500">
                 <ArrowUpRight className="group-hover:text-ink transition-colors" size={24} />
               </div>
