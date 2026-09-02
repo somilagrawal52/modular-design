@@ -53,10 +53,10 @@ export default function Services() {
                   className="border-b border-stone/10 py-16 cursor-pointer group"
                   onMouseEnter={() => setActiveId(service.id)}
                 >
-                  <div className="flex justify-between items-center mb-8">
-                    <div className="flex items-center gap-8">
+                  <div className="flex justify-between items-center gap-4 mb-8">
+                    <div className="flex flex-1 min-w-0 items-center gap-8">
                       <span className="text-gold font-mono text-xs opacity-40 group-hover:opacity-100 transition-opacity">0{i + 1}</span>
-                      <h3 className={`text-5xl md:text-6xl font-display font-bold tracking-tighter transition-all duration-700 ${activeId === service.id ? 'text-gold pl-8' : 'text-ivory group-hover:pl-4'}`}>
+                      <h3 className={`min-w-0 text-5xl md:text-6xl font-display font-bold tracking-tighter transition-all duration-700 ${activeId === service.id ? 'text-gold pl-8' : 'text-ivory group-hover:pl-4'}`}>
                         {service.title}
                       </h3>
                     </div>

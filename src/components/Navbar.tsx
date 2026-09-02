@@ -48,7 +48,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Menu */}
-      <div className="hidden lg:flex gap-3 xl:gap-6 items-center">
+      <div className="hidden xl:flex gap-6 items-center">
         {navLinks.map((link, i) => (
           <motion.div
             key={link.name}
@@ -59,11 +59,11 @@ export default function Navbar() {
             <Magnetic>
               <Link
                 to={link.href}
-                className={`text-[8px] xl:text-[9px] uppercase tracking-[0.18em] xl:tracking-[0.26em] font-bold hover:text-gold transition-all duration-500 relative group p-2 xl:p-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/60"}`}
+                className={`text-[10px] 2xl:text-[11px] uppercase tracking-[0.26em] font-bold hover:text-gold transition-all duration-500 relative group p-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/60"}`}
               >
                 {link.name}
                 <span
-                  className={`absolute bottom-1 left-2 right-2 xl:bottom-2 xl:left-3 xl:right-3 h-[1px] bg-gold transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100 ${location.pathname === link.href ? "scale-x-100" : ""}`}
+                  className={`absolute bottom-2 left-3 right-3 h-[1px] bg-gold transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100 ${location.pathname === link.href ? "scale-x-100" : ""}`}
                 />
               </Link>
             </Magnetic>
@@ -73,9 +73,11 @@ export default function Navbar() {
 
       {/* Mobile Toggle */}
       <button
-        className="lg:hidden text-ivory p-2 z-[1001] relative"
+        className="xl:hidden min-w-12 min-h-12 flex items-center justify-center text-ivory z-[1001] relative"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Menu"
+        aria-expanded={isOpen}
+        aria-controls="mobile-navigation"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -110,7 +112,8 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 w-full h-[100dvh] bg-ink backdrop-blur-2xl z-[1000] flex flex-col items-center justify-center lg:hidden overflow-y-auto py-20"
+            id="mobile-navigation"
+            className="fixed inset-0 w-full h-[100dvh] bg-ink backdrop-blur-2xl z-[1000] flex flex-col items-center justify-center xl:hidden overflow-y-auto py-20"
           >
             <div className="flex flex-col items-center gap-6 sm:gap-8 w-full">
               {navLinks.map((link, i) => (
@@ -146,24 +149,12 @@ export default function Navbar() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="mt-16 flex flex-col items-center gap-8"
+              className="mt-14 flex flex-col items-center gap-2"
             >
-              <div className="flex gap-10">
-                {["Instagram", "LinkedIn", "Behance"].map((social) => (
-                  <span
-                    key={social}
-                    className="text-[10px] font-bold tracking-[0.3em] text-ivory/40 hover:text-gold cursor-pointer transition-colors uppercase"
-                  >
-                    {social}
-                  </span>
-                ))}
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-8 h-[1px] bg-gold/30" />
-                <span className="text-[9px] uppercase tracking-[0.2em] text-ivory/20 font-brand font-semibold">
-                  {SITE_STUDIO_NAME} © 2026
-                </span>
-              </div>
+              <div className="w-8 h-[1px] bg-gold/30" />
+              <span className="text-[9px] uppercase tracking-[0.2em] text-ivory/40 font-brand font-semibold">
+                {SITE_STUDIO_NAME} © {new Date().getFullYear()}
+              </span>
             </motion.div>
           </motion.div>
         )}

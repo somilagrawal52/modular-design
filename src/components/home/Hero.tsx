@@ -64,13 +64,18 @@ export default function Hero() {
           </Reveal>
 
           <h1 className="font-display font-semibold leading-[0.96] tracking-[-0.055em] mb-9">
-            <span className="block whitespace-nowrap text-[clamp(1.35rem,5.7vw,6.5rem)] text-ivory">Turning Dreams into Reality</span>
-            <span className="mt-3 block whitespace-nowrap text-[clamp(0.9rem,3.25vw,3.6rem)] font-medium tracking-[-0.035em] text-gold">- Breaking the Imagination Barriers</span>
+            <span className="block whitespace-nowrap text-[clamp(1.35rem,5.7vw,6.5rem)] text-ivory">
+              Turning Dreams into Reality
+            </span>
+            <span className="mt-3 block whitespace-nowrap text-[clamp(0.9rem,3.25vw,3.6rem)] font-medium tracking-[-0.035em] text-gold">
+              {" "}
+              Breaking the Imagination Barriers
+            </span>
           </h1>
 
           <div className="max-w-2xl mx-auto">
             <StaggerText
-              text={`${SITE_NAME} presents premium capsule models and modular living solutions for hospitality, resorts, commercial developments, and private projects.`}
+              text={`${SITE_NAME}(DVR) presents premium capsule models and modular living solutions for hospitality, resorts, commercial developments, and private projects.`}
               className="text-base md:text-lg text-ivory/75 font-light tracking-[0.01em] leading-relaxed"
               delay={1.2}
               stagger={0.02}
@@ -78,9 +83,15 @@ export default function Hero() {
           </div>
 
           <Reveal delay={1.45}>
-            <Link to="/work" className="group mt-10 inline-flex items-center gap-4 border border-gold/45 px-6 py-4 text-[10px] uppercase tracking-[0.28em] font-bold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink">
+            <Link
+              to="/work"
+              className="group mt-10 inline-flex items-center gap-4 border border-gold/45 px-6 py-4 text-[10px] uppercase tracking-[0.28em] font-bold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink"
+            >
               Explore models
-              <ArrowUpRight size={15} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <ArrowUpRight
+                size={15}
+                className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
+              />
             </Link>
           </Reveal>
         </motion.div>

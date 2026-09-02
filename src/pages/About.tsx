@@ -10,7 +10,7 @@ import SEO from '../components/SEO';
 const principles = [
   {
     title: 'What we build',
-    text: 'Premium space capsules, Apple Cabin-style modular units, and adaptable modular spaces for hospitality, retreats, commercial uses, and private projects.',
+    text: 'Premium space capsules, rounded-cabin modular units, and adaptable modular spaces for hospitality, retreats, commercial uses, and private projects.',
   },
   {
     title: 'Design + engineering',
@@ -27,7 +27,7 @@ export default function About() {
     <div className="bg-ink min-h-screen">
       <SEO
         title="About"
-        description="Dream Realty Ventures presents premium space capsules and modular living solutions for hospitality, resorts, commercial developments and private projects."
+        description="Dream Ventures Realty presents premium space capsules and modular living solutions for hospitality, resorts, commercial developments and private projects."
       />
 
       <CinematicSection parallax={false} className="h-[90vh] flex items-center justify-center">
@@ -44,7 +44,7 @@ export default function About() {
         <div className="relative z-20 pt-32 md:pt-44 text-center px-6 max-w-6xl">
           <ParallaxElement speed={0.05}>
             <Reveal direction="up">
-              <span className="text-xs uppercase tracking-[0.45em] text-gold font-bold mb-8 block">About Dream Realty Ventures</span>
+              <span className="text-xs uppercase tracking-[0.45em] text-gold font-bold mb-8 block">About Dream Ventures Realty</span>
             </Reveal>
             <StaggerText
               el="h1"
@@ -74,7 +74,7 @@ export default function About() {
                   <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold block">Who we are</span>
                 </Reveal>
                 <StaggerText
-                  text="Dream Realty Ventures presents premium space capsules and modular living solutions for the places people stay, work, gather, and retreat."
+                  text="Dream Ventures Realty (DVR) presents premium space capsules and modular living solutions for the places people stay, work, gather, and retreat."
                   className="text-3xl md:text-4xl font-display font-medium tracking-tight leading-tight text-ivory/90"
                   delay={0.2}
                   stagger={0.02}
@@ -164,7 +164,7 @@ export default function About() {
                 <p className="text-lg leading-relaxed text-ivory/70 font-light">
                   Model-specific configuration, finishes, delivery scope, and commercial information should be reviewed against the selected model and project brief before a decision is made.
                 </p>
-                <Link to="/contact" className="group mt-10 inline-flex items-center gap-4 border-b border-gold/50 pb-3 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory hover:text-gold transition-colors">
+                <Link to="/contact" className="group mt-10 inline-flex min-h-11 items-center gap-4 border-b border-gold/50 pb-1 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory hover:text-gold transition-colors">
                   Contact us
                   <ArrowUpRight size={15} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>

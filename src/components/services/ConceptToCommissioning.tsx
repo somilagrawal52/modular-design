@@ -1,0 +1,188 @@
+import { motion } from "motion/react";
+import CinematicSection from "../CinematicSection";
+import Reveal from "../Reveal";
+import ParallaxElement from "../ParallaxElement";
+import StaggerText from "../StaggerText";
+
+const projectStages = [
+  {
+    step: "01",
+    title: "Concept",
+    descriptor: "Vision + Site + Requirements",
+    image: "/images/concept-capsule-consultation.webp",
+    alt: "Architect discussing a modular capsule house blueprint with prospective clients",
+    copy: "Every project starts with the site, intended experience and client vision. The initial capsule configuration is considered around use, layout and project requirements.",
+  },
+  {
+    step: "02",
+    title: "Design & Engineering",
+    descriptor: "Design Development + Coordination",
+    image: "/images/capsule-design-engineering.webp",
+    alt: "Engineer reviewing a digital capsule model and technical drawings",
+    copy: "The selected concept is developed into a coordinated modular solution, aligning spatial planning, product systems and project-specific requirements.",
+  },
+  {
+    step: "03",
+    title: "Factory Manufacturing",
+    descriptor: "Structure + Systems + Fit-Out",
+    image: "/images/capsule-factory-manufacturing.webp",
+    alt: "Technicians assembling a panoramic modular capsule in a controlled factory",
+    copy: "Structural, envelope, interior and building-system components are coordinated within a controlled production environment before delivery to site.",
+  },
+  {
+    step: "04",
+    title: "Site Preparation & Landscape",
+    descriptor: "Ground + Utilities + Landscape",
+    image: "/images/capsule-site-preparation.webp",
+    alt: "Prepared mountain resort site with supports and landscaped access ready for a capsule",
+    copy: "Site preparation and landscape requirements are coordinated according to the project scope, including positioning, access, utilities and the surrounding setting.",
+  },
+  {
+    step: "05",
+    title: "Delivery & Installation",
+    descriptor: "Transport + Positioning + Connection",
+    image: "/images/capsule-installation.webp",
+    alt: "Modular capsule being positioned by crane on prepared supports",
+    copy: "Once the site is prepared, the modular unit is transported, positioned and connected in line with the project installation plan.",
+  },
+  {
+    step: "06",
+    title: "Commissioning & Handover",
+    descriptor: "Final Checks + Handover",
+    image: "/images/capsule-commissioning.webp",
+    alt: "Completed illuminated capsule in a finished landscaped setting with clients and representative",
+    copy: "Final checks and system coordination are completed before handover, helping ensure the finished capsule is ready for its intended use.",
+  },
+];
+
+function StageHeading({
+  stage,
+  compact = false,
+}: {
+  stage: (typeof projectStages)[number];
+  compact?: boolean;
+}) {
+  return (
+    <div>
+      <span
+        className={
+          compact
+            ? "font-display text-5xl font-bold leading-none text-gold/70"
+            : "font-display text-[clamp(5rem,9vw,9.5rem)] font-bold leading-[0.72] tracking-tighter text-gold/25"
+        }
+      >
+        {stage.step}
+      </span>
+      <div className={compact ? "mt-5" : "mt-8 xl:mt-10"}>
+        <span className="block text-[10px] font-bold uppercase tracking-[0.28em] text-gold">
+          {stage.descriptor}
+        </span>
+        <h3
+          className={
+            compact
+              ? "mt-3 text-3xl font-bold leading-[0.95] text-balance"
+              : "mt-5 text-[clamp(2.75rem,5vw,5.25rem)] font-bold leading-[0.9] tracking-tighter text-balance"
+          }
+        >
+          {stage.title}
+        </h3>
+      </div>
+    </div>
+  );
+}
+
+export default function ConceptToCommissioning() {
+  return (
+    <CinematicSection
+      minHeight={false}
+      className="border-y border-stone/10 bg-stone/5 px-6 py-24 sm:px-8 md:px-12 md:py-36 lg:px-24 lg:py-44"
+    >
+      <ParallaxElement
+        speed={-0.03}
+        className="absolute right-[-8%] top-16 select-none font-display text-[24vw] font-bold leading-none text-ivory/[0.035]"
+      >
+        JOURNEY
+      </ParallaxElement>
+
+      <div className="relative z-20 mx-auto max-w-7xl">
+        <div className="max-w-4xl border-b border-stone/20 pb-16 md:pb-24">
+          <Reveal direction="up">
+            <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.34em] text-gold">
+              One Journey. Six Coordinated Stages.
+            </span>
+          </Reveal>
+          <StaggerText
+            el="h2"
+            text="CONCEPT TO COMMISSIONING."
+            className="max-w-3xl text-[clamp(3rem,7.5vw,7.25rem)] font-display font-bold leading-[0.86] tracking-tighter"
+            delay={0.1}
+            stagger={0.035}
+          />
+          <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-ivory/75 md:mt-10 md:text-xl">
+            From the first sketch to final handover, each stage is coordinated to turn a modular concept into a complete, site-ready experience.
+          </p>
+        </div>
+
+        <div className="mt-20 space-y-20 md:mt-32 md:space-y-32 lg:space-y-40">
+          {projectStages.map((stage, index) => {
+            const imageOnLeft = index % 2 === 0;
+            const imagePlacement = imageOnLeft
+              ? "lg:col-start-1"
+              : "lg:col-start-6";
+            const textPlacement = imageOnLeft
+              ? "lg:col-start-9"
+              : "lg:col-start-1";
+
+            return (
+              <motion.article
+                key={stage.step}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.14 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="grid grid-cols-1 gap-y-8 border-t border-stone/20 pt-10 md:gap-y-10 md:pt-14 lg:grid-cols-12 lg:grid-rows-[auto_auto] lg:gap-x-10 lg:gap-y-0 xl:gap-x-16"
+              >
+                <div className="order-1 lg:hidden">
+                  <StageHeading stage={stage} compact />
+                </div>
+
+                <motion.figure
+                  className={`order-2 overflow-hidden border border-stone/20 bg-ink lg:row-span-2 lg:col-span-7 ${imagePlacement}`}
+                  initial={{ clipPath: "inset(8% 0 8% 0)" }}
+                  whileInView={{ clipPath: "inset(0% 0 0% 0)" }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                  <div className="relative aspect-[3/2] overflow-hidden">
+                    <img
+                      src={stage.image}
+                      alt={stage.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-[1.02]"
+                    />
+                    <div className="absolute inset-0 bg-ink/10" />
+                    <span className="absolute bottom-4 left-4 border border-gold/30 bg-ink/80 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-gold backdrop-blur-sm md:bottom-5 md:left-5">
+                      Stage {stage.step}
+                    </span>
+                  </div>
+                </motion.figure>
+
+                <div className={`order-3 lg:row-span-2 lg:col-span-4 ${textPlacement} hidden self-center lg:flex lg:flex-col`}>
+                  <StageHeading stage={stage} />
+                  <p className="mt-10 max-w-md text-base font-light leading-relaxed text-ivory/75 xl:text-lg">
+                    {stage.copy}
+                  </p>
+                </div>
+
+                <p className="order-3 max-w-xl text-base font-light leading-relaxed text-ivory/75 lg:hidden">
+                  {stage.copy}
+                </p>
+              </motion.article>
+            );
+          })}
+        </div>
+      </div>
+    </CinematicSection>
+  );
+}

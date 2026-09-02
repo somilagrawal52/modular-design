@@ -6,7 +6,7 @@ import Reveal from '../components/Reveal';
 import SEO from '../components/SEO';
 import StaggerText from '../components/StaggerText';
 
-const deliveryStages = [
+const processStages = [
   {
     number: '01',
     title: 'Model configuration',
@@ -15,37 +15,86 @@ const deliveryStages = [
   },
   {
     number: '02',
-    title: 'Delivery planning',
-    copy: 'Site access, shipping route, lifting requirements, and the installation sequence are confirmed for the selected model and project setting.',
-    icon: Truck,
+    title: 'Engineering coordination',
+    copy: 'Support strategy, service interfaces, lifting requirements, site access, and installation sequencing are coordinated for the project setting.',
+    icon: Wrench,
   },
   {
     number: '03',
-    title: 'Site installation',
-    copy: 'Supports, connection points, and lifting operations are planned against the model documentation, site conditions, and the applicable local requirements.',
+    title: 'Factory assembly',
+    copy: 'The structural shell, envelope, and selected interior or service elements are assembled off-site according to the agreed model scope.',
+    icon: Layers3,
+  },
+  {
+    number: '04',
+    title: 'Pre-dispatch review',
+    copy: 'Finished scope, transport access, lifting considerations, and the relevant service interfaces are reviewed ahead of delivery.',
+    icon: Check,
+  },
+  {
+    number: '05',
+    title: 'Transport + positioning',
+    copy: 'The completed or substantially completed module is transported to the prepared site and positioned to the agreed installation plan.',
+    icon: Truck,
+  },
+  {
+    number: '06',
+    title: 'Final connection',
+    copy: 'Site connections and finishing work are completed where required, in line with the selected model, site conditions, and local requirements.',
     icon: Wrench,
   },
 ];
 
-const technicalSystems = [
+const constructionLayers = [
   {
-    title: 'Services to review',
-    detail: 'Electrical, water, waste, ventilation, and climate-control interfaces are confirmed against the selected model and the available site utilities.',
+    title: 'Structural frame',
+    detail: 'The structural frame forms the primary support system of the selected capsule and is coordinated with its base and installation strategy.',
   },
   {
-    title: 'Model-specific construction',
-    detail: 'Frame, enclosure, insulation, glazing, interior finish, and equipment should be checked in the selected model specification rather than assumed across the collection.',
+    title: 'Exterior shell',
+    detail: 'Precision-finished enclosure elements shape the capsule while protecting the structural and insulation systems within.',
   },
   {
-    title: 'Configuration potential',
-    detail: 'Where a manufacturer supports options or additional modules, the available configuration should be confirmed for the selected product and site.',
+    title: 'Thermal layer',
+    detail: 'Insulation within the envelope helps create a more controlled interior environment. Its final build-up is model-specific.',
+  },
+  {
+    title: 'Panoramic glazing',
+    detail: 'Large-format glazed openings bring daylight and landscape views into the compact plan; glazing selection is confirmed by model and project.',
+  },
+  {
+    title: 'Interior finish',
+    detail: 'Wall, ceiling, floor, and fixed interior systems can be completed within the off-site module scope, depending on configuration.',
+  },
+];
+
+const integratedSystems = [
+  {
+    number: '01',
+    title: 'Electrical + lighting',
+    detail: 'Electrical routing and lighting infrastructure can be coordinated within the model and project scope before delivery.',
+  },
+  {
+    number: '02',
+    title: 'Water + waste',
+    detail: 'Supply and drainage interfaces can be considered against the intended layout and the available site utilities.',
+  },
+  {
+    number: '03',
+    title: 'Ventilation + climate',
+    detail: 'Ventilation and climate-control provisions are considered according to the selected model, location, and project requirements.',
+  },
+  {
+    number: '04',
+    title: 'Site connections',
+    detail: 'Final connections are planned around utility access, supports, and the agreed installation sequence where required.',
   },
 ];
 
 const systemPromises = [
-  'Model-specific product information',
-  'Site, delivery, and installation considerations',
-  'Configuration options confirmed before ordering',
+  'Model, finish, and layout scope',
+  'Service and site-interface coordination',
+  'Delivery and installation planning',
 ];
 
 export default function SystemPage() {
@@ -80,7 +129,7 @@ export default function SystemPage() {
               </p>
             </Reveal>
             <Reveal direction="up" delay={0.45}>
-              <Link to="/contact" className="mt-10 inline-flex items-center gap-4 border-b border-gold/50 pb-3 text-[10px] uppercase tracking-[0.35em] font-bold text-gold transition-colors hover:text-ivory hover:border-ivory">
+              <Link to="/contact" className="mt-10 inline-flex min-h-11 items-center gap-4 border-b border-gold/50 pb-1 text-[10px] uppercase tracking-[0.35em] font-bold text-gold transition-colors hover:text-ivory hover:border-ivory">
                 Discuss a capsule system <ArrowUpRight size={16} />
               </Link>
             </Reveal>
@@ -108,21 +157,21 @@ export default function SystemPage() {
         <div className="max-w-7xl mx-auto">
           <Reveal direction="up">
             <div className="max-w-3xl mb-16 md:mb-24">
-              <span className="text-[10px] uppercase tracking-[0.35em] text-gold font-bold">The delivery sequence</span>
-              <h2 className="mt-6 text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9]">A more controlled route to site.</h2>
+              <span className="text-[10px] uppercase tracking-[0.35em] text-gold font-bold">From factory to site</span>
+              <h2 className="mt-6 text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9]">Built off-site. Positioned on-site.</h2>
             </div>
           </Reveal>
 
-          <div className="grid md:grid-cols-3 border-t border-stone/20">
-            {deliveryStages.map((stage, index) => {
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 border-l border-t border-stone/20">
+            {processStages.map((stage, index) => {
               const Icon = stage.icon;
               return (
-                <Reveal key={stage.number} direction="up" delay={index * 0.12} className="border-b md:border-b-0 md:border-r border-stone/20 last:border-r-0 p-8 md:p-10 lg:p-12 min-h-[300px] flex flex-col">
+                <Reveal key={stage.number} direction="up" delay={index * 0.08} className="border-r border-b border-stone/20 p-8 md:p-10 lg:p-12 min-h-[280px] flex flex-col">
                   <div className="flex items-start justify-between gap-6">
                     <span className="font-mono text-xs text-gold">{stage.number}</span>
                     <Icon size={22} strokeWidth={1.25} className="text-gold" />
                   </div>
-                  <h3 className="mt-16 text-3xl font-display font-bold tracking-tight">{stage.title}</h3>
+                  <h3 className="mt-12 text-3xl font-display font-bold tracking-tight">{stage.title}</h3>
                   <p className="mt-5 text-sm leading-relaxed text-ivory/60">{stage.copy}</p>
                 </Reveal>
               );
@@ -135,8 +184,8 @@ export default function SystemPage() {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-24 items-center">
           <Reveal direction="right" className="relative aspect-[16/11] overflow-hidden border border-stone/20 p-2">
             <ParallaxImage
-              src="/images/modular-capsule-coworking-studio-installation-v2.png"
-              alt="A workplace capsule module being installed"
+              src="/images/modular-capsule-courtyard-residence-hero-v2.png"
+              alt="Panoramic capsule modules arranged around a garden court"
               className="w-full h-full"
             />
             <div className="absolute inset-2 bg-ink/15 pointer-events-none" />
@@ -146,13 +195,13 @@ export default function SystemPage() {
             <Reveal direction="left">
               <div className="flex items-center gap-4">
                 <Layers3 size={18} className="text-gold" />
-                <span className="text-[10px] uppercase tracking-[0.35em] text-gold font-bold">Performance by design</span>
+                <span className="text-[10px] uppercase tracking-[0.35em] text-gold font-bold">Built from the outside in</span>
               </div>
-              <h2 className="mt-7 text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9]">Built to connect, perform, and evolve.</h2>
+              <h2 className="mt-7 text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9]">Engineered layer by layer.</h2>
             </Reveal>
-            <div className="mt-10 space-y-7">
-              {technicalSystems.map((system, index) => (
-                <Reveal key={system.title} direction="left" delay={0.12 + index * 0.08}>
+            <div className="mt-10 space-y-6">
+              {constructionLayers.map((system, index) => (
+                <Reveal key={system.title} direction="left" delay={0.08 + index * 0.06}>
                   <div className="border-l border-gold/50 pl-6">
                     <h3 className="text-xl font-display font-bold tracking-tight">{system.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-ivory/60">{system.detail}</p>
@@ -164,14 +213,38 @@ export default function SystemPage() {
         </div>
       </CinematicSection>
 
+      <CinematicSection parallax={false} className="border-y border-stone/15 bg-stone/[0.03] py-24 md:py-36 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <Reveal direction="up">
+            <div className="max-w-3xl mb-16 md:mb-24">
+              <span className="text-[10px] uppercase tracking-[0.35em] text-gold font-bold">Integrated from the start</span>
+              <h2 className="mt-6 text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9]">Everything works as one system.</h2>
+              <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory/70">
+                Building services can be coordinated within the modular approach before the unit reaches site. The final scope is confirmed for the selected model and project.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 border-l border-t border-stone/20">
+            {integratedSystems.map((system, index) => (
+              <Reveal key={system.number} direction="up" delay={index * 0.08} className="border-r border-b border-stone/20 p-8 md:p-10 min-h-[240px]">
+                <span className="font-mono text-xs text-gold">{system.number}</span>
+                <h3 className="mt-12 text-2xl font-display font-bold tracking-tight">{system.title}</h3>
+                <p className="mt-5 text-sm leading-relaxed text-ivory/60">{system.detail}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </CinematicSection>
+
       <CinematicSection parallax={false} className="px-6 md:px-12 pb-24 md:pb-36">
         <div className="max-w-7xl mx-auto border border-gold/25 bg-gold/[0.04] grid lg:grid-cols-[1fr_0.85fr] gap-10 p-8 md:p-14 lg:p-20">
           <div>
             <Reveal direction="right">
-              <span className="text-[10px] uppercase tracking-[0.35em] text-gold font-bold">Model-specific coordination</span>
-              <h2 className="mt-6 text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9]">One system. Many applications.</h2>
+              <span className="text-[10px] uppercase tracking-[0.35em] text-gold font-bold">Configured for the project</span>
+              <h2 className="mt-6 text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.9]">One platform. Multiple possibilities.</h2>
               <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory/70">
-                Capsule models can be considered for homes, hospitality, workplaces, public amenities, and commercial spaces. Final structure, services, delivery logistics, and compliance must be reviewed for the selected model, location, and intended use.
+                Capsule models can be considered for homes, hospitality, workplaces, public amenities, and commercial spaces. Finish, layout, glazing, and integration scope can be considered according to the selected model and project requirements.
               </p>
             </Reveal>
           </div>
@@ -184,7 +257,7 @@ export default function SystemPage() {
                 </li>
               ))}
             </ul>
-            <Link to="/work" className="mt-12 inline-flex items-center gap-4 text-[10px] uppercase tracking-[0.35em] font-bold text-gold transition-colors hover:text-ivory">
+            <Link to="/work" className="mt-12 inline-flex min-h-11 items-center gap-4 text-[10px] uppercase tracking-[0.35em] font-bold text-gold transition-colors hover:text-ivory">
               Explore models <ArrowUpRight size={16} />
             </Link>
           </Reveal>

@@ -1,8 +1,26 @@
-import { motion } from 'motion/react';
-import { Instagram, Twitter, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import Reveal from './Reveal';
-import StaggerText from './StaggerText';
-import { dreamRealtyEmail, MANAGER_DEMO_MODE, SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
+import { dreamRealtyEmail, SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
+
+const footerGroups = [
+  {
+    title: 'Explore',
+    links: [
+      { label: 'Capsule Collection', to: '/work' },
+      { label: 'Our Services', to: '/services' },
+    ],
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'Technology Behind It', to: '/system' },
+      { label: 'About Us', to: '/about' },
+      { label: 'Contact Us', to: '/contact' },
+    ],
+  },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-ink border-t border-stone/10 pt-16 md:pt-32 pb-12 px-8 relative overflow-hidden">
@@ -32,54 +50,30 @@ export default function Footer() {
           </Reveal>
         </div>
 
-        <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-16">
-          <div>
-            <Reveal direction="up" delay={0.2}>
-              <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-8">Start a conversation</h4>
-              <p className="text-sm text-ivory/75 leading-relaxed max-w-xs">
-                Explore a capsule model or discuss the modular application you have in mind with our team.
-              </p>
-            </Reveal>
-          </div>
-
-          <div>
-            <Reveal direction="up" delay={0.3}>
-              <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-8">Social Anthology</h4>
-              <div className="flex flex-col gap-6">
-                {[
-                  { name: 'Instagram', icon: <Instagram size={14} /> },
-                  { name: 'Twitter', icon: <Twitter size={14} /> },
-                  { name: 'LinkedIn', icon: <Linkedin size={14} /> }
-                ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((social) => (
-                  <a key={social.name} href="#" className="group flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory/60 hover:text-gold transition-all duration-500">
-                    <span className="opacity-40 group-hover:opacity-100 transition-opacity">{social.icon}</span>
-                    {social.name}
-                  </a>
+        <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-12 md:gap-16">
+          {footerGroups.map((group, index) => (
+            <Reveal key={group.title} direction="up" delay={0.2 + index * 0.1}>
+              <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-6">{group.title}</h4>
+              <div className="flex flex-col items-start gap-1">
+                {group.links.map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="inline-flex min-h-11 items-center text-[10px] uppercase tracking-[0.3em] font-bold text-ivory/70 transition-colors duration-500 hover:text-gold"
+                  >
+                    {link.label}
+                  </Link>
                 ))}
               </div>
             </Reveal>
-          </div>
+          ))}
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-16 md:mt-32 pt-12 border-t border-stone/10 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.32em] text-ivory/60 font-brand font-semibold relative z-10">
+      <div className="max-w-7xl mx-auto mt-16 md:mt-32 pt-8 md:pt-12 border-t border-stone/10 flex justify-center md:justify-start text-center md:text-left text-[9px] uppercase tracking-[0.32em] text-ivory/60 font-brand font-semibold relative z-10">
         <Reveal direction="up" delay={0.5}>
-          <p>© 2026 {SITE_STUDIO_NAME}. ALL RIGHTS RESERVED.</p>
+          <p>© {new Date().getFullYear()} {SITE_STUDIO_NAME}. ALL RIGHTS RESERVED.</p>
         </Reveal>
-        <div className="flex gap-12">
-          <Reveal direction="up" delay={0.6}>
-            <a href="#" className="hover:text-gold transition-colors relative group">
-              Privacy Policy
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all group-hover:w-full" />
-            </a>
-          </Reveal>
-          <Reveal direction="up" delay={0.7}>
-            <a href="#" className="hover:text-gold transition-colors relative group">
-              Terms of Service
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all group-hover:w-full" />
-            </a>
-          </Reveal>
-        </div>
       </div>
     </footer>
   );
