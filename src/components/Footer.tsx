@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-ink border-t border-stone/10 pt-16 md:pt-32 pb-12 px-8 relative overflow-hidden">
       {/* Subtle Background Text */}
-      <div className="absolute bottom-0 left-0 w-full text-[20vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none translate-y-1/2">
+      <div className="absolute bottom-0 left-0 w-full text-[20vw] font-brand font-semibold tracking-[0.08em] text-ivory/5 pointer-events-none select-none leading-none translate-y-1/2">
         {SITE_NAME}
       </div>
 
@@ -16,7 +16,7 @@ export default function Footer() {
           <Reveal direction="right">
             <h2 className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.85] mb-12">
               Let's build
-              <span className="text-gold italic font-serif font-light">something timeless.</span>
+              <span className="text-gold font-display font-medium">something timeless.</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.4}>
@@ -35,12 +35,10 @@ export default function Footer() {
         <div className="lg:col-span-5 grid grid-cols-1 md:grid-cols-2 gap-16">
           <div>
             <Reveal direction="up" delay={0.2}>
-              <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-8">Global Studios</h4>
-              <address className="not-italic text-sm text-ivory/75 leading-relaxed space-y-4">
-                <p className="hover:text-ivory transition-colors cursor-default">Geneva — Rue du Rhône 14</p>
-                <p className="hover:text-ivory transition-colors cursor-default">London — Savile Row 24</p>
-                <p className="hover:text-ivory transition-colors cursor-default">New York — Wooster St 150</p>
-              </address>
+              <h4 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold mb-8">Start a conversation</h4>
+              <p className="text-sm text-ivory/75 leading-relaxed max-w-xs">
+                Explore a capsule model or discuss the modular application you have in mind with our team.
+              </p>
             </Reveal>
           </div>
 
@@ -64,7 +62,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-16 md:mt-32 pt-12 border-t border-stone/10 flex flex-col md:flex-row justify-between items-center gap-8 text-[8px] uppercase tracking-[0.5em] text-ivory/60 font-bold relative z-10">
+      <div className="max-w-7xl mx-auto mt-16 md:mt-32 pt-12 border-t border-stone/10 flex flex-col md:flex-row justify-between items-center gap-8 text-[9px] uppercase tracking-[0.32em] text-ivory/60 font-brand font-semibold relative z-10">
         <Reveal direction="up" delay={0.5}>
           <p>© 2026 {SITE_STUDIO_NAME}. ALL RIGHTS RESERVED.</p>
         </Reveal>

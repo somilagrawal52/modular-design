@@ -6,6 +6,8 @@ import {
   useMotionTemplate,
 } from "motion/react";
 import { useEffect } from "react";
+import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Reveal from "../Reveal";
 import StaggerText from "../StaggerText";
 import { MANAGER_DEMO_MODE, SITE_NAME } from "../../config/siteMode";
@@ -50,30 +52,37 @@ export default function Hero() {
               className={
                 MANAGER_DEMO_MODE
                   ? "hidden"
-                  : "flex items-center justify-center gap-6 mb-12"
+                  : "flex items-center justify-center gap-4 mb-10"
               }
             >
-              <div className="h-[1px] w-12 bg-gold/40" />
-              <span className="text-[10px] uppercase tracking-[0.6em] text-gold font-bold">
-                Est. 1998 — Geneva
+              <div className="h-[1px] w-8 md:w-12 bg-gold/40" />
+              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.28em] md:tracking-[0.42em] text-gold font-bold">
+                Premium space capsules · modular living solutions
               </span>
-              <div className="h-[1px] w-12 bg-gold/40" />
+              <div className="h-[1px] w-8 md:w-12 bg-gold/40" />
             </div>
           </Reveal>
 
-          <h1 className="font-display font-bold leading-[0.82] tracking-tighter mb-12">
-            <span className="block whitespace-nowrap text-[6vw] sm:text-[6.2vw] md:text-[7vw] text-ivory">Turning Dreams into Reality</span>
-            <span className="block whitespace-nowrap text-[4vw] sm:text-[4.8vw] md:text-[5vw] text-gold font-serif italic font-light">- Breaking the Imagination Barriers</span>
+          <h1 className="font-display font-semibold leading-[0.96] tracking-[-0.055em] mb-9">
+            <span className="block whitespace-nowrap text-[clamp(1.35rem,5.7vw,6.5rem)] text-ivory">Turning Dreams into Reality</span>
+            <span className="mt-3 block whitespace-nowrap text-[clamp(0.9rem,3.25vw,3.6rem)] font-medium tracking-[-0.035em] text-gold">- Breaking the Imagination Barriers</span>
           </h1>
 
           <div className="max-w-2xl mx-auto">
             <StaggerText
-              text={`${SITE_NAME} creates modular spaces for living, gathering, and growing—designed with clarity, built with precision, and made for real life.`}
-              className="text-lg md:text-xl text-ivory/70 font-light tracking-wide leading-relaxed italic font-serif"
+              text={`${SITE_NAME} presents premium capsule models and modular living solutions for hospitality, resorts, commercial developments, and private projects.`}
+              className="text-base md:text-lg text-ivory/75 font-light tracking-[0.01em] leading-relaxed"
               delay={1.2}
               stagger={0.02}
             />
           </div>
+
+          <Reveal delay={1.45}>
+            <Link to="/work" className="group mt-10 inline-flex items-center gap-4 border border-gold/45 px-6 py-4 text-[10px] uppercase tracking-[0.28em] font-bold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink">
+              Explore models
+              <ArrowUpRight size={15} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Link>
+          </Reveal>
         </motion.div>
       </div>
 

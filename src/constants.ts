@@ -347,63 +347,35 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/capsule-showcase/capsule-munnar-tea-estate-exterior.png', '/images/capsule-showcase/capsule-munnar-tea-estate-installation.png', '/images/capsule-showcase/capsule-munnar-tea-estate-interior.png']
   }
 ];
-
 export const SERVICES: Service[] = [
   {
     id: 'modular-home-design', title: 'Modular Home Design',
-    description: 'We design modern prefabricated homes that bring thoughtful planning, flexible layouts, and refined architecture into a faster build process.',
+    description: 'Modular home concepts that bring thoughtful planning, flexible layouts, and refined living spaces into a clear product-led starting point.',
     features: ['Concept Planning', 'Module Configuration', 'Structural Coordination', '3D Visualization']
   },
   {
     id: 'modular-hotels-retreats', title: 'Modular Hotels & Retreats',
-    description: 'We create guest-room modules, resort masterplans, reception spaces, and amenities that open faster and grow in phases.',
+    description: 'Capsule suites, shared spaces, and hospitality applications suited to resorts, retreats, and phased destination planning.',
     features: ['Guest Room Modules', 'Resort Masterplanning', 'Reception & Shared Spaces', 'Phased Expansion']
   },
   {
     id: 'modular-offices', title: 'Modular Offices & Workspaces',
-    description: 'We design flexible office pavilions and workplace campuses that adapt as teams, sites, and business needs change.',
+    description: 'Flexible workplace pavilions and modular office applications that can be considered around teams, sites, and changing business needs.',
     features: ['Office Planning', 'Meeting Modules', 'Campus Layouts', 'Future Expansion']
   },
   {
     id: 'cafes-bars-restaurants', title: 'Cafés, Bars & Restaurants',
-    description: 'We turn modular structures into polished food-and-beverage destinations built for service, social energy, and memorable customer experience.',
+    description: 'Modular food-and-beverage applications for compact service spaces, social settings, and memorable guest experiences.',
     features: ['Café & Bar Planning', 'Kitchen Coordination', 'Rooftop Terraces', 'Guest Experience Design']
   },
   {
     id: 'retail-popups', title: 'Retail & Pop-Ups',
-    description: 'We create transportable retail, showroom, and pop-up modules that can launch quickly and move as opportunities change.',
+    description: 'Transportable retail, showroom, and pop-up applications designed to support changing locations and opportunities.',
     features: ['Retail Layouts', 'Display Systems', 'Brand-ready Interiors', 'Transport Planning']
   },
   {
     id: 'modular-amenities', title: 'Modular Amenities & Pools',
-    description: 'We add flexible outdoor amenities—from modular pools to landscape-ready leisure spaces—that complete a site with minimal disruption.',
+    description: 'Flexible outdoor amenities—from modular pools to landscape-ready leisure spaces—considered as part of a broader site experience.',
     features: ['Pool Integration', 'Landscape Coordination', 'Deck & Access Design', 'Site Installation']
-  }
-];
-
-export const TEAM = [
-  {
-    name: 'Julian Aurelian',
-    role: 'Founder & Principal Architect',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800',
-    bio: 'With over 30 years of experience, Julian leads the creative vision of the studio, focusing on the intersection of light and materiality.'
-  },
-  {
-    name: 'Elena Rossi',
-    role: 'Design Director',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800',
-    bio: 'Elena brings a poetic approach to spatial design, ensuring every project tells a unique story through its geometry.'
-  },
-  {
-    name: 'Marcus Thorne',
-    role: 'Technical Director',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800',
-    bio: 'Marcus oversees the engineering and technical execution, pushing the boundaries of what is possible with modern materials.'
-  },
-  {
-    name: 'Sophia Chen',
-    role: 'Sustainability Lead',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=800',
-    bio: 'Sophia ensures that every Dream Realty Ventures project meets the highest standards of environmental responsibility and longevity.'
   }
 ];

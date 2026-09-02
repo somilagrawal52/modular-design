@@ -1,8 +1,9 @@
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import { SITE_STUDIO_NAME } from '../config/siteMode';
 
 interface SEOProps {
-  title: string;
+  title?: string;
   description: string;
   name?: string;
   type?: string;
@@ -15,29 +16,31 @@ export default function SEO({
   description,
   name = SITE_STUDIO_NAME,
   type = 'website',
-  image = 'https://modular-design-flax.vercel.app/images/modular-capsule-desert-retreat-hero.png',
-  url = 'https://modular-design-flax.vercel.app/'
+  image = '/images/modular-capsule-desert-retreat-hero.png',
+  url
 }: SEOProps) {
-  const fullTitle = `${title} | ${name}`;
+  const location = useLocation();
+  const siteUrl = 'https://modular-design-flax.vercel.app';
+  const canonicalUrl = url ?? `${siteUrl}${location.pathname}`;
+  const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  const fullTitle = title ? `${name} — ${title}` : name;
   return (
     <Helmet>
-      {/* Standard metadata tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      
-      {/* Facebook tags */}
+      <link rel="canonical" href={canonicalUrl} />
+      <meta name="robots" content="index, follow" />
+      <meta name="theme-color" content="#050505" />
       <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={name} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      
-      {/* Twitter tags */}
-      <meta name="twitter:creator" content={name} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={imageUrl} />
     </Helmet>
   );
 }

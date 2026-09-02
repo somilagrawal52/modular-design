@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { PROJECTS } from '../constants';
-import { ArrowLeft, MapPin, Calendar } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import ParallaxImage from '../components/ParallaxImage';
 import StaggerText from '../components/StaggerText';
@@ -20,18 +20,10 @@ export default function ProjectDetail() {
   const { id } = useParams();
   const project = PROJECTS.find(p => p.id === id);
   if (!project) return <div>Project not found</div>;
-  const defaultSpecs = project.category === 'Hospitality'
-    ? [{ label: 'System', value: 'Off-site Modular' }, { label: 'Delivery', value: 'Phased Installation' }, { label: 'Climate', value: 'Site-responsive Envelope' }]
-    : project.category === 'Commercial'
-      ? [{ label: 'Format', value: 'Modular Commercial' }, { label: 'Setup', value: 'Rapid Installation' }, { label: 'Service', value: 'Integrated Fit-out' }]
-      : [{ label: 'System', value: 'Off-site Modular' }, { label: 'Installation', value: 'Low-disruption Setup' }, { label: 'Finish', value: 'Durable External Envelope' }];
-  const technicalSpecs = project.technicalSpecs ?? defaultSpecs;
-  const standardizedDetails = project.details.map((detail) =>
-    detail.label === 'Status' && detail.value === 'Reference Proposal'
-      ? { ...detail, value: 'Concept Study' }
-      : detail
-  );
-  const visibleDetails = demoItems(standardizedDetails, standardizedDetails.slice(0, 2));
+  const technicalSpecs = project.technicalSpecs ?? [];
+  const productType = project.details.find((detail) => detail.label === 'Type')?.value ?? project.category;
+  const modelDetails = [{ label: 'Product type', value: productType }];
+  const visibleDetails = demoItems(modelDetails, modelDetails);
   const visibleSpecs = demoItems(technicalSpecs, technicalSpecs.slice(0, 2));
   const completeGallery = [...project.gallery, ...(EXTRA_GALLERY_IMAGES[project.id] ?? [])];
   while (completeGallery.length < 3) {
@@ -46,14 +38,6 @@ export default function ProjectDetail() {
         description={project.description} 
         image={project.image}
       />
-      <Link
-        to="/work"
-        aria-label="Back to archive"
-        className="fixed top-6 left-6 md:top-8 md:left-8 z-50 flex items-center gap-3 px-4 py-3 bg-ink/75 backdrop-blur-md border border-gold/25 text-[9px] uppercase tracking-[0.28em] text-gold font-bold transition-all duration-300 hover:bg-gold hover:text-ink hover:border-gold"
-      >
-        <ArrowLeft size={14} />
-        Back to Archive
-      </Link>
       {/* Hero */}
       <CinematicSection parallax={false} className="h-screen">
         <div className="absolute inset-0 overflow-hidden">
@@ -75,32 +59,20 @@ export default function ProjectDetail() {
             <Reveal direction="right">
               <Link to="/work" className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.5em] text-gold font-bold mb-12">
                 <div className="w-8 h-[1px] bg-gold group-hover:w-12 transition-all" />
-                Back to Archive
+                Back to models
               </Link>
             </Reveal>
             <StaggerText
               el="h1"
               text={project.title}
-              className="text-[12vw] md:text-[10vw] font-display font-bold tracking-tighter leading-[0.8] mb-8"
+              className="max-w-5xl text-[clamp(2.5rem,11vw,4.5rem)] md:text-[clamp(4.5rem,8vw,6.5rem)] font-display font-bold tracking-tighter leading-[0.86] mb-8"
               delay={0.2}
               stagger={0.08}
             />
-            <div className="flex flex-wrap gap-12 items-center">
+            <div className="flex flex-wrap gap-4 items-center">
               <Reveal direction="up" delay={0.6}>
-                <div className="flex items-center gap-3">
-                  <MapPin size={14} className="text-gold" />
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60 font-bold">{project.location}</span>
-                </div>
-              </Reveal>
-              <Reveal direction="up" delay={0.7}>
-                <div className="flex items-center gap-3">
-                  <Calendar size={14} className="text-gold" />
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60 font-bold">{project.year}</span>
-                </div>
-              </Reveal>
-              <Reveal direction="up" delay={0.8}>
                 <div className="px-4 py-1 border border-gold/20 rounded-full">
-                  <span className="text-[8px] uppercase tracking-[0.4em] text-gold font-bold">{project.category}</span>
+                  <span className="text-[8px] uppercase tracking-[0.3em] text-gold font-bold">Product model · {project.category}</span>
                 </div>
               </Reveal>
             </div>
@@ -112,7 +84,7 @@ export default function ProjectDetail() {
       <CinematicSection className="py-24 md:py-48 px-8 md:px-24 bg-ivory text-ink">
         {/* Background Parallax */}
         <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0">
-          NARRATIVE
+          OVERVIEW
         </ParallaxElement>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -123,13 +95,13 @@ export default function ProjectDetail() {
                   <div className="flex items-center gap-4 mb-12">
                     <span className="text-gold font-mono text-xs">01</span>
                     <div className="h-[1px] w-12 bg-gold" />
-                    <span className="text-xs uppercase tracking-[0.4em] text-stone font-bold">The Vision</span>
+                    <span className="text-xs uppercase tracking-[0.4em] text-stone font-bold">Product overview</span>
                   </div>
                 </Reveal>
                 
                 <StaggerText
                   text={project.description}
-                  className="text-4xl md:text-5xl font-serif italic font-light leading-tight text-stone mb-24"
+                  className="text-3xl md:text-4xl font-display font-medium tracking-tight leading-tight text-stone mb-24"
                   delay={0.2}
                   stagger={0.02}
                 />
@@ -138,7 +110,7 @@ export default function ProjectDetail() {
                   {project.challenge && (
                     <Reveal direction="up" delay={0.4}>
                       <div className="space-y-8">
-                        <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">The Challenge</h3>
+                        <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">Designed for</h3>
                         <p className="text-xl font-light leading-relaxed text-stone/80">{project.challenge}</p>
                       </div>
                     </Reveal>
@@ -146,7 +118,7 @@ export default function ProjectDetail() {
                   {project.solution && !MANAGER_DEMO_MODE && (
                     <Reveal direction="up" delay={0.6}>
                       <div className="space-y-8">
-                        <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">The Solution</h3>
+                        <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">Configuration approach</h3>
                         <p className="text-xl font-light leading-relaxed text-stone/80">{project.solution}</p>
                       </div>
                     </Reveal>
@@ -158,7 +130,7 @@ export default function ProjectDetail() {
             <div className="lg:col-span-4 lg:sticky lg:top-40">
               <ParallaxElement speed={0.04}>
                 <div className="bg-stone/5 p-12 border border-stone/10 space-y-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.4em] text-stone font-bold border-b border-stone/10 pb-6">Technical Data</h3>
+                  <h3 className="text-[10px] uppercase tracking-[0.4em] text-stone font-bold border-b border-stone/10 pb-6">Model information</h3>
                   <div className="space-y-8">
                     {visibleDetails.map((detail, i) => (
                       <Reveal key={detail.label} direction="up" delay={i * 0.1}>
@@ -173,7 +145,7 @@ export default function ProjectDetail() {
                   
                   {technicalSpecs.length > 0 && (
                     <div className="pt-12 border-t border-stone/10 space-y-8">
-                      <h4 className="text-[10px] uppercase tracking-[0.3em] text-gold font-bold">Specifications</h4>
+                      <h4 className="text-[10px] uppercase tracking-[0.3em] text-gold font-bold">Key configuration</h4>
                       <div className="space-y-6">
                         {visibleSpecs.map((spec, i) => (
                           <Reveal key={spec.label} direction="up" delay={i * 0.1}>
@@ -204,12 +176,12 @@ export default function ProjectDetail() {
                   <div className="flex items-center gap-4 mb-12">
                     <span className="text-gold font-mono text-xs">02</span>
                     <div className="h-[1px] w-12 bg-gold" />
-                    <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Materiality</span>
+                    <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Exterior & interior finish</span>
                   </div>
                 </Reveal>
                 <StaggerText
                   text={`"${project.materiality}"`}
-                  className="text-5xl md:text-6xl font-serif italic font-light leading-tight text-ivory/80"
+                  className="text-4xl md:text-5xl font-display font-medium tracking-tight leading-tight text-ivory/80"
                   delay={0.2}
                   stagger={0.03}
                 />
@@ -233,7 +205,7 @@ export default function ProjectDetail() {
         <div className="max-w-7xl mx-auto">
           <Reveal direction="up" className="mb-16 md:mb-32 text-center">
             <span className="text-gold font-mono text-xs block mb-4">03</span>
-            <h2 className="text-xs uppercase tracking-[0.6em] text-ivory/60 font-bold">VISUAL ANTHOLOGY</h2>
+            <h2 className="text-xs uppercase tracking-[0.45em] text-ivory/60 font-bold">Exterior, installation & interior</h2>
           </Reveal>
           <div className="grid grid-cols-12 gap-8 md:gap-16">
             {visibleGallery.map((img, i) => {
@@ -266,21 +238,22 @@ export default function ProjectDetail() {
         </div>
       </CinematicSection>
 
-      {/* Next Project CTA */}
+      {/* Model enquiry CTA */}
       <CinematicSection className="py-32 md:py-64 px-8 text-center bg-ink border-t border-stone/10">
         <ParallaxElement speed={-0.05} className="absolute inset-0 flex items-center justify-center text-[30vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
-          NEXT
+          ENQUIRE
         </ParallaxElement>
         
         <div className="relative z-10">
           <Reveal direction="up">
             <span className="text-gold font-mono text-xs block mb-8">04</span>
-            <span className="text-xs uppercase tracking-[0.5em] text-ivory/60 font-bold mb-12 block">Continue the Journey</span>
-            <Link to="/work" className="group inline-block">
-              <h2 className="text-7xl md:text-[10vw] font-display font-bold tracking-tighter group-hover:text-gold transition-all duration-700 leading-none">
-                EXPLORE <span className="font-serif italic font-light">ARCHIVE</span>
-              </h2>
-              <div className="w-full h-[1px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left mt-8" />
+            <span className="text-xs uppercase tracking-[0.45em] text-ivory/60 font-bold mb-8 block">Interested in this model?</span>
+            <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.92] text-ivory">
+              Discuss your project with our team.
+            </h2>
+            <Link to="/contact" className="group mt-12 inline-flex items-center gap-4 border border-gold/40 px-7 py-5 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink">
+              Contact us
+              <ArrowUpRight size={16} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
           </Reveal>
         </div>

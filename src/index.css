@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Space Grotesk", sans-serif;
-  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Sora", sans-serif;
+  --font-brand: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-mono: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-serif: "Sora", sans-serif;
+
+  /* Reserve the lightest used body treatment for readable copy. */
+  --font-weight-light: 400;
 
   --color-ink: #050505;
   --color-ivory: #FAF9F6;
@@ -22,13 +27,18 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tighter;
+    @apply font-display tracking-[-0.035em];
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Small all-caps text is interface copy, not a second visual voice. */
+  :where(.uppercase.font-bold) {
+    font-family: var(--font-brand);
   }
   
   .glass {

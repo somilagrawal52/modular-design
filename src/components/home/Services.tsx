@@ -39,7 +39,7 @@ export default function Services() {
               />
               <StaggerText
                 text="From prefab homes to container cafés and outdoor amenities, we create flexible spaces built for the way people live and gather."
-                className="text-ivory/70 text-lg font-light leading-relaxed max-w-xs italic font-serif"
+                className="text-ivory/70 text-lg font-light leading-relaxed max-w-xs"
                 delay={0.6}
                 stagger={0.02}
               />

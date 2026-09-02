@@ -1,21 +1,35 @@
-import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import ParallaxImage from '../components/ParallaxImage';
 import StaggerText from '../components/StaggerText';
 import ParallaxElement from '../components/ParallaxElement';
 import CinematicSection from '../components/CinematicSection';
-import { TEAM } from '../constants';
 import SEO from '../components/SEO';
-import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
+
+const principles = [
+  {
+    title: 'What we build',
+    text: 'Premium space capsules, Apple Cabin-style modular units, and adaptable modular spaces for hospitality, retreats, commercial uses, and private projects.',
+  },
+  {
+    title: 'Design + engineering',
+    text: 'Every model is considered as a complete spatial system: its layout, envelope, glazing, interior character, site access, and the practical conditions around installation.',
+  },
+  {
+    title: 'Product-first thinking',
+    text: 'We keep the focus on clear model information and the decisions that matter to each project, so a concept can move forward with confidence and without unnecessary complexity.',
+  },
+];
 
 export default function About() {
   return (
     <div className="bg-ink min-h-screen">
-      <SEO 
-        title="About Us" 
-        description="Founded in 1998, Dream Realty Ventures is a global architectural practice driven by a singular vision: to strip away the superfluous and reveal the essential beauty of space." 
+      <SEO
+        title="About"
+        description="Dream Realty Ventures presents premium space capsules and modular living solutions for hospitality, resorts, commercial developments and private projects."
       />
-      {/* Hero Section */}
+
       <CinematicSection parallax={false} className="h-[90vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
@@ -24,20 +38,20 @@ export default function About() {
             speed={0.2}
             className="w-full h-full"
           />
-          <div className="absolute inset-0 bg-ink/40 z-10" />
+          <div className="absolute inset-0 bg-ink/50 z-10" />
         </div>
-        
-        <div className="relative z-20 text-center px-4">
+
+        <div className="relative z-20 pt-32 md:pt-44 text-center px-6 max-w-6xl">
           <ParallaxElement speed={0.05}>
             <Reveal direction="up">
-              <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-8 block">The Studio</span>
+              <span className="text-xs uppercase tracking-[0.45em] text-gold font-bold mb-8 block">About Dream Realty Ventures</span>
             </Reveal>
             <StaggerText
               el="h1"
-              text="A LEGACY OF SILENCE."
-              className="text-[12vw] md:text-[10vw] font-display font-bold leading-[0.85] tracking-tighter mt-40"
+              text="Modular spaces, made for real settings."
+              className="text-[clamp(2.25rem,9vw,3.25rem)] md:text-[clamp(3.75rem,6.5vw,5.5rem)] font-display font-bold leading-[0.92] tracking-tighter"
               delay={0.4}
-              stagger={0.08}
+              stagger={0.06}
             />
           </ParallaxElement>
         </div>
@@ -47,11 +61,9 @@ export default function About() {
         </div>
       </CinematicSection>
 
-      {/* Narrative Section */}
       <CinematicSection className="py-24 md:py-48 px-8 md:px-24">
-        {/* Background Parallax */}
         <ParallaxElement speed={-0.08} className="absolute top-40 left-[-5%] text-[20vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
-          GENEVA
+          ABOUT
         </ParallaxElement>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -59,31 +71,20 @@ export default function About() {
             <ParallaxElement speed={0.02}>
               <div className="space-y-12">
                 <Reveal direction="right">
-                  <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold block">Our Genesis</span>
+                  <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold block">Who we are</span>
                 </Reveal>
                 <StaggerText
-                  text="Founded in 1998, Dream Realty Ventures began as a small collective of architects in Geneva, driven by a singular vision: to strip away the superfluous and reveal the essential beauty of space."
-                  className="text-3xl md:text-4xl font-light leading-tight text-ivory/90"
+                  text="Dream Realty Ventures presents premium space capsules and modular living solutions for the places people stay, work, gather, and retreat."
+                  className="text-3xl md:text-4xl font-display font-medium tracking-tight leading-tight text-ivory/90"
                   delay={0.2}
                   stagger={0.02}
                 />
-                {!MANAGER_DEMO_MODE && <StaggerText
-                  text="Today, we are a global practice, yet our core philosophy remains unchanged. We believe that architecture is not merely about building; it is about the careful orchestration of light, shadow, and material to create environments that resonate with the human spirit."
-                  className="text-ivory/70 text-lg leading-relaxed font-light"
-                  delay={0.8}
+                <StaggerText
+                  text="Our collection is design-led, but never detached from real use. We use each model to start a focused conversation about programme, setting, experience, and the level of information needed to make the next decision."
+                  className="text-ivory/70 text-lg leading-relaxed font-light max-w-xl"
+                  delay={0.6}
                   stagger={0.01}
-                />}
-                
-                <div className="pt-12 border-t border-stone/10 grid grid-cols-2 gap-12">
-                  <div>
-                    <h4 className="text-[10px] uppercase tracking-widest text-gold mb-4">Established</h4>
-                    <p className="text-2xl font-display">1998</p>
-                  </div>
-                  <div>
-                    <h4 className="text-[10px] uppercase tracking-widest text-gold mb-4">Location</h4>
-                    <p className="text-2xl font-display">Geneva, CH</p>
-                  </div>
-                </div>
+                />
               </div>
             </ParallaxElement>
 
@@ -91,7 +92,7 @@ export default function About() {
               <div className="relative">
                 <div className="absolute -top-12 -right-12 z-20 hidden xl:block">
                   <div className="vertical-text text-[10px] uppercase tracking-[0.5em] text-gold font-bold bg-ink/80 backdrop-blur-md p-4 border border-gold/20">
-                    PRECISION — HONESTY — POETRY
+                    DESIGN — PRODUCT — PLACE
                   </div>
                 </div>
                 <Reveal direction="left" delay={0.4} className="aspect-[3/4] overflow-hidden rounded-sm border border-stone/10 p-2 bg-stone/5">
@@ -107,26 +108,21 @@ export default function About() {
         </div>
       </CinematicSection>
 
-      {/* Values Section */}
       <CinematicSection className="py-16 md:py-32 px-8 md:px-24 bg-stone/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
-            {[
-              { title: 'Vision', text: 'To redefine the boundaries of luxury through architectural innovation and material honesty.' },
-              { title: 'Mission', text: 'To create spaces that inspire, endure, and harmonize with the natural and urban landscape.' },
-              { title: 'Values', text: 'Precision, Integrity, Craftsmanship, and a deep respect for the environment.' }
-            ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((item, i) => (
-              <ParallaxElement key={item.title} speed={0.02 * (i + 1)}>
-                <Reveal direction="up" delay={i * 0.1}>
+            {principles.map((item, index) => (
+              <ParallaxElement key={item.title} speed={0.02 * (index + 1)}>
+                <Reveal direction="up" delay={index * 0.1}>
                   <div className="space-y-8">
                     <div className="flex items-center gap-4">
-                      <span className="text-gold font-mono text-xs">0{i + 1}</span>
+                      <span className="text-gold font-mono text-xs">0{index + 1}</span>
                       <div className="h-[1px] flex-1 bg-gold/20" />
                     </div>
                     <StaggerText
-                      el="h3"
+                      el="h2"
                       text={item.title}
-                      className="text-2xl uppercase tracking-[0.2em] font-bold"
+                      className="text-2xl font-display font-semibold tracking-tight"
                       delay={0.2}
                     />
                     <StaggerText
@@ -143,97 +139,36 @@ export default function About() {
         </div>
       </CinematicSection>
 
-      {/* Leadership Section */}
       <CinematicSection className="py-24 md:py-48 px-8 md:px-24">
+        {/* Owner-provided manufacturing, capacity, certification, and delivery information belongs here once verified. */}
         <div className="max-w-7xl mx-auto">
-          <div className="mb-16 md:mb-32">
-            <Reveal direction="right">
-              <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Leadership</span>
-            </Reveal>
-            <StaggerText
-              el="h2"
-              text="THE MINDS BEHIND THE VISION."
-              className="text-6xl md:text-8xl font-display font-bold tracking-tighter"
-              delay={0.2}
-              stagger={0.08}
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {demoItems(TEAM, TEAM.slice(0, 2)).map((member, i) => (
-              <ParallaxElement key={member.name} speed={i % 2 === 0 ? 0.02 : -0.02}>
-                <Reveal direction="up" delay={i * 0.1} className="group">
-                  <div className="relative aspect-[4/5] overflow-hidden mb-8 border border-stone/10 p-2 bg-stone/5">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover transition-all duration-700"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                      <p className="text-xs text-ivory/80 leading-relaxed italic">
-                        "{member.bio}"
-                      </p>
-                    </div>
-                  </div>
-                  <StaggerText
-                    el="h4"
-                    text={member.name}
-                    className="text-xl font-bold mb-2 group-hover:text-gold transition-colors"
-                    delay={0.2}
-                  />
-                  <span className="text-[10px] uppercase tracking-widest text-ivory/60">{member.role}</span>
-                </Reveal>
-              </ParallaxElement>
-            ))}
-          </div>
-        </div>
-      </CinematicSection>
-
-      {/* Milestones / Timeline */}
-      <CinematicSection className="py-24 md:py-48 px-8 md:px-24 bg-stone/5">
-        <ParallaxElement speed={-0.05} className="absolute bottom-20 right-[-10%] text-[25vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
-          JOURNEY
-        </ParallaxElement>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-            <div className="lg:col-span-4">
-              <ParallaxElement speed={0.03}>
-                <Reveal direction="right">
-                  <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Milestones</span>
-                </Reveal>
-                <StaggerText
-                  el="h2"
-                  text="A Quarter Century of Innovation."
-                  className="text-5xl font-display font-bold tracking-tighter leading-none"
-                  delay={0.2}
-                  stagger={0.08}
-                />
-              </ParallaxElement>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-end">
+            <div className="lg:col-span-7">
+              <Reveal direction="right">
+                <div className="flex items-center gap-4 mb-10">
+                  <span className="text-gold font-mono text-xs">03</span>
+                  <div className="h-[1px] w-12 bg-gold" />
+                  <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Choosing a model</span>
+                </div>
+              </Reveal>
+              <StaggerText
+                el="h2"
+                text="Start with the model, then define the right information."
+                className="text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.92]"
+                delay={0.2}
+                stagger={0.05}
+              />
             </div>
-            
-            <div className="lg:col-span-8 space-y-24">
-              {[
-                { year: '1998', title: 'The Foundation', text: 'Dream Realty Ventures establishes the studio in a small attic in Geneva.' },
-                { year: '2005', title: 'International Breakthrough', text: 'The completion of the Obsidian Villa in the Swiss Alps garners global acclaim.' },
-                { year: '2012', title: 'Global Expansion', text: 'Opening of the London and Tokyo offices to serve a growing international clientele.' },
-                { year: '2023', title: 'Sustainability Milestone', text: 'Dream Realty Ventures commits to carbon-neutral operations across all global projects.' }
-              ].slice(0, MANAGER_DEMO_MODE ? 2 : undefined).map((milestone, i) => (
-                <Reveal key={milestone.year} direction="up" delay={i * 0.1}>
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 group">
-                    <div className="md:col-span-1">
-                      <span className="text-4xl font-display font-bold text-gold group-hover:scale-110 transition-transform inline-block">
-                        {milestone.year}
-                      </span>
-                    </div>
-                    <div className="md:col-span-3 pt-2">
-                      <h3 className="text-xl font-bold mb-4 uppercase tracking-widest">{milestone.title}</h3>
-                      <p className="text-ivory/70 font-light leading-relaxed">{milestone.text}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
+            <div className="lg:col-span-5 lg:pb-2">
+              <Reveal direction="left" delay={0.3}>
+                <p className="text-lg leading-relaxed text-ivory/70 font-light">
+                  Model-specific configuration, finishes, delivery scope, and commercial information should be reviewed against the selected model and project brief before a decision is made.
+                </p>
+                <Link to="/contact" className="group mt-10 inline-flex items-center gap-4 border-b border-gold/50 pb-3 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory hover:text-gold transition-colors">
+                  Contact us
+                  <ArrowUpRight size={15} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </Link>
+              </Reveal>
             </div>
           </div>
         </div>

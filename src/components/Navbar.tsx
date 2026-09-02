@@ -1,9 +1,9 @@
-import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import Magnetic from './Magnetic';
-import { SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
+import { motion, AnimatePresence } from "motion/react";
+import { Menu, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Magnetic from "./Magnetic";
+import { SITE_NAME, SITE_STUDIO_NAME } from "../config/siteMode";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,22 +12,22 @@ export default function Navbar() {
   // Prevent scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Our Designs', href: '/work' },
-    { name: 'Technology Behind It', href: '/system' },
-    { name: 'Our Services', href: '/services' },
-    { name: 'About Us', href: '/about' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: "Home", href: "/" },
+    { name: "Our Designs", href: "/work" },
+    { name: "Technology Behind It", href: "/system" },
+    { name: "Our Services", href: "/services" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function Navbar() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-[11px] sm:text-sm md:text-base xl:text-lg font-display font-bold tracking-[0.12em] md:tracking-[0.15em] text-ivory flex items-center gap-2 md:gap-3 p-2 whitespace-nowrap"
+            className="text-sm sm:text-base md:text-lg xl:text-xl font-brand font-semibold tracking-[0.16em] md:tracking-[0.18em] text-ivory flex items-center gap-2 md:gap-3 p-2 whitespace-nowrap"
           >
             <div className="w-6 h-6 md:w-8 md:h-8 border border-gold/40 flex items-center justify-center">
               <div className="w-1 h-1 bg-gold" />
@@ -59,10 +59,12 @@ export default function Navbar() {
             <Magnetic>
               <Link
                 to={link.href}
-                className={`text-[8px] xl:text-[9px] uppercase tracking-[0.18em] xl:tracking-[0.26em] font-bold hover:text-gold transition-all duration-500 relative group p-2 xl:p-3 whitespace-nowrap ${location.pathname === link.href ? 'text-gold' : 'text-ivory/60'}`}
+                className={`text-[8px] xl:text-[9px] uppercase tracking-[0.18em] xl:tracking-[0.26em] font-bold hover:text-gold transition-all duration-500 relative group p-2 xl:p-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/60"}`}
               >
                 {link.name}
-                <span className={`absolute bottom-1 left-2 right-2 xl:bottom-2 xl:left-3 xl:right-3 h-[1px] bg-gold transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100 ${location.pathname === link.href ? 'scale-x-100' : ''}`} />
+                <span
+                  className={`absolute bottom-1 left-2 right-2 xl:bottom-2 xl:left-3 xl:right-3 h-[1px] bg-gold transition-all duration-500 origin-left scale-x-0 group-hover:scale-x-100 ${location.pathname === link.href ? "scale-x-100" : ""}`}
+                />
               </Link>
             </Magnetic>
           </motion.div>
@@ -117,14 +119,20 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 30 }}
-                  transition={{ delay: i * 0.05, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{
+                    delay: i * 0.05,
+                    duration: 0.6,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                   className="w-full text-center"
                 >
                   <Link
                     to={link.href}
                     onClick={() => setIsOpen(false)}
                     className={`text-5xl sm:text-6xl font-display font-bold tracking-tighter transition-all duration-500 block py-2 ${
-                      location.pathname === link.href ? 'text-gold' : 'text-ivory hover:text-gold'
+                      location.pathname === link.href
+                        ? "text-gold"
+                        : "text-ivory hover:text-gold"
                     }`}
                   >
                     {link.name}
@@ -134,22 +142,25 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Menu Footer */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
               className="mt-16 flex flex-col items-center gap-8"
             >
               <div className="flex gap-10">
-                {['Instagram', 'LinkedIn', 'Behance'].map((social) => (
-                  <span key={social} className="text-[10px] font-bold tracking-[0.3em] text-ivory/40 hover:text-gold cursor-pointer transition-colors uppercase">
+                {["Instagram", "LinkedIn", "Behance"].map((social) => (
+                  <span
+                    key={social}
+                    className="text-[10px] font-bold tracking-[0.3em] text-ivory/40 hover:text-gold cursor-pointer transition-colors uppercase"
+                  >
                     {social}
                   </span>
                 ))}
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="w-8 h-[1px] bg-gold/30" />
-                <span className="text-[8px] uppercase tracking-[0.22em] text-ivory/20 font-bold">
+                <span className="text-[9px] uppercase tracking-[0.2em] text-ivory/20 font-brand font-semibold">
                   {SITE_STUDIO_NAME} © 2026
                 </span>
               </div>

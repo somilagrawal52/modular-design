@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className="relative">
       <SEO 
-        title="Modular Architecture & Design" 
-        description="Modular homes, commercial container spaces, and landscape-ready amenities designed for flexible modern living." 
+        title="Premium Space Capsule & Modular Living Solutions"
+        description="Premium space capsules and modular living solutions designed for hospitality, resorts, commercial developments and private projects."
       />
       <Hero />
       <CinematicSection>

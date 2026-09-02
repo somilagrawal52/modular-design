@@ -120,7 +120,7 @@ const PageTransition = forwardRef<HTMLDivElement, PageTransitionProps>(
           <div className="absolute inset-0 flex items-center justify-center">
             <motion.div 
               variants={logoVariants}
-              className="text-ink font-display font-bold tracking-[0.8em] text-3xl md:text-5xl z-10"
+              className="text-ink font-brand font-semibold tracking-[0.18em] text-2xl sm:text-3xl md:text-5xl z-10"
             >
               {SITE_NAME}
             </motion.div>

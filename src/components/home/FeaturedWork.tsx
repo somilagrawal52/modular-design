@@ -12,6 +12,7 @@ import { demoItems } from '../../config/siteMode';
 function ProjectCard({ project, index }: { project: any, index: number }) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+  const productType = project.details?.find((detail: { label: string }) => detail.label === 'Type')?.value ?? project.category;
 
   const mouseXSpring = useSpring(x);
   const mouseYSpring = useSpring(y);
@@ -73,7 +74,7 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
           {/* Vertical Metadata */}
           <div style={{ transform: "translateZ(75px)" }} className="absolute top-12 right-12 z-20 hidden xl:block">
             <div className="vertical-text text-[10px] uppercase tracking-[0.5em] text-ivory/40 font-bold">
-              {project.category} — {project.year}
+              {project.category} — Model
             </div>
           </div>
         </motion.div>
@@ -82,7 +83,7 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
           <div className="flex items-center gap-4">
             <span className="text-gold font-mono text-[10px]">0{index + 1}</span>
             <div className="h-[1px] flex-1 bg-stone/10" />
-            <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60 font-bold">{project.location}</span>
+            <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60 font-bold">{productType}</span>
           </div>
           <StaggerText
             el="h3"
@@ -99,10 +100,9 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
 export default function FeaturedWork() {
   const featuredCapsuleIds = [
     'modular-capsule-riverbend-resort',
-    'modular-capsule-cloudline-observatory',
-    'modular-capsule-mangrove-retreat',
-    'modular-capsule-stone-spring-lodge',
-    'modular-capsule-canyon-skywalk-lodge',
+    'modular-capsule-tea-estate-retreat',
+    'modular-capsule-island-retreat',
+    'modular-capsule-coworking-studio',
   ];
   const featuredProjects = featuredCapsuleIds.flatMap((id) => {
     const project = PROJECTS.find((item) => item.id === id);
@@ -110,7 +110,7 @@ export default function FeaturedWork() {
   });
   const visibleProjects = demoItems(featuredProjects, featuredProjects);
   return (
-    <section id="work" className="py-24 md:py-48 px-8 relative overflow-hidden">
+    <section id="models" className="py-24 md:py-48 px-8 relative overflow-hidden">
       {/* Background Parallax */}
       <ParallaxElement speed={-0.05} className="absolute top-20 left-[-5%] text-[20vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
         CAPSULE
@@ -123,12 +123,12 @@ export default function FeaturedWork() {
               <div className="flex items-center gap-4 mb-8">
                 <span className="text-gold font-mono text-xs">02</span>
                 <div className="h-[1px] w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Featured Capsule Systems</span>
+                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Featured models</span>
               </div>
             </Reveal>
             <StaggerText
               el="h2"
-              text="CAPSULE SYSTEMS."
+              text="Explore the collection."
               className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.85]"
               delay={0.2}
               stagger={0.08}
@@ -136,7 +136,7 @@ export default function FeaturedWork() {
           </div>
           <Reveal direction="left">
             <Link to="/work" className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.4em] font-bold hover:text-gold transition-all duration-500 pb-4 border-b border-stone/20">
-              Explore All Works <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              Explore all models <ArrowUpRight size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </Link>
           </Reveal>
         </div>

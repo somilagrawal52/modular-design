@@ -13,10 +13,10 @@ import { demoItems } from '../config/siteMode';
 export default function ServicesPage() {
   const visibleServices = demoItems(SERVICES, SERVICES.slice(0, 2));
   const processSteps = [
-    { step: '01', title: 'Discovery', text: 'We begin with the site, programme, access, and the way people will use the space.' },
-    { step: '02', title: 'Configuration', text: 'We shape the module layout, circulation, and indoor-outdoor experience around the brief.' },
-    { step: '03', title: 'Coordination', text: 'We refine the build, services, finishes, and transport-ready details before fabrication.' },
-    { step: '04', title: 'Installation', text: 'We bring the completed modules together on site for an efficient, considered handover.' }
+    { step: '01', title: 'Select', text: 'Start with the model or application that best matches the intended setting and use.' },
+    { step: '02', title: 'Review', text: 'Consider layout, finishes, access, utilities, and the information available for that selected model.' },
+    { step: '03', title: 'Confirm', text: 'Validate the final configuration, delivery scope, commercial terms, and site requirements before ordering.' },
+    { step: '04', title: 'Coordinate', text: 'Plan the model’s delivery and installation with the relevant supplier and site team.' }
   ];
   const visibleProcessSteps = demoItems(processSteps, processSteps.slice(0, 2));
   return (
@@ -44,8 +44,8 @@ export default function ServicesPage() {
             </Reveal>
             <StaggerText
               el="h1"
-              text="MODULAR BY DESIGN."
-              className="text-[12vw] md:text-[10vw] font-display font-bold leading-[0.85] tracking-tighter mt-40"
+              text="MODULAR APPLICATIONS."
+              className="text-[clamp(2.5rem,11vw,4.5rem)] md:text-[clamp(4.5rem,8vw,6.5rem)] font-display font-bold leading-[0.88] tracking-tighter mt-40"
               delay={0.4}
               stagger={0.08}
             />
@@ -101,7 +101,7 @@ export default function ServicesPage() {
                               className="text-[10px] uppercase tracking-widest text-ivory/60 font-bold mb-2"
                               delay={0.2}
                             />
-                            <p className="text-xs text-ivory/70 font-light leading-relaxed">Specialized expertise in {feature.toLowerCase()} for complex projects.</p>
+                            <p className="text-xs text-ivory/70 font-light leading-relaxed">A key consideration when reviewing this application.</p>
                           </div>
                         </div>
                       </Reveal>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                     className="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl"
                   >
                     <ParallaxImage
-                      src={['/images/modular-home-garden-hero.jpg', '/images/modular-capsule-desert-retreat-hero.png', '/images/modular-office-india-exterior.jpg', '/images/container-cafe-rooftop.jpeg', '/images/modular-capsule-brand-experience-gallery-hero.png', '/images/container-pool.jpeg'][i]}
+                      src={['/images/modular-home-garden-hero.jpg', '/images/modular-capsule-desert-retreat-hero.png', '/images/modular-office-india-exterior.jpg', '/images/container-cafe-rooftop.jpeg', '/images/modular-capsule-micro-library-hub-hero-v2.png', '/images/container-pool.jpeg'][i]}
                       alt={service.title}
                       className="w-full h-full transition-all duration-1000"
                     />
@@ -150,11 +150,11 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="mb-16 md:mb-32">
             <Reveal direction="right">
-              <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Our Process</span>
+              <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Planning a project</span>
             </Reveal>
             <StaggerText
               el="h2"
-              text="FROM CONCEPT TO REALITY."
+              text="FROM MODEL TO PROJECT."
               className="text-6xl md:text-8xl font-display font-bold tracking-tighter"
               delay={0.2}
               stagger={0.08}
@@ -187,7 +187,7 @@ export default function ServicesPage() {
             <span className="text-xs uppercase tracking-[0.5em] text-ivory/60 mb-8 block">Ready to Begin?</span>
             <Link to="/contact" className="group inline-block">
               <h2 className="text-6xl md:text-8xl font-display font-bold tracking-tighter group-hover:text-gold transition-colors">
-                Start Your <span className="font-serif italic font-light">Project</span>
+                Find your <span className="font-display font-medium">Model</span>
               </h2>
             </Link>
           </Reveal>

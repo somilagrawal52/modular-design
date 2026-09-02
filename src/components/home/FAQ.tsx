@@ -11,31 +11,31 @@ const faqs = [
   },
   {
     question: 'Can I customise the layout and finishes?',
-    answer: 'Yes. We can tailor the layout, interior finishes, glazing, furniture, services, and exterior details to the site and programme, from a private retreat to a public-facing amenity.',
+    answer: 'Configuration options vary by selected model and manufacturer. The available layout, finish, glazing, furniture, service, and exterior choices should be confirmed against the chosen model and your brief.',
   },
   {
     question: 'What technology is included in a capsule project?',
-    answer: 'Each project is developed as a prefabricated system with coordinated structure, enclosure, services, and interior elements. Smart controls and energy-conscious options can be defined around the brief and local conditions.',
+    answer: 'Technology varies by model. The reference manufacturers used in this collection describe factory-built systems with an insulated enclosure, glazing, electrical and plumbing provisions, and optional equipment. The final scope should always be confirmed for the selected model.',
   },
   {
     question: 'Can I experience a capsule before committing?',
-    answer: 'We can share relevant project references, material samples, and visual walk-throughs during the early design stage. Where available, a visit to a completed project or demonstration unit can also be arranged.',
+    answer: 'Relevant imagery, product information, finish references, and available drawings can be reviewed for the selected model before you make a decision. Demonstration access depends on the model and location.',
   },
   {
     question: 'How long does delivery take?',
-    answer: 'The schedule depends on the selected module, the level of customisation, site access, and installation logistics. We establish a clear fabrication and delivery programme once the scope is confirmed.',
+    answer: 'The schedule depends on the selected model, configuration, site access, shipping route, and installation logistics. A model-specific fabrication and delivery programme should be confirmed before an order is placed.',
   },
   {
     question: 'Is there a warranty?',
-    answer: 'Warranty coverage is set out for each project in the final specification and agreement. We make the scope, duration, and responsible parties clear before work begins.',
+    answer: 'Warranty coverage, scope, duration, and responsible parties should be set out in the selected-model specification and final agreement before work begins.',
   },
   {
     question: 'How do you maintain quality and safety?',
-    answer: 'Key components are coordinated and checked before dispatch, while foundations, access, and lifting are planned for the individual site. This keeps the finished installation aligned with the approved design and local requirements.',
+    answer: 'The chosen model, site access, foundations, lifting requirements, and local compliance need to be reviewed together before installation. These requirements are specific to the selected model and project location.',
   },
   {
     question: 'What support is available after installation?',
-    answer: 'We remain available for maintenance guidance, performance reviews, and future upgrades as your needs evolve. Long-term support is considered from the first design conversation.',
+    answer: 'Maintenance, service, and upgrade support should be agreed with the relevant supplier or delivery partner as part of the selected-model proposal.',
   },
 ];
 

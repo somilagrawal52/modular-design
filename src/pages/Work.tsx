@@ -89,13 +89,13 @@ export default function Work() {
   return (
     <div className="bg-ink min-h-screen pt-40 pb-32 relative overflow-hidden">
       <SEO 
-        title="Modular Applications" 
-        description="Explore modular applications across homes, hospitality, commercial spaces, workplaces, community buildings, and amenities." 
+        title="Capsule Models & Modular Applications"
+        description="Explore premium capsule models and modular applications for hospitality, private retreats, commercial spaces, workplaces, and community amenities."
       />
       <CinematicSection parallax={false} minHeight={false}>
         {/* Background Parallax */}
         <ParallaxElement speed={-0.1} className="absolute top-20 left-[-10%] text-[25vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
-          PORTFOLIO
+          MODELS
         </ParallaxElement>
 
       {/* Atmospheric Background Elements */}
@@ -110,11 +110,11 @@ export default function Work() {
           <div className="max-w-4xl">
             <ParallaxElement speed={0.02}>
               <Reveal direction="right">
-                <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Primary Portfolio — Capsule Systems</span>
+                <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-6 block">Capsule model collection</span>
               </Reveal>
               <StaggerText
                 el="h1"
-                text="CAPSULE SYSTEMS."
+                text="Explore capsule models."
                 className="text-[10vw] md:text-[8vw] font-display font-bold leading-[0.85] tracking-tighter"
                 delay={0.2}
                 stagger={0.08}
@@ -129,7 +129,7 @@ export default function Work() {
               <Reveal direction="left" delay={0.4}>
                 <div className="flex flex-col items-start md:items-end gap-6">
                   <div className="flex items-center gap-3 text-ivory/50 text-[10px] uppercase tracking-widest font-bold">
-                    <Filter size={12} /> Filter by Sector
+                    <Filter size={12} /> Browse by application
                   </div>
                   <div className="flex flex-wrap justify-start md:justify-end gap-x-8 gap-y-4">
                     {CATEGORIES.map((category) => (
@@ -157,7 +157,7 @@ export default function Work() {
             </ParallaxElement>
           </div>
 
-        {/* Featured Project */}
+        {/* Featured Model */}
         {featuredProject && (
           <motion.div
             key={`featured-${featuredProject.id}`}
@@ -184,10 +184,10 @@ export default function Work() {
                   <div className="absolute inset-x-0 bottom-0 z-30 p-8 md:p-14">
                     <div className="flex items-center justify-between gap-8 mb-5">
                       <span className="text-[10px] uppercase tracking-[0.5em] text-gold font-bold">
-                        Featured — {featuredProject.category}
+                        Featured model — {featuredProject.category}
                       </span>
                       <span className="hidden md:block text-[10px] uppercase tracking-[0.3em] text-ivory/60">
-                        {featuredProject.location} — {featuredProject.year}
+                        {projectSummary(featuredProject).type}
                       </span>
                     </div>
                     <div className="flex items-end justify-between gap-8">
@@ -230,7 +230,7 @@ export default function Work() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent opacity-70 group-hover/card:opacity-100 transition-opacity duration-500" />
                     <div className="absolute top-5 right-5 z-20 px-3 py-2 bg-ink/60 backdrop-blur-sm">
-                      <span className="text-[9px] uppercase tracking-[0.25em] text-ivory/70">{project.year}</span>
+                      <span className="text-[9px] uppercase tracking-[0.25em] text-ivory/70">Model</span>
                     </div>
                   </div>
                 </div>
@@ -245,10 +245,10 @@ export default function Work() {
                     </h3>
                     <div className="mt-7 grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-5 border-t border-stone/15 pt-5 text-[9px] uppercase tracking-[0.16em] text-ivory/45 font-bold">
                       {[
-                        ['Location', project.location],
-                        ['Type', projectSummary(project).type],
-                        ['System', projectSummary(project).system],
-                        ['Status', projectSummary(project).status],
+                        ['Product type', projectSummary(project).type],
+                        ['Model system', projectSummary(project).system],
+                        ['Application', project.category],
+                        ['Availability', 'Enquire for details'],
                       ].map(([label, value]) => (
                         <div key={label} className="min-w-0">
                           <span className="block text-gold/70 mb-2">{label}</span>
@@ -256,6 +256,7 @@ export default function Work() {
                         </div>
                       ))}
                     </div>
+                    <span className="mt-6 block text-[10px] uppercase tracking-[0.28em] text-gold">View model →</span>
                   </div>
                   <ArrowUpRight size={28} className="mt-7 shrink-0 text-ivory/20 group-hover/card:text-gold group-hover/card:translate-x-1 group-hover/card:-translate-y-1 transition-all duration-500" />
                 </div>
@@ -272,7 +273,7 @@ export default function Work() {
               className="group flex items-center gap-5 px-8 py-5 border border-stone/20 bg-stone/5 hover:border-gold/50 hover:bg-gold/5 transition-all duration-500"
             >
               <span className="text-[10px] uppercase tracking-[0.35em] font-bold text-ivory group-hover:text-gold transition-colors">
-                Load More Projects
+                Load more models
               </span>
               <ArrowDown size={15} className="text-gold group-hover:translate-y-1 transition-transform duration-500" />
             </button>
@@ -284,11 +285,11 @@ export default function Work() {
           <Reveal direction="up">
             <div className="inline-block relative group cursor-pointer">
               <h2 className="text-4xl md:text-6xl font-display font-bold tracking-tighter mb-4">
-                HAVE A VISION?
+                FIND THE RIGHT MODEL.
               </h2>
               <div className="w-full h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
               <p className="mt-6 text-ivory/60 uppercase tracking-[0.4em] text-[10px] font-bold">
-                Plan your modular project
+                Discuss your modular space
               </p>
             </div>
           </Reveal>

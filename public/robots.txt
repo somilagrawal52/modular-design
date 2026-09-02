@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aurelian.cursorbits.works/sitemap.xml
+Sitemap: https://modular-design-flax.vercel.app/sitemap.xml
