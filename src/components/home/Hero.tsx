@@ -64,7 +64,7 @@ export default function Hero() {
           </Reveal>
 
           <h1 className="mx-auto max-w-6xl font-display font-semibold leading-[1] tracking-[-0.03em] mb-7 md:mb-9">
-            <span className="block text-[clamp(2.625rem,6vw,5.125rem)] text-ivory text-balance">
+            <span className="block type-hero-title text-ivory text-balance">
               Turning Dreams into Reality
             </span>
             <span className="mt-3 block text-[clamp(1.35rem,3vw,2.75rem)] font-medium tracking-[-0.03em] text-gold text-balance">

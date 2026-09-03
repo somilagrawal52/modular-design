@@ -92,6 +92,15 @@
     font-weight: 600;
   }
 
+  .type-collection-title {
+    max-width: 16ch;
+    font-size: clamp(2.5rem, calc(5vw - 2px), 4.375rem);
+  }
+
+  .type-hero-title {
+    font-size: clamp(2.625rem, calc(6vw - 2px), 5rem);
+  }
+
   .type-page-title {
     font-family: var(--font-display);
     font-size: var(--type-page-title);

@@ -125,8 +125,8 @@ export default function Work() {
                 </Reveal>
                 <StaggerText
                   el="h1"
-                  text="Explore capsule models."
-                  className="type-display"
+                  text={'Explore\u00a0capsule models.'}
+                  className="type-display type-collection-title"
                   delay={0.2}
                   stagger={0.08}
                 />
