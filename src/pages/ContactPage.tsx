@@ -145,7 +145,7 @@ export default function ContactPage() {
                       type="submit"
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.99 }}
-                      className="w-full min-h-14 py-5 bg-gold text-ink uppercase tracking-[0.1em] font-semibold text-xs flex items-center justify-center gap-6 group relative overflow-hidden"
+                      className="mobile-no-hover w-full min-h-14 py-5 bg-gold text-ink uppercase tracking-[0.1em] font-semibold text-xs flex items-center justify-center gap-6 group relative overflow-hidden"
                     >
                       <span className="relative z-10">Send inquiry</span>
                       <ArrowRight

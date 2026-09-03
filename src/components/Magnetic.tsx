@@ -18,6 +18,8 @@ export default function Magnetic({ children, strength = 0.35, className = "" }: 
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!ref.current) return;
+    // Magnetic motion is intended for precise pointer devices, never touch input.
+    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
     const { clientX, clientY } = e;
     const { left, top, width, height } = ref.current.getBoundingClientRect();
     const centerX = left + width / 2;
