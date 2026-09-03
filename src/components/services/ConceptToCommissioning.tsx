@@ -68,7 +68,7 @@ function StageHeading({
         className={
           compact
             ? "font-display text-4xl font-bold leading-none text-gold/70"
-            : "font-display text-[clamp(3.5rem,6vw,5rem)] font-bold leading-[0.82] tracking-tighter text-gold/25"
+            : "font-display text-[clamp(3rem,5vw,4.25rem)] font-bold leading-[0.82] tracking-tighter text-gold/25"
         }
       >
         {stage.step}
@@ -80,8 +80,8 @@ function StageHeading({
         <h3
           className={
             compact
-              ? "mt-3 text-3xl font-bold leading-[0.98] text-balance"
-              : "mt-4 text-[clamp(2.25rem,3.5vw,3.25rem)] font-bold leading-[0.98] tracking-tighter text-balance"
+              ? "mt-3 text-[clamp(1.625rem,5vw,1.875rem)] font-semibold leading-[1.05] text-balance"
+              : "mt-4 text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-[1.05] tracking-tighter text-balance"
           }
         >
           {stage.title}
@@ -123,7 +123,7 @@ export default function ConceptToCommissioning() {
           </p>
         </div>
 
-        <div className="mt-14 space-y-14 md:mt-20 md:space-y-20 lg:space-y-24">
+        <div className="mt-12 space-y-12 md:mt-16 md:space-y-16 lg:space-y-20">
           {projectStages.map((stage, index) => {
             const imageOnLeft = index % 2 === 0;
             const imagePlacement = imageOnLeft
@@ -140,7 +140,7 @@ export default function ConceptToCommissioning() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.14 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
-                className="grid grid-cols-1 gap-y-8 border-t border-stone/20 pt-10 md:gap-y-10 md:pt-14 lg:grid-cols-12 lg:grid-rows-[auto_auto] lg:gap-x-10 lg:gap-y-0 xl:gap-x-16"
+                className="grid grid-cols-1 gap-y-6 border-t border-stone/20 pt-8 md:gap-y-8 md:pt-10 lg:grid-cols-12 lg:grid-rows-[auto_auto] lg:gap-x-10 lg:gap-y-0 xl:gap-x-16"
               >
                 <div className="order-1 lg:hidden">
                   <StageHeading stage={stage} compact />
@@ -153,7 +153,7 @@ export default function ConceptToCommissioning() {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                  <div className="relative aspect-[3/2] overflow-hidden">
+                  <div className="relative aspect-[16/10] overflow-hidden">
                     <img
                       src={stage.image}
                       alt={stage.alt}
@@ -170,7 +170,7 @@ export default function ConceptToCommissioning() {
 
                 <div className={`order-3 lg:row-span-2 lg:col-span-4 ${textPlacement} hidden self-center lg:flex lg:flex-col`}>
                   <StageHeading stage={stage} />
-                  <p className="mt-8 max-w-md text-base font-light leading-relaxed text-ivory/75 xl:text-lg">
+                  <p className="mt-6 max-w-md text-base font-light leading-relaxed text-ivory/75 xl:text-lg">
                     {stage.copy}
                   </p>
                 </div>
