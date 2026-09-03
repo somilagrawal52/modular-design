@@ -34,7 +34,7 @@ export default function Hero() {
   const transform = useMotionTemplate`translate3d(${moveX}px, ${moveY}px, 0)`;
 
   return (
-    <section className="relative min-h-[680px] h-[100svh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[600px] sm:min-h-[680px] h-[100svh] flex items-center justify-center overflow-hidden">
       <motion.div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-ink/45 via-ink/45 to-ink/90 z-10" />
         <img
@@ -73,7 +73,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="max-w-[46rem] mx-auto">
+          <div className="max-w-[36rem] mx-auto">
             <StaggerText
               text={`${SITE_NAME}(DVR) presents premium capsule models and modular living solutions for hospitality, resorts, commercial developments, and private projects.`}
               className="text-base md:text-lg text-ivory/85 font-light tracking-[0.005em] leading-relaxed"

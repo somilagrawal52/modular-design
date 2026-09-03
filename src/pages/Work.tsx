@@ -262,11 +262,6 @@ export default function Work() {
                         className="w-full h-full group-hover/card:scale-105 transition-all duration-1000 ease-out"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-ink/50 via-transparent to-transparent opacity-70 group-hover/card:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute top-5 right-5 z-20 px-3 py-2 bg-ink/60 backdrop-blur-sm">
-                        <span className="text-xs uppercase tracking-[0.1em] text-ivory/70">
-                          Model
-                        </span>
-                      </div>
                     </div>
                   </div>
 

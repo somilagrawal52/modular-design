@@ -73,7 +73,7 @@ export default function Services() {
                       height: activeId === service.id ? 'auto' : 0,
                       opacity: activeId === service.id ? 1 : 0
                     }}
-                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
                     <div className="pb-6 pl-4 md:pl-16 flex flex-col md:flex-row gap-8 md:gap-16">

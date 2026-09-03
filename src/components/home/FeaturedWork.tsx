@@ -77,15 +77,6 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             </div>
           </div>
 
-          {/* Vertical Metadata */}
-          <div
-            style={{ transform: "translateZ(75px)" }}
-            className="absolute top-10 right-10 z-20 hidden xl:block"
-          >
-            <div className="vertical-text text-xs uppercase tracking-[0.12em] text-ivory/50 font-semibold">
-              {project.category} — Model
-            </div>
-          </div>
         </motion.div>
 
         <div className="space-y-4">
@@ -104,6 +95,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             className="type-card group-hover:text-gold transition-colors"
             delay={0.2}
           />
+          <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.08em] font-medium text-stone/65 group-hover:text-gold transition-colors">
+            Explore model <ArrowUpRight size={14} />
+          </span>
         </div>
       </Link>
     </Reveal>

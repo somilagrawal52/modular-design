@@ -58,7 +58,7 @@ export default function Navbar() {
             <Magnetic>
               <Link
                 to={link.href}
-                className={`text-xs 2xl:text-sm uppercase tracking-[0.08em] font-medium hover:text-gold transition-all duration-500 relative group px-2.5 py-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/75"}`}
+                className={`text-[13px] 2xl:text-sm uppercase tracking-[0.08em] font-medium hover:text-gold transition-all duration-500 relative group px-2.5 py-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/75"}`}
               >
                 {link.name}
                 <span

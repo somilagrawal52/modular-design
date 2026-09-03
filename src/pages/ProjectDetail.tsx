@@ -243,7 +243,7 @@ export default function ProjectDetail() {
               Discuss your project with our team.
             </h2>
             <Link to="/contact" className="group mt-10 inline-flex min-h-12 items-center gap-4 border border-gold/40 px-7 text-xs uppercase tracking-[0.1em] font-semibold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink">
-              Contact us
+              Discuss your project
               <ArrowUpRight size={16} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
           </Reveal>

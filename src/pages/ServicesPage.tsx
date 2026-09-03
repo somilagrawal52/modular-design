@@ -152,14 +152,6 @@ export default function ServicesPage() {
                     />
                   </Reveal>
 
-                  {/* Floating Metadata */}
-                  <div
-                    className={`absolute bottom-12 ${i % 2 === 1 ? "-left-12" : "-right-12"} z-30 hidden xl:block`}
-                  >
-                    <div className="vertical-text text-xs uppercase tracking-[0.12em] text-gold font-semibold bg-ink/80 backdrop-blur-md p-4 border border-gold/20">
-                      CAPABILITY — 0{i + 1}
-                    </div>
-                  </div>
                 </div>
               </ParallaxElement>
             </div>
