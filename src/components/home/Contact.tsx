@@ -115,7 +115,7 @@ export default function Contact() {
                         whileTap={{ scale: 0.98 }}
                         className="mobile-no-hover w-full py-6 bg-gold text-ink uppercase tracking-[0.1em] font-semibold text-xs flex items-center justify-center gap-6 group overflow-hidden relative"
                       >
-                        <span className="relative z-10">Send Inquiry</span>
+                        <span className="relative z-10">Discuss your project</span>
                         <Send size={16} className="relative z-10 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform duration-500" />
                         <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                       </motion.button>

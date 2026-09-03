@@ -211,7 +211,7 @@ export default function ProjectDetail() {
             {visibleGallery.map((img, i) => {
               const isFull = i % 3 === 0;
               const colSpan = isFull ? 'col-span-12' : 'col-span-12 md:col-span-6';
-              const aspect = isFull ? 'aspect-[21/9]' : 'aspect-[4/5]';
+              const aspect = isFull ? 'aspect-[16/9]' : 'aspect-[4/5]';
               
               return (
                 <div key={i} className={colSpan}>

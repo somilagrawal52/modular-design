@@ -310,7 +310,7 @@ export default function Work() {
                         ))}
                       </div>
                       <span className="mt-5 block text-xs uppercase tracking-[0.08em] text-gold">
-                        View model →
+                        Explore model →
                       </span>
                     </div>
                     <ArrowUpRight

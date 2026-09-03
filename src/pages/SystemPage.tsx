@@ -180,7 +180,7 @@ export default function SystemPage() {
         </div>
       </CinematicSection>
 
-      <CinematicSection parallax={false} className="section-space-compact">
+      <CinematicSection parallax={false} overlay={false} className="section-space-compact bg-light text-stone">
         <div className="site-container grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
           <Reveal direction="right" className="relative aspect-[16/11] overflow-hidden border border-stone/20 p-2">
             <ParallaxImage
@@ -204,7 +204,7 @@ export default function SystemPage() {
                 <Reveal key={system.title} direction="left" delay={0.08 + index * 0.06}>
                   <div className="border-l border-gold/50 pl-6">
                     <h3 className="text-xl font-sans font-semibold tracking-tight">{system.title}</h3>
-                    <p className="mt-2 text-base leading-relaxed text-ivory/65">{system.detail}</p>
+                    <p className="mt-2 text-base leading-relaxed text-stone/75">{system.detail}</p>
                   </div>
                 </Reveal>
               ))}
@@ -213,13 +213,13 @@ export default function SystemPage() {
         </div>
       </CinematicSection>
 
-      <CinematicSection parallax={false} overlay={false} className="border-y border-stone/15 bg-light text-stone section-space-compact">
+      <CinematicSection parallax={false} className="border-y border-stone/15 bg-ink text-ivory section-space-compact">
         <div className="site-container">
           <Reveal direction="up">
             <div className="max-w-3xl mb-12 md:mb-16">
               <span className="eyebrow text-gold">Integrated from the start</span>
               <h2 className="mt-6 type-section">Everything works as one system.</h2>
-              <p className="mt-8 max-w-2xl text-base leading-relaxed text-stone/75">
+              <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory/70">
                 Building services can be coordinated within the modular approach before the unit reaches site. The final scope is confirmed for the selected model and project.
               </p>
             </div>
@@ -230,20 +230,20 @@ export default function SystemPage() {
               <Reveal key={system.number} direction="up" delay={index * 0.08} className="border-r border-b border-stone/20 p-8 md:p-10 min-h-[240px]">
                 <span className="font-mono text-xs text-gold">{system.number}</span>
                 <h3 className="mt-12 text-2xl font-sans font-semibold tracking-tight">{system.title}</h3>
-                <p className="mt-5 text-base leading-relaxed text-stone/75">{system.detail}</p>
+                <p className="mt-5 text-base leading-relaxed text-ivory/65">{system.detail}</p>
               </Reveal>
             ))}
           </div>
         </div>
       </CinematicSection>
 
-      <CinematicSection parallax={false} className="section-space-compact">
+      <CinematicSection parallax={false} overlay={false} className="section-space-compact bg-light text-stone">
         <div className="site-container border border-gold/25 bg-gold/[0.04] grid lg:grid-cols-[1fr_0.85fr] gap-10 p-7 md:p-12 lg:p-16">
           <div>
             <Reveal direction="right">
               <span className="eyebrow text-gold">Configured for the project</span>
               <h2 className="mt-6 type-section">One platform. Multiple possibilities.</h2>
-              <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory/70">
+              <p className="mt-8 max-w-2xl text-base leading-relaxed text-stone/75">
                 Capsule models can be considered for homes, hospitality, workplaces, public amenities, and commercial spaces. Finish, layout, glazing, and integration scope can be considered according to the selected model and project requirements.
               </p>
             </Reveal>
@@ -251,13 +251,13 @@ export default function SystemPage() {
           <Reveal direction="left" className="self-end">
             <ul className="space-y-5">
               {systemPromises.map((promise) => (
-                <li key={promise} className="flex items-start gap-4 text-sm text-ivory/75">
+                <li key={promise} className="flex items-start gap-4 text-sm text-stone/80">
                   <Check size={17} className="mt-0.5 shrink-0 text-gold" />
                   <span>{promise}</span>
                 </li>
               ))}
             </ul>
-            <Link to="/work" className="mt-12 inline-flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold text-gold transition-colors hover:text-ivory">
+            <Link to="/work" className="mt-12 inline-flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold text-gold transition-colors hover:text-stone">
               Explore models <ArrowUpRight size={16} />
             </Link>
           </Reveal>

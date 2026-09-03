@@ -142,7 +142,7 @@ export default function ServicesPage() {
                   <Reveal
                     direction={i % 2 === 1 ? "right" : "left"}
                     delay={0.2}
-                    className="aspect-[16/10] overflow-hidden rounded-sm shadow-2xl"
+                    className="aspect-[16/10] overflow-hidden rounded-sm shadow-sm"
                   >
                     <ParallaxImage
                       src={

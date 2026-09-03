@@ -55,7 +55,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       >
         <motion.div
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden mb-7 md:mb-9 border border-stone/10 p-2 bg-stone/5 transition-colors duration-500 group-hover:border-gold/30"
+          className="relative aspect-[4/3] overflow-hidden mb-7 md:mb-9 border border-stone/10 p-2 bg-stone/5 transition-colors duration-500 group-hover:border-gold/30"
         >
           <div
             style={{ transform: "translateZ(50px)" }}
@@ -160,7 +160,7 @@ export default function FeaturedWork() {
               to="/work"
               className="group flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold hover:text-gold transition-all duration-500 pb-1 border-b border-stone/20"
             >
-              Explore all models{" "}
+              Explore models{" "}
               <ArrowUpRight
                 size={16}
                 className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"

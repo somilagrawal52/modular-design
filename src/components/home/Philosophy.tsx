@@ -56,7 +56,7 @@ export default function Philosophy() {
                 {/* Decorative Frame */}
                 <div className="absolute -inset-4 border border-stone/10 pointer-events-none z-20" />
                 
-                <Reveal direction="left" delay={0.3} className="relative aspect-[4/3] lg:aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
+                <Reveal direction="left" delay={0.3} className="relative aspect-[4/3] lg:aspect-[3/4] overflow-hidden rounded-sm shadow-sm">
                   <ParallaxImage
                     src="/images/modular-campus-aerial-hero.jpg"
                     alt="Aerial view of a modular living campus"
@@ -66,7 +66,7 @@ export default function Philosophy() {
                 </Reveal>
                 
                 <div className="absolute -bottom-12 -left-12 z-30 hidden xl:block">
-                <div className="vertical-text text-xs uppercase tracking-[0.12em] text-gold font-semibold bg-ivory/80 backdrop-blur-md p-6 border border-gold/20 shadow-xl">
+                <div className="vertical-text text-xs uppercase tracking-[0.12em] text-gold font-semibold bg-ivory/80 backdrop-blur-md p-6 border border-gold/20 shadow-sm">
                     MODULAR LIVING CAMPUS
                   </div>
                 </div>
