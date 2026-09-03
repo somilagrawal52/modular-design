@@ -15,7 +15,6 @@ const footerGroups = [
     title: 'Company',
     links: [
       { label: 'Technology Behind It', to: '/system' },
-      { label: 'About Us', to: '/about' },
       { label: 'Contact Us', to: '/contact' },
     ],
   },

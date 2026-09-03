@@ -5,10 +5,11 @@ interface CinematicSectionProps {
   className?: string;
   parallax?: boolean;
   minHeight?: boolean;
+  overlay?: boolean;
   key?: string | number;
 }
 
-export default function CinematicSection({ children, className = "", minHeight = false }: CinematicSectionProps) {
+export default function CinematicSection({ children, className = "", minHeight = false, overlay = true }: CinematicSectionProps) {
   return (
     <section className={`relative overflow-hidden ${minHeight ? 'min-h-screen' : ''} ${className}`}>
       <div className="w-full h-full">
@@ -16,7 +17,7 @@ export default function CinematicSection({ children, className = "", minHeight =
       </div>
       
       {/* Cinematic Overlay (Subtle) */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-ink/20 via-transparent to-ink/20 z-10" />
+      {overlay && <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-ink/20 via-transparent to-ink/20 z-10" />}
     </section>
   );
 }

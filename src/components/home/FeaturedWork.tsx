@@ -94,7 +94,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
               0{index + 1}
             </span>
             <div className="h-[1px] flex-1 bg-stone/10" />
-            <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">
+            <span className="text-xs uppercase tracking-[0.1em] text-stone/60 font-semibold">
               {productType}
             </span>
           </div>
@@ -125,12 +125,12 @@ export default function FeaturedWork() {
   return (
     <section
       id="models"
-      className="section-space relative overflow-hidden"
+      className="section-space relative overflow-hidden bg-light text-stone"
     >
       {/* Background Parallax */}
       <ParallaxElement
         speed={-0.05}
-        className="absolute top-20 left-[-5%] text-[20vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0"
+        className="absolute top-20 left-[-5%] text-[20vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0"
       >
         CAPSULE
       </ParallaxElement>
@@ -142,7 +142,7 @@ export default function FeaturedWork() {
               <div className="flex items-center gap-4 mb-8">
                 <span className="text-gold font-mono text-xs">02</span>
                 <div className="h-[1px] w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">
+                <span className="text-xs uppercase tracking-[0.1em] text-stone/60 font-semibold">
                   Featured models
                 </span>
               </div>

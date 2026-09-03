@@ -95,11 +95,12 @@ export default function ConceptToCommissioning() {
   return (
     <CinematicSection
       minHeight={false}
-      className="section-space border-y border-stone/10 bg-stone/5"
+      overlay={false}
+      className="section-space border-y border-stone/15 bg-light text-stone"
     >
       <ParallaxElement
         speed={-0.03}
-        className="absolute right-[-8%] top-16 select-none font-display text-[24vw] font-bold leading-none text-ivory/[0.035]"
+        className="absolute right-[-8%] top-16 select-none font-display text-[24vw] font-bold leading-none text-stone/[0.035]"
       >
         JOURNEY
       </ParallaxElement>
@@ -118,7 +119,7 @@ export default function ConceptToCommissioning() {
             delay={0.1}
             stagger={0.035}
           />
-          <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-ivory/75 md:mt-10 md:text-xl">
+          <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-stone/75 md:mt-10 md:text-xl">
             From the first sketch to final handover, each stage is coordinated to turn a modular concept into a complete, site-ready experience.
           </p>
         </div>
@@ -170,12 +171,12 @@ export default function ConceptToCommissioning() {
 
                 <div className={`order-3 lg:row-span-2 lg:col-span-4 ${textPlacement} hidden self-center lg:flex lg:flex-col`}>
                   <StageHeading stage={stage} />
-                  <p className="mt-6 max-w-md text-base font-light leading-relaxed text-ivory/75 xl:text-lg">
+                  <p className="mt-6 max-w-md text-base font-light leading-relaxed text-stone/75 xl:text-lg">
                     {stage.copy}
                   </p>
                 </div>
 
-                <p className="order-3 max-w-xl text-base font-light leading-relaxed text-ivory/75 lg:hidden">
+                <p className="order-3 max-w-xl text-base font-light leading-relaxed text-stone/75 lg:hidden">
                   {stage.copy}
                 </p>
               </motion.article>

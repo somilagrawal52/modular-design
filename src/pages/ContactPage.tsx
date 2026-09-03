@@ -23,7 +23,7 @@ export default function ContactPage() {
   const [selectedInquiry, setSelectedInquiry] = useState("");
 
   return (
-    <div className="bg-ink min-h-screen pt-28 md:pt-36 relative overflow-hidden">
+    <div className="bg-light text-stone min-h-screen pt-28 md:pt-36 relative overflow-hidden">
       <SEO
         title="Contact"
         description="Discuss premium space capsules and modular living solutions for hospitality, resorts, commercial developments and private projects."
@@ -41,7 +41,7 @@ export default function ContactPage() {
               <div className="flex items-center gap-4 mb-12">
                 <span className="text-gold font-mono text-xs">04</span>
                 <div className="h-[1px] w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.1em] text-ivory/65 font-semibold">
+                <span className="text-xs uppercase tracking-[0.1em] text-stone/65 font-semibold">
                   Contact
                 </span>
               </div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
             <div className="max-w-3xl">
               <StaggerText
                 text="Tell us what you want to create. We’ll start with the right capsule model or modular application and the information that matters for your brief."
-                className="text-lg md:text-xl text-ivory/75 font-light leading-relaxed"
+                className="text-lg md:text-xl text-stone/75 font-light leading-relaxed"
                 delay={0.8}
                 stagger={0.02}
               />
@@ -67,7 +67,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-24 md:mb-32">
           <div className="lg:col-span-7">
             <Reveal direction="right" delay={0.4}>
-              <div className="bg-stone/5 p-6 md:p-10 border border-stone/10 relative backdrop-blur-sm">
+              <div className="bg-light-secondary p-6 md:p-10 border border-stone/15 relative">
                 <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-gold/20" />
                 <h2 className="text-3xl font-display font-bold mb-10 tracking-tight">
                   Start a conversation
@@ -85,7 +85,7 @@ export default function ContactPage() {
                         name="name"
                         autoComplete="name"
                         placeholder="Your name"
-                        className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/40 text-ivory text-lg font-light"
+                        className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
                       />
                     </div>
                     <div className="space-y-4">
@@ -98,7 +98,7 @@ export default function ContactPage() {
                         name="email"
                         autoComplete="email"
                         placeholder={dreamRealtyEmail("studio")}
-                        className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/40 text-ivory text-lg font-light"
+                        className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
                       />
                     </div>
                   </div>
@@ -136,7 +136,7 @@ export default function ContactPage() {
                       id="contact-brief"
                       name="brief"
                       rows={4}
-                      className="w-full bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/40 text-ivory text-lg font-light resize-none"
+                      className="w-full bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light resize-none"
                     />
                   </div>
 
@@ -208,7 +208,7 @@ export default function ContactPage() {
                   },
                 ].map((item) => (
                   <div key={item.label} className="group">
-                    <h3 className="text-xs uppercase tracking-[0.08em] text-ivory/55 mb-2">
+                    <h3 className="text-xs uppercase tracking-[0.08em] text-stone/65 mb-2">
                       {item.label}
                     </h3>
                     <a
@@ -229,14 +229,14 @@ export default function ContactPage() {
               <h2 className="text-2xl font-display font-bold mb-6 tracking-tight">
                 Model-led conversations
               </h2>
-              <p className="text-ivory/75 font-light leading-relaxed mb-8">
+              <p className="text-stone/75 font-light leading-relaxed mb-8">
                 Start with a model or application. From there, the relevant
                 configuration, finish, delivery, and project information can be
                 considered against your requirements.
               </p>
               <a
                 href={`mailto:${dreamRealtyEmail("studio")}`}
-                className="inline-flex min-h-11 items-center gap-3 text-xs uppercase tracking-[0.1em] font-semibold text-gold hover:text-ivory transition-colors"
+                className="inline-flex min-h-11 items-center gap-3 text-xs uppercase tracking-[0.1em] font-semibold text-gold hover:text-stone transition-colors"
               >
                 <Mail size={14} /> {dreamRealtyEmail("studio")}
               </a>

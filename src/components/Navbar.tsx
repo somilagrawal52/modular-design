@@ -26,7 +26,6 @@ export default function Navbar() {
     { name: "Our Designs", href: "/work" },
     { name: "Technology Behind It", href: "/system" },
     { name: "Our Services", href: "/services" },
-    { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contact" },
   ];
 

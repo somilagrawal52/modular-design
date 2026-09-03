@@ -65,12 +65,13 @@ export default function ServicesPage() {
         {visibleServices.map((service, i) => (
           <CinematicSection
             key={service.id}
-            className="section-space-compact border-b border-stone/10"
+            overlay={false}
+            className="section-space-compact border-b border-stone/10 bg-light text-stone"
           >
             {/* Background Number */}
             <ParallaxElement
               speed={-0.1}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0"
             >
               0{i + 1}
             </ParallaxElement>
@@ -84,7 +85,7 @@ export default function ServicesPage() {
                         0{i + 1}
                       </span>
                       <div className="h-[1px] w-12 bg-gold" />
-                      <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">
+                      <span className="text-xs uppercase tracking-[0.1em] text-stone/65 font-semibold">
                         Service Sector
                       </span>
                     </div>
@@ -97,7 +98,7 @@ export default function ServicesPage() {
                   />
                   <StaggerText
                     text={service.description}
-                    className="text-lg md:text-xl font-light text-ivory/80 leading-relaxed mb-10"
+                    className="text-lg md:text-xl font-light text-stone/80 leading-relaxed mb-10"
                     delay={0.4}
                     stagger={0.02}
                   />
@@ -117,10 +118,10 @@ export default function ServicesPage() {
                           <div>
                             <StaggerText
                               text={feature}
-                            className="text-sm uppercase tracking-[0.06em] text-ivory/75 font-semibold mb-2"
+                            className="text-sm uppercase tracking-[0.06em] text-stone/80 font-semibold mb-2"
                               delay={0.2}
                             />
-                            <p className="text-sm text-ivory/70 font-light leading-relaxed">
+                            <p className="text-sm text-stone/75 font-light leading-relaxed">
                               A key consideration when reviewing this
                               application.
                             </p>

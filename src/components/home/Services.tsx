@@ -13,9 +13,9 @@ export default function Services() {
   const [activeId, setActiveId] = useState<string | null>(SERVICES[0].id);
 
   return (
-    <section id="services" className="section-space bg-stone/5 relative overflow-hidden">
+    <section id="services" className="section-space bg-light-secondary text-stone relative overflow-hidden">
       {/* Background Parallax */}
-      <ParallaxElement speed={-0.06} className="absolute bottom-20 left-[-5%] text-[25vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
+      <ParallaxElement speed={-0.06} className="absolute bottom-20 left-[-5%] text-[25vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0">
         EXPERTISE
       </ParallaxElement>
 
@@ -27,7 +27,7 @@ export default function Services() {
                 <div className="flex items-center gap-4 mb-12">
                   <span className="text-gold font-mono text-xs">03</span>
                   <div className="h-[1px] w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">Expertise</span>
+                <span className="text-xs uppercase tracking-[0.1em] text-stone/60 font-semibold">Expertise</span>
                 </div>
               </Reveal>
               <StaggerText
@@ -39,7 +39,7 @@ export default function Services() {
               />
               <StaggerText
                 text="From prefab homes to container cafés and outdoor amenities, we create flexible spaces built for the way people live and gather."
-                className="text-ivory/70 text-lg font-light leading-relaxed max-w-xs"
+                className="text-stone/75 text-lg font-light leading-relaxed max-w-xs"
                 delay={0.6}
                 stagger={0.02}
               />
@@ -58,14 +58,14 @@ export default function Services() {
                   <div className="flex justify-between items-center gap-4 mb-8">
                     <div className="flex flex-1 min-w-0 items-center gap-8">
                       <span className="text-gold font-mono text-xs opacity-40 group-hover:opacity-100 transition-opacity">0{i + 1}</span>
-                      <h3 className={`min-w-0 text-3xl md:text-4xl font-display font-bold tracking-tighter leading-[0.98] transition-all duration-500 ${activeId === service.id ? 'text-gold pl-3 md:pl-5' : 'text-ivory group-hover:pl-3'}`}>
+                      <h3 className={`min-w-0 text-3xl md:text-4xl font-display font-semibold tracking-tight leading-[1.05] transition-all duration-500 ${activeId === service.id ? 'text-gold pl-3 md:pl-5' : 'text-stone group-hover:pl-3'}`}>
                         {service.title}
                       </h3>
                     </div>
                     <Magnetic strength={0.5}>
                       <div className={`w-12 h-12 rounded-full border border-stone/20 flex items-center justify-center transition-all duration-500 ${activeId === service.id ? 'bg-gold border-gold rotate-45' : 'group-hover:border-gold'}`}>
                         <Plus 
-                          className={`transition-colors duration-500 ${activeId === service.id ? 'text-ink' : 'text-ivory/40 group-hover:text-gold'}`} 
+                          className={`transition-colors duration-500 ${activeId === service.id ? 'text-ink' : 'text-stone/50 group-hover:text-gold'}`}
                           size={24} 
                         />
                       </div>
@@ -82,13 +82,13 @@ export default function Services() {
                     className="overflow-hidden"
                   >
                     <div className="pb-8 pl-4 md:pl-16 flex flex-col md:flex-row gap-12 md:gap-24">
-                      <p className="flex-1 text-ivory/70 text-lg font-light leading-relaxed">
+                      <p className="flex-1 text-stone/75 text-lg font-light leading-relaxed">
                         {service.description}
                       </p>
                       <div className="flex-1 grid grid-cols-1 gap-6">
                         {service.features.map((feature) => (
                           <div key={feature} className="flex items-center justify-between border-b border-stone/10 pb-4 group/item">
-                            <span className="text-sm uppercase tracking-[0.06em] text-ivory/65 font-semibold group-hover/item:text-gold transition-colors">
+                            <span className="text-sm uppercase tracking-[0.06em] text-stone/70 font-semibold group-hover/item:text-gold transition-colors">
                               {feature}
                             </span>
                             <div className="w-1.5 h-1.5 bg-gold/20 group-hover/item:bg-gold transition-colors" />

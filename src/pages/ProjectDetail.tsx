@@ -81,7 +81,7 @@ export default function ProjectDetail() {
       </CinematicSection>
 
       {/* Narrative Section */}
-      <CinematicSection className="section-space bg-ivory text-ink">
+      <CinematicSection overlay={false} className="section-space bg-light text-stone">
         {/* Background Parallax */}
         <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0">
           OVERVIEW
@@ -201,11 +201,11 @@ export default function ProjectDetail() {
       )}
 
       {/* Gallery */}
-      <CinematicSection className="section-space bg-stone/5">
+      <CinematicSection overlay={false} className="section-space bg-light-secondary text-stone">
         <div className="site-container">
           <Reveal direction="up" className="mb-12 md:mb-16 text-center">
             <span className="text-gold font-mono text-xs block mb-4">03</span>
-            <h2 className="text-xs uppercase tracking-[0.1em] text-ivory/65 font-semibold">Exterior, installation & interior</h2>
+            <h2 className="text-xs uppercase tracking-[0.1em] text-stone/65 font-semibold">Exterior, installation & interior</h2>
           </Reveal>
           <div className="grid grid-cols-12 gap-6 md:gap-10">
             {visibleGallery.map((img, i) => {

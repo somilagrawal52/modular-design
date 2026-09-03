@@ -43,8 +43,8 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="section-space relative overflow-hidden border-t border-white/5">
-      <div className="absolute -right-[5vw] top-16 text-[22vw] font-display font-bold tracking-tighter leading-none text-ivory/[0.025] pointer-events-none select-none">
+    <section id="faq" aria-labelledby="faq-heading" className="section-space relative overflow-hidden border-t border-stone/10 bg-light text-stone">
+      <div className="absolute -right-[5vw] top-16 text-[22vw] font-display font-bold tracking-tighter leading-none text-stone/[0.035] pointer-events-none select-none">
         FAQ
       </div>
 
@@ -56,7 +56,7 @@ export default function FAQ() {
               <div className="flex items-center gap-4 mb-10">
                 <span className="text-gold font-mono text-xs">04</span>
                 <div className="h-px w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">Knowledge</span>
+                <span className="text-xs uppercase tracking-[0.1em] text-stone/60 font-semibold">Knowledge</span>
               </div>
             </Reveal>
 
@@ -69,21 +69,21 @@ export default function FAQ() {
             />
 
             <Reveal direction="right" delay={0.3}>
-              <p className="mt-10 max-w-sm text-base md:text-lg leading-relaxed text-ivory/60 font-light">
+              <p className="mt-10 max-w-sm text-base md:text-lg leading-relaxed text-stone/70 font-light">
                 A practical guide to starting a modular or capsule-space project.
               </p>
             </Reveal>
           </div>
 
           <div className="lg:col-span-8 lg:pt-2">
-            <div className="border-t border-white/15">
+            <div className="border-t border-stone/15">
               {faqs.map((faq, index) => {
                 const isOpen = openIndex === index;
                 const answerId = `faq-answer-${index}`;
 
                 return (
                   <Reveal key={faq.question} direction="up" delay={Math.min(index * 0.04, 0.24)}>
-                    <div className="border-b border-white/15">
+                    <div className="border-b border-stone/15">
                       <button
                         type="button"
                         className="w-full flex items-center gap-5 md:gap-8 py-6 md:py-8 text-left group"
@@ -92,7 +92,7 @@ export default function FAQ() {
                         aria-controls={answerId}
                       >
                         <span className="w-7 shrink-0 text-xs font-mono text-gold/80">{String(index + 1).padStart(2, '0')}</span>
-                        <span className="flex-1 text-lg md:text-2xl font-display font-medium tracking-tight text-ivory group-hover:text-gold transition-colors duration-300">
+                        <span className="flex-1 text-lg md:text-2xl font-display font-medium tracking-tight text-stone group-hover:text-gold transition-colors duration-300">
                           {faq.question}
                         </span>
                         <motion.span
@@ -114,7 +114,7 @@ export default function FAQ() {
                             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                             className="overflow-hidden"
                           >
-                            <p className="pb-7 md:pb-9 pl-12 md:pl-16 max-w-2xl text-base md:text-lg leading-relaxed text-ivory/65 font-light">
+                            <p className="pb-7 md:pb-9 pl-12 md:pl-16 max-w-2xl text-base md:text-lg leading-relaxed text-stone/70 font-light">
                               {faq.answer}
                             </p>
                           </motion.div>

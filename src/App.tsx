@@ -8,7 +8,6 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Work from './pages/Work';
 import ProjectDetail from './pages/ProjectDetail';
-import About from './pages/About';
 import ServicesPage from './pages/ServicesPage';
 import ContactPage from './pages/ContactPage';
 import SystemPage from './pages/SystemPage';
@@ -41,7 +40,6 @@ export default function App() {
         <Route path="/work/:id" element={<ProjectDetail />} />
         <Route path="/system" element={<SystemPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Layout>

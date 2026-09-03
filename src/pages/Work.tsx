@@ -107,16 +107,16 @@ export default function Work() {
   });
 
   return (
-    <div className="bg-ink min-h-screen pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 relative overflow-hidden">
+    <div className="bg-light text-stone min-h-screen pt-28 md:pt-32 lg:pt-36 pb-24 md:pb-28 relative overflow-hidden">
       <SEO
         title="Capsule Models & Modular Applications"
         description="Explore premium capsule models and modular applications for hospitality, private retreats, commercial spaces, workplaces, and community amenities."
       />
-      <CinematicSection parallax={false} minHeight={false}>
+      <CinematicSection parallax={false} minHeight={false} overlay={false}>
         {/* Background Parallax */}
         <ParallaxElement
           speed={-0.1}
-          className="absolute top-28 left-[-10%] text-[20vw] font-display font-bold text-ivory/[0.035] pointer-events-none select-none leading-none z-0"
+          className="absolute top-28 left-[-10%] text-[20vw] font-display font-bold text-stone/[0.035] pointer-events-none select-none leading-none z-0"
         >
           MODELS
         </ParallaxElement>
@@ -152,7 +152,7 @@ export default function Work() {
             <ParallaxElement speed={-0.02}>
               <Reveal direction="left" delay={0.4}>
                 <div className="flex flex-col items-start md:items-end gap-4">
-                  <div className="flex items-center gap-3 text-ivory/60 text-xs uppercase tracking-[0.1em] font-semibold">
+                  <div className="flex items-center gap-3 text-stone/65 text-xs uppercase tracking-[0.1em] font-semibold">
                     <Filter size={12} /> Browse by application
                   </div>
                   <div className="flex flex-wrap justify-start md:justify-end gap-x-5 gap-y-2">
@@ -166,12 +166,12 @@ export default function Work() {
                         className={`inline-flex min-h-11 items-center px-1 text-xs uppercase tracking-[0.08em] font-semibold border-b-2 transition-all duration-500 relative group ${
                           filter === category
                             ? "border-gold text-gold"
-                            : "border-transparent text-ivory/60 hover:text-ivory"
+                            : "border-transparent text-stone/65 hover:text-stone"
                         }`}
                       >
                         {category}
                         <span
-                          className={`absolute -right-3 -top-1 text-[9px] opacity-40 ${filter === category ? "text-gold" : "text-ivory/40"}`}
+                          className={`absolute -right-3 -top-1 text-[9px] opacity-40 ${filter === category ? "text-gold" : "text-stone/50"}`}
                         >
                           {category === "All"
                             ? PROJECTS.length
@@ -292,7 +292,7 @@ export default function Work() {
                       <h3 className="type-card group-hover/card:text-gold transition-colors duration-500">
                         {project.title}
                       </h3>
-                      <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-5 border-t border-stone/15 pt-5 text-xs uppercase tracking-[0.06em] text-ivory/55 font-semibold">
+                      <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-x-5 gap-y-5 border-t border-stone/15 pt-5 text-xs uppercase tracking-[0.06em] text-stone/65 font-semibold">
                         {[
                           ["Product type", projectSummary(project).type],
                           ["Model system", projectSummary(project).system],
@@ -303,7 +303,7 @@ export default function Work() {
                             <span className="block text-gold/70 mb-2">
                               {label}
                             </span>
-                            <span className="block text-ivory/75 normal-case tracking-normal text-xs font-medium truncate">
+                            <span className="block text-stone/80 normal-case tracking-normal text-xs font-medium truncate">
                               {value}
                             </span>
                           </div>
@@ -315,7 +315,7 @@ export default function Work() {
                     </div>
                     <ArrowUpRight
                       size={28}
-                      className="mt-7 shrink-0 text-ivory/20 group-hover/card:text-gold group-hover/card:translate-x-1 group-hover/card:-translate-y-1 transition-all duration-500"
+                      className="mt-7 shrink-0 text-stone/30 group-hover/card:text-gold group-hover/card:translate-x-1 group-hover/card:-translate-y-1 transition-all duration-500"
                     />
                   </div>
                 </Link>
@@ -330,7 +330,7 @@ export default function Work() {
                 onClick={() => setVisibleCount(visibleProjects.length)}
                 className="group flex items-center gap-5 px-8 py-5 border border-stone/20 bg-stone/5 hover:border-gold/50 hover:bg-gold/5 transition-all duration-500"
               >
-                <span className="text-xs uppercase tracking-[0.1em] font-semibold text-ivory group-hover:text-gold transition-colors">
+                <span className="text-xs uppercase tracking-[0.1em] font-semibold text-stone group-hover:text-gold transition-colors">
                   Load more models
                 </span>
                 <ArrowDown
@@ -349,7 +349,7 @@ export default function Work() {
                   Find the right model.
                 </h2>
                 <div className="w-full h-[2px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-                <p className="mt-5 text-ivory/60 uppercase tracking-[0.1em] text-xs font-semibold">
+                <p className="mt-5 text-stone/65 uppercase tracking-[0.1em] text-xs font-semibold">
                   Discuss your modular space
                 </p>
               </Link>

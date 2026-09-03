@@ -11,11 +11,21 @@
   /* Keep body copy readable while preserving a calm, technical hierarchy. */
   --font-weight-light: 400;
 
-  --color-ink: #050505;
-  --color-ivory: #FAF9F6;
+  /* Architectural palette: warm light surfaces with deliberate cinematic darks. */
+  --color-dark: #0D0E0E;
+  --color-dark-secondary: #151616;
+  --color-light: #F4F2EC;
+  --color-light-secondary: #E9E7E1;
+  --color-white: #FAFAF8;
+  --color-text-dark: #151616;
+  --color-text-light: #F4F2EC;
+  --color-muted-dark: #656565;
+  --color-muted-light: #A7A7A3;
+  --color-ink: var(--color-dark);
+  --color-ivory: var(--color-light);
   --color-gold: #D4AF37;
-  --color-stone: #1A1A1A;
-  --color-clay: #2C2C2C;
+  --color-stone: var(--color-dark-secondary);
+  --color-clay: #2A2B2B;
 
   --animate-shimmer: shimmer 2s linear infinite;
 }
@@ -25,10 +35,10 @@
   --layout-gutter: clamp(1.25rem, 4vw, 4rem);
   --section-space: clamp(4rem, 8vw, 7.5rem);
   --section-space-compact: clamp(3.5rem, 6vw, 6rem);
-  --type-display: clamp(2.75rem, 6vw, 5.25rem);
-  --type-page-title: clamp(2.5rem, 5.2vw, 4.5rem);
-  --type-section: clamp(2.125rem, 4vw, 3.5rem);
-  --type-card: clamp(1.625rem, 2.6vw, 2.25rem);
+  --type-display: clamp(2.75rem, 5.8vw, 5.25rem);
+  --type-page-title: clamp(2.5rem, 4.8vw, 4.25rem);
+  --type-section: clamp(2rem, 3.6vw, 3.25rem);
+  --type-card: clamp(1.5rem, 2.3vw, 2rem);
   --type-body-large: clamp(1.0625rem, 1.25vw, 1.25rem);
 }
 
@@ -75,22 +85,22 @@
 
   .type-display {
     font-size: var(--type-display);
-    line-height: 0.94;
-    letter-spacing: -0.045em;
+    line-height: 0.98;
+    letter-spacing: -0.035em;
     font-weight: 600;
   }
 
   .type-page-title {
     font-size: var(--type-page-title);
-    line-height: 0.96;
-    letter-spacing: -0.04em;
+    line-height: 1;
+    letter-spacing: -0.03em;
     font-weight: 600;
   }
 
   .type-section {
     font-size: var(--type-section);
-    line-height: 1;
-    letter-spacing: -0.035em;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
     font-weight: 600;
   }
 
