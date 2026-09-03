@@ -8,7 +8,7 @@ export default function Philosophy() {
   return (
     <section id="about" className="section-space bg-ivory text-ink relative overflow-hidden">
       {/* Background Parallax */}
-      <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0">
+      <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0">
         MODULAR
       </ParallaxElement>
 

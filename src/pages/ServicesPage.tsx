@@ -71,7 +71,7 @@ export default function ServicesPage() {
             {/* Background Number */}
             <ParallaxElement
               speed={-0.1}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0"
             >
               0{i + 1}
             </ParallaxElement>
@@ -185,7 +185,7 @@ export default function ServicesPage() {
             <Link to="/contact" className="group inline-block">
               <h2 className="type-section text-balance group-hover:text-gold transition-colors">
                 Discuss your{" "}
-                <span className="font-display font-medium">project.</span>
+                <span className="font-sans font-medium">project.</span>
               </h2>
             </Link>
           </Reveal>

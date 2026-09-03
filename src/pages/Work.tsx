@@ -116,7 +116,7 @@ export default function Work() {
         {/* Background Parallax */}
         <ParallaxElement
           speed={-0.1}
-          className="absolute top-28 left-[-10%] text-[20vw] font-display font-bold text-stone/[0.035] pointer-events-none select-none leading-none z-0"
+          className="absolute top-28 left-[-10%] text-[20vw] font-sans font-semibold text-stone/[0.035] pointer-events-none select-none leading-none z-0"
         >
           MODELS
         </ParallaxElement>

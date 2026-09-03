@@ -83,7 +83,7 @@ export default function ProjectDetail() {
       {/* Narrative Section */}
       <CinematicSection overlay={false} className="section-space bg-light text-stone">
         {/* Background Parallax */}
-        <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0">
+        <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0">
           OVERVIEW
         </ParallaxElement>
 
@@ -137,7 +137,7 @@ export default function ProjectDetail() {
                         <div className="flex justify-between items-end gap-4">
                           <span className="text-xs uppercase tracking-[0.08em] text-stone/65 font-semibold">{detail.label}</span>
                           <div className="flex-1 border-b border-stone/10 border-dotted mb-1" />
-                          <span className="text-sm font-bold">{detail.value}</span>
+                          <span className="text-sm font-semibold">{detail.value}</span>
                         </div>
                       </Reveal>
                     ))}
@@ -240,7 +240,7 @@ export default function ProjectDetail() {
 
       {/* Model enquiry CTA */}
       <CinematicSection className="section-space text-center bg-ink border-t border-stone/10">
-        <ParallaxElement speed={-0.05} className="absolute inset-0 flex items-center justify-center text-[30vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
+        <ParallaxElement speed={-0.05} className="absolute inset-0 flex items-center justify-center text-[30vw] font-sans font-semibold text-ivory/5 pointer-events-none select-none leading-none z-0">
           ENQUIRE
         </ParallaxElement>
         

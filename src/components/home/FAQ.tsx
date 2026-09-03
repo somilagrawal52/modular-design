@@ -44,7 +44,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" aria-labelledby="faq-heading" className="section-space relative overflow-hidden border-t border-stone/10 bg-light text-stone">
-      <div className="absolute -right-[5vw] top-16 text-[22vw] font-display font-bold tracking-tighter leading-none text-stone/[0.035] pointer-events-none select-none">
+      <div className="absolute -right-[5vw] top-16 text-[22vw] font-sans font-semibold tracking-tight leading-none text-stone/[0.035] pointer-events-none select-none">
         FAQ
       </div>
 
@@ -92,7 +92,7 @@ export default function FAQ() {
                         aria-controls={answerId}
                       >
                         <span className="w-7 shrink-0 text-xs font-mono text-gold/80">{String(index + 1).padStart(2, '0')}</span>
-                        <span className="flex-1 text-lg md:text-2xl font-display font-medium tracking-tight text-stone group-hover:text-gold transition-colors duration-300">
+                        <span className="flex-1 text-lg md:text-2xl font-sans font-medium tracking-tight text-stone group-hover:text-gold transition-colors duration-300">
                           {faq.question}
                         </span>
                         <motion.span

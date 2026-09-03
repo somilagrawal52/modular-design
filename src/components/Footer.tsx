@@ -33,7 +33,7 @@ export default function Footer() {
           <Reveal direction="right">
             <h2 className="type-section mb-10 max-w-3xl">
               Let's build{' '}
-              <span className="text-gold font-display font-medium">something timeless.</span>
+              <span className="text-gold font-sans font-medium">something timeless.</span>
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.4}>

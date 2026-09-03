@@ -69,7 +69,7 @@ export default function ContactPage() {
             <Reveal direction="right" delay={0.4}>
               <div className="bg-light-secondary p-6 md:p-10 border border-stone/15 relative">
                 <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-gold/20" />
-                <h2 className="text-3xl font-display font-bold mb-10 tracking-tight">
+                <h2 className="text-3xl font-sans font-semibold mb-10 tracking-tight">
                   Start a conversation
                 </h2>
 
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   <span className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">
                     Choose the right starting point
                   </span>
-                  <p className="mt-5 text-2xl font-display font-medium leading-tight text-ivory">
+                  <p className="mt-5 text-2xl font-sans font-medium leading-tight text-ivory">
                     A model, an application, or a project question.
                   </p>
                 </div>
@@ -209,7 +209,7 @@ export default function ContactPage() {
           <Reveal direction="left">
             <div className="bg-gold/5 p-12 border border-gold/10">
               <Globe className="text-gold mb-8" size={32} />
-              <h2 className="text-2xl font-display font-bold mb-6 tracking-tight">
+              <h2 className="text-2xl font-sans font-semibold mb-6 tracking-tight">
                 Model-led conversations
               </h2>
               <p className="text-stone/75 font-light leading-relaxed mb-8">

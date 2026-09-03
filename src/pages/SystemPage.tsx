@@ -153,10 +153,10 @@ export default function SystemPage() {
         </div>
       </CinematicSection>
 
-      <CinematicSection parallax={false} className="border-y border-stone/15 bg-stone/[0.03] section-space-compact">
+      <CinematicSection parallax={false} overlay={false} className="border-y border-stone/15 bg-light-secondary text-stone section-space-compact">
         <div className="site-container">
           <Reveal direction="up">
-            <div className="max-w-3xl mb-16 md:mb-24">
+            <div className="max-w-3xl mb-12 md:mb-16">
               <span className="eyebrow text-gold">From factory to site</span>
               <h2 className="mt-6 type-section">Built off-site. Positioned on-site.</h2>
             </div>
@@ -171,8 +171,8 @@ export default function SystemPage() {
                     <span className="font-mono text-xs text-gold">{stage.number}</span>
                     <Icon size={22} strokeWidth={1.25} className="text-gold" />
                   </div>
-                  <h3 className="mt-10 text-2xl md:text-3xl font-display font-bold tracking-tight">{stage.title}</h3>
-                  <p className="mt-4 text-base leading-relaxed text-ivory/65">{stage.copy}</p>
+                  <h3 className="mt-10 text-2xl md:text-3xl font-sans font-semibold tracking-tight">{stage.title}</h3>
+                  <p className="mt-4 text-base leading-relaxed text-stone/75">{stage.copy}</p>
                 </Reveal>
               );
             })}
@@ -203,7 +203,7 @@ export default function SystemPage() {
               {constructionLayers.map((system, index) => (
                 <Reveal key={system.title} direction="left" delay={0.08 + index * 0.06}>
                   <div className="border-l border-gold/50 pl-6">
-                    <h3 className="text-xl font-display font-bold tracking-tight">{system.title}</h3>
+                    <h3 className="text-xl font-sans font-semibold tracking-tight">{system.title}</h3>
                     <p className="mt-2 text-base leading-relaxed text-ivory/65">{system.detail}</p>
                   </div>
                 </Reveal>
@@ -213,13 +213,13 @@ export default function SystemPage() {
         </div>
       </CinematicSection>
 
-      <CinematicSection parallax={false} className="border-y border-stone/15 bg-stone/[0.03] section-space-compact">
+      <CinematicSection parallax={false} overlay={false} className="border-y border-stone/15 bg-light text-stone section-space-compact">
         <div className="site-container">
           <Reveal direction="up">
-            <div className="max-w-3xl mb-16 md:mb-24">
+            <div className="max-w-3xl mb-12 md:mb-16">
               <span className="eyebrow text-gold">Integrated from the start</span>
               <h2 className="mt-6 type-section">Everything works as one system.</h2>
-              <p className="mt-8 max-w-2xl text-base leading-relaxed text-ivory/70">
+              <p className="mt-8 max-w-2xl text-base leading-relaxed text-stone/75">
                 Building services can be coordinated within the modular approach before the unit reaches site. The final scope is confirmed for the selected model and project.
               </p>
             </div>
@@ -229,8 +229,8 @@ export default function SystemPage() {
             {integratedSystems.map((system, index) => (
               <Reveal key={system.number} direction="up" delay={index * 0.08} className="border-r border-b border-stone/20 p-8 md:p-10 min-h-[240px]">
                 <span className="font-mono text-xs text-gold">{system.number}</span>
-                <h3 className="mt-12 text-2xl font-display font-bold tracking-tight">{system.title}</h3>
-                <p className="mt-5 text-base leading-relaxed text-ivory/65">{system.detail}</p>
+                <h3 className="mt-12 text-2xl font-sans font-semibold tracking-tight">{system.title}</h3>
+                <p className="mt-5 text-base leading-relaxed text-stone/75">{system.detail}</p>
               </Reveal>
             ))}
           </div>

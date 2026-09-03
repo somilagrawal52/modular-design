@@ -67,8 +67,8 @@ function StageHeading({
       <span
         className={
           compact
-            ? "font-display text-4xl font-bold leading-none text-gold/70"
-            : "font-display text-[clamp(3rem,5vw,4.25rem)] font-bold leading-[0.82] tracking-tighter text-gold/25"
+            ? "font-sans text-4xl font-semibold leading-none text-gold/70"
+            : "font-sans text-[clamp(3rem,5vw,4.25rem)] font-semibold leading-[0.82] tracking-tight text-gold/25"
         }
       >
         {stage.step}
@@ -81,7 +81,7 @@ function StageHeading({
           className={
             compact
               ? "mt-3 text-[clamp(1.625rem,5vw,1.875rem)] font-semibold leading-[1.05] text-balance"
-              : "mt-4 text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-[1.05] tracking-tighter text-balance"
+              : "mt-4 text-[clamp(1.75rem,2.5vw,2.25rem)] font-semibold leading-[1.05] tracking-tight text-balance"
           }
         >
           {stage.title}
@@ -100,7 +100,7 @@ export default function ConceptToCommissioning() {
     >
       <ParallaxElement
         speed={-0.03}
-        className="absolute right-[-8%] top-16 select-none font-display text-[24vw] font-bold leading-none text-stone/[0.035]"
+        className="absolute right-[-8%] top-16 select-none font-sans text-[24vw] font-semibold leading-none text-stone/[0.035]"
       >
         JOURNEY
       </ParallaxElement>

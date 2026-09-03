@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section-space relative overflow-hidden">
       {/* Background Parallax */}
-      <ParallaxElement speed={-0.08} className="absolute top-40 right-[-10%] text-[25vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
+      <ParallaxElement speed={-0.08} className="absolute top-40 right-[-10%] text-[25vw] font-sans font-semibold text-ivory/5 pointer-events-none select-none leading-none z-0">
         CONNECT
       </ParallaxElement>
 

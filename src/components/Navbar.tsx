@@ -131,7 +131,7 @@ export default function Navbar() {
                   <Link
                     to={link.href}
                     onClick={() => setIsOpen(false)}
-                    className={`text-[clamp(2rem,9vw,3rem)] font-display font-semibold tracking-[-0.04em] leading-none transition-all duration-300 block py-2.5 ${
+                    className={`text-[clamp(2rem,9vw,2.75rem)] font-sans font-semibold tracking-[-0.03em] leading-none transition-all duration-300 block py-2.5 ${
                       location.pathname === link.href
                         ? "text-gold"
                         : "text-ivory hover:text-gold"

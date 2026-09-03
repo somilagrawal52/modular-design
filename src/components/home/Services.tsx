@@ -15,7 +15,7 @@ export default function Services() {
   return (
     <section id="services" className="section-space bg-light-secondary text-stone relative overflow-hidden">
       {/* Background Parallax */}
-      <ParallaxElement speed={-0.06} className="absolute bottom-20 left-[-5%] text-[25vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0">
+      <ParallaxElement speed={-0.06} className="absolute bottom-20 left-[-5%] text-[25vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0">
         EXPERTISE
       </ParallaxElement>
 
@@ -58,7 +58,7 @@ export default function Services() {
                   <div className="flex justify-between items-center gap-4 mb-8">
                     <div className="flex flex-1 min-w-0 items-center gap-8">
                       <span className="text-gold font-mono text-xs opacity-40 group-hover:opacity-100 transition-opacity">0{i + 1}</span>
-                      <h3 className={`min-w-0 text-3xl md:text-4xl font-display font-semibold tracking-tight leading-[1.05] transition-all duration-500 ${activeId === service.id ? 'text-gold pl-3 md:pl-5' : 'text-stone group-hover:pl-3'}`}>
+                      <h3 className={`min-w-0 text-3xl md:text-4xl font-sans font-semibold tracking-tight leading-[1.05] transition-all duration-500 ${activeId === service.id ? 'text-gold pl-3 md:pl-5' : 'text-stone group-hover:pl-3'}`}>
                         {service.title}
                       </h3>
                     </div>
