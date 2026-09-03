@@ -34,11 +34,7 @@ export default function Contact() {
               />
               
               <div className="space-y-10 md:space-y-12">
-                {[
-                  { label: 'New Projects', value: dreamRealtyEmail('projects') },
-                  { label: 'Press & Media', value: dreamRealtyEmail('press') },
-                  { label: 'Careers', value: dreamRealtyEmail('careers') }
-                ].map((item, i) => (
+                {[{ label: 'Sales enquiries', value: dreamRealtyEmail() }].map((item, i) => (
                   <Reveal key={item.label} direction="right" delay={i * 0.1 + 0.2}>
                     <a href={`mailto:${item.value}`} className="group block w-fit">
                       <h4 className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold mb-3 group-hover:text-gold transition-colors">{item.label}</h4>
@@ -85,7 +81,7 @@ export default function Contact() {
                           id="home-contact-email"
                           name="email"
                           autoComplete="email"
-                          placeholder="hello@example.com"
+                          placeholder={dreamRealtyEmail()}
                           className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/40 text-ivory text-lg font-light"
                         />
                       </div>

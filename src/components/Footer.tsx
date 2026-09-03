@@ -38,10 +38,10 @@ export default function Footer() {
           </Reveal>
           <Reveal direction="up" delay={0.4}>
             <a
-              href={`mailto:${dreamRealtyEmail('studio')}`}
+              href={`mailto:${dreamRealtyEmail()}`}
               className="group inline-flex flex-wrap items-center gap-4 md:gap-6 text-xl md:text-3xl font-light tracking-tight hover:text-gold transition-all duration-500"
             >
-              {dreamRealtyEmail('studio')}
+              {dreamRealtyEmail()}
               <div className="w-12 h-12 rounded-full border border-stone/20 flex items-center justify-center group-hover:bg-gold group-hover:border-gold transition-all duration-500">
                 <ArrowUpRight className="group-hover:text-ink transition-colors" size={24} />
               </div>

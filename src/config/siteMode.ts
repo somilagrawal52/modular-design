@@ -7,7 +7,8 @@ export const MANAGER_DEMO_MODE = MANAGER_OUTLINE_MODE;
 export const SITE_NAME = 'DREAM VENTURES REALTY';
 export const SITE_STUDIO_NAME = 'DREAM VENTURES REALTY';
 export const EMAIL_DOMAIN = 'dvr.com';
-export const dreamRealtyEmail = (mailbox: string) => `${mailbox}@${EMAIL_DOMAIN}`;
+export const SALES_EMAIL = `sales@${EMAIL_DOMAIN}`;
+export const dreamRealtyEmail = (_mailbox?: string) => SALES_EMAIL;
 
 export function demoItems<T>(items: T[], demoSelection: T[]): T[] {
   return MANAGER_DEMO_MODE ? demoSelection : items;

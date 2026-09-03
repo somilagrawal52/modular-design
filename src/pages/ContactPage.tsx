@@ -97,7 +97,7 @@ export default function ContactPage() {
                         id="contact-email"
                         name="email"
                         autoComplete="email"
-                        placeholder={dreamRealtyEmail("studio")}
+                        placeholder={dreamRealtyEmail()}
                         className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
                       />
                     </div>
@@ -189,24 +189,7 @@ export default function ContactPage() {
                 Direct access
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {[
-                  {
-                    label: "Model enquiries",
-                    email: dreamRealtyEmail("models"),
-                  },
-                  {
-                    label: "Project discussions",
-                    email: dreamRealtyEmail("projects"),
-                  },
-                  {
-                    label: "General information",
-                    email: dreamRealtyEmail("studio"),
-                  },
-                  {
-                    label: "Partnerships",
-                    email: dreamRealtyEmail("partners"),
-                  },
-                ].map((item) => (
+                {[{ label: "Sales enquiries", email: dreamRealtyEmail() }].map((item) => (
                   <div key={item.label} className="group">
                     <h3 className="text-xs uppercase tracking-[0.08em] text-stone/65 mb-2">
                       {item.label}
@@ -235,10 +218,10 @@ export default function ContactPage() {
                 considered against your requirements.
               </p>
               <a
-                href={`mailto:${dreamRealtyEmail("studio")}`}
+                href={`mailto:${dreamRealtyEmail()}`}
                 className="inline-flex min-h-11 items-center gap-3 text-xs uppercase tracking-[0.1em] font-semibold text-gold hover:text-stone transition-colors"
               >
-                <Mail size={14} /> {dreamRealtyEmail("studio")}
+                <Mail size={14} /> {dreamRealtyEmail()}
               </a>
             </div>
           </Reveal>
