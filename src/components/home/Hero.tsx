@@ -34,9 +34,9 @@ export default function Hero() {
   const transform = useMotionTemplate`translate3d(${moveX}px, ${moveY}px, 0)`;
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[680px] h-[100svh] flex items-center justify-center overflow-hidden">
       <motion.div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/20 via-ink/40 to-ink z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/45 via-ink/45 to-ink/90 z-10" />
         <img
           src="/images/modular-home-garden-hero.jpg"
           alt="Contemporary modular home in a garden"
@@ -45,7 +45,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="relative z-20 text-center px-8">
+      <div className="relative z-20 w-full text-center px-5 sm:px-8 pt-20">
         <motion.div style={{ transform }}>
           <Reveal delay={0.2}>
             <div
@@ -56,27 +56,27 @@ export default function Hero() {
               }
             >
               <div className="h-[1px] w-8 md:w-12 bg-gold/40" />
-              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.28em] md:tracking-[0.42em] text-gold font-bold">
+              <span className="text-[10px] md:text-xs uppercase tracking-[0.1em] md:tracking-[0.12em] text-gold font-semibold">
                 Premium space capsules · modular living solutions
               </span>
               <div className="h-[1px] w-8 md:w-12 bg-gold/40" />
             </div>
           </Reveal>
 
-          <h1 className="font-display font-semibold leading-[0.96] tracking-[-0.055em] mb-9">
-            <span className="block whitespace-nowrap text-[clamp(1.35rem,5.7vw,6.5rem)] text-ivory">
+          <h1 className="mx-auto max-w-6xl font-display font-semibold leading-[0.96] tracking-[-0.045em] mb-7 md:mb-9">
+            <span className="block text-[clamp(2.55rem,5.8vw,5.25rem)] text-ivory text-balance">
               Turning Dreams into Reality
             </span>
-            <span className="mt-3 block whitespace-nowrap text-[clamp(0.9rem,3.25vw,3.6rem)] font-medium tracking-[-0.035em] text-gold">
+            <span className="mt-3 block text-[clamp(1.35rem,3vw,2.75rem)] font-medium tracking-[-0.03em] text-gold text-balance">
               {" "}
               Breaking the Imagination Barriers
             </span>
           </h1>
 
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-[46rem] mx-auto">
             <StaggerText
               text={`${SITE_NAME}(DVR) presents premium capsule models and modular living solutions for hospitality, resorts, commercial developments, and private projects.`}
-              className="text-base md:text-lg text-ivory/75 font-light tracking-[0.01em] leading-relaxed"
+              className="text-base md:text-lg text-ivory/85 font-light tracking-[0.005em] leading-relaxed"
               delay={1.2}
               stagger={0.02}
             />
@@ -85,7 +85,7 @@ export default function Hero() {
           <Reveal delay={1.45}>
             <Link
               to="/work"
-              className="group mt-10 inline-flex items-center gap-4 border border-gold/45 px-6 py-4 text-[10px] uppercase tracking-[0.28em] font-bold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink"
+              className="group mt-8 md:mt-10 inline-flex min-h-12 items-center gap-4 border border-gold/55 px-6 py-3 text-xs uppercase tracking-[0.1em] font-semibold text-ivory transition-colors duration-300 hover:bg-gold hover:text-ink"
             >
               Explore models
               <ArrowUpRight
@@ -107,7 +107,7 @@ export default function Hero() {
             : "absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
         }
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60">
+        <span className="text-xs uppercase tracking-[0.1em] text-ivory/60">
           Explore below
         </span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-gold to-transparent" />

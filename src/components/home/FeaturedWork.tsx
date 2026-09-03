@@ -44,7 +44,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
     <Reveal
       direction="up"
       delay={index * 0.1}
-      className={`group cursor-pointer ${index % 2 === 1 ? "md:mt-48" : ""}`}
+      className={`group cursor-pointer ${index % 2 === 1 ? "md:mt-16" : ""}`}
     >
       <Link
         to={`/work/${project.id}`}
@@ -55,7 +55,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       >
         <motion.div
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="relative aspect-[4/5] overflow-hidden mb-12 border border-stone/10 p-2 bg-stone/5 transition-colors duration-500 group-hover:border-gold/30"
+          className="relative aspect-[4/3] md:aspect-[4/5] overflow-hidden mb-7 md:mb-9 border border-stone/10 p-2 bg-stone/5 transition-colors duration-500 group-hover:border-gold/30"
         >
           <div
             style={{ transform: "translateZ(50px)" }}
@@ -80,9 +80,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
           {/* Vertical Metadata */}
           <div
             style={{ transform: "translateZ(75px)" }}
-            className="absolute top-12 right-12 z-20 hidden xl:block"
+            className="absolute top-10 right-10 z-20 hidden xl:block"
           >
-            <div className="vertical-text text-[10px] uppercase tracking-[0.5em] text-ivory/40 font-bold">
+            <div className="vertical-text text-xs uppercase tracking-[0.12em] text-ivory/50 font-semibold">
               {project.category} — Model
             </div>
           </div>
@@ -90,18 +90,18 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 
         <div className="space-y-4">
           <div className="flex items-center gap-4">
-            <span className="text-gold font-mono text-[10px]">
+            <span className="text-gold font-mono text-xs">
               0{index + 1}
             </span>
             <div className="h-[1px] flex-1 bg-stone/10" />
-            <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60 font-bold">
+            <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">
               {productType}
             </span>
           </div>
           <StaggerText
             el="h3"
             text={project.title}
-            className="text-4xl font-display font-bold group-hover:text-gold transition-colors tracking-tighter"
+            className="type-card group-hover:text-gold transition-colors"
             delay={0.2}
           />
         </div>
@@ -125,7 +125,7 @@ export default function FeaturedWork() {
   return (
     <section
       id="models"
-      className="py-24 md:py-48 px-8 relative overflow-hidden"
+      className="section-space relative overflow-hidden"
     >
       {/* Background Parallax */}
       <ParallaxElement
@@ -135,14 +135,14 @@ export default function FeaturedWork() {
         CAPSULE
       </ParallaxElement>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-32 gap-8">
+      <div className="site-container relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-8">
           <div className="max-w-2xl">
             <Reveal direction="right">
               <div className="flex items-center gap-4 mb-8">
                 <span className="text-gold font-mono text-xs">02</span>
                 <div className="h-[1px] w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">
+                <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">
                   Featured models
                 </span>
               </div>
@@ -150,7 +150,7 @@ export default function FeaturedWork() {
             <StaggerText
               el="h2"
               text="Explore the collection."
-              className="text-6xl md:text-8xl font-display font-bold tracking-tighter leading-[0.85]"
+              className="type-section"
               delay={0.2}
               stagger={0.08}
             />
@@ -158,7 +158,7 @@ export default function FeaturedWork() {
           <Reveal direction="left">
             <Link
               to="/work"
-              className="group flex min-h-11 items-center gap-4 text-[10px] uppercase tracking-[0.4em] font-bold hover:text-gold transition-all duration-500 pb-1 border-b border-stone/20"
+              className="group flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold hover:text-gold transition-all duration-500 pb-1 border-b border-stone/20"
             >
               Explore all models{" "}
               <ArrowUpRight
@@ -170,7 +170,7 @@ export default function FeaturedWork() {
         </div>
 
         <div
-          className={`grid grid-cols-1 gap-16 ${visibleProjects.length > 1 ? "md:grid-cols-2 md:gap-24 lg:gap-32" : "max-w-xl"}`}
+          className={`grid grid-cols-1 gap-14 ${visibleProjects.length > 1 ? "md:grid-cols-2 md:gap-16 lg:gap-20" : "max-w-xl"}`}
         >
           {visibleProjects.map((project, i) => (
             <div key={project.id}>

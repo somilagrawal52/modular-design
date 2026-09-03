@@ -43,12 +43,12 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="py-24 md:py-48 px-8 relative overflow-hidden border-t border-white/5">
+    <section id="faq" aria-labelledby="faq-heading" className="section-space relative overflow-hidden border-t border-white/5">
       <div className="absolute -right-[5vw] top-16 text-[22vw] font-display font-bold tracking-tighter leading-none text-ivory/[0.025] pointer-events-none select-none">
         FAQ
       </div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="site-container relative z-10">
         <h2 id="faq-heading" className="sr-only">Frequently asked questions</h2>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           <div className="lg:col-span-4">
@@ -56,14 +56,14 @@ export default function FAQ() {
               <div className="flex items-center gap-4 mb-10">
                 <span className="text-gold font-mono text-xs">04</span>
                 <div className="h-px w-12 bg-gold" />
-                <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Knowledge</span>
+                <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">Knowledge</span>
               </div>
             </Reveal>
 
             <StaggerText
               el="h2"
               text="QUESTIONS, ANSWERED."
-              className="text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.88]"
+              className="type-section"
               delay={0.1}
               stagger={0.05}
             />
@@ -91,7 +91,7 @@ export default function FAQ() {
                         aria-expanded={isOpen}
                         aria-controls={answerId}
                       >
-                        <span className="w-7 shrink-0 text-[10px] font-mono text-gold/80">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="w-7 shrink-0 text-xs font-mono text-gold/80">{String(index + 1).padStart(2, '0')}</span>
                         <span className="flex-1 text-lg md:text-2xl font-display font-medium tracking-tight text-ivory group-hover:text-gold transition-colors duration-300">
                           {faq.question}
                         </span>

@@ -33,25 +33,25 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-ink/60 z-10" />
         </div>
 
-        <div className="relative z-20 text-center px-4">
-          <ParallaxElement speed={0.05}>
+        <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-4">
+          <div>
             <Reveal direction="up">
-              <span className="text-xs uppercase tracking-[0.5em] text-gold font-bold mb-8 block">
+              <span className="text-xs uppercase tracking-[0.12em] text-gold font-semibold mb-6 block">
                 Our Capabilities
               </span>
             </Reveal>
             <StaggerText
               el="h1"
               text="Dream Ventures Realty (DVR) Services."
-              className="text-[clamp(2.5rem,11vw,4.5rem)] md:text-[clamp(4.5rem,8vw,6.5rem)] font-display font-bold leading-[0.88] tracking-tighter mt-40"
+              className="type-display mt-7 max-w-5xl"
               delay={0.4}
               stagger={0.08}
             />
-          </ParallaxElement>
+          </div>
         </div>
 
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-4">
-          <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60">
+          <span className="text-xs uppercase tracking-[0.1em] text-ivory/60">
             Explore Services
           </span>
           <ArrowDown size={16} className="text-gold animate-bounce" />
@@ -65,7 +65,7 @@ export default function ServicesPage() {
         {visibleServices.map((service, i) => (
           <CinematicSection
             key={service.id}
-            className="py-16 md:py-32 px-8 md:px-24 border-b border-stone/10"
+            className="section-space-compact border-b border-stone/10"
           >
             {/* Background Number */}
             <ParallaxElement
@@ -75,7 +75,7 @@ export default function ServicesPage() {
               0{i + 1}
             </ParallaxElement>
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+            <div className="site-container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
               <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <ParallaxElement speed={0.03}>
                   <Reveal direction="right">
@@ -84,7 +84,7 @@ export default function ServicesPage() {
                         0{i + 1}
                       </span>
                       <div className="h-[1px] w-12 bg-gold" />
-                      <span className="text-xs uppercase tracking-[0.3em] text-ivory/60 font-bold">
+                      <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">
                         Service Sector
                       </span>
                     </div>
@@ -92,17 +92,17 @@ export default function ServicesPage() {
                   <StaggerText
                     el="h2"
                     text={service.title}
-                    className="text-6xl md:text-8xl font-display font-bold tracking-tighter mb-12"
+                    className="type-section mb-7"
                     delay={0.2}
                   />
                   <StaggerText
                     text={service.description}
-                    className="text-2xl font-light text-ivory/80 leading-tight mb-16"
+                    className="text-lg md:text-xl font-light text-ivory/80 leading-relaxed mb-10"
                     delay={0.4}
                     stagger={0.02}
                   />
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {demoItems(
                       service.features,
                       service.features.slice(0, 2),
@@ -112,15 +112,15 @@ export default function ServicesPage() {
                         direction="up"
                         delay={j * 0.1 + 0.6}
                       >
-                        <div className="group flex items-start gap-4 p-6 border border-stone/10 bg-stone/5 hover:border-gold/30 transition-colors duration-500">
+                        <div className="group flex items-start gap-4 p-5 border border-stone/10 bg-stone/5 hover:border-gold/30 transition-colors duration-500">
                           <div className="w-1.5 h-1.5 bg-gold rounded-full mt-1.5 group-hover:scale-150 transition-transform" />
                           <div>
                             <StaggerText
                               text={feature}
-                              className="text-[10px] uppercase tracking-widest text-ivory/60 font-bold mb-2"
+                            className="text-sm uppercase tracking-[0.06em] text-ivory/75 font-semibold mb-2"
                               delay={0.2}
                             />
-                            <p className="text-xs text-ivory/70 font-light leading-relaxed">
+                            <p className="text-sm text-ivory/70 font-light leading-relaxed">
                               A key consideration when reviewing this
                               application.
                             </p>
@@ -141,7 +141,7 @@ export default function ServicesPage() {
                   <Reveal
                     direction={i % 2 === 1 ? "right" : "left"}
                     delay={0.2}
-                    className="aspect-[4/5] overflow-hidden rounded-sm shadow-2xl"
+                    className="aspect-[4/3] lg:aspect-[4/5] overflow-hidden rounded-sm shadow-2xl"
                   >
                     <ParallaxImage
                       src={
@@ -163,7 +163,7 @@ export default function ServicesPage() {
                   <div
                     className={`absolute bottom-12 ${i % 2 === 1 ? "-left-12" : "-right-12"} z-30 hidden xl:block`}
                   >
-                    <div className="vertical-text text-[10px] uppercase tracking-[0.5em] text-gold font-bold bg-ink/80 backdrop-blur-md p-4 border border-gold/20">
+                    <div className="vertical-text text-xs uppercase tracking-[0.12em] text-gold font-semibold bg-ink/80 backdrop-blur-md p-4 border border-gold/20">
                       CAPABILITY — 0{i + 1}
                     </div>
                   </div>
@@ -175,14 +175,14 @@ export default function ServicesPage() {
       </div>
 
       {/* CTA Section */}
-      <CinematicSection className="py-24 md:py-48 px-8 text-center">
+      <CinematicSection className="section-space-compact text-center">
         <ParallaxElement speed={0.05}>
           <Reveal direction="up">
-            <span className="text-xs uppercase tracking-[0.5em] text-ivory/60 mb-8 block">
+            <span className="text-xs uppercase tracking-[0.12em] text-ivory/60 mb-6 block">
               From first idea to final installation.
             </span>
             <Link to="/contact" className="group inline-block">
-              <h2 className="text-balance text-6xl md:text-8xl font-display font-bold tracking-tighter group-hover:text-gold transition-colors">
+              <h2 className="type-section text-balance group-hover:text-gold transition-colors">
                 Discuss your{" "}
                 <span className="font-display font-medium">project.</span>
               </h2>

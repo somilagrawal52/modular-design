@@ -30,7 +30,7 @@ export default function About() {
         description="Dream Ventures Realty presents premium space capsules and modular living solutions for hospitality, resorts, commercial developments and private projects."
       />
 
-      <CinematicSection parallax={false} className="h-[90vh] flex items-center justify-center">
+      <CinematicSection parallax={false} className="h-[86svh] min-h-[620px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <ParallaxImage
             src="/images/modular-capsule-desert-retreat-hero.png"
@@ -44,12 +44,12 @@ export default function About() {
         <div className="relative z-20 pt-32 md:pt-44 text-center px-6 max-w-6xl">
           <ParallaxElement speed={0.05}>
             <Reveal direction="up">
-              <span className="text-xs uppercase tracking-[0.45em] text-gold font-bold mb-8 block">About Dream Ventures Realty</span>
+              <span className="text-xs uppercase tracking-[0.1em] text-gold font-semibold mb-7 block">About Dream Ventures Realty</span>
             </Reveal>
             <StaggerText
               el="h1"
               text="Modular spaces, made for real settings."
-              className="text-[clamp(2.25rem,9vw,3.25rem)] md:text-[clamp(3.75rem,6.5vw,5.5rem)] font-display font-bold leading-[0.92] tracking-tighter"
+              className="type-display"
               delay={0.4}
               stagger={0.06}
             />
@@ -61,21 +61,21 @@ export default function About() {
         </div>
       </CinematicSection>
 
-      <CinematicSection className="py-24 md:py-48 px-8 md:px-24">
+      <CinematicSection className="section-space">
         <ParallaxElement speed={-0.08} className="absolute top-40 left-[-5%] text-[20vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
           ABOUT
         </ParallaxElement>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
+        <div className="site-container relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
             <ParallaxElement speed={0.02}>
               <div className="space-y-12">
                 <Reveal direction="right">
-                  <span className="text-xs uppercase tracking-[0.3em] text-gold font-bold block">Who we are</span>
+                  <span className="eyebrow text-gold block">Who we are</span>
                 </Reveal>
                 <StaggerText
                   text="Dream Ventures Realty (DVR) presents premium space capsules and modular living solutions for the places people stay, work, gather, and retreat."
-                  className="text-3xl md:text-4xl font-display font-medium tracking-tight leading-tight text-ivory/90"
+                  className="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-medium tracking-tight leading-[1.12] text-ivory/90"
                   delay={0.2}
                   stagger={0.02}
                 />
@@ -95,7 +95,7 @@ export default function About() {
                     DESIGN — PRODUCT — PLACE
                   </div>
                 </div>
-                <Reveal direction="left" delay={0.4} className="aspect-[3/4] overflow-hidden rounded-sm border border-stone/10 p-2 bg-stone/5">
+                <Reveal direction="left" delay={0.4} className="aspect-[4/3] lg:aspect-[3/4] overflow-hidden rounded-sm border border-stone/10 p-2 bg-stone/5">
                   <ParallaxImage
                     src="/images/modular-home-garden-hero.jpg"
                     alt="Modern modular residence in a garden"
@@ -108,13 +108,13 @@ export default function About() {
         </div>
       </CinematicSection>
 
-      <CinematicSection className="py-16 md:py-32 px-8 md:px-24 bg-stone/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-24">
+      <CinematicSection className="section-space-compact bg-stone/5">
+        <div className="site-container">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
             {principles.map((item, index) => (
               <ParallaxElement key={item.title} speed={0.02 * (index + 1)}>
                 <Reveal direction="up" delay={index * 0.1}>
-                  <div className="space-y-8">
+                  <div className="space-y-6">
                     <div className="flex items-center gap-4">
                       <span className="text-gold font-mono text-xs">0{index + 1}</span>
                       <div className="h-[1px] flex-1 bg-gold/20" />
@@ -139,22 +139,22 @@ export default function About() {
         </div>
       </CinematicSection>
 
-      <CinematicSection className="py-24 md:py-48 px-8 md:px-24">
+      <CinematicSection className="section-space">
         {/* Owner-provided manufacturing, capacity, certification, and delivery information belongs here once verified. */}
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-end">
+        <div className="site-container">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-end">
             <div className="lg:col-span-7">
               <Reveal direction="right">
                 <div className="flex items-center gap-4 mb-10">
                   <span className="text-gold font-mono text-xs">03</span>
                   <div className="h-[1px] w-12 bg-gold" />
-                  <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Choosing a model</span>
+                  <span className="text-xs uppercase tracking-[0.1em] text-ivory/65 font-semibold">Choosing a model</span>
                 </div>
               </Reveal>
               <StaggerText
                 el="h2"
                 text="Start with the model, then define the right information."
-                className="text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.92]"
+                className="type-section"
                 delay={0.2}
                 stagger={0.05}
               />
@@ -164,7 +164,7 @@ export default function About() {
                 <p className="text-lg leading-relaxed text-ivory/70 font-light">
                   Model-specific configuration, finishes, delivery scope, and commercial information should be reviewed against the selected model and project brief before a decision is made.
                 </p>
-                <Link to="/contact" className="group mt-10 inline-flex min-h-11 items-center gap-4 border-b border-gold/50 pb-1 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory hover:text-gold transition-colors">
+                <Link to="/contact" className="group mt-10 inline-flex min-h-11 items-center gap-4 border-b border-gold/50 pb-1 text-xs uppercase tracking-[0.1em] font-semibold text-ivory hover:text-gold transition-colors">
                   Contact us
                   <ArrowUpRight size={15} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </Link>

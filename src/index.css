@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Sora", sans-serif;
-  --font-brand: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --font-mono: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --font-serif: "Sora", sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-brand: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 
-  /* Reserve the lightest used body treatment for readable copy. */
+  /* Keep body copy readable while preserving a calm, technical hierarchy. */
   --font-weight-light: 400;
 
   --color-ink: #050505;
@@ -20,25 +20,108 @@
   --animate-shimmer: shimmer 2s linear infinite;
 }
 
+:root {
+  --layout-max: 80rem;
+  --layout-gutter: clamp(1.25rem, 4vw, 4rem);
+  --section-space: clamp(4rem, 8vw, 7.5rem);
+  --section-space-compact: clamp(3.5rem, 6vw, 6rem);
+  --type-display: clamp(2.75rem, 6vw, 5.25rem);
+  --type-page-title: clamp(2.5rem, 5.2vw, 4.5rem);
+  --type-section: clamp(2.125rem, 4vw, 3.5rem);
+  --type-card: clamp(1.625rem, 2.6vw, 2.25rem);
+  --type-body-large: clamp(1.0625rem, 1.25vw, 1.25rem);
+}
+
 @layer base {
+  html {
+    scroll-padding-top: 6rem;
+  }
+
   body {
     @apply bg-ink text-ivory font-sans selection:bg-gold selection:text-ink antialiased;
     cursor: auto;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-[-0.035em];
+    @apply font-display tracking-[-0.03em];
+  }
+
+  :where(a, button, input, select, textarea):focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 4px;
+  }
+
+  :where(button, a) {
+    touch-action: manipulation;
   }
 }
 
 @layer utilities {
+  .site-container {
+    width: 100%;
+    max-width: calc(var(--layout-max) + (var(--layout-gutter) * 2));
+    margin-inline: auto;
+    padding-inline: var(--layout-gutter);
+  }
+
+  .section-space {
+    padding-block: var(--section-space);
+  }
+
+  .section-space-compact {
+    padding-block: var(--section-space-compact);
+  }
+
+  .type-display {
+    font-size: var(--type-display);
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+    font-weight: 600;
+  }
+
+  .type-page-title {
+    font-size: var(--type-page-title);
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+  }
+
+  .type-section {
+    font-size: var(--type-section);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    font-weight: 600;
+  }
+
+  .type-card {
+    font-size: var(--type-card);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+  }
+
+  .body-large {
+    font-size: var(--type-body-large);
+    line-height: 1.65;
+  }
+
+  .eyebrow {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
 
-  /* Small all-caps text is interface copy, not a second visual voice. */
+  /* Small all-caps text is interface copy, not a separate visual voice. */
   :where(.uppercase.font-bold) {
-    font-family: var(--font-brand);
+    font-family: var(--font-sans);
   }
   
   .glass {
@@ -86,6 +169,17 @@
 @keyframes shimmer {
   from { transform: translateX(-100%) skewX(-12deg); }
   to { transform: translateX(100%) skewX(-12deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Custom Scrollbar */

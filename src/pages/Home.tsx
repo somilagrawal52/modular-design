@@ -4,7 +4,6 @@ import FeaturedWork from '../components/home/FeaturedWork';
 import Services from '../components/home/Services';
 import Contact from '../components/home/Contact';
 import FAQ from '../components/home/FAQ';
-import CinematicSection from '../components/CinematicSection';
 import SEO from '../components/SEO';
 
 export default function Home() {
@@ -15,21 +14,11 @@ export default function Home() {
         description="Premium space capsules and modular living solutions designed for hospitality, resorts, commercial developments and private projects."
       />
       <Hero />
-      <CinematicSection>
-        <Philosophy />
-      </CinematicSection>
-      <CinematicSection>
-        <FeaturedWork />
-      </CinematicSection>
-      <CinematicSection>
-        <Services />
-      </CinematicSection>
-      <CinematicSection>
-        <FAQ />
-      </CinematicSection>
-      <CinematicSection>
-        <Contact />
-      </CinematicSection>
+      <Philosophy />
+      <FeaturedWork />
+      <Services />
+      <FAQ />
+      <Contact />
     </div>
   );
 }

@@ -67,21 +67,21 @@ function StageHeading({
       <span
         className={
           compact
-            ? "font-display text-5xl font-bold leading-none text-gold/70"
-            : "font-display text-[clamp(5rem,9vw,9.5rem)] font-bold leading-[0.72] tracking-tighter text-gold/25"
+            ? "font-display text-4xl font-bold leading-none text-gold/70"
+            : "font-display text-[clamp(3.5rem,6vw,5rem)] font-bold leading-[0.82] tracking-tighter text-gold/25"
         }
       >
         {stage.step}
       </span>
       <div className={compact ? "mt-5" : "mt-8 xl:mt-10"}>
-        <span className="block text-[10px] font-bold uppercase tracking-[0.28em] text-gold">
+        <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-gold">
           {stage.descriptor}
         </span>
         <h3
           className={
             compact
-              ? "mt-3 text-3xl font-bold leading-[0.95] text-balance"
-              : "mt-5 text-[clamp(2.75rem,5vw,5.25rem)] font-bold leading-[0.9] tracking-tighter text-balance"
+              ? "mt-3 text-3xl font-bold leading-[0.98] text-balance"
+              : "mt-4 text-[clamp(2.25rem,3.5vw,3.25rem)] font-bold leading-[0.98] tracking-tighter text-balance"
           }
         >
           {stage.title}
@@ -95,7 +95,7 @@ export default function ConceptToCommissioning() {
   return (
     <CinematicSection
       minHeight={false}
-      className="border-y border-stone/10 bg-stone/5 px-6 py-24 sm:px-8 md:px-12 md:py-36 lg:px-24 lg:py-44"
+      className="section-space border-y border-stone/10 bg-stone/5"
     >
       <ParallaxElement
         speed={-0.03}
@@ -104,17 +104,17 @@ export default function ConceptToCommissioning() {
         JOURNEY
       </ParallaxElement>
 
-      <div className="relative z-20 mx-auto max-w-7xl">
-        <div className="max-w-4xl border-b border-stone/20 pb-16 md:pb-24">
+      <div className="site-container relative z-20">
+        <div className="max-w-4xl border-b border-stone/20 pb-14 md:pb-16">
           <Reveal direction="up">
-            <span className="mb-6 block text-[10px] font-bold uppercase tracking-[0.34em] text-gold">
+            <span className="mb-5 block text-xs font-semibold uppercase tracking-[0.1em] text-gold">
               One Journey. Six Coordinated Stages.
             </span>
           </Reveal>
           <StaggerText
             el="h2"
-            text="CONCEPT TO COMMISSIONING."
-            className="max-w-3xl text-[clamp(3rem,7.5vw,7.25rem)] font-display font-bold leading-[0.86] tracking-tighter"
+            text="Concept to commissioning."
+            className="type-section max-w-3xl"
             delay={0.1}
             stagger={0.035}
           />
@@ -123,7 +123,7 @@ export default function ConceptToCommissioning() {
           </p>
         </div>
 
-        <div className="mt-20 space-y-20 md:mt-32 md:space-y-32 lg:space-y-40">
+        <div className="mt-14 space-y-14 md:mt-20 md:space-y-20 lg:space-y-24">
           {projectStages.map((stage, index) => {
             const imageOnLeft = index % 2 === 0;
             const imagePlacement = imageOnLeft
@@ -162,7 +162,7 @@ export default function ConceptToCommissioning() {
                       className="h-full w-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-[1.02]"
                     />
                     <div className="absolute inset-0 bg-ink/10" />
-                    <span className="absolute bottom-4 left-4 border border-gold/30 bg-ink/80 px-3 py-2 text-[9px] font-bold uppercase tracking-[0.24em] text-gold backdrop-blur-sm md:bottom-5 md:left-5">
+                    <span className="absolute bottom-4 left-4 border border-gold/30 bg-ink/80 px-3 py-2 text-xs font-semibold uppercase tracking-[0.08em] text-gold backdrop-blur-sm md:bottom-5 md:left-5">
                       Stage {stage.step}
                     </span>
                   </div>
@@ -170,7 +170,7 @@ export default function ConceptToCommissioning() {
 
                 <div className={`order-3 lg:row-span-2 lg:col-span-4 ${textPlacement} hidden self-center lg:flex lg:flex-col`}>
                   <StageHeading stage={stage} />
-                  <p className="mt-10 max-w-md text-base font-light leading-relaxed text-ivory/75 xl:text-lg">
+                  <p className="mt-8 max-w-md text-base font-light leading-relaxed text-ivory/75 xl:text-lg">
                     {stage.copy}
                   </p>
                 </div>

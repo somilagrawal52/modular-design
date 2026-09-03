@@ -39,7 +39,7 @@ export default function ProjectDetail() {
         image={project.image}
       />
       {/* Hero */}
-      <CinematicSection parallax={false} className="h-screen">
+      <CinematicSection parallax={false} className="h-[100svh] min-h-[680px]">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0">
             <img
@@ -54,10 +54,10 @@ export default function ProjectDetail() {
         
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent z-10" />
         
-        <div className="absolute bottom-24 left-8 md:left-24 z-20 max-w-5xl">
+        <div className="absolute bottom-16 md:bottom-20 left-[var(--layout-gutter)] right-[var(--layout-gutter)] z-20 max-w-5xl">
           <ParallaxElement speed={0.05}>
             <Reveal direction="right">
-              <Link to="/work" className="group flex items-center gap-4 text-[10px] uppercase tracking-[0.5em] text-gold font-bold mb-12">
+              <Link to="/work" className="group flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] text-gold font-semibold mb-7 md:mb-10">
                 <div className="w-8 h-[1px] bg-gold group-hover:w-12 transition-all" />
                 Back to models
               </Link>
@@ -65,14 +65,14 @@ export default function ProjectDetail() {
             <StaggerText
               el="h1"
               text={project.title}
-              className="max-w-5xl text-[clamp(2.5rem,11vw,4.5rem)] md:text-[clamp(4.5rem,8vw,6.5rem)] font-display font-bold tracking-tighter leading-[0.86] mb-8"
+              className="type-display max-w-5xl mb-7"
               delay={0.2}
               stagger={0.08}
             />
             <div className="flex flex-wrap gap-4 items-center">
               <Reveal direction="up" delay={0.6}>
-                <div className="px-4 py-1 border border-gold/20 rounded-full">
-                  <span className="text-[8px] uppercase tracking-[0.3em] text-gold font-bold">Product model · {project.category}</span>
+                <div className="px-4 py-2 border border-gold/30 rounded-full">
+                  <span className="text-xs uppercase tracking-[0.08em] text-gold font-semibold">Product model · {project.category}</span>
                 </div>
               </Reveal>
             </div>
@@ -81,45 +81,45 @@ export default function ProjectDetail() {
       </CinematicSection>
 
       {/* Narrative Section */}
-      <CinematicSection className="py-24 md:py-48 px-8 md:px-24 bg-ivory text-ink">
+      <CinematicSection className="section-space bg-ivory text-ink">
         {/* Background Parallax */}
         <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-display font-bold text-stone/5 pointer-events-none select-none leading-none z-0">
           OVERVIEW
         </ParallaxElement>
 
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
+        <div className="site-container relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-8">
               <ParallaxElement speed={0.02}>
                 <Reveal direction="right">
                   <div className="flex items-center gap-4 mb-12">
                     <span className="text-gold font-mono text-xs">01</span>
                     <div className="h-[1px] w-12 bg-gold" />
-                    <span className="text-xs uppercase tracking-[0.4em] text-stone font-bold">Product overview</span>
+                    <span className="text-xs uppercase tracking-[0.1em] text-stone font-semibold">Product overview</span>
                   </div>
                 </Reveal>
                 
                 <StaggerText
                   text={project.description}
-                  className="text-3xl md:text-4xl font-display font-medium tracking-tight leading-tight text-stone mb-24"
+                  className="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-medium tracking-tight leading-[1.12] text-stone mb-14 md:mb-16"
                   delay={0.2}
                   stagger={0.02}
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
                   {project.challenge && (
                     <Reveal direction="up" delay={0.4}>
-                      <div className="space-y-8">
-                        <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">Designed for</h3>
-                        <p className="text-xl font-light leading-relaxed text-stone/80">{project.challenge}</p>
+                      <div className="space-y-5">
+                        <h3 className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">Designed for</h3>
+                        <p className="text-lg font-light leading-relaxed text-stone/80">{project.challenge}</p>
                       </div>
                     </Reveal>
                   )}
                   {project.solution && !MANAGER_DEMO_MODE && (
                     <Reveal direction="up" delay={0.6}>
-                      <div className="space-y-8">
-                        <h3 className="text-[10px] uppercase tracking-[0.4em] text-gold font-bold">Configuration approach</h3>
-                        <p className="text-xl font-light leading-relaxed text-stone/80">{project.solution}</p>
+                      <div className="space-y-5">
+                        <h3 className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">Configuration approach</h3>
+                        <p className="text-lg font-light leading-relaxed text-stone/80">{project.solution}</p>
                       </div>
                     </Reveal>
                   )}
@@ -129,13 +129,13 @@ export default function ProjectDetail() {
 
             <div className="lg:col-span-4 lg:sticky lg:top-40">
               <ParallaxElement speed={0.04}>
-                <div className="bg-stone/5 p-12 border border-stone/10 space-y-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.4em] text-stone font-bold border-b border-stone/10 pb-6">Model information</h3>
+                <div className="bg-stone/5 p-6 md:p-8 border border-stone/10 space-y-9">
+                  <h3 className="text-xs uppercase tracking-[0.1em] text-stone font-semibold border-b border-stone/10 pb-5">Model information</h3>
                   <div className="space-y-8">
                     {visibleDetails.map((detail, i) => (
                       <Reveal key={detail.label} direction="up" delay={i * 0.1}>
                         <div className="flex justify-between items-end gap-4">
-                          <span className="text-[10px] uppercase tracking-[0.2em] text-stone/60 font-bold">{detail.label}</span>
+                          <span className="text-xs uppercase tracking-[0.08em] text-stone/65 font-semibold">{detail.label}</span>
                           <div className="flex-1 border-b border-stone/10 border-dotted mb-1" />
                           <span className="text-sm font-bold">{detail.value}</span>
                         </div>
@@ -144,15 +144,15 @@ export default function ProjectDetail() {
                   </div>
                   
                   {technicalSpecs.length > 0 && (
-                    <div className="pt-12 border-t border-stone/10 space-y-8">
-                      <h4 className="text-[10px] uppercase tracking-[0.3em] text-gold font-bold">Key configuration</h4>
+                    <div className="pt-8 border-t border-stone/10 space-y-7">
+                      <h4 className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">Key configuration</h4>
                       <div className="space-y-6">
                         {visibleSpecs.map((spec, i) => (
                           <Reveal key={spec.label} direction="up" delay={i * 0.1}>
                             <div className="flex justify-between items-end gap-4">
-                              <span className="text-[10px] uppercase tracking-[0.2em] text-stone/60 font-bold">{spec.label}</span>
+                              <span className="text-xs uppercase tracking-[0.08em] text-stone/65 font-semibold">{spec.label}</span>
                               <div className="flex-1 border-b border-stone/10 border-dotted mb-1" />
-                              <span className="text-xs font-bold">{spec.value}</span>
+                              <span className="text-sm font-semibold">{spec.value}</span>
                             </div>
                           </Reveal>
                         ))}
@@ -168,20 +168,20 @@ export default function ProjectDetail() {
 
       {/* Materiality Section */}
       {project.materiality && (
-        <CinematicSection className="py-24 md:py-48 px-8 md:px-24 bg-ink text-ivory">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <CinematicSection className="section-space bg-ink text-ivory">
+          <div className="site-container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               <ParallaxElement speed={0.02}>
                 <Reveal direction="right">
                   <div className="flex items-center gap-4 mb-12">
                     <span className="text-gold font-mono text-xs">02</span>
                     <div className="h-[1px] w-12 bg-gold" />
-                    <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Exterior & interior finish</span>
+                    <span className="text-xs uppercase tracking-[0.1em] text-ivory/65 font-semibold">Exterior & interior finish</span>
                   </div>
                 </Reveal>
                 <StaggerText
                   text={`"${project.materiality}"`}
-                  className="text-4xl md:text-5xl font-display font-medium tracking-tight leading-tight text-ivory/80"
+                  className="text-[clamp(2rem,3.8vw,3rem)] font-display font-medium tracking-tight leading-[1.08] text-ivory/85"
                   delay={0.2}
                   stagger={0.03}
                 />
@@ -201,13 +201,13 @@ export default function ProjectDetail() {
       )}
 
       {/* Gallery */}
-      <CinematicSection className="py-24 md:py-48 px-8 md:px-24 bg-stone/5">
-        <div className="max-w-7xl mx-auto">
-          <Reveal direction="up" className="mb-16 md:mb-32 text-center">
+      <CinematicSection className="section-space bg-stone/5">
+        <div className="site-container">
+          <Reveal direction="up" className="mb-12 md:mb-16 text-center">
             <span className="text-gold font-mono text-xs block mb-4">03</span>
-            <h2 className="text-xs uppercase tracking-[0.45em] text-ivory/60 font-bold">Exterior, installation & interior</h2>
+            <h2 className="text-xs uppercase tracking-[0.1em] text-ivory/65 font-semibold">Exterior, installation & interior</h2>
           </Reveal>
-          <div className="grid grid-cols-12 gap-8 md:gap-16">
+          <div className="grid grid-cols-12 gap-6 md:gap-10">
             {visibleGallery.map((img, i) => {
               const isFull = i % 3 === 0;
               const colSpan = isFull ? 'col-span-12' : 'col-span-12 md:col-span-6';
@@ -224,7 +224,7 @@ export default function ProjectDetail() {
                           className="w-full h-full transition-all duration-1000"
                         />
                         <div className="absolute bottom-8 right-8 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                          <span className="text-[10px] uppercase tracking-[0.4em] text-ivory font-bold bg-ink/40 backdrop-blur-md px-4 py-2">
+                          <span className="text-xs uppercase tracking-[0.08em] text-ivory font-semibold bg-ink/50 backdrop-blur-md px-4 py-2">
                             PLATE_{i + 1}
                           </span>
                         </div>
@@ -239,7 +239,7 @@ export default function ProjectDetail() {
       </CinematicSection>
 
       {/* Model enquiry CTA */}
-      <CinematicSection className="py-32 md:py-64 px-8 text-center bg-ink border-t border-stone/10">
+      <CinematicSection className="section-space text-center bg-ink border-t border-stone/10">
         <ParallaxElement speed={-0.05} className="absolute inset-0 flex items-center justify-center text-[30vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
           ENQUIRE
         </ParallaxElement>
@@ -247,11 +247,11 @@ export default function ProjectDetail() {
         <div className="relative z-10">
           <Reveal direction="up">
             <span className="text-gold font-mono text-xs block mb-8">04</span>
-            <span className="text-xs uppercase tracking-[0.45em] text-ivory/60 font-bold mb-8 block">Interested in this model?</span>
-            <h2 className="text-5xl md:text-7xl font-display font-bold tracking-tighter leading-[0.92] text-ivory">
+            <span className="text-xs uppercase tracking-[0.1em] text-ivory/65 font-semibold mb-7 block">Interested in this model?</span>
+            <h2 className="type-section text-ivory">
               Discuss your project with our team.
             </h2>
-            <Link to="/contact" className="group mt-12 inline-flex items-center gap-4 border border-gold/40 px-7 py-5 text-[10px] uppercase tracking-[0.3em] font-bold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink">
+            <Link to="/contact" className="group mt-10 inline-flex min-h-12 items-center gap-4 border border-gold/40 px-7 text-xs uppercase tracking-[0.1em] font-semibold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink">
               Contact us
               <ArrowUpRight size={16} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>

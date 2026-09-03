@@ -8,7 +8,7 @@ interface CinematicSectionProps {
   key?: string | number;
 }
 
-export default function CinematicSection({ children, className = "", minHeight = true }: CinematicSectionProps) {
+export default function CinematicSection({ children, className = "", minHeight = false }: CinematicSectionProps) {
   return (
     <section className={`relative overflow-hidden ${minHeight ? 'min-h-screen' : ''} ${className}`}>
       <div className="w-full h-full">

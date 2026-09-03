@@ -19,8 +19,8 @@ export default function StaggerText({
   const words = text.split(' ');
 
   return (
-    <Element className={className}>
-      <span className="flex flex-wrap">
+    <Element className={className} aria-label={text}>
+      <span className="flex flex-wrap" aria-hidden="true">
         {words.map((word, index) => (
           <span key={index} className="inline-block mr-[0.25em]">
             {word}

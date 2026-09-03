@@ -13,27 +13,27 @@ export default function Services() {
   const [activeId, setActiveId] = useState<string | null>(SERVICES[0].id);
 
   return (
-    <section id="services" className="py-24 md:py-48 px-8 bg-stone/5 relative overflow-hidden">
+    <section id="services" className="section-space bg-stone/5 relative overflow-hidden">
       {/* Background Parallax */}
       <ParallaxElement speed={-0.06} className="absolute bottom-20 left-[-5%] text-[25vw] font-display font-bold text-ivory/5 pointer-events-none select-none leading-none z-0">
         EXPERTISE
       </ParallaxElement>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+      <div className="site-container relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20">
           <div className="lg:col-span-4">
             <ParallaxElement speed={0.03}>
               <Reveal direction="right">
                 <div className="flex items-center gap-4 mb-12">
                   <span className="text-gold font-mono text-xs">03</span>
                   <div className="h-[1px] w-12 bg-gold" />
-                  <span className="text-xs uppercase tracking-[0.4em] text-ivory/60 font-bold">Expertise</span>
+                <span className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold">Expertise</span>
                 </div>
               </Reveal>
               <StaggerText
                 el="h2"
-                text="MODULAR SPACES, MADE TO MOVE."
-                className="text-6xl font-display font-bold tracking-tighter leading-[0.85] mb-12"
+                text="Modular spaces, made to move."
+                className="type-section mb-8"
                 delay={0.2}
                 stagger={0.08}
               />
@@ -49,14 +49,16 @@ export default function Services() {
           <div className="lg:col-span-8 flex flex-col">
             {visibleServices.map((service, i) => (
               <Reveal key={service.id} direction="up" delay={i * 0.1} fullWidth>
-                <div
-                  className="border-b border-stone/10 py-16 cursor-pointer group"
-                  onMouseEnter={() => setActiveId(service.id)}
+                <button
+                  type="button"
+                  className="w-full border-b border-stone/15 py-8 md:py-10 cursor-pointer group text-left"
+                  onClick={() => setActiveId(activeId === service.id ? null : service.id)}
+                  aria-expanded={activeId === service.id}
                 >
                   <div className="flex justify-between items-center gap-4 mb-8">
                     <div className="flex flex-1 min-w-0 items-center gap-8">
                       <span className="text-gold font-mono text-xs opacity-40 group-hover:opacity-100 transition-opacity">0{i + 1}</span>
-                      <h3 className={`min-w-0 text-5xl md:text-6xl font-display font-bold tracking-tighter transition-all duration-700 ${activeId === service.id ? 'text-gold pl-8' : 'text-ivory group-hover:pl-4'}`}>
+                      <h3 className={`min-w-0 text-3xl md:text-4xl font-display font-bold tracking-tighter leading-[0.98] transition-all duration-500 ${activeId === service.id ? 'text-gold pl-3 md:pl-5' : 'text-ivory group-hover:pl-3'}`}>
                         {service.title}
                       </h3>
                     </div>
@@ -86,7 +88,7 @@ export default function Services() {
                       <div className="flex-1 grid grid-cols-1 gap-6">
                         {service.features.map((feature) => (
                           <div key={feature} className="flex items-center justify-between border-b border-stone/10 pb-4 group/item">
-                            <span className="text-[10px] uppercase tracking-[0.3em] text-ivory/60 font-bold group-hover/item:text-gold transition-colors">
+                            <span className="text-sm uppercase tracking-[0.06em] text-ivory/65 font-semibold group-hover/item:text-gold transition-colors">
                               {feature}
                             </span>
                             <div className="w-1.5 h-1.5 bg-gold/20 group-hover/item:bg-gold transition-colors" />
@@ -95,7 +97,7 @@ export default function Services() {
                       </div>
                     </div>
                   </motion.div>
-                </div>
+                </button>
               </Reveal>
             ))}
           </div>
