@@ -98,13 +98,6 @@ export default function ConceptToCommissioning() {
       overlay={false}
       className="section-space border-y border-stone/15 bg-light text-stone"
     >
-      <ParallaxElement
-        speed={-0.03}
-        className="absolute right-[-8%] top-16 select-none font-sans text-[24vw] font-semibold leading-none text-stone/[0.035]"
-      >
-        JOURNEY
-      </ParallaxElement>
-
       <div className="site-container relative z-20">
         <div className="max-w-4xl border-b border-stone/20 pb-14 md:pb-16">
           <Reveal direction="up">

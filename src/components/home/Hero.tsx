@@ -63,8 +63,8 @@ export default function Hero() {
             </div>
           </Reveal>
 
-          <h1 className="mx-auto max-w-6xl font-display font-semibold leading-[0.96] tracking-[-0.045em] mb-7 md:mb-9">
-            <span className="block text-[clamp(2.55rem,5.8vw,5.25rem)] text-ivory text-balance">
+          <h1 className="mx-auto max-w-6xl font-display font-semibold leading-[1] tracking-[-0.03em] mb-7 md:mb-9">
+            <span className="block text-[clamp(2.625rem,6vw,5.125rem)] text-ivory text-balance">
               Turning Dreams into Reality
             </span>
             <span className="mt-3 block text-[clamp(1.35rem,3vw,2.75rem)] font-medium tracking-[-0.03em] text-gold text-balance">
@@ -97,21 +97,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className={
-          MANAGER_DEMO_MODE
-            ? "hidden"
-            : "absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4"
-        }
-      >
-        <span className="text-xs uppercase tracking-[0.1em] text-ivory/60">
-          Explore below
-        </span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-gold to-transparent" />
-      </motion.div>
     </section>
   );
 }

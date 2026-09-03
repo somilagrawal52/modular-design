@@ -24,13 +24,13 @@ export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Our Designs", href: "/work" },
-    { name: "Technology Behind It", href: "/system" },
-    { name: "Our Services", href: "/services" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Technology", href: "/system" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[999] px-4 sm:px-6 lg:px-10 xl:px-16 py-4 md:py-5 flex justify-between items-center bg-ink/45 backdrop-blur-xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full z-[999] px-4 sm:px-6 lg:px-10 xl:px-16 py-3 md:py-4 flex justify-between items-center bg-ink/45 backdrop-blur-xl border-b border-white/10">
       <Link to="/" onClick={() => setIsOpen(false)}>
         <Magnetic>
           <motion.div
@@ -58,7 +58,7 @@ export default function Navbar() {
             <Magnetic>
               <Link
                 to={link.href}
-                className={`text-[11px] 2xl:text-xs uppercase tracking-[0.1em] font-semibold hover:text-gold transition-all duration-500 relative group px-2.5 py-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/75"}`}
+                className={`text-xs 2xl:text-sm uppercase tracking-[0.08em] font-medium hover:text-gold transition-all duration-500 relative group px-2.5 py-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/75"}`}
               >
                 {link.name}
                 <span

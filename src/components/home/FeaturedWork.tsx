@@ -130,7 +130,7 @@ export default function FeaturedWork() {
       {/* Background Parallax */}
       <ParallaxElement
         speed={-0.05}
-        className="absolute top-20 left-[-5%] text-[20vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0"
+        className="absolute top-20 left-[-5%] text-[12vw] font-sans font-semibold text-stone/[0.02] pointer-events-none select-none leading-none z-0"
       >
         CAPSULE
       </ParallaxElement>

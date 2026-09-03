@@ -82,11 +82,6 @@ export default function ProjectDetail() {
 
       {/* Narrative Section */}
       <CinematicSection overlay={false} className="section-space bg-light text-stone">
-        {/* Background Parallax */}
-        <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0">
-          OVERVIEW
-        </ParallaxElement>
-
         <div className="site-container relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-8">
@@ -240,10 +235,6 @@ export default function ProjectDetail() {
 
       {/* Model enquiry CTA */}
       <CinematicSection className="section-space text-center bg-ink border-t border-stone/10">
-        <ParallaxElement speed={-0.05} className="absolute inset-0 flex items-center justify-center text-[30vw] font-sans font-semibold text-ivory/5 pointer-events-none select-none leading-none z-0">
-          ENQUIRE
-        </ParallaxElement>
-        
         <div className="relative z-10">
           <Reveal direction="up">
             <span className="text-gold font-mono text-xs block mb-8">04</span>

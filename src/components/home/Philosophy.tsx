@@ -7,11 +7,6 @@ import { MANAGER_DEMO_MODE } from '../../config/siteMode';
 export default function Philosophy() {
   return (
     <section id="about" className="section-space bg-ivory text-ink relative overflow-hidden">
-      {/* Background Parallax */}
-      <ParallaxElement speed={-0.08} className="absolute top-40 right-[-5%] text-[25vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0">
-        MODULAR
-      </ParallaxElement>
-
       <div className="site-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-7">
@@ -65,11 +60,6 @@ export default function Philosophy() {
                   <div className="absolute inset-0 bg-gold/5 mix-blend-overlay z-10" />
                 </Reveal>
                 
-                <div className="absolute -bottom-12 -left-12 z-30 hidden xl:block">
-                <div className="vertical-text text-xs uppercase tracking-[0.12em] text-gold font-semibold bg-ivory/80 backdrop-blur-md p-6 border border-gold/20 shadow-sm">
-                    MODULAR LIVING CAMPUS
-                  </div>
-                </div>
               </div>
             </ParallaxElement>
           </div>

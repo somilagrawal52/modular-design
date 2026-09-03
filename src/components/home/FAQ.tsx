@@ -43,11 +43,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" aria-labelledby="faq-heading" className="section-space relative overflow-hidden border-t border-stone/10 bg-light text-stone">
-      <div className="absolute -right-[5vw] top-16 text-[22vw] font-sans font-semibold tracking-tight leading-none text-stone/[0.035] pointer-events-none select-none">
-        FAQ
-      </div>
-
+    <section id="faq" aria-labelledby="faq-heading" className="section-space-compact relative overflow-hidden border-t border-stone/10 bg-light text-stone">
       <div className="site-container relative z-10">
         <h2 id="faq-heading" className="sr-only">Frequently asked questions</h2>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
@@ -86,13 +82,13 @@ export default function FAQ() {
                     <div className="border-b border-stone/15">
                       <button
                         type="button"
-                        className="w-full flex items-center gap-5 md:gap-8 py-6 md:py-8 text-left group"
+                        className="w-full flex items-center gap-5 md:gap-8 py-5 md:py-6 text-left group"
                         onClick={() => setOpenIndex(isOpen ? null : index)}
                         aria-expanded={isOpen}
                         aria-controls={answerId}
                       >
                         <span className="w-7 shrink-0 text-xs font-mono text-gold/80">{String(index + 1).padStart(2, '0')}</span>
-                        <span className="flex-1 text-lg md:text-2xl font-sans font-medium tracking-tight text-stone group-hover:text-gold transition-colors duration-300">
+                        <span className="flex-1 text-lg md:text-[1.375rem] font-sans font-medium tracking-tight text-stone group-hover:text-gold transition-colors duration-300">
                           {faq.question}
                         </span>
                         <motion.span

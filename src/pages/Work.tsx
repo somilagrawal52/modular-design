@@ -113,20 +113,6 @@ export default function Work() {
         description="Explore premium capsule models and modular applications for hospitality, private retreats, commercial spaces, workplaces, and community amenities."
       />
       <CinematicSection parallax={false} minHeight={false} overlay={false}>
-        {/* Background Parallax */}
-        <ParallaxElement
-          speed={-0.1}
-          className="absolute top-28 left-[-10%] text-[20vw] font-sans font-semibold text-stone/[0.035] pointer-events-none select-none leading-none z-0"
-        >
-          MODELS
-        </ParallaxElement>
-
-        {/* Atmospheric Background Elements */}
-        <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-gold/5 rounded-full blur-[120px]" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-stone/5 rounded-full blur-[150px]" />
-        </div>
-
         <div className="site-container relative z-10">
           {/* Editorial Header */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-8">

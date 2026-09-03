@@ -68,14 +68,6 @@ export default function ServicesPage() {
             overlay={false}
             className="section-space-compact border-b border-stone/10 bg-light text-stone"
           >
-            {/* Background Number */}
-            <ParallaxElement
-              speed={-0.1}
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0"
-            >
-              0{i + 1}
-            </ParallaxElement>
-
             <div className="site-container grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
               <div className={i % 2 === 1 ? "lg:order-2" : ""}>
                 <ParallaxElement speed={0.03}>

@@ -13,12 +13,7 @@ export default function Services() {
   const [activeId, setActiveId] = useState<string | null>(SERVICES[0].id);
 
   return (
-    <section id="services" className="section-space bg-light-secondary text-stone relative overflow-hidden">
-      {/* Background Parallax */}
-      <ParallaxElement speed={-0.06} className="absolute bottom-20 left-[-5%] text-[25vw] font-sans font-semibold text-stone/5 pointer-events-none select-none leading-none z-0">
-        EXPERTISE
-      </ParallaxElement>
-
+    <section id="services" className="section-space-compact bg-light-secondary text-stone relative overflow-hidden">
       <div className="site-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20">
           <div className="lg:col-span-4">
@@ -51,19 +46,19 @@ export default function Services() {
               <Reveal key={service.id} direction="up" delay={i * 0.1} fullWidth>
                 <button
                   type="button"
-                  className="w-full border-b border-stone/15 py-8 md:py-10 cursor-pointer group text-left"
+                  className="w-full border-b border-stone/15 py-6 md:py-7 cursor-pointer group text-left"
                   onClick={() => setActiveId(activeId === service.id ? null : service.id)}
                   aria-expanded={activeId === service.id}
                 >
-                  <div className="flex justify-between items-center gap-4 mb-8">
+                  <div className="flex justify-between items-center gap-4 mb-5">
                     <div className="flex flex-1 min-w-0 items-center gap-8">
                       <span className="text-gold font-mono text-xs opacity-40 group-hover:opacity-100 transition-opacity">0{i + 1}</span>
-                      <h3 className={`min-w-0 text-3xl md:text-4xl font-sans font-semibold tracking-tight leading-[1.05] transition-all duration-500 ${activeId === service.id ? 'text-gold pl-3 md:pl-5' : 'text-stone group-hover:pl-3'}`}>
+                      <h3 className={`min-w-0 text-2xl md:text-3xl font-sans font-medium tracking-tight leading-[1.1] transition-all duration-500 ${activeId === service.id ? 'text-stone pl-3 md:pl-5' : 'text-stone group-hover:pl-3'}`}>
                         {service.title}
                       </h3>
                     </div>
                     <Magnetic strength={0.5}>
-                      <div className={`w-12 h-12 rounded-full border border-stone/20 flex items-center justify-center transition-all duration-500 ${activeId === service.id ? 'bg-gold border-gold rotate-45' : 'group-hover:border-gold'}`}>
+                      <div className={`w-11 h-11 rounded-full border border-stone/25 flex items-center justify-center transition-all duration-500 ${activeId === service.id ? 'bg-gold border-gold rotate-45' : 'group-hover:border-gold'}`}>
                         <Plus 
                           className={`transition-colors duration-500 ${activeId === service.id ? 'text-ink' : 'text-stone/50 group-hover:text-gold'}`}
                           size={24} 
@@ -81,7 +76,7 @@ export default function Services() {
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="pb-8 pl-4 md:pl-16 flex flex-col md:flex-row gap-12 md:gap-24">
+                    <div className="pb-6 pl-4 md:pl-16 flex flex-col md:flex-row gap-8 md:gap-16">
                       <p className="flex-1 text-stone/75 text-lg font-light leading-relaxed">
                         {service.description}
                       </p>

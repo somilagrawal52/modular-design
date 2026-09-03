@@ -8,12 +8,7 @@ import { dreamRealtyEmail } from '../../config/siteMode';
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-space relative overflow-hidden">
-      {/* Background Parallax */}
-      <ParallaxElement speed={-0.08} className="absolute top-40 right-[-10%] text-[25vw] font-sans font-semibold text-ivory/5 pointer-events-none select-none leading-none z-0">
-        CONNECT
-      </ParallaxElement>
-
+    <section id="contact" className="section-space-compact relative overflow-hidden">
       <div className="site-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
           <div className="lg:col-span-5">
@@ -37,7 +32,7 @@ export default function Contact() {
                 {[{ label: 'Sales enquiries', value: dreamRealtyEmail() }].map((item, i) => (
                   <Reveal key={item.label} direction="right" delay={i * 0.1 + 0.2}>
                     <a href={`mailto:${item.value}`} className="group block w-fit">
-                      <h4 className="text-xs uppercase tracking-[0.1em] text-ivory/60 font-semibold mb-3 group-hover:text-gold transition-colors">{item.label}</h4>
+                      <h4 className="text-xs uppercase tracking-[0.1em] text-ivory/75 font-medium mb-3 group-hover:text-gold transition-colors">{item.label}</h4>
                       <p className="text-2xl font-light tracking-tight group-hover:translate-x-2 transition-transform duration-500">{item.value}</p>
                     </a>
                   </Reveal>
@@ -64,31 +59,31 @@ export default function Contact() {
                   <form className="space-y-9 md:space-y-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
                       <div className="relative group">
-                        <label htmlFor="home-contact-name" className="text-xs uppercase tracking-[0.08em] text-ivory/60 font-semibold mb-3 block">Full Name</label>
+                      <label htmlFor="home-contact-name" className="text-xs uppercase tracking-[0.08em] text-ivory/75 font-medium mb-3 block">Full Name</label>
                         <input 
                           type="text" 
                           id="home-contact-name"
                           name="name"
                           autoComplete="name"
                           placeholder="Your Name"
-                          className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/40 text-ivory text-lg font-light"
+                          className="w-full min-h-14 bg-transparent border-b border-white/20 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/50 text-ivory/90 text-lg font-light"
                         />
                       </div>
                       <div className="relative group">
-                        <label htmlFor="home-contact-email" className="text-xs uppercase tracking-[0.08em] text-ivory/60 font-semibold mb-3 block">Email Address</label>
+                      <label htmlFor="home-contact-email" className="text-xs uppercase tracking-[0.08em] text-ivory/75 font-medium mb-3 block">Email Address</label>
                         <input 
                           type="email" 
                           id="home-contact-email"
                           name="email"
                           autoComplete="email"
                           placeholder={dreamRealtyEmail()}
-                          className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/40 text-ivory text-lg font-light"
+                          className="w-full min-h-14 bg-transparent border-b border-white/20 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/50 text-ivory/90 text-lg font-light"
                         />
                       </div>
                     </div>
                     <div className="relative group">
-                      <label htmlFor="home-contact-project-type" className="text-xs uppercase tracking-[0.08em] text-ivory/60 font-semibold mb-3 block">Project Type</label>
-                      <select id="home-contact-project-type" name="projectType" className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 text-ivory/70 text-lg font-light appearance-none">
+                      <label htmlFor="home-contact-project-type" className="text-xs uppercase tracking-[0.08em] text-ivory/75 font-medium mb-3 block">Project Type</label>
+                      <select id="home-contact-project-type" name="projectType" className="w-full min-h-14 bg-transparent border-b border-white/20 py-4 outline-none focus:border-gold transition-all duration-500 text-ivory/90 text-lg font-light appearance-none">
                         <option>Select Sector</option>
                         <option>Modular Home</option>
                         <option>Modular Hotel or Retreat</option>
@@ -99,13 +94,13 @@ export default function Contact() {
                       </select>
                     </div>
                     <div className="relative group">
-                      <label htmlFor="home-contact-message" className="text-xs uppercase tracking-[0.08em] text-ivory/60 font-semibold mb-3 block">Message</label>
+                      <label htmlFor="home-contact-message" className="text-xs uppercase tracking-[0.08em] text-ivory/75 font-medium mb-3 block">Message</label>
                       <textarea 
                         placeholder="Tell us about your vision..."
                         id="home-contact-message"
                         name="message"
                         rows={4}
-                        className="w-full bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/40 text-ivory text-lg font-light resize-none"
+                        className="w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/50 text-ivory/90 text-lg font-light resize-none"
                       />
                     </div>
                     <Magnetic strength={0.2}>

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import Reveal from './Reveal';
-import { dreamRealtyEmail, SITE_NAME, SITE_STUDIO_NAME } from '../config/siteMode';
+import { dreamRealtyEmail, SITE_STUDIO_NAME } from '../config/siteMode';
 
 const footerGroups = [
   {
@@ -23,11 +23,6 @@ const footerGroups = [
 export default function Footer() {
   return (
     <footer className="bg-ink border-t border-stone/10 pt-16 md:pt-24 pb-10 relative overflow-hidden">
-      {/* Subtle Background Text */}
-      <div className="absolute bottom-0 left-0 w-full text-[20vw] font-brand font-semibold tracking-[0.08em] text-ivory/5 pointer-events-none select-none leading-none translate-y-1/2">
-        {SITE_NAME}
-      </div>
-
       <div className="site-container grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 relative z-10">
         <div className="lg:col-span-7">
           <Reveal direction="right">
