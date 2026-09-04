@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { ArrowRight, Globe, Mail } from "lucide-react";
 import ParallaxElement from "../components/ParallaxElement";
 import ParallaxImage from "../components/ParallaxImage";
@@ -21,6 +21,21 @@ const inquiryTypes = [
 
 export default function ContactPage() {
   const [selectedInquiry, setSelectedInquiry] = useState("");
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!selectedInquiry) {
+      return;
+    }
+
+    if (!event.currentTarget.checkValidity()) {
+      event.currentTarget.reportValidity();
+      return;
+    }
+
+    event.currentTarget.reset();
+    setSelectedInquiry("");
+  };
 
   return (
     <div className="bg-light text-stone min-h-screen pt-28 md:pt-36 relative overflow-hidden">
@@ -73,11 +88,11 @@ export default function ContactPage() {
                   Start a conversation
                 </h2>
 
-                <form className="space-y-10">
+                <form className="space-y-10" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                     <div className="space-y-4">
                       <label htmlFor="contact-name" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
-                        Full name
+                        Full name <span aria-hidden="true">*</span>
                       </label>
                       <input
                         type="text"
@@ -85,12 +100,13 @@ export default function ContactPage() {
                         name="name"
                         autoComplete="name"
                         placeholder="Your name"
+                        required
                         className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
                       />
                     </div>
                     <div className="space-y-4">
                       <label htmlFor="contact-email" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
-                        Email address
+                        Email address <span aria-hidden="true">*</span>
                       </label>
                       <input
                         type="email"
@@ -98,6 +114,37 @@ export default function ContactPage() {
                         name="email"
                         autoComplete="email"
                         placeholder="your@email.com"
+                        required
+                        className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                    <div className="space-y-4">
+                      <label htmlFor="contact-phone" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
+                        Phone / WhatsApp
+                      </label>
+                      <input
+                        type="tel"
+                        id="contact-phone"
+                        name="phone"
+                        autoComplete="tel"
+                        inputMode="tel"
+                        placeholder="+91 98765 43210"
+                        className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
+                      />
+                    </div>
+                    <div className="space-y-4">
+                      <label htmlFor="contact-company" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
+                        Company / Organization
+                      </label>
+                      <input
+                        type="text"
+                        id="contact-company"
+                        name="company"
+                        autoComplete="organization"
+                        placeholder="Company name"
                         className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
                       />
                     </div>
@@ -105,10 +152,22 @@ export default function ContactPage() {
 
                   <div className="space-y-4">
                     <div id="contact-inquiry-label" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
-                      What are you exploring?
+                      What are you exploring? <span aria-hidden="true">*</span>
                     </div>
-                    <input type="hidden" name="inquiryType" value={selectedInquiry} />
-                    <div className="grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:gap-4" role="group" aria-labelledby="contact-inquiry-label">
+                    <select
+                      id="contact-project-type"
+                      name="projectType"
+                      value={selectedInquiry}
+                      onChange={(event) => setSelectedInquiry(event.target.value)}
+                      required
+                      tabIndex={-1}
+                      aria-hidden="true"
+                      className="sr-only"
+                    >
+                      <option value="">Select an enquiry type</option>
+                      {inquiryTypes.map((type) => <option key={type} value={type}>{type}</option>)}
+                    </select>
+                    <div className="grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:gap-4" role="group" aria-labelledby="contact-inquiry-label" aria-required="true">
                       {inquiryTypes.map((type) => (
                         <button
                           key={type}
@@ -127,15 +186,57 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                    <div className="space-y-4">
+                      <label htmlFor="contact-estimated-units" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
+                        Estimated number of units
+                      </label>
+                      <select
+                        id="contact-estimated-units"
+                        name="estimatedUnits"
+                        defaultValue=""
+                        className="w-full min-h-14 max-w-full bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 text-stone text-lg font-light appearance-none"
+                      >
+                        <option value="">Select quantity</option>
+                        <option value="1">1 unit</option>
+                        <option value="2-5">2–5 units</option>
+                        <option value="6-10">6–10 units</option>
+                        <option value="11-25">11–25 units</option>
+                        <option value="26-50">26–50 units</option>
+                        <option value="50-plus">50+ units</option>
+                        <option value="not-sure">Not sure yet</option>
+                      </select>
+                    </div>
+                    <div className="space-y-4">
+                      <label htmlFor="contact-project-timeline" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
+                        Project timeline
+                      </label>
+                      <select
+                        id="contact-project-timeline"
+                        name="projectTimeline"
+                        defaultValue=""
+                        className="w-full min-h-14 max-w-full bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 text-stone text-lg font-light appearance-none"
+                      >
+                        <option value="">Select timeline</option>
+                        <option value="exploring">Exploring / No fixed timeline</option>
+                        <option value="within-3-months">Within 3 months</option>
+                        <option value="3-6-months">3–6 months</option>
+                        <option value="6-12-months">6–12 months</option>
+                        <option value="12-plus-months">12+ months</option>
+                      </select>
+                    </div>
+                  </div>
+
                   <div className="space-y-4">
                     <label htmlFor="contact-brief" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
-                      Your brief
+                      Your brief <span aria-hidden="true">*</span>
                     </label>
                     <textarea
-                      placeholder="Tell us about the setting, intended use, and model or application you have in mind."
+                      placeholder="Tell us about your project, intended use, number of units, and what you would like to create."
                       id="contact-brief"
                       name="brief"
                       rows={4}
+                      required
                       className="w-full bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light resize-none"
                     />
                   </div>
