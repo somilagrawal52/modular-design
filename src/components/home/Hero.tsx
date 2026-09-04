@@ -23,6 +23,10 @@ export default function Hero() {
   const moveY = useTransform(springY, [0, 1000], [-20, 20]);
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const supportsPointerMotion = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (prefersReducedMotion || !supportsPointerMotion) return;
+
     const handleMouseMove = (e: MouseEvent) => {
       mouseX.set(e.clientX);
       mouseY.set(e.clientY);
@@ -41,6 +45,9 @@ export default function Hero() {
           src="/images/modular-home-garden-hero.jpg"
           alt="Contemporary modular home in a garden"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           referrerPolicy="no-referrer"
         />
       </motion.div>
@@ -87,7 +94,7 @@ export default function Hero() {
               to="/work"
               className="group mt-8 md:mt-10 inline-flex min-h-12 items-center gap-4 border border-gold/55 px-6 py-3 text-xs uppercase tracking-[0.1em] font-semibold text-ivory transition-colors duration-300 hover:bg-gold hover:text-ink"
             >
-              Explore models
+              View models
               <ArrowUpRight
                 size={15}
                 className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"

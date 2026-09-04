@@ -96,7 +96,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             delay={0.2}
           />
           <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.08em] font-medium text-stone/65 group-hover:text-gold transition-colors">
-            Explore model <ArrowUpRight size={14} />
+            View model <ArrowUpRight size={14} />
           </span>
         </div>
       </Link>
@@ -154,7 +154,7 @@ export default function FeaturedWork() {
               to="/work"
               className="group flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold hover:text-gold transition-all duration-500 pb-1 border-b border-stone/20"
             >
-              Explore models{" "}
+              View models{" "}
               <ArrowUpRight
                 size={16}
                 className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"

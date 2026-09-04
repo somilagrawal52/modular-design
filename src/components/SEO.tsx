@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
-import { SITE_STUDIO_NAME } from '../config/siteMode';
+import { SITE_STUDIO_NAME, SITE_URL } from '../config/siteMode';
 
 interface SEOProps {
   title?: string;
@@ -20,9 +20,8 @@ export default function SEO({
   url
 }: SEOProps) {
   const location = useLocation();
-  const siteUrl = 'https://modular-design-flax.vercel.app';
-  const canonicalUrl = url ?? `${siteUrl}${location.pathname}`;
-  const imageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+  const canonicalUrl = url ?? `${SITE_URL}${location.pathname}`;
+  const imageUrl = image.startsWith('http') ? image : `${SITE_URL}${image}`;
   const fullTitle = title ? `${name} — ${title}` : name;
   return (
     <Helmet>
@@ -30,7 +29,7 @@ export default function SEO({
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content="index, follow" />
-      <meta name="theme-color" content="#050505" />
+      <meta name="theme-color" content="#0D0E0E" />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={name} />
       <meta property="og:title" content={fullTitle} />
@@ -41,6 +40,15 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name,
+          url: SITE_URL,
+          description,
+        })}
+      </script>
     </Helmet>
   );
 }

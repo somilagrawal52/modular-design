@@ -139,6 +139,7 @@ export default function SystemPage() {
             <ParallaxImage
               src="/images/modular-capsule-visitor-gateway-installation.png"
               alt="A capsule module being crane-set into position"
+              priority
               className="w-full h-full"
             />
             <div className="absolute inset-2 bg-gradient-to-t from-ink/75 via-transparent to-transparent pointer-events-none" />
@@ -258,7 +259,7 @@ export default function SystemPage() {
               ))}
             </ul>
             <Link to="/work" className="mt-12 inline-flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold text-gold transition-colors hover:text-stone">
-              Explore models <ArrowUpRight size={16} />
+              View models <ArrowUpRight size={16} />
             </Link>
           </Reveal>
         </div>

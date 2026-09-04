@@ -27,6 +27,7 @@ export default function ServicesPage() {
           <ParallaxImage
             src="/images/modular-home-garden-hero.jpg"
             alt="Contemporary modular residence"
+            priority
             speed={0.2}
             className="w-full h-full"
           />
@@ -54,7 +55,7 @@ export default function ServicesPage() {
           <span className="text-xs uppercase tracking-[0.1em] text-ivory/60">
             Explore Services
           </span>
-          <ArrowDown size={16} className="text-gold animate-bounce" />
+          <ArrowDown size={16} className="text-gold motion-safe:animate-bounce" />
         </div>
       </CinematicSection>
 

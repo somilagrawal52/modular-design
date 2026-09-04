@@ -57,17 +57,6 @@ export default function Contact() {
                 )}
               </div>
 
-              <div className="mt-16 pt-10 border-t border-stone/10 flex flex-wrap gap-x-8 gap-y-3">
-                {["Instagram", "LinkedIn"].map((social) => (
-                  <a
-                    key={social}
-                    href="#"
-                    className="inline-flex min-h-11 items-center text-xs uppercase tracking-[0.08em] font-semibold text-ivory/60 hover:text-gold transition-colors"
-                  >
-                    {social}
-                  </a>
-                ))}
-              </div>
             </ParallaxElement>
           </div>
 
@@ -157,7 +146,7 @@ export default function Contact() {
                         className="mobile-no-hover w-full py-6 bg-gold text-ink uppercase tracking-[0.1em] font-semibold text-xs flex items-center justify-center gap-6 group overflow-hidden relative"
                       >
                         <span className="relative z-10">
-                          Discuss your project
+                          Start a project
                         </span>
                         <Send
                           size={16}

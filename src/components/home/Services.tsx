@@ -49,6 +49,7 @@ export default function Services() {
                   className="w-full border-b border-stone/15 py-6 md:py-7 cursor-pointer group text-left"
                   onClick={() => setActiveId(activeId === service.id ? null : service.id)}
                   aria-expanded={activeId === service.id}
+                  aria-controls={`service-details-${service.id}`}
                 >
                   <div className="flex justify-between items-center gap-4 mb-5">
                     <div className="flex flex-1 min-w-0 items-center gap-8">
@@ -68,6 +69,7 @@ export default function Services() {
                   </div>
                   
                   <motion.div
+                    id={`service-details-${service.id}`}
                     initial={false}
                     animate={{ 
                       height: activeId === service.id ? 'auto' : 0,

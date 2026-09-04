@@ -30,7 +30,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[999] px-4 sm:px-6 lg:px-10 xl:px-16 py-3 md:py-4 flex justify-between items-center bg-ink/45 backdrop-blur-xl border-b border-white/10">
+    <nav className="fixed top-0 left-0 w-full z-[999] px-4 sm:px-6 lg:px-10 xl:px-16 py-3 md:py-4 flex justify-between items-center bg-ink/80 backdrop-blur-xl border-b border-white/10">
       <Link to="/" onClick={() => setIsOpen(false)}>
         <Magnetic>
           <motion.div
@@ -58,6 +58,7 @@ export default function Navbar() {
             <Magnetic>
               <Link
                 to={link.href}
+                aria-current={location.pathname === link.href ? "page" : undefined}
                 className={`text-[13px] 2xl:text-sm uppercase tracking-[0.08em] font-medium hover:text-gold transition-all duration-500 relative group px-2.5 py-3 whitespace-nowrap ${location.pathname === link.href ? "text-gold" : "text-ivory/75"}`}
               >
                 {link.name}
@@ -131,6 +132,7 @@ export default function Navbar() {
                   <Link
                     to={link.href}
                     onClick={() => setIsOpen(false)}
+                    aria-current={location.pathname === link.href ? "page" : undefined}
                     className={`text-[clamp(2rem,9vw,2.75rem)] font-sans font-semibold tracking-[-0.03em] leading-none transition-all duration-300 block py-2.5 ${
                       location.pathname === link.href
                         ? "text-gold"

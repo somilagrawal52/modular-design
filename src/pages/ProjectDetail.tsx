@@ -22,7 +22,11 @@ export default function ProjectDetail() {
   if (!project) return <div>Project not found</div>;
   const technicalSpecs = project.technicalSpecs ?? [];
   const productType = project.details.find((detail) => detail.label === 'Type')?.value ?? project.category;
-  const modelDetails = [{ label: 'Product type', value: productType }];
+  const modelDetails = [
+    { label: 'Product type', value: productType },
+    { label: 'Location', value: project.location },
+    { label: 'Year', value: project.year },
+  ];
   const visibleDetails = demoItems(modelDetails, modelDetails);
   const visibleSpecs = demoItems(technicalSpecs, technicalSpecs.slice(0, 2));
   const completeGallery = [...project.gallery, ...(EXTRA_GALLERY_IMAGES[project.id] ?? [])];
@@ -46,6 +50,9 @@ export default function ProjectDetail() {
               src={project.image}
               alt={project.title}
               className="w-full h-full object-cover"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               referrerPolicy="no-referrer"
             />
             <div className="absolute inset-0 bg-ink/40 mix-blend-multiply" />
@@ -243,7 +250,7 @@ export default function ProjectDetail() {
               Discuss your project with our team.
             </h2>
             <Link to="/contact" className="group mt-10 inline-flex min-h-12 items-center gap-4 border border-gold/40 px-7 text-xs uppercase tracking-[0.1em] font-semibold text-ivory transition-colors duration-500 hover:bg-gold hover:text-ink">
-              Discuss your project
+              Request pricing
               <ArrowUpRight size={16} className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
           </Reveal>

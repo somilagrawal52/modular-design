@@ -6,6 +6,8 @@ export const MANAGER_OUTLINE_MODE = false;
 export const MANAGER_DEMO_MODE = MANAGER_OUTLINE_MODE;
 export const SITE_NAME = 'DREAM VENTURES REALTY';
 export const SITE_STUDIO_NAME = 'DREAM VENTURES REALTY';
+// Configure this per deployment (VITE_SITE_URL); the Vercel URL is the current public fallback.
+export const SITE_URL = (import.meta.env.VITE_SITE_URL || 'https://modular-design-flax.vercel.app').replace(/\/$/, '');
 export const EMAIL_DOMAIN = 'dvr.com';
 export const SALES_EMAIL = `sales@${EMAIL_DOMAIN}`;
 export const dreamRealtyEmail = (_mailbox?: string) => SALES_EMAIL;

@@ -6,7 +6,7 @@ import { MANAGER_DEMO_MODE } from '../../config/siteMode';
 
 export default function Philosophy() {
   return (
-    <section id="about" className="section-space bg-ivory text-ink relative overflow-hidden">
+    <section id="why-modular" className="section-space bg-ivory text-ink relative overflow-hidden">
       <div className="site-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-7">

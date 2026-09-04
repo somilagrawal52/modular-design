@@ -113,8 +113,8 @@ export default function Work() {
       <CinematicSection parallax={false} minHeight={false} overlay={false}>
         <div className="site-container relative z-10">
           {/* Editorial Header */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-8">
-            <div className="max-w-4xl">
+          <div className="grid grid-cols-1 md:grid-cols-12 items-end gap-8 md:gap-12 mb-12 md:mb-16">
+            <div className="max-w-4xl md:col-span-5 lg:col-span-5">
               <ParallaxElement speed={0.02}>
                 <Reveal direction="right">
                   <span className="text-xs uppercase tracking-[0.12em] text-gold font-semibold mb-5 block">
@@ -130,45 +130,45 @@ export default function Work() {
                 />
               </ParallaxElement>
             </div>
-          </div>
 
-          <div className="self-start md:self-end mb-14 md:mb-20">
-            <ParallaxElement speed={-0.02}>
-              <Reveal direction="left" delay={0.4}>
-                <div className="flex flex-col items-start md:items-end gap-4">
-                  <div className="flex items-center gap-3 text-stone/65 text-xs uppercase tracking-[0.1em] font-semibold">
-                    <Filter size={12} /> Browse by application
-                  </div>
-                  <div className="flex flex-wrap justify-start md:justify-end gap-x-5 gap-y-2">
-                    {CATEGORIES.map((category) => (
-                      <button
-                        key={category}
-                        onClick={() => {
-                          setFilter(category);
-                          setVisibleCount(INITIAL_PROJECT_COUNT);
-                        }}
-                        className={`inline-flex min-h-11 items-center px-1 text-xs uppercase tracking-[0.08em] font-semibold border-b-2 transition-all duration-500 relative group ${
-                          filter === category
-                            ? "border-gold text-gold"
-                            : "border-transparent text-stone/65 hover:text-stone"
-                        }`}
-                      >
-                        {category}
-                        <span
-                          className={`absolute -right-3 -top-1 text-[9px] opacity-40 ${filter === category ? "text-gold" : "text-stone/50"}`}
+            <div className="md:col-span-7 lg:col-span-7 md:justify-self-end">
+              <ParallaxElement speed={-0.02}>
+                <Reveal direction="left" delay={0.4}>
+                  <div className="flex flex-col items-start md:items-end gap-4">
+                    <div className="flex items-center gap-3 text-stone/65 text-xs uppercase tracking-[0.1em] font-semibold">
+                      <Filter size={12} /> Browse by application
+                    </div>
+                    <div className="flex flex-wrap justify-start md:justify-end gap-x-5 gap-y-2">
+                      {CATEGORIES.map((category) => (
+                        <button
+                          key={category}
+                          onClick={() => {
+                            setFilter(category);
+                            setVisibleCount(INITIAL_PROJECT_COUNT);
+                          }}
+                          className={`inline-flex min-h-11 items-center px-1 text-xs uppercase tracking-[0.08em] font-semibold border-b-2 transition-all duration-500 relative group ${
+                            filter === category
+                              ? "border-gold text-gold"
+                              : "border-transparent text-stone/65 hover:text-stone"
+                          }`}
                         >
-                          {category === "All"
-                            ? PROJECTS.length
-                            : PROJECTS.filter(
-                                (project) => project.category === category,
-                              ).length}
-                        </span>
-                      </button>
-                    ))}
+                          {category}
+                          <span
+                            className={`absolute -right-3 -top-1 text-[9px] opacity-40 ${filter === category ? "text-gold" : "text-stone/50"}`}
+                          >
+                            {category === "All"
+                              ? PROJECTS.length
+                              : PROJECTS.filter(
+                                  (project) => project.category === category,
+                                ).length}
+                          </span>
+                        </button>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </Reveal>
-            </ParallaxElement>
+                </Reveal>
+              </ParallaxElement>
+            </div>
           </div>
 
           {/* Featured Model */}
@@ -289,7 +289,7 @@ export default function Work() {
                         ))}
                       </div>
                       <span className="mt-5 block text-xs uppercase tracking-[0.08em] text-gold">
-                        Explore model →
+                        View model →
                       </span>
                     </div>
                     <ArrowUpRight

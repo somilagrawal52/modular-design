@@ -34,6 +34,9 @@ export default function BackgroundEffect() {
   );
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const supportsPointerMotion = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
       if (canvasRef.current) {
@@ -48,8 +51,13 @@ export default function BackgroundEffect() {
     };
 
     window.addEventListener('resize', handleResize);
-    window.addEventListener('mousemove', handleMouseMove);
     handleResize();
+
+    if (prefersReducedMotion || !supportsPointerMotion) {
+      return () => window.removeEventListener('resize', handleResize);
+    }
+
+    window.addEventListener('mousemove', handleMouseMove);
 
     // Particle System Logic
     const canvas = canvasRef.current;
