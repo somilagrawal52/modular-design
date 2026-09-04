@@ -213,7 +213,7 @@ export default function Work() {
                       </div>
                       <div className="flex items-end justify-between gap-8">
                         <div>
-                          <h2 className="type-section group-hover/featured:text-gold transition-colors duration-500">
+                          <h2 className="type-section text-ivory group-hover/featured:text-gold transition-colors duration-500">
                             {featuredProject.title}
                           </h2>
                           <p className="hidden md:block mt-5 max-w-3xl text-base lg:text-lg text-ivory/70 font-light leading-relaxed">
