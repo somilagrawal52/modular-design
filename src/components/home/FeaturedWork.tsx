@@ -55,7 +55,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       >
         <motion.div
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-          className="relative aspect-[4/3] overflow-hidden mb-7 md:mb-9 border border-stone/10 p-2 bg-stone/5 transition-colors duration-500 group-hover:border-gold/30"
+          className="relative aspect-[4/3] overflow-hidden mb-7 md:mb-9 p-2 bg-stone/5 transition-colors duration-500"
         >
           <div
             style={{ transform: "translateZ(50px)" }}

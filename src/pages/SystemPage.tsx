@@ -135,7 +135,7 @@ export default function SystemPage() {
             </Reveal>
           </div>
 
-          <Reveal direction="left" delay={0.15} className="relative aspect-[4/5] lg:aspect-[5/6] overflow-hidden border border-stone/20 p-2">
+          <Reveal direction="left" delay={0.15} className="relative aspect-[4/5] lg:aspect-[5/6] overflow-hidden p-2">
             <ParallaxImage
               src="/images/modular-capsule-visitor-gateway-installation.png"
               alt="A capsule module being crane-set into position"
@@ -182,7 +182,7 @@ export default function SystemPage() {
 
       <CinematicSection parallax={false} overlay={false} className="section-space-compact bg-light text-stone">
         <div className="site-container grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
-          <Reveal direction="right" className="relative aspect-[16/11] overflow-hidden border border-stone/20 p-2">
+          <Reveal direction="right" className="relative aspect-[16/11] overflow-hidden p-2">
             <ParallaxImage
               src="/images/modular-capsule-courtyard-residence-hero-v2.png"
               alt="Panoramic capsule modules arranged around a garden court"

@@ -187,7 +187,7 @@ export default function Work() {
                 to={`/work/${featuredProject.id}`}
                 className="block group/featured"
               >
-                <div className="relative overflow-hidden border border-stone/10 p-3 bg-stone/5 transition-all duration-700 group-hover/featured:border-gold/30 group-hover/featured:shadow-[0_0_50px_rgba(212,175,55,0.1)]">
+                <div className="relative overflow-hidden p-3 bg-stone/5 transition-shadow duration-700 group-hover/featured:shadow-[0_0_50px_rgba(212,175,55,0.1)]">
                   <div className="relative overflow-hidden aspect-[4/3] md:aspect-[16/7]">
                     <div
                       className="absolute inset-0 z-10 opacity-20 pointer-events-none"
@@ -253,7 +253,7 @@ export default function Work() {
                   to={`/work/${project.id}`}
                   className="block group/card h-full"
                 >
-                  <div className="relative overflow-hidden mb-8 border border-stone/10 p-2 bg-stone/5 transition-all duration-700 group-hover/card:border-gold/30 group-hover/card:shadow-[0_0_40px_rgba(212,175,55,0.08)]">
+                  <div className="relative overflow-hidden mb-8 p-2 bg-stone/5 transition-shadow duration-700 group-hover/card:shadow-[0_0_40px_rgba(212,175,55,0.08)]">
                     <div className="relative overflow-hidden aspect-[4/3]">
                       <ParallaxImage
                         src={project.image}

@@ -67,7 +67,7 @@ export default function Hero() {
             <span className="block type-hero-title text-ivory text-balance">
               Turning Dreams into Reality
             </span>
-            <span className="mt-3 block text-[clamp(1.35rem,3vw,2.75rem)] font-medium tracking-[-0.03em] text-gold text-balance">
+            <span className="mt-3 block text-[clamp(1.35rem,3vw,2.5rem)] font-medium tracking-[-0.03em] text-gold text-balance">
               {" "}
               Breaking the Imagination Barriers
             </span>

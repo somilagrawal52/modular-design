@@ -90,7 +90,7 @@ export default function ServicesPage() {
                   />
                   <StaggerText
                     text={service.description}
-                    className="text-lg md:text-xl font-light text-stone/80 leading-relaxed mb-10"
+                    className="text-base md:text-lg font-light text-stone/80 leading-relaxed mb-10"
                     delay={0.4}
                     stagger={0.02}
                   />
@@ -128,7 +128,6 @@ export default function ServicesPage() {
               <ParallaxElement speed={i % 2 === 0 ? -0.05 : 0.05}>
                 <div className={`relative ${i % 2 === 1 ? "lg:order-1" : ""}`}>
                   {/* Technical Overlay */}
-                  <div className="absolute -inset-4 border border-gold/10 pointer-events-none z-20" />
                   <div className="absolute top-0 left-0 w-full h-full bg-gold/5 mix-blend-overlay z-10" />
 
                   <Reveal

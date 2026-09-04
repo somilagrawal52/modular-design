@@ -56,7 +56,7 @@ export default function ContactPage() {
             <div className="max-w-3xl">
               <StaggerText
                 text="Tell us what you want to create. We’ll start with the right capsule model or modular application and the information that matters for your brief."
-                className="text-lg md:text-xl text-stone/75 font-light leading-relaxed"
+                className="text-base md:text-lg text-stone/75 font-light leading-relaxed"
                 delay={0.8}
                 stagger={0.02}
               />
@@ -69,7 +69,7 @@ export default function ContactPage() {
             <Reveal direction="right" delay={0.4}>
               <div className="bg-light-secondary p-6 md:p-10 border border-stone/15 relative">
                 <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-gold/20" />
-                <h2 className="text-3xl font-sans font-semibold mb-10 tracking-tight">
+                <h2 className="text-2xl font-sans font-semibold mb-10 tracking-tight">
                   Start a conversation
                 </h2>
 
@@ -162,7 +162,7 @@ export default function ContactPage() {
 
           <div className="lg:col-span-5 hidden lg:block">
             <ParallaxElement speed={-0.05} className="h-full">
-              <div className="relative h-full overflow-hidden border border-stone/10 p-4 bg-stone/5">
+              <div className="relative h-full overflow-hidden p-4 bg-stone/5">
                 <ParallaxImage
                   src="/images/capsule-riverside-resort-hero.png"
                   alt="Premium capsule accommodation in a landscape setting"
@@ -173,7 +173,7 @@ export default function ContactPage() {
                   <span className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">
                     Choose the right starting point
                   </span>
-                  <p className="mt-5 text-2xl font-sans font-medium leading-tight text-ivory">
+                  <p className="mt-5 text-xl font-sans font-medium leading-tight text-ivory">
                     A model, an application, or a project question.
                   </p>
                 </div>

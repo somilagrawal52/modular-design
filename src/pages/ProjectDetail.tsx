@@ -182,7 +182,7 @@ export default function ProjectDetail() {
                 />
               </ParallaxElement>
               <ParallaxElement speed={-0.02}>
-                <div className="aspect-square bg-stone/5 border border-stone/10 p-4">
+                <div className="aspect-square bg-stone/5 p-4">
                   <ParallaxImage
                     src={project.gallery[0] ?? project.image}
                     alt={`${project.title} material palette`}
@@ -212,7 +212,7 @@ export default function ProjectDetail() {
                 <div key={i} className={colSpan}>
                   <ParallaxElement speed={i % 2 === 0 ? 0.02 : -0.02}>
                     <Reveal direction="up" delay={i * 0.1}>
-                      <div className={`relative overflow-hidden ${aspect} border border-stone/10 p-2 bg-stone/5 group`}>
+                      <div className={`relative overflow-hidden ${aspect} p-2 bg-stone/5 group`}>
                         <ParallaxImage
                           src={img}
                           alt={`${project.title} gallery ${i}`}

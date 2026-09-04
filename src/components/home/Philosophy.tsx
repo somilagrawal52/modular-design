@@ -30,7 +30,7 @@ export default function Philosophy() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10">
                 <StaggerText
                   text="Dream Ventures Realty (DVR) presents design-led space capsules and modular living solutions for hospitality, retreats, commercial spaces, and private projects."
-                  className="text-lg md:text-xl text-stone/80 font-light leading-relaxed"
+                  className="text-base md:text-lg text-stone/80 font-light leading-relaxed"
                   delay={0.6}
                   stagger={0.02}
                 />
@@ -48,9 +48,6 @@ export default function Philosophy() {
           <div className="lg:col-span-5">
             <ParallaxElement speed={-0.04}>
               <div className="relative">
-                {/* Decorative Frame */}
-                <div className="absolute -inset-4 border border-stone/10 pointer-events-none z-20" />
-                
                 <Reveal direction="left" delay={0.3} className="relative aspect-[4/3] lg:aspect-[3/4] overflow-hidden rounded-sm shadow-sm">
                   <ParallaxImage
                     src="/images/modular-campus-aerial-hero.jpg"

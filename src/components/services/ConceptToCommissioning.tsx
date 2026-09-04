@@ -112,7 +112,7 @@ export default function ConceptToCommissioning() {
             delay={0.1}
             stagger={0.035}
           />
-          <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-stone/75 md:mt-10 md:text-xl">
+          <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-stone/75 md:mt-10 md:text-lg">
             From the first sketch to final handover, each stage is coordinated to turn a modular concept into a complete, site-ready experience.
           </p>
         </div>
@@ -141,7 +141,7 @@ export default function ConceptToCommissioning() {
                 </div>
 
                 <motion.figure
-                  className={`order-2 overflow-hidden border border-stone/20 bg-ink lg:row-span-2 lg:col-span-7 ${imagePlacement}`}
+                  className={`order-2 overflow-hidden bg-ink lg:row-span-2 lg:col-span-7 ${imagePlacement}`}
                   initial={{ clipPath: "inset(8% 0 8% 0)" }}
                   whileInView={{ clipPath: "inset(0% 0 0% 0)" }}
                   viewport={{ once: true, amount: 0.2 }}
