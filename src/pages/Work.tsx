@@ -117,7 +117,7 @@ export default function Work() {
             <div className="max-w-4xl md:col-span-5 lg:col-span-5">
               <ParallaxElement speed={0.02}>
                 <Reveal direction="right">
-                  <span className="text-xs uppercase tracking-[0.12em] text-gold font-semibold mb-5 block">
+                  <span className="text-xs uppercase tracking-[0.12em] text-gold-text font-semibold mb-5 block">
                     Capsule model collection
                   </span>
                 </Reveal>
@@ -148,13 +148,13 @@ export default function Work() {
                           }}
                           className={`inline-flex min-h-11 items-center px-1 text-xs uppercase tracking-[0.08em] font-semibold border-b-2 transition-all duration-500 relative group ${
                             filter === category
-                              ? "border-gold text-gold"
+                            ? "border-gold text-gold-text"
                               : "border-transparent text-stone/65 hover:text-stone"
                           }`}
                         >
                           {category}
                           <span
-                            className={`absolute -right-3 -top-1 text-[9px] opacity-40 ${filter === category ? "text-gold" : "text-stone/50"}`}
+                    className={`absolute -right-3 -top-1 hidden text-[9px] opacity-40 sm:inline ${filter === category ? "text-gold-text" : "text-stone/50"}`}
                           >
                             {category === "All"
                               ? PROJECTS.length
@@ -265,7 +265,7 @@ export default function Work() {
 
                   <div className="flex items-start justify-between gap-6 px-1">
                     <div>
-                      <span className="text-xs uppercase tracking-[0.1em] text-gold font-semibold mb-3 block">
+                      <span className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold mb-3 block">
                         {project.category}
                       </span>
                       <h3 className="type-card group-hover/card:text-gold transition-colors duration-500">
@@ -279,10 +279,10 @@ export default function Work() {
                           ["Availability", "Enquire for details"],
                         ].map(([label, value]) => (
                           <div key={label} className="min-w-0">
-                            <span className="block text-gold/70 mb-2">
+                              <span className="block text-gold-text mb-2">
                               {label}
                             </span>
-                            <span className="block text-stone/80 normal-case tracking-normal text-xs font-medium truncate">
+                            <span className="block min-h-[2.5rem] text-stone/80 normal-case tracking-normal text-xs font-medium leading-relaxed line-clamp-2 break-words">
                               {value}
                             </span>
                           </div>
@@ -321,7 +321,7 @@ export default function Work() {
           )}
 
           {/* Bottom CTA */}
-          <div className="mt-24 md:mt-32 text-center">
+          <div className="mt-16 md:mt-20 text-center">
             <Reveal direction="up">
               <Link to="/contact" className="inline-block relative group">
                 <h2 className="type-section mb-4">

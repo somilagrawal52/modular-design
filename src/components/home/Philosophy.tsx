@@ -6,14 +6,14 @@ import { MANAGER_DEMO_MODE } from '../../config/siteMode';
 
 export default function Philosophy() {
   return (
-    <section id="why-modular" className="section-space bg-ivory text-ink relative overflow-hidden">
+    <section id="why-modular" className="section-space desktop-transition-tight-bottom bg-ivory text-ink relative overflow-hidden">
       <div className="site-container relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           <div className="lg:col-span-7">
             <ParallaxElement speed={0.02}>
               <Reveal direction="right">
                 <div className="flex items-center gap-4 mb-8">
-                  <span className="text-gold font-mono text-xs">01</span>
+                  <span className="text-gold-text font-mono text-xs">01</span>
                   <div className="h-[1px] w-12 bg-gold" />
                 <span className="text-xs uppercase tracking-[0.1em] text-stone font-semibold">Why modular</span>
                 </div>

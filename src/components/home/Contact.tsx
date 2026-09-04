@@ -97,7 +97,7 @@ export default function Contact() {
                           id="home-contact-email"
                           name="email"
                           autoComplete="email"
-                          placeholder={dreamRealtyEmail()}
+                          placeholder="your@email.com"
                           className="w-full min-h-14 bg-transparent border-b border-white/20 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-ivory/50 text-ivory/90 text-lg font-light"
                         />
                       </div>

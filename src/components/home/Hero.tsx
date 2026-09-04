@@ -41,6 +41,7 @@ export default function Hero() {
     <section className="relative min-h-[600px] sm:min-h-[680px] h-[100svh] flex items-center justify-center overflow-hidden">
       <motion.div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-ink/45 via-ink/45 to-ink/90 z-10" />
+        <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-ink/80 via-ink/20 to-transparent z-10 md:hidden" />
         <img
           src="/images/modular-home-garden-hero.jpg"
           alt="Contemporary modular home in a garden"
@@ -74,7 +75,7 @@ export default function Hero() {
             <span className="block type-hero-title text-ivory text-balance">
               Turning Dreams into Reality
             </span>
-            <span className="mt-3 block text-[clamp(1.35rem,3vw,2.5rem)] font-medium tracking-[-0.03em] text-gold text-balance">
+            <span className="mt-3 block text-[clamp(1.35rem,3vw,2.5rem)] font-medium tracking-[-0.03em] text-gold text-balance max-[480px]:hidden">
               {" "}
               Breaking the Imagination Barriers
             </span>
@@ -82,7 +83,7 @@ export default function Hero() {
 
           <div className="max-w-[36rem] mx-auto">
             <StaggerText
-              text={`${SITE_NAME}(DVR) presents premium capsule models and modular living solutions for hospitality, resorts, commercial developments, and private projects.`}
+              text={`${SITE_NAME} (DVR) presents premium capsule models and modular living solutions for hospitality, resorts, commercial developments, and private projects.`}
               className="text-base md:text-lg text-ivory/85 font-light tracking-[0.005em] leading-relaxed"
               delay={1.2}
               stagger={0.02}

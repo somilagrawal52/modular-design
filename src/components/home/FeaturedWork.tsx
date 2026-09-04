@@ -81,7 +81,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 
         <div className="space-y-4">
           <div className="flex items-center gap-4">
-            <span className="text-gold font-mono text-xs">
+            <span className="text-gold-text font-mono text-xs">
               0{index + 1}
             </span>
             <div className="h-[1px] flex-1 bg-stone/10" />
@@ -119,7 +119,7 @@ export default function FeaturedWork() {
   return (
     <section
       id="models"
-      className="section-space relative overflow-hidden bg-light text-stone"
+      className="section-space desktop-transition-tight-top relative overflow-hidden bg-light text-stone"
     >
       {/* Background Parallax */}
       <ParallaxElement
@@ -134,7 +134,7 @@ export default function FeaturedWork() {
           <div className="max-w-2xl">
             <Reveal direction="right">
               <div className="flex items-center gap-4 mb-8">
-                <span className="text-gold font-mono text-xs">02</span>
+                <span className="text-gold-text font-mono text-xs">02</span>
                 <div className="h-[1px] w-12 bg-gold" />
                 <span className="text-xs uppercase tracking-[0.1em] text-stone/60 font-semibold">
                   Featured models
@@ -152,7 +152,7 @@ export default function FeaturedWork() {
           <Reveal direction="left">
             <Link
               to="/work"
-              className="group flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold hover:text-gold transition-all duration-500 pb-1 border-b border-stone/20"
+              className="group flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold text-gold-text hover:text-gold transition-all duration-500 pb-1 border-b border-stone/20"
             >
               View models{" "}
               <ArrowUpRight

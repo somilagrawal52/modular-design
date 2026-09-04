@@ -39,7 +39,7 @@ export default function ContactPage() {
           <ParallaxElement speed={0.02}>
             <Reveal direction="right">
               <div className="flex items-center gap-4 mb-12">
-                <span className="text-gold font-mono text-xs">04</span>
+                <span className="text-gold-text font-mono text-xs">04</span>
                 <div className="h-[1px] w-12 bg-gold" />
                 <span className="text-xs uppercase tracking-[0.1em] text-stone/65 font-semibold">
                   Contact
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 <form className="space-y-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                     <div className="space-y-4">
-                      <label htmlFor="contact-name" className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">
+                      <label htmlFor="contact-name" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
                         Full name
                       </label>
                       <input
@@ -89,7 +89,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div className="space-y-4">
-                      <label htmlFor="contact-email" className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">
+                      <label htmlFor="contact-email" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
                         Email address
                       </label>
                       <input
@@ -97,25 +97,25 @@ export default function ContactPage() {
                         id="contact-email"
                         name="email"
                         autoComplete="email"
-                        placeholder={dreamRealtyEmail()}
+                        placeholder="your@email.com"
                         className="w-full min-h-14 bg-transparent border-b border-stone/35 py-4 outline-none focus:border-gold transition-all duration-500 placeholder:text-stone/50 text-stone text-lg font-light"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-4">
-                    <div id="contact-inquiry-label" className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">
+                    <div id="contact-inquiry-label" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
                       What are you exploring?
                     </div>
                     <input type="hidden" name="inquiryType" value={selectedInquiry} />
-                    <div className="flex flex-wrap gap-4" role="group" aria-labelledby="contact-inquiry-label">
+                    <div className="grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:gap-4" role="group" aria-labelledby="contact-inquiry-label">
                       {inquiryTypes.map((type) => (
                         <button
                           key={type}
                           type="button"
                           onClick={() => setSelectedInquiry(type)}
                           aria-pressed={selectedInquiry === type}
-                          className={`min-h-11 px-5 py-2 border rounded-sm text-xs uppercase tracking-[0.08em] transition-all ${
+                            className={`min-h-11 w-full justify-start px-5 py-2 border rounded-sm text-left text-xs uppercase tracking-[0.08em] transition-all sm:w-auto sm:justify-center sm:text-center ${
                             selectedInquiry === type
                               ? "border-gold bg-gold text-ink"
                               : "border-stone/30 hover:border-gold hover:text-gold"
@@ -128,7 +128,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="space-y-4">
-                    <label htmlFor="contact-brief" className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">
+                    <label htmlFor="contact-brief" className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
                       Your brief
                     </label>
                     <textarea
@@ -186,7 +186,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 pb-24 md:pb-32">
           <Reveal direction="right">
             <div className="space-y-12">
-              <h2 className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">
+              <h2 className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
                 Direct access
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -209,7 +209,7 @@ export default function ContactPage() {
 
           <Reveal direction="left">
             <div className="bg-gold/5 p-12 border border-gold/10">
-              <Globe className="text-gold mb-8" size={32} />
+              <Globe className="text-gold-text mb-8" size={32} />
               <h2 className="text-2xl font-sans font-semibold mb-6 tracking-tight">
                 Model-led conversations
               </h2>
@@ -220,7 +220,7 @@ export default function ContactPage() {
               </p>
               <a
                 href={`mailto:${dreamRealtyEmail()}`}
-                className="inline-flex min-h-11 items-center gap-3 text-xs uppercase tracking-[0.1em] font-semibold text-gold hover:text-stone transition-colors"
+                className="inline-flex min-h-11 items-center gap-3 text-xs uppercase tracking-[0.1em] font-semibold text-gold-text hover:text-stone transition-colors"
               >
                 <Mail size={14} /> {dreamRealtyEmail()}
               </a>

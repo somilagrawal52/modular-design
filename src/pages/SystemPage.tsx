@@ -158,7 +158,7 @@ export default function SystemPage() {
         <div className="site-container">
           <Reveal direction="up">
             <div className="max-w-3xl mb-12 md:mb-16">
-              <span className="eyebrow text-gold">From factory to site</span>
+              <span className="eyebrow text-gold-text">From factory to site</span>
               <h2 className="mt-6 type-section">Built off-site. Positioned on-site.</h2>
             </div>
           </Reveal>
@@ -169,7 +169,7 @@ export default function SystemPage() {
               return (
                 <Reveal key={stage.number} direction="up" delay={index * 0.08} className="border-r border-b border-stone/20 p-7 md:p-9 min-h-[240px] flex flex-col">
                   <div className="flex items-start justify-between gap-6">
-                    <span className="font-mono text-xs text-gold">{stage.number}</span>
+                    <span className="font-mono text-xs text-gold-text">{stage.number}</span>
                     <Icon size={22} strokeWidth={1.25} className="text-gold" />
                   </div>
                   <h3 className="mt-10 text-2xl md:text-3xl font-sans font-semibold tracking-tight">{stage.title}</h3>
@@ -196,7 +196,7 @@ export default function SystemPage() {
             <Reveal direction="left">
               <div className="flex items-center gap-4">
                 <Layers3 size={18} className="text-gold" />
-                <span className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">Built from the outside in</span>
+                <span className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">Built from the outside in</span>
               </div>
               <h2 className="mt-7 type-section">Engineered layer by layer.</h2>
             </Reveal>
@@ -242,7 +242,7 @@ export default function SystemPage() {
         <div className="site-container border border-gold/25 bg-gold/[0.04] grid lg:grid-cols-[1fr_0.85fr] gap-10 p-7 md:p-12 lg:p-16">
           <div>
             <Reveal direction="right">
-              <span className="eyebrow text-gold">Configured for the project</span>
+              <span className="eyebrow text-gold-text">Configured for the project</span>
               <h2 className="mt-6 type-section">One platform. Multiple possibilities.</h2>
               <p className="mt-8 max-w-2xl text-base leading-relaxed text-stone/75">
                 Capsule models can be considered for homes, hospitality, workplaces, public amenities, and commercial spaces. Finish, layout, glazing, and integration scope can be considered according to the selected model and project requirements.
@@ -253,12 +253,12 @@ export default function SystemPage() {
             <ul className="space-y-5">
               {systemPromises.map((promise) => (
                 <li key={promise} className="flex items-start gap-4 text-sm text-stone/80">
-                  <Check size={17} className="mt-0.5 shrink-0 text-gold" />
+                  <Check size={17} className="mt-0.5 shrink-0 text-gold-text" />
                   <span>{promise}</span>
                 </li>
               ))}
             </ul>
-            <Link to="/work" className="mt-12 inline-flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold text-gold transition-colors hover:text-stone">
+            <Link to="/work" className="mt-12 inline-flex min-h-11 items-center gap-4 text-xs uppercase tracking-[0.1em] font-semibold text-gold-text transition-colors hover:text-stone">
               View models <ArrowUpRight size={16} />
             </Link>
           </Reveal>

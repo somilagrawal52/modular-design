@@ -95,7 +95,7 @@ export default function ProjectDetail() {
               <ParallaxElement speed={0.02}>
                 <Reveal direction="right">
                   <div className="flex items-center gap-4 mb-12">
-                    <span className="text-gold font-mono text-xs">01</span>
+                    <span className="text-gold-text font-mono text-xs">01</span>
                     <div className="h-[1px] w-12 bg-gold" />
                     <span className="text-xs uppercase tracking-[0.1em] text-stone font-semibold">Product overview</span>
                   </div>
@@ -112,7 +112,7 @@ export default function ProjectDetail() {
                   {project.challenge && (
                     <Reveal direction="up" delay={0.4}>
                       <div className="space-y-5">
-                        <h3 className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">Designed for</h3>
+                        <h3 className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">Designed for</h3>
                         <p className="text-lg font-light leading-relaxed text-stone/80">{project.challenge}</p>
                       </div>
                     </Reveal>
@@ -120,7 +120,7 @@ export default function ProjectDetail() {
                   {project.solution && !MANAGER_DEMO_MODE && (
                     <Reveal direction="up" delay={0.6}>
                       <div className="space-y-5">
-                        <h3 className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">Configuration approach</h3>
+                        <h3 className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">Configuration approach</h3>
                         <p className="text-lg font-light leading-relaxed text-stone/80">{project.solution}</p>
                       </div>
                     </Reveal>
@@ -147,7 +147,7 @@ export default function ProjectDetail() {
                   
                   {technicalSpecs.length > 0 && (
                     <div className="pt-8 border-t border-stone/10 space-y-7">
-                      <h4 className="text-xs uppercase tracking-[0.1em] text-gold font-semibold">Key configuration</h4>
+                      <h4 className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">Key configuration</h4>
                       <div className="space-y-6">
                         {visibleSpecs.map((spec, i) => (
                           <Reveal key={spec.label} direction="up" delay={i * 0.1}>
@@ -206,7 +206,7 @@ export default function ProjectDetail() {
       <CinematicSection overlay={false} className="section-space bg-light-secondary text-stone">
         <div className="site-container">
           <Reveal direction="up" className="mb-12 md:mb-16 text-center">
-            <span className="text-gold font-mono text-xs block mb-4">03</span>
+            <span className="text-gold-text font-mono text-xs block mb-4">03</span>
             <h2 className="text-xs uppercase tracking-[0.1em] text-stone/65 font-semibold">Exterior, installation & interior</h2>
           </Reveal>
           <div className="grid grid-cols-12 gap-6 md:gap-10">

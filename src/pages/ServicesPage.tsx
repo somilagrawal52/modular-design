@@ -21,7 +21,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <CinematicSection
         parallax={false}
-        className="h-screen flex items-center justify-center"
+        className="h-[88svh] min-h-[520px] flex items-center justify-center md:h-screen md:min-h-0"
       >
         <div className="absolute inset-0 z-0">
           <ParallaxImage
@@ -74,11 +74,11 @@ export default function ServicesPage() {
                 <ParallaxElement speed={0.03}>
                   <Reveal direction="right">
                     <div className="flex items-center gap-4 mb-8">
-                      <span className="text-gold font-mono text-xs">
+                      <span className="text-gold-text font-mono text-xs">
                         0{i + 1}
                       </span>
                       <div className="h-[1px] w-12 bg-gold" />
-                      <span className="text-xs uppercase tracking-[0.1em] text-stone/65 font-semibold">
+                      <span className="text-xs uppercase tracking-[0.1em] text-gold-text font-semibold">
                         Service Sector
                       </span>
                     </div>

@@ -21,6 +21,15 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
+  }, [isOpen]);
+
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Our Designs", href: "/work" },
@@ -113,6 +122,9 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             id="mobile-navigation"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
             className="fixed inset-0 w-full h-[100dvh] bg-ink/98 backdrop-blur-2xl z-[1000] flex flex-col items-center justify-center xl:hidden overflow-y-auto px-6 py-20"
           >
             <div className="flex flex-col items-center gap-2 sm:gap-3 w-full">

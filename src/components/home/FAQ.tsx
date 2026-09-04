@@ -50,7 +50,7 @@ export default function FAQ() {
           <div className="lg:col-span-4">
             <Reveal direction="right">
               <div className="flex items-center gap-4 mb-10">
-                <span className="text-gold font-mono text-xs">04</span>
+                <span className="text-gold-text font-mono text-xs">04</span>
                 <div className="h-px w-12 bg-gold" />
                 <span className="text-xs uppercase tracking-[0.1em] text-stone/60 font-semibold">Knowledge</span>
               </div>
@@ -87,7 +87,7 @@ export default function FAQ() {
                         aria-expanded={isOpen}
                         aria-controls={answerId}
                       >
-                        <span className="w-7 shrink-0 text-xs font-mono text-gold/80">{String(index + 1).padStart(2, '0')}</span>
+                        <span className="w-7 shrink-0 text-xs font-mono text-gold-text">{String(index + 1).padStart(2, '0')}</span>
                         <span className="flex-1 text-lg md:text-[1.375rem] font-sans font-medium tracking-tight text-stone group-hover:text-gold transition-colors duration-300">
                           {faq.question}
                         </span>

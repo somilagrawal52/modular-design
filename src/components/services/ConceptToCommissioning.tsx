@@ -67,14 +67,14 @@ function StageHeading({
       <span
         className={
           compact
-            ? "font-sans text-4xl font-semibold leading-none text-gold/70"
+            ? "font-sans text-4xl font-semibold leading-none text-gold-text/70"
             : "font-sans text-[clamp(3rem,5vw,4.25rem)] font-semibold leading-[0.82] tracking-tight text-gold/25"
         }
       >
         {stage.step}
       </span>
       <div className={compact ? "mt-5" : "mt-8 xl:mt-10"}>
-        <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-gold">
+        <span className="block text-xs font-semibold uppercase tracking-[0.1em] text-gold-text">
           {stage.descriptor}
         </span>
         <h3
@@ -101,7 +101,7 @@ export default function ConceptToCommissioning() {
       <div className="site-container relative z-20">
         <div className="max-w-4xl border-b border-stone/20 pb-14 md:pb-16">
           <Reveal direction="up">
-            <span className="mb-5 block text-xs font-semibold uppercase tracking-[0.1em] text-gold">
+            <span className="mb-5 block text-xs font-semibold uppercase tracking-[0.1em] text-gold-text">
               One Journey. Six Coordinated Stages.
             </span>
           </Reveal>
