@@ -32,34 +32,14 @@ export const PROJECTS: Project[] = [
     gallery: ['/images/garden-cabin-village-hero.png', '/images/garden-cabin-village-garden.png', '/images/garden-cabin-village-interior.png']
   },
   {
-    id: 'modular-capsule-quarry-lake-retreat', title: 'Quarry Lake Capsule Retreat', category: 'Hospitality', location: 'Site-specific', year: '2026', image: '/images/capsule-lake-retreat-hero.jpeg',
-    description: 'A waterside capsule retreat that pairs panoramic guest suites with a quiet boardwalk and a light-touch landscape strategy at the lake edge.',
-    challenge: 'Create an immersive hospitality stay beside a sensitive water body without relying on heavy conventional construction.',
-    solution: 'Factory-finished capsule suites arrive with interiors and services complete, then settle onto independent supports and connect through a compact timber circulation system.',
-    materiality: 'White insulated composite shells, black panoramic glazing, warm oak interiors, and dark timber paths bring a precise contemporary finish to the tropical lake setting.',
-    technicalSpecs: [{ label: 'System', value: 'Panoramic Capsule Suites' }, { label: 'Foundation', value: 'Light-touch Lake-edge Supports' }, { label: 'Envelope', value: 'Insulated Composite Shell' }],
-    details: [{ label: 'Type', value: 'Lakeside Capsule Hospitality' }, { label: 'Location', value: 'Site-specific' }, { label: 'Status', value: 'Concept Ready' }],
-    gallery: ['/images/capsule-lake-retreat-hero.jpeg', '/images/capsule-lake-retreat-evening.png', '/images/capsule-lake-retreat-interior.png']
-  },
-  {
-    id: 'modular-capsule-mountain-panorama-suite', title: 'Mountain Panorama Capsule Suite', category: 'Hospitality', location: 'Himalayan Ridge, India', year: '2026', image: '/images/capsule-mountain-suite-hero.jpeg',
+    id: 'modular-capsule-mountain-panorama-suite', title: 'Mountain Panorama Capsule Suite', category: 'Hospitality', location: 'Himalayan Ridge, India', year: '2026', image: '/images/capsule-mountain-suite-panorama.png',
     description: 'A self-contained mountain suite that frames long ridge views through faceted panoramic glazing while keeping installation compact and reversible.',
     challenge: 'Deliver an all-season guest room to a remote ridge without sacrificing the wide views that make the site special.',
     solution: 'A finished single capsule arrives as one transportable unit, with services pre-routed and a small entry deck assembled only after placement on the ridge.',
     materiality: 'White aluminium-composite panels, deep black window frames, integrated rooflight, pale interiors, and a low timber threshold keep the cabin crisp against the landscape.',
     technicalSpecs: [{ label: 'System', value: 'Panoramic Capsule Suite' }, { label: 'Foundation', value: 'Screw-pile Supports' }, { label: 'Climate', value: 'High-altitude Thermal Envelope' }],
     details: [{ label: 'Type', value: 'Mountain Capsule Hospitality' }, { label: 'Location', value: 'Himalayan Ridge, India' }, { label: 'Status', value: 'Concept Ready' }],
-    gallery: ['/images/capsule-mountain-suite-hero.jpeg', '/images/capsule-mountain-suite-panorama.png', '/images/capsule-mountain-suite-interior.jpeg']
-  },
-  {
-    id: 'modular-capsule-hillside-lodge', title: 'Hillside Capsule Lodge', category: 'Hospitality', location: 'Himalayan Foothills, India', year: '2026', image: '/images/capsule-hillside-lodge-hero.jpeg',
-    description: 'An elevated hillside lodge made from sculpted capsule suites, lifting guests above meadow planting for wide valley views and minimal ground impact.',
-    challenge: 'Place premium suites on a sloping, planted site while avoiding major excavation and retaining the character of the hillside.',
-    solution: 'Finished cabins are crane-set onto slender independent steel supports, with short decks and compact paths following the contours between existing planting.',
-    materiality: 'Rounded white shells, deep black panoramic glazing, slim steel supports, warm oak interiors, stone retaining edges, and meadow planting make the system feel light on the land.',
-    technicalSpecs: [{ label: 'System', value: 'Elevated Capsule Lodges' }, { label: 'Foundation', value: 'Independent Steel Pier Supports' }, { label: 'Glazing', value: 'Panoramic Low-E Glass' }],
-    details: [{ label: 'Type', value: 'Hillside Capsule Hospitality' }, { label: 'Location', value: 'Himalayan Foothills, India' }, { label: 'Status', value: 'Concept Ready' }],
-    gallery: ['/images/capsule-hillside-lodge-hero.jpeg', '/images/capsule-hillside-lodge-garden.png', '/images/capsule-hillside-lodge-interior.png']
+    gallery: ['/images/capsule-mountain-suite-panorama.png', '/images/capsule-mountain-suite-interior.jpeg']
   },
   {
     id: 'modular-capsule-rounded-garden-suite', title: 'Rounded Garden Cabin Suite', category: 'Residential', location: 'Site-specific', year: '2026', image: '/images/capsule-rounded-garden-suite-hero.jpeg',

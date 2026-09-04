@@ -164,9 +164,10 @@ export default function ContactPage() {
             <ParallaxElement speed={-0.05} className="h-full">
               <div className="relative h-full overflow-hidden p-4 bg-stone/5">
                 <ParallaxImage
-                  src="/images/capsule-riverside-resort-hero.png"
-                  alt="Premium capsule accommodation in a landscape setting"
+                  src="/images/modular-capsule-forest-retreat-hero-v2.png"
+                  alt="Premium capsule retreat set within a forest landscape"
                   className="w-full h-full"
+                  objectPosition="68% center"
                 />
                 <div className="absolute inset-0 bg-ink/45" />
                 <div className="absolute bottom-12 left-12 right-12">
