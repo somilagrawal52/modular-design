@@ -6,6 +6,7 @@ import ParallaxImage from '../components/ParallaxImage';
 import StaggerText from '../components/StaggerText';
 import ParallaxElement from '../components/ParallaxElement';
 import SEO from '../components/SEO';
+import NotFound from './NotFound';
 
 import CinematicSection from '../components/CinematicSection';
 import { MANAGER_DEMO_MODE, demoItems } from '../config/siteMode';
@@ -19,7 +20,7 @@ const EXTRA_GALLERY_IMAGES: Record<string, string[]> = {
 export default function ProjectDetail() {
   const { id } = useParams();
   const project = PROJECTS.find(p => p.id === id);
-  if (!project) return <div>Project not found</div>;
+  if (!project) return <NotFound />;
   const technicalSpecs = project.technicalSpecs ?? [];
   const productType = project.details.find((detail) => detail.label === 'Type')?.value ?? project.category;
   const modelDetails = [

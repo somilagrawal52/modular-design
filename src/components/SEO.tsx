@@ -9,6 +9,7 @@ interface SEOProps {
   type?: string;
   image?: string;
   url?: string;
+  robots?: string;
 }
 
 export default function SEO({
@@ -17,7 +18,8 @@ export default function SEO({
   name = SITE_STUDIO_NAME,
   type = 'website',
   image = '/images/modular-capsule-desert-retreat-hero.png',
-  url
+  url,
+  robots = 'index, follow'
 }: SEOProps) {
   const location = useLocation();
   const canonicalUrl = url ?? `${SITE_URL}${location.pathname}`;
@@ -28,7 +30,7 @@ export default function SEO({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content={robots} />
       <meta name="theme-color" content="#0D0E0E" />
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={name} />
