@@ -54,7 +54,7 @@ export default function Hero() {
       </motion.div>
 
       <div className="relative z-20 w-full text-center px-5 sm:px-8 pt-20">
-        <motion.div className="w-full" style={{ transform }}>
+        <motion.div className="w-full mobile-no-hover" style={{ transform }}>
           <Reveal delay={0.2}>
             <div
               className={

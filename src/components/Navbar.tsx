@@ -39,7 +39,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[999] px-4 sm:px-6 lg:px-10 xl:px-16 py-3 md:py-4 flex justify-between items-center bg-ink/80 backdrop-blur-xl border-b border-white/10">
+    <nav className="site-nav-shell fixed top-0 left-0 w-full z-[999] px-4 sm:px-6 lg:px-10 xl:px-16 py-3 md:py-4 flex justify-between items-center bg-ink/80 backdrop-blur-xl border-b border-white/10">
       <Link to="/" onClick={() => setIsOpen(false)}>
         <Magnetic>
           <motion.div
